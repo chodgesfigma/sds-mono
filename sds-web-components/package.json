@@ -55,5 +55,8 @@
     "puppeteer": "^21.9.0",
     "typescript-eslint": "^8.23.0"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "clsx": "^2.1.1"
+  }
 }
