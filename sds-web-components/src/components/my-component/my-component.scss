@@ -1,0 +1,11 @@
+:host {
+  display: block;
+}
+
+.my-component {
+  font-size: 18px;
+
+  &__name {
+    font-weight: bold;
+  }
+}
