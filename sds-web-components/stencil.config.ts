@@ -7,7 +7,9 @@ export const config: Config = {
   globalStyle: 'src/styles/app.scss',
   plugins: [
     // refer to https://www.npmjs.com/package/@stencil/sass for options
-    sass(),
+    sass({
+      includePaths: ['./src/styles/'],
+    }),
   ],
   outputTargets: [
     {
