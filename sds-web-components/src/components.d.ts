@@ -9,864 +9,1725 @@ import { IconSize } from "./ui/primitives/Icon/Icon";
 export { IconSize } from "./ui/primitives/Icon/Icon";
 export namespace Components {
     interface IconActivity {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAirplay {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAlertCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAlertOctagon {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAlertTriangle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAlignCenter {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAlignJustify {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAlignLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAlignRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAnchor {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAperture {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArchive {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowDown {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowDownCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowDownLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowDownRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowLeftCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowRightCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowUp {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowUpCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowUpLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowUpRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAtSign {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAward {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBarChart {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBarChart2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBattery {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBatteryCharging {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBell {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBellOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBluetooth {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBold {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBook {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBookOpen {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBookmark {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBox {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBriefcase {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCalendar {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCamera {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCameraOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCast {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCheck {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCheckCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCheckSquare {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChevronDown {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChevronLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChevronRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChevronUp {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChevronsDown {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChevronsLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChevronsRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChevronsUp {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChrome {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconClipboard {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconClock {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCloud {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCloudDrizzle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCloudLightning {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCloudOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCloudRain {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCloudSnow {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCode {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCodepen {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCodesandbox {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCoffee {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconColumns {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCommand {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCompass {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCopy {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCornerDownLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCornerDownRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCornerLeftDown {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCornerLeftUp {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCornerRightDown {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCornerRightUp {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCornerUpLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCornerUpRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCpu {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCreditCard {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCrop {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCrosshair {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDatabase {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDelete {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDisc {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDivide {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDivideCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDivideSquare {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDollarSign {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDownload {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDownloadCloud {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDribbble {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDroplet {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconEdit {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconEdit2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconEdit3 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconExternalLink {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconEye {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconEyeOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFacebook {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFastForward {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFeather {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFigma {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFile {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFileMinus {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFilePlus {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFileText {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFilm {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFilter {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFlag {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFolder {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFolderMinus {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFolderPlus {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFramer {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFrown {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGift {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGitBranch {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGitCommit {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGitMerge {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGitPullRequest {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGithub {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGitlab {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGlobe {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGrid {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconHardDrive {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconHash {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconHeadphones {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconHeart {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconHelpCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconHexagon {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconHome {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconImage {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconInbox {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconInfo {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconInstagram {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconItalic {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconKey {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLayers {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLayout {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLifeBuoy {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLink {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLink2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLinkedin {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconList {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLoader {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLock {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLogIn {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLogOut {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMail {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMap {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMapPin {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMaximize {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMaximize2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMeh {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMenu {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMessageCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMessageSquare {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMic {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMicOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMinimize {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMinimize2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMinus {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMinusCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMinusSquare {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMonitor {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMoon {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMoreHorizontal {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMoreVertical {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMousePointer {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMove {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMusic {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconNavigation {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconNavigation2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconOctagon {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPackage {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPaperclip {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPause {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPauseCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPenTool {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPercent {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPhone {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPhoneCall {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPhoneForwarded {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPhoneIncoming {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPhoneMissed {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPhoneOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPhoneOutgoing {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPieChart {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPlay {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPlayCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPlus {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPlusCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPlusSquare {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPocket {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPower {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPrinter {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconRadio {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconRefreshCcw {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconRefreshCw {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconRepeat {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconRewind {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconRotateCcw {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconRotateCw {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconRss {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSave {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconScissors {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSearch {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSend {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconServer {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSettings {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconShare {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconShare2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconShield {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconShieldOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconShoppingBag {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconShoppingCart {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconShuffle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSidebar {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSkipBack {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSkipForward {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSlack {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSlash {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSliders {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSmartphone {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSmile {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSpeaker {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSquare {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconStar {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconStopCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSun {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSunrise {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSunset {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTable {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTablet {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTag {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTarget {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTerminal {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconThermometer {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconThumbsDown {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconThumbsUp {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconToggleLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconToggleRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTool {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTrash {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTrash2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTrello {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTrendingDown {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTrendingUp {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTriangle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTruck {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTv {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTwitch {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTwitter {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconType {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUmbrella {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUnderline {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUnlock {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUpload {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUploadCloud {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUser {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUserCheck {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUserMinus {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUserPlus {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUserX {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUsers {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconVideo {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconVideoOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconVoicemail {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconVolume {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconVolume1 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconVolume2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconVolumeX {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconWatch {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconWifi {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconWifiOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconWind {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconX {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconXCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconXOctagon {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconXSquare {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconYoutube {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconZap {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconZapOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconZoomIn {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconZoomOut {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface MyComponent {
@@ -2906,864 +3767,1725 @@ declare global {
 }
 declare namespace LocalJSX {
     interface IconActivity {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAirplay {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAlertCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAlertOctagon {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAlertTriangle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAlignCenter {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAlignJustify {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAlignLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAlignRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAnchor {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAperture {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArchive {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowDown {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowDownCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowDownLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowDownRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowLeftCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowRightCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowUp {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowUpCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowUpLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconArrowUpRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAtSign {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconAward {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBarChart {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBarChart2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBattery {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBatteryCharging {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBell {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBellOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBluetooth {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBold {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBook {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBookOpen {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBookmark {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBox {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconBriefcase {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCalendar {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCamera {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCameraOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCast {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCheck {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCheckCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCheckSquare {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChevronDown {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChevronLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChevronRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChevronUp {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChevronsDown {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChevronsLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChevronsRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChevronsUp {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconChrome {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconClipboard {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconClock {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCloud {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCloudDrizzle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCloudLightning {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCloudOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCloudRain {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCloudSnow {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCode {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCodepen {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCodesandbox {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCoffee {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconColumns {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCommand {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCompass {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCopy {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCornerDownLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCornerDownRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCornerLeftDown {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCornerLeftUp {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCornerRightDown {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCornerRightUp {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCornerUpLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCornerUpRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCpu {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCreditCard {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCrop {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconCrosshair {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDatabase {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDelete {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDisc {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDivide {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDivideCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDivideSquare {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDollarSign {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDownload {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDownloadCloud {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDribbble {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconDroplet {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconEdit {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconEdit2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconEdit3 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconExternalLink {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconEye {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconEyeOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFacebook {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFastForward {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFeather {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFigma {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFile {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFileMinus {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFilePlus {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFileText {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFilm {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFilter {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFlag {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFolder {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFolderMinus {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFolderPlus {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFramer {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconFrown {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGift {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGitBranch {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGitCommit {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGitMerge {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGitPullRequest {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGithub {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGitlab {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGlobe {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconGrid {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconHardDrive {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconHash {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconHeadphones {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconHeart {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconHelpCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconHexagon {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconHome {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconImage {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconInbox {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconInfo {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconInstagram {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconItalic {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconKey {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLayers {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLayout {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLifeBuoy {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLink {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLink2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLinkedin {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconList {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLoader {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLock {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLogIn {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconLogOut {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMail {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMap {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMapPin {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMaximize {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMaximize2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMeh {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMenu {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMessageCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMessageSquare {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMic {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMicOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMinimize {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMinimize2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMinus {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMinusCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMinusSquare {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMonitor {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMoon {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMoreHorizontal {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMoreVertical {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMousePointer {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMove {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconMusic {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconNavigation {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconNavigation2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconOctagon {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPackage {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPaperclip {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPause {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPauseCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPenTool {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPercent {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPhone {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPhoneCall {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPhoneForwarded {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPhoneIncoming {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPhoneMissed {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPhoneOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPhoneOutgoing {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPieChart {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPlay {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPlayCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPlus {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPlusCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPlusSquare {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPocket {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPower {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconPrinter {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconRadio {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconRefreshCcw {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconRefreshCw {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconRepeat {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconRewind {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconRotateCcw {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconRotateCw {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconRss {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSave {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconScissors {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSearch {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSend {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconServer {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSettings {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconShare {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconShare2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconShield {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconShieldOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconShoppingBag {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconShoppingCart {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconShuffle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSidebar {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSkipBack {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSkipForward {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSlack {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSlash {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSliders {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSmartphone {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSmile {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSpeaker {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSquare {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconStar {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconStopCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSun {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSunrise {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconSunset {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTable {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTablet {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTag {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTarget {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTerminal {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconThermometer {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconThumbsDown {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconThumbsUp {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconToggleLeft {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconToggleRight {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTool {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTrash {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTrash2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTrello {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTrendingDown {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTrendingUp {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTriangle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTruck {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTv {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTwitch {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconTwitter {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconType {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUmbrella {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUnderline {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUnlock {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUpload {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUploadCloud {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUser {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUserCheck {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUserMinus {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUserPlus {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUserX {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconUsers {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconVideo {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconVideoOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconVoicemail {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconVolume {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconVolume1 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconVolume2 {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconVolumeX {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconWatch {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconWifi {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconWifiOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconWind {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconX {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconXCircle {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconXOctagon {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconXSquare {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconYoutube {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconZap {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconZapOff {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconZoomIn {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface IconZoomOut {
+        /**
+          * The size the icon will be displayed at
+         */
         "size"?: IconSize;
     }
     interface MyComponent {

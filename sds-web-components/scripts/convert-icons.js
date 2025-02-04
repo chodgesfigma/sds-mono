@@ -12,8 +12,7 @@ const convertToKebabCase = (name) => {
 }
 
 const template = ({ name, svg }) => {
-  return `
-import { Component, Prop, h } from '@stencil/core';
+  return `import { Component, Prop, h } from '@stencil/core';
 import { Icon, IconSize } from '../primitives/Icon/Icon';
 
 @Component({
@@ -22,6 +21,9 @@ import { Icon, IconSize } from '../primitives/Icon/Icon';
   shadow: true,
 })
 export class Icon%Name% {
+  /**
+   * The size the icon will be displayed at
+   */
   @Prop() size?: IconSize = '16';
 
   render() {
@@ -31,7 +33,8 @@ export class Icon%Name% {
       </Icon>
     );
   }
-}`
+}
+`
   .replace('%name%', convertToKebabCase(name))
   .replace('%Name%', name)
   .replace('%svg%', svg.trim());

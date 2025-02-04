@@ -1,4 +1,3 @@
-
 import { Component, Prop, h } from '@stencil/core';
 import { Icon, IconSize } from '../primitives/Icon/Icon';
 
@@ -8,6 +7,9 @@ import { Icon, IconSize } from '../primitives/Icon/Icon';
   shadow: true,
 })
 export class IconUpload {
+  /**
+   * The size the icon will be displayed at
+   */
   @Prop() size?: IconSize = '16';
 
   render() {
