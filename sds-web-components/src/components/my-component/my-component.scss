@@ -1,9 +1,12 @@
+@import 'reset';
+
 :host {
   display: block;
 }
 
 .my-component {
   font-size: 18px;
+  color: var(--sds-color-text-danger-tertiary);
 
   &__name {
     font-weight: bold;
