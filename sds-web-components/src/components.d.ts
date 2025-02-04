@@ -5,7 +5,12 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { IconSize } from "./ui/primitives/Icon/Icon";
+export { IconSize } from "./ui/primitives/Icon/Icon";
 export namespace Components {
+    interface IconActivity {
+        "size"?: IconSize;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -22,6 +27,12 @@ export namespace Components {
     }
 }
 declare global {
+    interface HTMLIconActivityElement extends Components.IconActivity, HTMLStencilElement {
+    }
+    var HTMLIconActivityElement: {
+        prototype: HTMLIconActivityElement;
+        new (): HTMLIconActivityElement;
+    };
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
     }
     var HTMLMyComponentElement: {
@@ -29,10 +40,14 @@ declare global {
         new (): HTMLMyComponentElement;
     };
     interface HTMLElementTagNameMap {
+        "icon-activity": HTMLIconActivityElement;
         "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
+    interface IconActivity {
+        "size"?: IconSize;
+    }
     interface MyComponent {
         /**
           * The first name
@@ -48,6 +63,7 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     interface IntrinsicElements {
+        "icon-activity": IconActivity;
         "my-component": MyComponent;
     }
 }
@@ -55,6 +71,7 @@ export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
+            "icon-activity": LocalJSX.IconActivity & JSXBase.HTMLAttributes<HTMLIconActivityElement>;
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
