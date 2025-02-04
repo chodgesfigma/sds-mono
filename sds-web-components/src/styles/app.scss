@@ -1,0 +1,6 @@
+// These scss files will be compiled into a singular css file
+// that will then be accessible in the /build folder as "sds.css"
+// and can be imported into the consumer's app.
+// Documentation: https://stenciljs.com/docs/styling#global-styles
+@import './theme';
+@import './responsive';
