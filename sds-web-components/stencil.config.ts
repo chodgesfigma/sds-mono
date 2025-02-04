@@ -3,6 +3,8 @@ import { sass } from '@stencil/sass';
 
 export const config: Config = {
   namespace: 'sds',
+  // Styles that will be compiled into `./build/sds.css`
+  globalStyle: 'src/styles/app.scss',
   plugins: [
     // refer to https://www.npmjs.com/package/@stencil/sass for options
     sass(),
