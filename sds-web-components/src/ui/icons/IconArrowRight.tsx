@@ -3,17 +3,17 @@ import { Component, Prop, h } from '@stencil/core';
 import { Icon, IconSize } from '../primitives/Icon/Icon';
 
 @Component({
-  tag: 'icon-activity',
+  tag: 'icon-arrow-right',
   styleUrl: 'icon.scss',
   shadow: true,
 })
-export class IconActivity {
+export class IconArrowRight {
   @Prop() size?: IconSize = '16';
 
   render() {
     return (
       <Icon size={this.size}>
-        <path d="M14.6666 8H12L9.99998 14L5.99998 2L3.99998 8H1.33331" stroke="var(--svg-stroke-color)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M3.33331 7.99992H12.6666M12.6666 7.99992L7.99998 3.33325M12.6666 7.99992L7.99998 12.6666" stroke="var(--svg-stroke-color)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
       </Icon>
     );
   }

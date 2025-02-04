@@ -3,17 +3,17 @@ import { Component, Prop, h } from '@stencil/core';
 import { Icon, IconSize } from '../primitives/Icon/Icon';
 
 @Component({
-  tag: 'icon-activity',
+  tag: 'icon-bar-chart',
   styleUrl: 'icon.scss',
   shadow: true,
 })
-export class IconActivity {
+export class IconBarChart {
   @Prop() size?: IconSize = '16';
 
   render() {
     return (
       <Icon size={this.size}>
-        <path d="M14.6666 8H12L9.99998 14L5.99998 2L3.99998 8H1.33331" stroke="var(--svg-stroke-color)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M8 13.3334V6.66675M12 13.3334V2.66675M4 13.3334V10.6667" stroke="var(--svg-stroke-color)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
       </Icon>
     );
   }

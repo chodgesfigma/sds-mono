@@ -1,0 +1,20 @@
+
+import { Component, Prop, h } from '@stencil/core';
+import { Icon, IconSize } from '../primitives/Icon/Icon';
+
+@Component({
+  tag: 'icon-flag',
+  styleUrl: 'icon.scss',
+  shadow: true,
+})
+export class IconFlag {
+  @Prop() size?: IconSize = '16';
+
+  render() {
+    return (
+      <Icon size={this.size}>
+        <path d="M2.66663 10C2.66663 10 3.33329 9.33333 5.33329 9.33333C7.33329 9.33333 8.66663 10.6667 10.6666 10.6667C12.6666 10.6667 13.3333 10 13.3333 10V2C13.3333 2 12.6666 2.66667 10.6666 2.66667C8.66663 2.66667 7.33329 1.33333 5.33329 1.33333C3.33329 1.33333 2.66663 2 2.66663 2V10ZM2.66663 10V14.6667" stroke="var(--svg-stroke-color)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </Icon>
+    );
+  }
+}
