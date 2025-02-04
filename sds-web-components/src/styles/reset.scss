@@ -1,0 +1,25 @@
+// This is a reset file that can be imported into each other .scss file via
+// @import 'reset';
+
+// This should contain minimal css as it gets injected into each component,
+// but these are styles that should only be applied to elements within our shadow-doms
+
+a,
+button,
+legend,
+fieldset,
+select,
+input,
+textarea {
+  all: unset;
+  line-height: 1;
+}
+
+div,
+button,
+select,
+input,
+textarea,
+span {
+  box-sizing: border-box;
+}
