@@ -7,6 +7,8 @@ defineCustomElements();
 
 if (docJson) setStencilDocJson(docJson);
 
+import './../dist/sds/sds.css';
+
 const preview: Preview = {
   parameters: {
     controls: {
