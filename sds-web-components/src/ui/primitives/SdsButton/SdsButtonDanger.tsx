@@ -1,7 +1,7 @@
 import { Component, Prop, h } from '@stencil/core';
-import { ButtonType, ButtonSize, ButtonVariant } from './SdsButtonBase';
+import { Type, Size, Variant } from './SdsButtonBase';
 
-export type ButtonDanger = Exclude<ButtonVariant, 'primary' | 'subtle' | 'neutral'>;
+export type DangerVariant = Exclude<Variant, 'primary' | 'subtle' | 'neutral'>;
 
 @Component({
   tag: 'sds-button-danger',
@@ -12,15 +12,15 @@ export class SdsButtonDanger {
   /**
    * The button type
    */
-  @Prop() type: ButtonType = 'button';
+  @Prop() type?: Type;
   /**
    * The button size
    */
-  @Prop() size: ButtonSize = 'medium';
+  @Prop() size?: Size;
   /**
-   * The button variant
+   * The button danger variant
    */
-  @Prop() variant: ButtonDanger = 'danger-primary';
+  @Prop() variant?: DangerVariant;
 
   render() {
     return (

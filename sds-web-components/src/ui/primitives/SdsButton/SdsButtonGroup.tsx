@@ -7,15 +7,15 @@ import { clsx } from 'clsx';
   shadow: true,
 })
 export class SdsButtonGroup {
-  @Prop() align?: 'start' | 'end' | 'center' | 'justify' | 'stack';
+  @Prop() align?: 'start' | 'end' | 'center' | 'justify' | 'stack' = 'start';
 
   render() {
-    const classNames = clsx(
-      // className,
-      'button-group',
-      `button-group-align-${this.align}`,
-    );
+    const classNames = clsx('button-group', `button-group-align-${this.align}`);
 
-    return <div class={classNames} />;
+    return (
+      <div class={classNames}>
+        <slot />
+      </div>
+    );
   }
 }
