@@ -5,12 +5,14 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
-import { ButtonSize, ButtonType, ButtonVariant } from "./ui/primitives/SdsButton/SdsButtonBase";
-import { ButtonSize as ButtonSize1, ButtonType as ButtonType1, ButtonVariant as ButtonVariant1 } from "./ui/primitives/SdsButton/SdsButtonBase";
-import { ButtonDanger } from "./ui/primitives/SdsButton/SdsButtonDanger";
-export { ButtonSize, ButtonType, ButtonVariant } from "./ui/primitives/SdsButton/SdsButtonBase";
-export { ButtonSize as ButtonSize1, ButtonType as ButtonType1, ButtonVariant as ButtonVariant1 } from "./ui/primitives/SdsButton/SdsButtonBase";
-export { ButtonDanger } from "./ui/primitives/SdsButton/SdsButtonDanger";
+import { Size, Type } from "./ui/primitives/SdsButton/SdsButtonBase";
+import { DefaultVariant } from "./ui/primitives/SdsButton/SdsButton";
+import { Size as Size1, Type as Type1, Variant } from "./ui/primitives/SdsButton/SdsButtonBase";
+import { DangerVariant } from "./ui/primitives/SdsButton/SdsButtonDanger";
+export { Size, Type } from "./ui/primitives/SdsButton/SdsButtonBase";
+export { DefaultVariant } from "./ui/primitives/SdsButton/SdsButton";
+export { Size as Size1, Type as Type1, Variant } from "./ui/primitives/SdsButton/SdsButtonBase";
+export { DangerVariant } from "./ui/primitives/SdsButton/SdsButtonDanger";
 export namespace Components {
     interface MyComponent {
         /**
@@ -30,43 +32,43 @@ export namespace Components {
         /**
           * The button size
          */
-        "size": ButtonSize;
+        "size"?: Size;
         /**
           * The button type
          */
-        "type": ButtonType;
+        "type"?: Type;
         /**
-          * The button variant
+          * The button default variant
          */
-        "variant": ButtonVariant;
+        "variant"?: DefaultVariant;
     }
     interface SdsButtonBase {
         /**
           * The button size
          */
-        "size": ButtonSize1;
+        "size"?: Size1;
         /**
           * The button type
          */
-        "type": ButtonType1;
+        "type"?: Type1;
         /**
           * The button variant
          */
-        "variant": ButtonVariant1;
+        "variant"?: Variant;
     }
     interface SdsButtonDanger {
         /**
           * The button size
          */
-        "size": ButtonSize;
+        "size"?: Size;
         /**
           * The button type
          */
-        "type": ButtonType;
+        "type"?: Type;
         /**
-          * The button variant
+          * The button danger variant
          */
-        "variant": ButtonDanger;
+        "variant"?: DangerVariant;
     }
     interface SdsButtonGroup {
         "align"?: 'start' | 'end' | 'center' | 'justify' | 'stack';
@@ -130,43 +132,43 @@ declare namespace LocalJSX {
         /**
           * The button size
          */
-        "size"?: ButtonSize;
+        "size"?: Size;
         /**
           * The button type
          */
-        "type"?: ButtonType;
+        "type"?: Type;
         /**
-          * The button variant
+          * The button default variant
          */
-        "variant"?: ButtonVariant;
+        "variant"?: DefaultVariant;
     }
     interface SdsButtonBase {
         /**
           * The button size
          */
-        "size"?: ButtonSize1;
+        "size"?: Size1;
         /**
           * The button type
          */
-        "type"?: ButtonType1;
+        "type"?: Type1;
         /**
           * The button variant
          */
-        "variant"?: ButtonVariant1;
+        "variant"?: Variant;
     }
     interface SdsButtonDanger {
         /**
           * The button size
          */
-        "size"?: ButtonSize;
+        "size"?: Size;
         /**
           * The button type
          */
-        "type"?: ButtonType;
+        "type"?: Type;
         /**
-          * The button variant
+          * The button danger variant
          */
-        "variant"?: ButtonDanger;
+        "variant"?: DangerVariant;
     }
     interface SdsButtonGroup {
         "align"?: 'start' | 'end' | 'center' | 'justify' | 'stack';
