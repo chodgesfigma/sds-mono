@@ -28,6 +28,10 @@ export const config: Config = {
       type: 'www',
       serviceWorker: null, // disable service workers
     },
+    {
+      type: 'docs-json',
+      file: './dist/docs.json'
+    },
   ],
   testing: {
     browserHeadless: 'shell',

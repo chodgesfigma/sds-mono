@@ -18,7 +18,8 @@
     "jsxFragmentFactory": "h.Fragment",
     "strict": true,
     "noUncheckedIndexedAccess": true,
-    "noImplicitOverride": true
+    "noImplicitOverride": true,
+    "skipLibCheck": true
   },
   "include": [
     "src"
