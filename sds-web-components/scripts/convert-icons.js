@@ -1,15 +1,16 @@
+/**
+ * This script will find all .tsx files in the designated folder, and convert any React components into a Stencil component.
+ * It will check to see if it's a tsx file, and if isn't already following a Stencil component pattern.
+ */
+
 import path from 'path';
 import fs from 'fs';
+import { convertToKebabCase } from './utils.js';
 
-
+/**
+ * Folder where Icon components are defined
+ */
 const iconFolderPath = 'src/ui/icons/';
-
-// util taken from: https://stackoverflow.com/questions/63116039/camelcase-to-kebab-case
-// with an additional replacement for ending numbers
-const convertToKebabCase = (name) => {
-  return name
-    .replace(/[A-Z]+(?![a-z])|[A-Z]|\d$/g, ($, ofs) => (ofs ? "-" : "") + $.toLowerCase());
-}
 
 const template = ({ name, svg }) => {
   return `import { Component, Prop, h } from '@stencil/core';
@@ -82,11 +83,10 @@ const convertFile = async (filename) => {
   });
 };
 
-
-const getFiles = () => {
+const convert = () => {
   const files = fs.readdirSync(path.resolve(iconFolderPath));
   console.log(`found: ${files.length} files`)
   files.forEach((filename) => convertFile(filename));
 }
 
-getFiles();
+convert();
