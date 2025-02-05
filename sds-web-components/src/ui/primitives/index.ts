@@ -4,7 +4,7 @@
 // export * from './Checkbox/Checkbox';
 // export * from './Dialog/Dialog';
 // export * from './Fieldset/Fieldset';
-export * from './Icon/Icon';
+export * from './SdsIcon/SdsIcon';
 // export * from './IconButton/IconButton';
 // export * from './Image/Image';
 // export * from './Input/Input';

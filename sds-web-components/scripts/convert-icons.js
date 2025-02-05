@@ -13,24 +13,24 @@ const convertToKebabCase = (name) => {
 
 const template = ({ name, svg }) => {
   return `import { Component, Prop, h } from '@stencil/core';
-import { Icon, IconSize } from '../primitives/Icon/Icon';
+import { SdsIcon, Size } from '../primitives/SdsIcon/SdsIcon';
 
 @Component({
-  tag: 'icon-%name%',
+  tag: 'sds-icon-%name%',
   styleUrl: 'icon.scss',
   shadow: true,
 })
-export class Icon%Name% {
+export class SdsIcon%Name% {
   /**
    * The size the icon will be displayed at
    */
-  @Prop() size?: IconSize = '16';
+  @Prop() size?: Size = '16';
 
   render() {
     return (
-      <Icon size={this.size}>
+      <SdsIcon size={this.size}>
         %svg%
-      </Icon>
+      </SdsIcon>
     );
   }
 }
@@ -70,8 +70,16 @@ const convertFile = async (filename) => {
 
   const output = template({name, svg: normalizedSVG});
 
-  console.log(`re-writing: ${name} icon to ${filepath}`);
-  fs.writeFileSync(filepath, output, { encoding: 'utf-8' });
+  const outputFilepath = path.resolve(iconFolderPath, `Sds${filename}`);
+  console.log(`re-writing: ${name} icon to ${outputFilepath}`);
+  fs.writeFileSync(outputFilepath, output, { encoding: 'utf-8' });
+
+  console.log(`removing: original ${filepath} file`);
+  fs.unlink(filepath, (err) => {
+    if (err) {
+      console.error(err);
+    }
+  });
 };
 
 
