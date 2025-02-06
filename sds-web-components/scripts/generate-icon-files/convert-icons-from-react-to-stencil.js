@@ -30,7 +30,7 @@ export class SdsIcon${name} {
   render() {
     return (
       <SdsIcon size={this.size}>
-        ${svg}
+        ${svg.trim()}
       </SdsIcon>
     );
   }
