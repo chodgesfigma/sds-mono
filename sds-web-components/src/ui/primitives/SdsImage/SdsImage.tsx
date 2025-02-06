@@ -1,4 +1,5 @@
 import { Component, Prop, State, h } from '@stencil/core';
+import clsx from 'clsx';
 
 export type AspectRatio = '1-1' | '16-9' | '4-3' | 'fill' | 'natural';
 export type Size = 'small' | 'medium' | 'large' | 'fill' | 'natural';
@@ -40,6 +41,11 @@ export class SdsButton {
   };
 
   render() {
-    return <image></image>;
+    const classNames = clsx('image', `image-aspect-ratio-${this.aspectRatio}`, `image-size-${this.size}`, `image-variant-${this.variant}`, { 'image-loading': !this.loaded });
+
+    return (
+      // need to handle loading state still
+      <img class={classNames} alt={this.alt} onLoad={this.handleLoad} />
+    );
   }
 }
