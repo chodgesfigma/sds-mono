@@ -6,7 +6,7 @@ export type Type = 'submit' | 'reset' | 'button';
 export type Size = 'small' | 'medium';
 export type Variant = 'primary' | 'neutral' | 'subtle' | 'danger-primary' | 'danger-subtle';
 
-interface SdsButtonBaseProps {
+export interface SdsButtonBaseProps {
   /**
    * The button type
    */

@@ -1,5 +1,5 @@
 import { Component, Prop, h } from '@stencil/core';
-import { Type, Size, Variant } from './SdsButtonBase';
+import { Type, Size, Variant, SdsButtonBase } from './SdsButtonBase';
 
 export type DangerVariant = Exclude<Variant, 'primary' | 'subtle' | 'neutral'>;
 
@@ -24,9 +24,9 @@ export class SdsButtonDanger {
 
   render() {
     return (
-      <sds-button-base variant={this.variant} size={this.size} type={this.type}>
+      <SdsButtonBase variant={this.variant} size={this.size} type={this.type}>
         <slot />
-      </sds-button-base>
+      </SdsButtonBase>
     );
   }
 }

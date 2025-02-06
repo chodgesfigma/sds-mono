@@ -7,11 +7,9 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Size, Type } from "./ui/primitives/SdsButton/SdsButtonBase";
 import { DefaultVariant } from "./ui/primitives/SdsButton/SdsButton";
-import { Size as Size1, Type as Type1, Variant } from "./ui/primitives/SdsButton/SdsButtonBase";
 import { DangerVariant } from "./ui/primitives/SdsButton/SdsButtonDanger";
 export { Size, Type } from "./ui/primitives/SdsButton/SdsButtonBase";
 export { DefaultVariant } from "./ui/primitives/SdsButton/SdsButton";
-export { Size as Size1, Type as Type1, Variant } from "./ui/primitives/SdsButton/SdsButtonBase";
 export { DangerVariant } from "./ui/primitives/SdsButton/SdsButtonDanger";
 export namespace Components {
     interface MyComponent {
@@ -41,20 +39,6 @@ export namespace Components {
           * The button default variant
          */
         "variant"?: DefaultVariant;
-    }
-    interface SdsButtonBase {
-        /**
-          * The button size
-         */
-        "size"?: Size1;
-        /**
-          * The button type
-         */
-        "type"?: Type1;
-        /**
-          * The button variant
-         */
-        "variant"?: Variant;
     }
     interface SdsButtonDanger {
         /**
@@ -87,12 +71,6 @@ declare global {
         prototype: HTMLSdsButtonElement;
         new (): HTMLSdsButtonElement;
     };
-    interface HTMLSdsButtonBaseElement extends Components.SdsButtonBase, HTMLStencilElement {
-    }
-    var HTMLSdsButtonBaseElement: {
-        prototype: HTMLSdsButtonBaseElement;
-        new (): HTMLSdsButtonBaseElement;
-    };
     interface HTMLSdsButtonDangerElement extends Components.SdsButtonDanger, HTMLStencilElement {
     }
     var HTMLSdsButtonDangerElement: {
@@ -108,7 +86,6 @@ declare global {
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "sds-button": HTMLSdsButtonElement;
-        "sds-button-base": HTMLSdsButtonBaseElement;
         "sds-button-danger": HTMLSdsButtonDangerElement;
         "sds-button-group": HTMLSdsButtonGroupElement;
     }
@@ -142,20 +119,6 @@ declare namespace LocalJSX {
          */
         "variant"?: DefaultVariant;
     }
-    interface SdsButtonBase {
-        /**
-          * The button size
-         */
-        "size"?: Size1;
-        /**
-          * The button type
-         */
-        "type"?: Type1;
-        /**
-          * The button variant
-         */
-        "variant"?: Variant;
-    }
     interface SdsButtonDanger {
         /**
           * The button size
@@ -176,7 +139,6 @@ declare namespace LocalJSX {
     interface IntrinsicElements {
         "my-component": MyComponent;
         "sds-button": SdsButton;
-        "sds-button-base": SdsButtonBase;
         "sds-button-danger": SdsButtonDanger;
         "sds-button-group": SdsButtonGroup;
     }
@@ -187,7 +149,6 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             "sds-button": LocalJSX.SdsButton & JSXBase.HTMLAttributes<HTMLSdsButtonElement>;
-            "sds-button-base": LocalJSX.SdsButtonBase & JSXBase.HTMLAttributes<HTMLSdsButtonBaseElement>;
             "sds-button-danger": LocalJSX.SdsButtonDanger & JSXBase.HTMLAttributes<HTMLSdsButtonDangerElement>;
             "sds-button-group": LocalJSX.SdsButtonGroup & JSXBase.HTMLAttributes<HTMLSdsButtonGroupElement>;
         }
