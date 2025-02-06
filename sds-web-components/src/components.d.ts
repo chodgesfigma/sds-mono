@@ -20,6 +20,32 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface SdsDescription {
+    }
+    interface SdsField {
+    }
+    interface SdsFieldError {
+    }
+    interface SdsFieldGroup {
+    }
+    interface SdsFieldset {
+        /**
+          * Controls if the fieldset is disabled or note
+         */
+        "disabled": boolean;
+    }
+    interface SdsForm {
+        /**
+          * Display the form items on a single line
+         */
+        "singleLine": boolean;
+    }
+    interface SdsKeyboard {
+    }
+    interface SdsLabel {
+    }
+    interface SdsLegend {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +54,71 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLSdsDescriptionElement extends Components.SdsDescription, HTMLStencilElement {
+    }
+    var HTMLSdsDescriptionElement: {
+        prototype: HTMLSdsDescriptionElement;
+        new (): HTMLSdsDescriptionElement;
+    };
+    interface HTMLSdsFieldElement extends Components.SdsField, HTMLStencilElement {
+    }
+    var HTMLSdsFieldElement: {
+        prototype: HTMLSdsFieldElement;
+        new (): HTMLSdsFieldElement;
+    };
+    interface HTMLSdsFieldErrorElement extends Components.SdsFieldError, HTMLStencilElement {
+    }
+    var HTMLSdsFieldErrorElement: {
+        prototype: HTMLSdsFieldErrorElement;
+        new (): HTMLSdsFieldErrorElement;
+    };
+    interface HTMLSdsFieldGroupElement extends Components.SdsFieldGroup, HTMLStencilElement {
+    }
+    var HTMLSdsFieldGroupElement: {
+        prototype: HTMLSdsFieldGroupElement;
+        new (): HTMLSdsFieldGroupElement;
+    };
+    interface HTMLSdsFieldsetElement extends Components.SdsFieldset, HTMLStencilElement {
+    }
+    var HTMLSdsFieldsetElement: {
+        prototype: HTMLSdsFieldsetElement;
+        new (): HTMLSdsFieldsetElement;
+    };
+    interface HTMLSdsFormElement extends Components.SdsForm, HTMLStencilElement {
+    }
+    var HTMLSdsFormElement: {
+        prototype: HTMLSdsFormElement;
+        new (): HTMLSdsFormElement;
+    };
+    interface HTMLSdsKeyboardElement extends Components.SdsKeyboard, HTMLStencilElement {
+    }
+    var HTMLSdsKeyboardElement: {
+        prototype: HTMLSdsKeyboardElement;
+        new (): HTMLSdsKeyboardElement;
+    };
+    interface HTMLSdsLabelElement extends Components.SdsLabel, HTMLStencilElement {
+    }
+    var HTMLSdsLabelElement: {
+        prototype: HTMLSdsLabelElement;
+        new (): HTMLSdsLabelElement;
+    };
+    interface HTMLSdsLegendElement extends Components.SdsLegend, HTMLStencilElement {
+    }
+    var HTMLSdsLegendElement: {
+        prototype: HTMLSdsLegendElement;
+        new (): HTMLSdsLegendElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "sds-description": HTMLSdsDescriptionElement;
+        "sds-field": HTMLSdsFieldElement;
+        "sds-field-error": HTMLSdsFieldErrorElement;
+        "sds-field-group": HTMLSdsFieldGroupElement;
+        "sds-fieldset": HTMLSdsFieldsetElement;
+        "sds-form": HTMLSdsFormElement;
+        "sds-keyboard": HTMLSdsKeyboardElement;
+        "sds-label": HTMLSdsLabelElement;
+        "sds-legend": HTMLSdsLegendElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +136,43 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface SdsDescription {
+    }
+    interface SdsField {
+    }
+    interface SdsFieldError {
+    }
+    interface SdsFieldGroup {
+    }
+    interface SdsFieldset {
+        /**
+          * Controls if the fieldset is disabled or note
+         */
+        "disabled"?: boolean;
+    }
+    interface SdsForm {
+        /**
+          * Display the form items on a single line
+         */
+        "singleLine"?: boolean;
+    }
+    interface SdsKeyboard {
+    }
+    interface SdsLabel {
+    }
+    interface SdsLegend {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "sds-description": SdsDescription;
+        "sds-field": SdsField;
+        "sds-field-error": SdsFieldError;
+        "sds-field-group": SdsFieldGroup;
+        "sds-fieldset": SdsFieldset;
+        "sds-form": SdsForm;
+        "sds-keyboard": SdsKeyboard;
+        "sds-label": SdsLabel;
+        "sds-legend": SdsLegend;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +180,15 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "sds-description": LocalJSX.SdsDescription & JSXBase.HTMLAttributes<HTMLSdsDescriptionElement>;
+            "sds-field": LocalJSX.SdsField & JSXBase.HTMLAttributes<HTMLSdsFieldElement>;
+            "sds-field-error": LocalJSX.SdsFieldError & JSXBase.HTMLAttributes<HTMLSdsFieldErrorElement>;
+            "sds-field-group": LocalJSX.SdsFieldGroup & JSXBase.HTMLAttributes<HTMLSdsFieldGroupElement>;
+            "sds-fieldset": LocalJSX.SdsFieldset & JSXBase.HTMLAttributes<HTMLSdsFieldsetElement>;
+            "sds-form": LocalJSX.SdsForm & JSXBase.HTMLAttributes<HTMLSdsFormElement>;
+            "sds-keyboard": LocalJSX.SdsKeyboard & JSXBase.HTMLAttributes<HTMLSdsKeyboardElement>;
+            "sds-label": LocalJSX.SdsLabel & JSXBase.HTMLAttributes<HTMLSdsLabelElement>;
+            "sds-legend": LocalJSX.SdsLegend & JSXBase.HTMLAttributes<HTMLSdsLegendElement>;
         }
     }
 }
