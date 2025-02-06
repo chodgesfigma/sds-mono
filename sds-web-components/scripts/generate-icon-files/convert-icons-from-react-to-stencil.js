@@ -17,11 +17,11 @@ const template = ({ name, svg }) => {
 import { SdsIcon, Size } from '../primitives/SdsIcon/SdsIcon';
 
 @Component({
-  tag: 'sds-icon-%name%',
+  tag: 'sds-icon-${convertToKebabCase(name)}',
   styleUrl: 'icon.scss',
   shadow: true,
 })
-export class SdsIcon%Name% {
+export class SdsIcon${name} {
   /**
    * The size the icon will be displayed at
    */
@@ -30,15 +30,12 @@ export class SdsIcon%Name% {
   render() {
     return (
       <SdsIcon size={this.size}>
-        %svg%
+        ${svg}
       </SdsIcon>
     );
   }
 }
-`
-  .replace('%name%', convertToKebabCase(name))
-  .replace('%Name%', name)
-  .replace('%svg%', svg.trim());
+`;
 }
 
 const convertFile = async (filename) => {

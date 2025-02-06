@@ -13,10 +13,9 @@ import { convertToKebabCase } from './utils.js';
 const iconFolderPath = 'src/ui/icons/';
 
 const iconTemplate = ({ iconTag, iconName }) => {
-  return `  <IconItem name="%name%">
-    <%tag%></%tag%>
-  </IconItem>
-`.replace('%name%', iconName).replaceAll('%tag%', iconTag);
+  return `  <IconItem name="${iconName}">
+    <${iconTag}></${iconTag}>
+  </IconItem>`;
 };
 
 const fileTemplate = ({ icons }) => {
@@ -25,12 +24,12 @@ const fileTemplate = ({ icons }) => {
 <Meta title="Iconography" />
  
 # Iconography
-> Generated via \`scripts/generate-iconography-story\`
+> Generated via \`scripts/generate-icon-files/generate-iconography-story\`
 
 <IconGallery>
-  %icons%
+${icons}
 </IconGallery>
-`.replace('%icons%', icons);
+`;
 };
 
 const generate = () => {
@@ -39,7 +38,7 @@ const generate = () => {
   const iconElements = files
     .map(filename => filename.replace('.tsx', ''))
     .map(fileName => iconTemplate({ iconName: fileName.replace('SdsIcon', ''), iconTag: convertToKebabCase(fileName)}))
-    .join('');
+    .join('\n');
   const output = fileTemplate({ icons: iconElements });
 
   const outputFilepath = path.resolve(iconFolderPath, `icons.mdx`);
