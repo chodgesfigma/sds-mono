@@ -1,6 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html';
 
 import { Components } from '../../../components';
+import { spread } from '../../../utils/storybook-helpers';
 
 type ComponentArgs = Components.SdsFieldset;
 
@@ -10,8 +11,8 @@ const meta = {
   title: 'SDS Primitives/Inputs/Fieldset',
   parameters: { layout: 'centered' },
   component: 'sds-fieldset',
-  render: args => `
-    <sds-fieldset ${args.disabled ? 'disabled' : ''}>
+  render: ({ disabled }) => `
+    <sds-fieldset ${spread({ disabled })}>
       <sds-legend>Shipping details</sds-legend>
       <sds-text>Without this your odds of getting your order are low.</sds-text>
       <sds-field-group>
