@@ -1,0 +1,22 @@
+import { Component, Prop, h } from '@stencil/core';
+import { SdsIcon, Size } from '../primitives/SdsIcon/SdsIcon';
+
+@Component({
+  tag: 'sds-icon-zoom-out',
+  styleUrl: 'icon.scss',
+  shadow: true,
+})
+export class SdsIconZoomOut {
+  /**
+   * The size the icon will be displayed at
+   */
+  @Prop() size?: Size = '16';
+
+  render() {
+    return (
+      <SdsIcon size={this.size}>
+        <path d="M14 14L11.1 11.1M5.33333 7.33333H9.33333M12.6667 7.33333C12.6667 10.2789 10.2789 12.6667 7.33333 12.6667C4.38781 12.6667 2 10.2789 2 7.33333C2 4.38781 4.38781 2 7.33333 2C10.2789 2 12.6667 4.38781 12.6667 7.33333Z" stroke="var(--svg-stroke-color)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+      </SdsIcon>
+    );
+  }
+}
