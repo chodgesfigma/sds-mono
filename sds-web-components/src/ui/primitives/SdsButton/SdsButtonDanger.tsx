@@ -1,6 +1,5 @@
 import { Component, Prop, h } from '@stencil/core';
 import { Type, Size, Variant, SdsButtonBase } from './SdsButtonBase';
-
 export type DangerVariant = Exclude<Variant, 'primary' | 'subtle' | 'neutral'>;
 
 @Component({
@@ -20,7 +19,7 @@ export class SdsButtonDanger {
   /**
    * The button danger variant
    */
-  @Prop() variant?: DangerVariant;
+  @Prop() variant?: DangerVariant = 'danger-primary';
 
   render() {
     return (

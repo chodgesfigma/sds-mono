@@ -23,10 +23,14 @@ const meta: Meta<ComponentArgs> = {
   parameters: {
     layout: 'centered',
     actions: {
-      handles: ['onclick', '.button'],
+      handles: ['click'],
     },
   },
-  render: args => `<sds-button ${spread(args)} >Hello world</sds-button>`,
+  render: args => `
+  <sds-button ${spread(args)}>
+    <sds-icon-arrow-left></sds-icon-arrow-left>Hello world!<sds-icon-activity></sds-icon-activity>
+  </sds-button>
+`,
   decorators: [withActions],
   component: 'sds-button',
 } satisfies Meta<ComponentArgs>;
@@ -56,11 +60,18 @@ export const IconButton: StoryObj<ComponentArgs> = {
   args: {
     type: 'submit',
   },
-  render: args => `<sds-button ${spread(args)} >TODO: implement svg</sds-button>`,
+  parameters: {
+    backgrounds: {
+      default: 'dark',
+    },
+  },
+  render: args => `<sds-button ${spread(args)} ><sds-icon-activity></sds-icon-activity></sds-button>`,
 };
 
 export const DestructiveIconButton: StoryObj<ComponentArgs> = {
   args: {
     type: 'submit',
+    variant: 'danger-primary',
   },
+  render: args => `<sds-button-danger ${spread(args)} ><sds-icon-activity></sds-icon-activity></sds-button-danger>`,
 };
