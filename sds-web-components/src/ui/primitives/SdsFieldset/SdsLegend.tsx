@@ -1,5 +1,6 @@
 import { FunctionalComponent, h } from '@stencil/core';
 import { JSXBase } from '@stencil/core/internal';
+import clsx from 'clsx';
 
 type SdsLegendProps = JSXBase.HTMLAttributes<HTMLLegendElement>;
 
@@ -8,8 +9,9 @@ type SdsLegendProps = JSXBase.HTMLAttributes<HTMLLegendElement>;
  * @return `legend` element
  */
 export const SdsLegend: FunctionalComponent<SdsLegendProps> = (props, children) => {
+  const className = clsx('legend', props.class);
   return (
-    <legend class="legend" {...props}>
+    <legend {...props} class={className}>
       {children}
     </legend>
   );

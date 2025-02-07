@@ -12,9 +12,9 @@ interface SdsFormProps extends JSXBase.FormHTMLAttributes<HTMLFormElement> {
  * @return `form` element
  */
 export const SdsForm: FunctionalComponent<SdsFormProps> = ({ singleLine, ...props }, children) => {
-  const classNames = clsx('form', singleLine && 'form-single-line');
+  const className = clsx('form', singleLine && 'form-single-line', props.class);
   return (
-    <form class={classNames} {...props}>
+    <form {...props} class={className}>
       {children}
     </form>
   );
