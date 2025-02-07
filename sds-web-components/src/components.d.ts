@@ -6,7 +6,9 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Size } from "./ui/primitives/SdsIcon/SdsIcon";
+import { JSXBase } from "@stencil/core/internal";
 export { Size } from "./ui/primitives/SdsIcon/SdsIcon";
+export { JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MyComponent {
         /**
@@ -1769,6 +1771,43 @@ export namespace Components {
           * The size the icon will be displayed at
          */
         "size"?: Size;
+    }
+    /**
+     * Input Field
+     */
+    interface SdsInputField {
+        /**
+          * Sets the default value for the input
+         */
+        "defaultValue": string;
+        /**
+          * A secondary label below the input
+         */
+        "description": string;
+        /**
+          * Disables the input
+         */
+        "disabled": boolean;
+        /**
+          * An error message that appears below the input
+         */
+        "error": string;
+        /**
+          * The input label
+         */
+        "label": string;
+        /**
+          * Placeholder text for the input
+         */
+        "placeholder": string;
+        /**
+          * Marks the input as required
+         */
+        "required": boolean;
+        /**
+          * The type of input
+         */
+        "type": Exclude<JSXBase.InputHTMLAttributes<HTMLInputElement>['type'], undefined>;
     }
     /**
      * Fieldset Keyboard
@@ -3537,6 +3576,15 @@ declare global {
         new (): HTMLSdsIconZoomOutElement;
     };
     /**
+     * Input Field
+     */
+    interface HTMLSdsInputFieldElement extends Components.SdsInputField, HTMLStencilElement {
+    }
+    var HTMLSdsInputFieldElement: {
+        prototype: HTMLSdsInputFieldElement;
+        new (): HTMLSdsInputFieldElement;
+    };
+    /**
      * Fieldset Keyboard
      * @return `kbd` elements
      */
@@ -3838,6 +3886,7 @@ declare global {
         "sds-icon-zap-off": HTMLSdsIconZapOffElement;
         "sds-icon-zoom-in": HTMLSdsIconZoomInElement;
         "sds-icon-zoom-out": HTMLSdsIconZoomOutElement;
+        "sds-input-field": HTMLSdsInputFieldElement;
         "sds-keyboard": HTMLSdsKeyboardElement;
     }
 }
@@ -5605,6 +5654,43 @@ declare namespace LocalJSX {
         "size"?: Size;
     }
     /**
+     * Input Field
+     */
+    interface SdsInputField {
+        /**
+          * Sets the default value for the input
+         */
+        "defaultValue"?: string;
+        /**
+          * A secondary label below the input
+         */
+        "description"?: string;
+        /**
+          * Disables the input
+         */
+        "disabled"?: boolean;
+        /**
+          * An error message that appears below the input
+         */
+        "error"?: string;
+        /**
+          * The input label
+         */
+        "label"?: string;
+        /**
+          * Placeholder text for the input
+         */
+        "placeholder"?: string;
+        /**
+          * Marks the input as required
+         */
+        "required"?: boolean;
+        /**
+          * The type of input
+         */
+        "type"?: Exclude<JSXBase.InputHTMLAttributes<HTMLInputElement>['type'], undefined>;
+    }
+    /**
      * Fieldset Keyboard
      * @return `kbd` elements
      */
@@ -5902,6 +5988,7 @@ declare namespace LocalJSX {
         "sds-icon-zap-off": SdsIconZapOff;
         "sds-icon-zoom-in": SdsIconZoomIn;
         "sds-icon-zoom-out": SdsIconZoomOut;
+        "sds-input-field": SdsInputField;
         "sds-keyboard": SdsKeyboard;
     }
 }
@@ -6212,6 +6299,10 @@ declare module "@stencil/core" {
             "sds-icon-zap-off": LocalJSX.SdsIconZapOff & JSXBase.HTMLAttributes<HTMLSdsIconZapOffElement>;
             "sds-icon-zoom-in": LocalJSX.SdsIconZoomIn & JSXBase.HTMLAttributes<HTMLSdsIconZoomInElement>;
             "sds-icon-zoom-out": LocalJSX.SdsIconZoomOut & JSXBase.HTMLAttributes<HTMLSdsIconZoomOutElement>;
+            /**
+             * Input Field
+             */
+            "sds-input-field": LocalJSX.SdsInputField & JSXBase.HTMLAttributes<HTMLSdsInputFieldElement>;
             /**
              * Fieldset Keyboard
              * @return `kbd` elements

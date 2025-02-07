@@ -15,6 +15,16 @@ import { SdsFieldError } from '../SdsFieldset/SdsFieldError';
 })
 export class SdsInputField {
   /**
+   * A reference to the input field
+   */
+  textInput!: HTMLInputElement;
+
+  /**
+   * The value that the input field has
+   */
+  @State() inputValue = '';
+
+  /**
    * Sets the default value for the input
    */
   @Prop() defaultValue = '';
@@ -37,7 +47,7 @@ export class SdsInputField {
   /**
    * An error message that appears below the input
    */
-  @Prop() error? = '';
+  @Prop() error = '';
 
   /**
    * Disables the input
@@ -52,9 +62,18 @@ export class SdsInputField {
   /**
    * The type of input
    */
-  @Prop({ reflect: true }) type: JSXBase.InputHTMLAttributes<HTMLInputElement>['type'] = '';
+  @Prop({ reflect: true }) type: Exclude<JSXBase.InputHTMLAttributes<HTMLInputElement>['type'], undefined> = '';
 
-  @State() inputValue = this.defaultValue ?? '';
+  componentDidLoad() {
+    this.inputValue = this.defaultValue ?? '';
+  }
+
+  /**
+   * Update the internal component value when the input field is changed
+   */
+  handleInputChange = () => {
+    this.inputValue = this.textInput.value;
+  };
 
   render() {
     return (
@@ -73,6 +92,13 @@ export class SdsInputField {
           aria-describedby={`description${this.error ? ' error' : ''}`}
           aria-labelledby="label"
           value={this.inputValue}
+          defaultValue={this.defaultValue}
+          onChange={this.handleInputChange}
+          onInput={this.handleInputChange}
+          onKeyUp={this.handleInputChange}
+          ref={el => {
+            this.textInput = el as HTMLInputElement;
+          }}
         />
         {this.description && <SdsDescription id="description">{this.description}</SdsDescription>}
         {this.error && <SdsFieldError id="error">{this.error}</SdsFieldError>}
