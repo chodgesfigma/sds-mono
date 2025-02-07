@@ -1,4 +1,5 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
+import clsx from 'clsx';
 
 @Component({
   tag: 'sds-field',
@@ -6,9 +7,11 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class SdsField {
+  @Prop() disabled = false;
+
   render() {
     return (
-      <div class="field">
+      <div class={clsx('field', this.disabled && 'field--disabled')}>
         <slot />
       </div>
     );

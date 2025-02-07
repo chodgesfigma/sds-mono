@@ -1,18 +1,12 @@
-import { Component, h } from '@stencil/core';
+import { FunctionalComponent, h } from '@stencil/core';
+import { JSXBase } from '@stencil/core/internal';
 
-// TODO: investigate RAC
+type SdsLabelProps = JSXBase.LabelHTMLAttributes<HTMLLabelElement>;
 
-@Component({
-  tag: 'sds-label',
-  styleUrl: 'SdsFieldset.scss',
-  shadow: true,
-})
-export class SdsLabel {
-  render() {
-    return (
-      <div class="label" slot="label">
-        <slot />
-      </div>
-    );
-  }
-}
+export const SdsLabel: FunctionalComponent<SdsLabelProps> = (props, children) => {
+  return (
+    <label class="label" {...props}>
+      {children}
+    </label>
+  );
+};

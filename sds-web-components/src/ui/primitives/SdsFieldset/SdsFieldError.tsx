@@ -1,16 +1,12 @@
-import { Component, h } from '@stencil/core';
+import { FunctionalComponent, h } from '@stencil/core';
+import { JSXBase } from '@stencil/core/internal';
 
-@Component({
-  tag: 'sds-field-error',
-  styleUrl: 'SdsFieldset.scss',
-  shadow: true,
-})
-export class SdsFieldError {
-  render() {
-    return (
-      <div class="error-message">
-        <slot />
-      </div>
-    );
-  }
-}
+type SdsFieldErrorProps = JSXBase.HTMLAttributes<HTMLSpanElement>;
+
+export const SdsFieldError: FunctionalComponent<SdsFieldErrorProps> = (props, children) => {
+  return (
+    <span class="error-message" {...props}>
+      {children}
+    </span>
+  );
+};

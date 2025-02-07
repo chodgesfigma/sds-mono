@@ -1,23 +1,16 @@
-import { Component, h, Prop } from '@stencil/core';
+import { FunctionalComponent, h } from '@stencil/core';
+import { JSXBase } from '@stencil/core/internal';
 import clsx from 'clsx';
 
-@Component({
-  tag: 'sds-form',
-  styleUrl: 'SdsFieldset.scss',
-  shadow: true,
-})
-export class SdsForm {
-  /**
-   * Display the form items on a single line
-   */
-  @Prop() singleLine: boolean = false;
-
-  render() {
-    const classNames = clsx('form', this.singleLine && 'form-single-line');
-    return (
-      <div class={classNames}>
-        <slot />
-      </div>
-    );
-  }
+interface SdsFormProps extends JSXBase.FormHTMLAttributes<HTMLFormElement> {
+  singleLine?: boolean;
 }
+
+export const SdsForm: FunctionalComponent<SdsFormProps> = ({ singleLine, ...props }, children) => {
+  const classNames = clsx('form', singleLine && 'form-single-line');
+  return (
+    <form class={classNames} {...props}>
+      {children}
+    </form>
+  );
+};
