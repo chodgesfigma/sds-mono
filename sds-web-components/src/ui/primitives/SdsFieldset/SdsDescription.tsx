@@ -1,16 +1,18 @@
-import { Component, h } from '@stencil/core';
+import { FunctionalComponent, h } from '@stencil/core';
+import { JSXBase } from '@stencil/core/internal';
 
-@Component({
-  tag: 'sds-description',
-  styleUrl: 'SdsFieldset.scss',
-  shadow: true,
-})
-export class SdsDescription {
-  render() {
-    return (
-      <div class="description">
-        <slot />
-      </div>
-    );
-  }
+interface SdsDescriptionProps extends JSXBase.HTMLAttributes<HTMLElement> {
+  elementType?: string;
 }
+
+/**
+ * Fieldset Description
+ * @return styled `div` element
+ */
+export const SdsDescription: FunctionalComponent<SdsDescriptionProps> = (props, children) => {
+  return (
+    <span class="description" {...props}>
+      {children}
+    </span>
+  );
+};

@@ -1,3 +1,5 @@
+@import 'reset';
+
 .fieldset {
   border: none;
   display: flex;
@@ -34,32 +36,30 @@
   width: 100%;
 
   :disabled > &,
-  &:disabled {
+  &--disabled {
     --field-label-color: var(--sds-color-text-disabled-default);
     --field-description-color: var(--sds-color-text-disabled-default);
   }
 
-  .select,
-  .input,
-  .text-area,
-  .slider {
+  // TODO: use this css var instead of the :slotted selector
+  --input-grid-area: field-main;
+  ::slotted(.select),
+  ::slotted(.text-area),
+  ::slotted(.slider) {
     grid-area: field-main;
   }
 
-  .label {
-    grid-area: field-label;
-    margin-bottom: var(--field-row-gap);
-  }
+  // slotted label
+  --input-label-grid-area: field-label;
+  --input-label-margin-bottom: var(--field-row-gap);
 
-  .description {
-    grid-area: field-description;
-    margin-top: var(--field-row-gap);
-  }
+  // slotted description
+  --input-description-area: field-description;
+  --input-description-margin-top: var(--field-row-gap);
 
-  .error-message {
-    grid-area: field-error;
-    margin-top: var(--field-row-gap);
-  }
+  // slotted error-message
+  --input-error-message-grid-area: field-error;
+  --input-error-message-margin-top: var(--field-row-gap);
 }
 
 .form.form-single-line {
@@ -76,14 +76,23 @@
 .label {
   color: var(--field-label-color);
   font: var(--sds-font-body-base);
+
+  grid-area: var(--input-label-grid-area);
+  margin-bottom: var(--input-label-margin-bottom);
 }
 
 .description {
   color: var(--field-description-color);
   font: var(--sds-font-body-base);
+
+  grid-area: var(--input-description-area);
+  margin-top: var(--input-description-margin-top);
 }
 
 .error-message {
   color: var(--sds-color-text-danger-default);
   font: var(--sds-font-body-base);
+
+  grid-area: var(--input-error-message-grid-area);
+  margin-top: var(--input-error-message-margin-top);
 }

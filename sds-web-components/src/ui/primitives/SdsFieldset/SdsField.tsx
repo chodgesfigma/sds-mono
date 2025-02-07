@@ -1,14 +1,24 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
+import clsx from 'clsx';
 
+/**
+ * Fieldset Field
+ * @return styled `div` element
+ */
 @Component({
   tag: 'sds-field',
   styleUrl: 'SdsFieldset.scss',
   shadow: true,
 })
 export class SdsField {
+  /**
+   * Controls if the field is disabled or not
+   */
+  @Prop() disabled = false;
+
   render() {
     return (
-      <div class="field">
+      <div class={clsx('field', this.disabled && 'field--disabled')}>
         <slot />
       </div>
     );

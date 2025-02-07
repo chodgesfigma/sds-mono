@@ -1,20 +1,31 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Element, State, VNode } from '@stencil/core';
 
+/**
+ * Fieldset Keyboard
+ * @return `kbd` elements
+ */
 @Component({
   tag: 'sds-keyboard',
   styleUrl: 'SdsFieldset.scss',
   shadow: true,
 })
 export class SdsKeyboard {
-  render() {
-    // const items = typeof children === "string"
-    //   ? children.split("").map((k) => <kbd key={k}>{k}</kbd>)
-    //   : children;
+  @Element() host!: HTMLElement;
+  /**
+   * The parsed innerHTML, that's been split into further <kbd> elements
+   */
+  @State() childrenData?: VNode[];
 
-    return (
-      <div class="keyboard">
-        <slot />
-      </div>
-    );
+  componentDidLoad() {
+    const slotted = this.host.innerHTML;
+    const splitContent = slotted.split('');
+    if (splitContent.length > 0) {
+      this.childrenData = [];
+      this.childrenData = splitContent.map(char => <kbd key={char}>{char}</kbd>);
+    }
+  }
+
+  render() {
+    return <kbd class="keyboard">{this.childrenData ? this.childrenData : <slot />}</kbd>;
   }
 }

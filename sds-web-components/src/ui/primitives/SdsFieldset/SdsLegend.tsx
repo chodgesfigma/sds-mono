@@ -1,16 +1,16 @@
-import { Component, h } from '@stencil/core';
+import { FunctionalComponent, h } from '@stencil/core';
+import { JSXBase } from '@stencil/core/internal';
 
-@Component({
-  tag: 'sds-legend',
-  styleUrl: 'SdsFieldset.scss',
-  shadow: true,
-})
-export class SdsLegend {
-  render() {
-    return (
-      <legend class="legend">
-        <slot />
-      </legend>
-    );
-  }
-}
+type SdsLegendProps = JSXBase.HTMLAttributes<HTMLLegendElement>;
+
+/**
+ * Fieldset Legend
+ * @return `legend` element
+ */
+export const SdsLegend: FunctionalComponent<SdsLegendProps> = (props, children) => {
+  return (
+    <legend class="legend" {...props}>
+      {children}
+    </legend>
+  );
+};

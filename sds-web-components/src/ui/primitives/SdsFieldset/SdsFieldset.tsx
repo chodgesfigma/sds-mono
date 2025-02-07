@@ -1,6 +1,10 @@
 import { Component, h, Prop } from '@stencil/core';
 import clsx from 'clsx';
 
+/**
+ * Fieldset
+ * @return `fieldset` element
+ */
 @Component({
   tag: 'sds-fieldset',
   styleUrl: 'SdsFieldset.scss',
