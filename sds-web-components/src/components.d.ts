@@ -5,6 +5,8 @@
  * It contains typing information for all components that exist in this project.
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
+import { AspectRatio, Size, Variant } from "./ui/primitives/SdsImage/SdsImage";
+export { AspectRatio, Size, Variant } from "./ui/primitives/SdsImage/SdsImage";
 export namespace Components {
     interface MyComponent {
         /**
@@ -20,6 +22,66 @@ export namespace Components {
          */
         "middle": string;
     }
+    interface SdsImage {
+        /**
+          * Alt description
+         */
+        "alt": string;
+        /**
+          * Aspect Ratio
+         */
+        "aspectRatio"?: AspectRatio;
+        /**
+          * Crossorigin html attribute
+         */
+        "crossorigin"?: crossorigin;
+        /**
+          * Decoding html attribute
+         */
+        "decoding"?: 'async' | 'auto' | 'sync' | undefined;
+        /**
+          * Height html attribute
+         */
+        "height"?: number | string | undefined;
+        /**
+          * Loading html attribute
+         */
+        "loading"?: 'eager' | 'lazy' | undefined;
+        /**
+          * Size
+         */
+        "size"?: Size;
+        /**
+          * Sizes html attribute
+         */
+        "sizes"?: string | undefined;
+        /**
+          * The src url
+         */
+        "src"?: string | undefined;
+        /**
+          * SrcSet url html attribute
+         */
+        "srcset"?: string | undefined;
+        /**
+          * Usemap html attribute
+         */
+        "usemap"?: string | undefined;
+        /**
+          * The variant
+         */
+        "variant"?: Variant;
+        /**
+          * Width html attribute
+         */
+        "width"?: number | string | undefined;
+    }
+    interface SdsPicture {
+        /**
+          * Custom class for styling
+         */
+        "className"?: string;
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -28,8 +90,22 @@ declare global {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
     };
+    interface HTMLSdsImageElement extends Components.SdsImage, HTMLStencilElement {
+    }
+    var HTMLSdsImageElement: {
+        prototype: HTMLSdsImageElement;
+        new (): HTMLSdsImageElement;
+    };
+    interface HTMLSdsPictureElement extends Components.SdsPicture, HTMLStencilElement {
+    }
+    var HTMLSdsPictureElement: {
+        prototype: HTMLSdsPictureElement;
+        new (): HTMLSdsPictureElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "sds-image": HTMLSdsImageElement;
+        "sds-picture": HTMLSdsPictureElement;
     }
 }
 declare namespace LocalJSX {
@@ -47,8 +123,70 @@ declare namespace LocalJSX {
          */
         "middle"?: string;
     }
+    interface SdsImage {
+        /**
+          * Alt description
+         */
+        "alt"?: string;
+        /**
+          * Aspect Ratio
+         */
+        "aspectRatio"?: AspectRatio;
+        /**
+          * Crossorigin html attribute
+         */
+        "crossorigin"?: crossorigin;
+        /**
+          * Decoding html attribute
+         */
+        "decoding"?: 'async' | 'auto' | 'sync' | undefined;
+        /**
+          * Height html attribute
+         */
+        "height"?: number | string | undefined;
+        /**
+          * Loading html attribute
+         */
+        "loading"?: 'eager' | 'lazy' | undefined;
+        /**
+          * Size
+         */
+        "size"?: Size;
+        /**
+          * Sizes html attribute
+         */
+        "sizes"?: string | undefined;
+        /**
+          * The src url
+         */
+        "src"?: string | undefined;
+        /**
+          * SrcSet url html attribute
+         */
+        "srcset"?: string | undefined;
+        /**
+          * Usemap html attribute
+         */
+        "usemap"?: string | undefined;
+        /**
+          * The variant
+         */
+        "variant"?: Variant;
+        /**
+          * Width html attribute
+         */
+        "width"?: number | string | undefined;
+    }
+    interface SdsPicture {
+        /**
+          * Custom class for styling
+         */
+        "className"?: string;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "sds-image": SdsImage;
+        "sds-picture": SdsPicture;
     }
 }
 export { LocalJSX as JSX };
@@ -56,6 +194,8 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
+            "sds-image": LocalJSX.SdsImage & JSXBase.HTMLAttributes<HTMLSdsImageElement>;
+            "sds-picture": LocalJSX.SdsPicture & JSXBase.HTMLAttributes<HTMLSdsPictureElement>;
         }
     }
 }

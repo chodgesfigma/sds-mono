@@ -4,13 +4,14 @@ import clsx from 'clsx';
 export type AspectRatio = '1-1' | '16-9' | '4-3' | 'fill' | 'natural';
 export type Size = 'small' | 'medium' | 'large' | 'fill' | 'natural';
 export type Variant = 'default' | 'rounded';
+type crossorigin = 'anonymous' | 'use-credentials' | '' | undefined;
 
 @Component({
   tag: 'sds-image',
   styleUrl: 'SdsImage.scss',
   shadow: true,
 })
-export class SdsButton {
+export class SdsImage {
   /**
    * Alt description
    */
@@ -22,19 +23,64 @@ export class SdsButton {
   @Prop() aspectRatio?: AspectRatio = 'natural';
 
   /**
-   * Aspect Ratio
+   * Size
    */
   @Prop() size?: Size = 'natural';
 
   /**
-   * The button default variant
+   * The variant
    */
   @Prop() variant?: Variant = 'rounded';
+
+  /**
+   * The src url
+   */
+  @Prop() src?: string | undefined;
 
   /**
    * Tracks whether the image has loaded or not
    */
   @State() loaded: boolean = false;
+
+  /**
+   * Usemap html attribute
+   */
+  @Prop() usemap?: string | undefined;
+
+  /**
+   * SrcSet url html attribute
+   */
+  @Prop() srcset?: string | undefined;
+
+  /**
+   * Width html attribute
+   */
+  @Prop() width?: number | string | undefined;
+
+  /**
+   * Height html attribute
+   */
+  @Prop() height?: number | string | undefined;
+
+  /**
+   * Sizes html attribute
+   */
+  @Prop() sizes?: string | undefined;
+
+  /**
+   * Loading html attribute
+   */
+  @Prop() loading?: 'eager' | 'lazy' | undefined;
+
+  /**
+   * Decoding html attribute
+   */
+  @Prop() decoding?: 'async' | 'auto' | 'sync' | undefined;
+
+  /**
+   * Crossorigin html attribute
+   */
+  @Prop() crossorigin?: crossorigin;
 
   private handleLoad = () => {
     this.loaded = true;
@@ -44,8 +90,23 @@ export class SdsButton {
     const classNames = clsx('image', `image-aspect-ratio-${this.aspectRatio}`, `image-size-${this.size}`, `image-variant-${this.variant}`, { 'image-loading': !this.loaded });
 
     return (
-      // need to handle loading state still
-      <img class={classNames} alt={this.alt} onLoad={this.handleLoad} />
+      <>
+        {!this.loaded && <span class={clsx('image-placeholder', classNames)} />}
+        <img
+          class={classNames}
+          src={this.src}
+          srcset={this.srcset}
+          sizes={this.sizes}
+          width={this.width !== undefined ? String(this.width) : undefined}
+          height={this.height !== undefined ? String(this.height) : undefined}
+          alt={this.alt}
+          usemap={this.usemap}
+          loading={this.loading}
+          decoding={this.decoding}
+          crossorigin={this.crossorigin}
+          onLoad={this.handleLoad}
+        />
+      </>
     );
   }
 }
