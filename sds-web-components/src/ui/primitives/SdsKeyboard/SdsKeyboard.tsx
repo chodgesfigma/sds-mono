@@ -6,7 +6,6 @@ import { Component, h, Element, State, VNode } from '@stencil/core';
  */
 @Component({
   tag: 'sds-keyboard',
-  styleUrl: 'SdsFieldset.scss',
   shadow: true,
 })
 export class SdsKeyboard {

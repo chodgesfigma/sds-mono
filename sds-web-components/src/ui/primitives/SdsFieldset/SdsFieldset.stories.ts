@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/html';
 
 import { Components } from '../../../components';
-import { spread } from '../../../utils/storybook-helpers';
+import { hideArgs, spread } from '../../../utils/storybook-helpers';
 
 type ComponentArgs = Components.SdsFieldset;
 
@@ -10,18 +10,23 @@ type ComponentArgs = Components.SdsFieldset;
 const meta = {
   title: 'SDS Primitives/Inputs/Fieldset',
   parameters: { layout: 'centered' },
+  argTypes: {
+    ...hideArgs<ComponentArgs>(['form', 'name']),
+  },
+  tags: ['autodocs'],
   component: 'sds-fieldset',
   render: ({ disabled }) => `
     <sds-fieldset ${spread({ disabled })}>
       <sds-legend>Shipping details</sds-legend>
       <sds-text>Without this your odds of getting your order are low.</sds-text>
       <sds-field-group>
-        <InputField
-          isRequired
+        <sds-input-field
+          required
           name="address"
-          defaultValue="123 Example Ln."
+          default-value="123 Example Ln."
           label="Street address"
           description="Hello there"
+          ${disabled ? 'disabled' : ''}
         />
         <SelectField
           isRequired

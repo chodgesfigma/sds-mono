@@ -49,6 +49,14 @@ export namespace Components {
           * Controls if the fieldset is disabled or note
          */
         "disabled": boolean;
+        /**
+          * The id attribute of a `<form>` element you want this `<fieldset>` to be part of
+         */
+        "form": string;
+        /**
+          * The name associated with the group.
+         */
+        "name": string;
     }
     interface SdsIconActivity {
         /**
@@ -3930,6 +3938,14 @@ declare namespace LocalJSX {
           * Controls if the fieldset is disabled or note
          */
         "disabled"?: boolean;
+        /**
+          * The id attribute of a `<form>` element you want this `<fieldset>` to be part of
+         */
+        "form"?: string;
+        /**
+          * The name associated with the group.
+         */
+        "name"?: string;
     }
     interface SdsIconActivity {
         /**
