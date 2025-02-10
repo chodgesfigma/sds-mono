@@ -13,9 +13,14 @@ type crossorigin = 'anonymous' | 'use-credentials' | '' | undefined;
 })
 export class SdsImage {
   /**
+   * Tracks whether the image has loaded or not
+   */
+  @State() loaded: boolean = false;
+
+  /**
    * Alt description
    */
-  @Prop() alt: string = '';
+  @Prop() alt!: string;
 
   /**
    * Aspect Ratio
@@ -35,12 +40,7 @@ export class SdsImage {
   /**
    * The src url
    */
-  @Prop() src?: string | undefined;
-
-  /**
-   * Tracks whether the image has loaded or not
-   */
-  @State() loaded: boolean = false;
+  @Prop() src?: string;
 
   /**
    * Usemap html attribute
