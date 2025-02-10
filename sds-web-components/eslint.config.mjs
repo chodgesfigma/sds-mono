@@ -19,7 +19,8 @@ export default [
       "no-unused-vars": "off",
       "@typescript-eslint/no-unused-vars": ["error", {
         // solution for unused `h` import: https://github.com/stencil-community/stencil-eslint/issues/9
-        "varsIgnorePattern": "^h$"
+        "varsIgnorePattern": "^h$|^_",
+        "argsIgnorePattern": "^_",
       }]
     }
   },
