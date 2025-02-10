@@ -1,5 +1,3 @@
-import '@spectrum-web-components/tags/sp-tags.js';
-import '@spectrum-web-components/tags/sp-tag.js';
 import { Component, Element, Event, EventEmitter, h, Listen, Prop, State } from '@stencil/core';
 import clsx from 'clsx';
 import { TagToggle } from './sds-toggle-tag';

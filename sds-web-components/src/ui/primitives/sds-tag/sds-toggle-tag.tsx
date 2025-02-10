@@ -1,4 +1,3 @@
-import '@spectrum-web-components/tags/sp-tag.js';
 import { Component, h, Prop, Event, EventEmitter, Element } from '@stencil/core';
 import clsx from 'clsx';
 
