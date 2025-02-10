@@ -1,8 +1,8 @@
 import { FunctionalComponent, h } from '@stencil/core';
-import { JSXBase } from '@stencil/core/internal';
+import { JSXBase, VNode } from '@stencil/core/internal';
 
 type AnchorOrButtonSharedProps = {
-  children?: React.ReactNode;
+  children?: VNode[];
   href?: string;
 };
 
