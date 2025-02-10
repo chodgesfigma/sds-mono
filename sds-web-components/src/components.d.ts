@@ -6,7 +6,13 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Size } from "./ui/primitives/SdsIcon/SdsIcon";
+import { Scheme, Variant } from "./ui/primitives/sds-tag/types";
+import { TagToggle } from "./ui/primitives/sds-tag/sds-toggle-tag";
+import { SelectionMode } from "./ui/primitives/sds-tag/sds-toggle-tag-list";
 export { Size } from "./ui/primitives/SdsIcon/SdsIcon";
+export { Scheme, Variant } from "./ui/primitives/sds-tag/types";
+export { TagToggle } from "./ui/primitives/sds-tag/sds-toggle-tag";
+export { SelectionMode } from "./ui/primitives/sds-tag/sds-toggle-tag-list";
 export namespace Components {
     interface MyComponent {
         /**
@@ -1744,6 +1750,66 @@ export namespace Components {
          */
         "size"?: Size;
     }
+    interface SdsTag {
+        /**
+          * Show or hide the x button
+         */
+        "removable": boolean;
+        /**
+          * Color scheme for the tag
+         */
+        "scheme": Scheme;
+        /**
+          * Sets which set of colors to use in the scheme
+         */
+        "variant": Variant;
+    }
+    interface SdsTagButton {
+        /**
+          * Color scheme for the tag
+         */
+        "scheme": Scheme;
+        /**
+          * Sets which set of colors to use in the scheme
+         */
+        "variant": Variant;
+    }
+    /**
+     * Toggle Tag
+     */
+    interface SdsToggleTag {
+        /**
+          * Allows the toggle to handle it's own state, without the use of a `<sds-toggle-tag-list>`
+         */
+        "allowSelfToggle": boolean;
+        /**
+          * The selected state of the tag
+         */
+        "selected": boolean;
+    }
+    /**
+     * Toggle Tag Group
+     */
+    interface SdsToggleTagGroup {
+    }
+    /**
+     * Toggle Tag List
+     */
+    interface SdsToggleTagList {
+        "selectionMode": SelectionMode;
+    }
+}
+export interface SdsTagCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLSdsTagElement;
+}
+export interface SdsToggleTagCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLSdsToggleTagElement;
+}
+export interface SdsToggleTagListCustomEvent<T> extends CustomEvent<T> {
+    detail: T;
+    target: HTMLSdsToggleTagListElement;
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -3474,6 +3540,78 @@ declare global {
         prototype: HTMLSdsIconZoomOutElement;
         new (): HTMLSdsIconZoomOutElement;
     };
+    interface HTMLSdsTagElementEventMap {
+        "removed": null;
+    }
+    interface HTMLSdsTagElement extends Components.SdsTag, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLSdsTagElementEventMap>(type: K, listener: (this: HTMLSdsTagElement, ev: SdsTagCustomEvent<HTMLSdsTagElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLSdsTagElementEventMap>(type: K, listener: (this: HTMLSdsTagElement, ev: SdsTagCustomEvent<HTMLSdsTagElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLSdsTagElement: {
+        prototype: HTMLSdsTagElement;
+        new (): HTMLSdsTagElement;
+    };
+    interface HTMLSdsTagButtonElement extends Components.SdsTagButton, HTMLStencilElement {
+    }
+    var HTMLSdsTagButtonElement: {
+        prototype: HTMLSdsTagButtonElement;
+        new (): HTMLSdsTagButtonElement;
+    };
+    interface HTMLSdsToggleTagElementEventMap {
+        "toggle": TagToggle;
+    }
+    /**
+     * Toggle Tag
+     */
+    interface HTMLSdsToggleTagElement extends Components.SdsToggleTag, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLSdsToggleTagElementEventMap>(type: K, listener: (this: HTMLSdsToggleTagElement, ev: SdsToggleTagCustomEvent<HTMLSdsToggleTagElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLSdsToggleTagElementEventMap>(type: K, listener: (this: HTMLSdsToggleTagElement, ev: SdsToggleTagCustomEvent<HTMLSdsToggleTagElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLSdsToggleTagElement: {
+        prototype: HTMLSdsToggleTagElement;
+        new (): HTMLSdsToggleTagElement;
+    };
+    /**
+     * Toggle Tag Group
+     */
+    interface HTMLSdsToggleTagGroupElement extends Components.SdsToggleTagGroup, HTMLStencilElement {
+    }
+    var HTMLSdsToggleTagGroupElement: {
+        prototype: HTMLSdsToggleTagGroupElement;
+        new (): HTMLSdsToggleTagGroupElement;
+    };
+    interface HTMLSdsToggleTagListElementEventMap {
+        "togglesUpdated": Selection;
+    }
+    /**
+     * Toggle Tag List
+     */
+    interface HTMLSdsToggleTagListElement extends Components.SdsToggleTagList, HTMLStencilElement {
+        addEventListener<K extends keyof HTMLSdsToggleTagListElementEventMap>(type: K, listener: (this: HTMLSdsToggleTagListElement, ev: SdsToggleTagListCustomEvent<HTMLSdsToggleTagListElementEventMap[K]>) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | AddEventListenerOptions): void;
+        addEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | AddEventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLSdsToggleTagListElementEventMap>(type: K, listener: (this: HTMLSdsToggleTagListElement, ev: SdsToggleTagListCustomEvent<HTMLSdsToggleTagListElementEventMap[K]>) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof DocumentEventMap>(type: K, listener: (this: Document, ev: DocumentEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener<K extends keyof HTMLElementEventMap>(type: K, listener: (this: HTMLElement, ev: HTMLElementEventMap[K]) => any, options?: boolean | EventListenerOptions): void;
+        removeEventListener(type: string, listener: EventListenerOrEventListenerObject, options?: boolean | EventListenerOptions): void;
+    }
+    var HTMLSdsToggleTagListElement: {
+        prototype: HTMLSdsToggleTagListElement;
+        new (): HTMLSdsToggleTagListElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "sds-icon-activity": HTMLSdsIconActivityElement;
@@ -3763,6 +3901,11 @@ declare global {
         "sds-icon-zap-off": HTMLSdsIconZapOffElement;
         "sds-icon-zoom-in": HTMLSdsIconZoomInElement;
         "sds-icon-zoom-out": HTMLSdsIconZoomOutElement;
+        "sds-tag": HTMLSdsTagElement;
+        "sds-tag-button": HTMLSdsTagButtonElement;
+        "sds-toggle-tag": HTMLSdsToggleTagElement;
+        "sds-toggle-tag-group": HTMLSdsToggleTagGroupElement;
+        "sds-toggle-tag-list": HTMLSdsToggleTagListElement;
     }
 }
 declare namespace LocalJSX {
@@ -5502,6 +5645,60 @@ declare namespace LocalJSX {
          */
         "size"?: Size;
     }
+    interface SdsTag {
+        /**
+          * Fires when the `x` icon button is clicked
+         */
+        "onRemoved"?: (event: SdsTagCustomEvent<null>) => void;
+        /**
+          * Show or hide the x button
+         */
+        "removable"?: boolean;
+        /**
+          * Color scheme for the tag
+         */
+        "scheme"?: Scheme;
+        /**
+          * Sets which set of colors to use in the scheme
+         */
+        "variant"?: Variant;
+    }
+    interface SdsTagButton {
+        /**
+          * Color scheme for the tag
+         */
+        "scheme"?: Scheme;
+        /**
+          * Sets which set of colors to use in the scheme
+         */
+        "variant"?: Variant;
+    }
+    /**
+     * Toggle Tag
+     */
+    interface SdsToggleTag {
+        /**
+          * Allows the toggle to handle it's own state, without the use of a `<sds-toggle-tag-list>`
+         */
+        "allowSelfToggle"?: boolean;
+        "onToggle"?: (event: SdsToggleTagCustomEvent<TagToggle>) => void;
+        /**
+          * The selected state of the tag
+         */
+        "selected"?: boolean;
+    }
+    /**
+     * Toggle Tag Group
+     */
+    interface SdsToggleTagGroup {
+    }
+    /**
+     * Toggle Tag List
+     */
+    interface SdsToggleTagList {
+        "onTogglesUpdated"?: (event: SdsToggleTagListCustomEvent<Selection>) => void;
+        "selectionMode"?: SelectionMode;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "sds-icon-activity": SdsIconActivity;
@@ -5791,6 +5988,11 @@ declare namespace LocalJSX {
         "sds-icon-zap-off": SdsIconZapOff;
         "sds-icon-zoom-in": SdsIconZoomIn;
         "sds-icon-zoom-out": SdsIconZoomOut;
+        "sds-tag": SdsTag;
+        "sds-tag-button": SdsTagButton;
+        "sds-toggle-tag": SdsToggleTag;
+        "sds-toggle-tag-group": SdsToggleTagGroup;
+        "sds-toggle-tag-list": SdsToggleTagList;
     }
 }
 export { LocalJSX as JSX };
@@ -6085,6 +6287,20 @@ declare module "@stencil/core" {
             "sds-icon-zap-off": LocalJSX.SdsIconZapOff & JSXBase.HTMLAttributes<HTMLSdsIconZapOffElement>;
             "sds-icon-zoom-in": LocalJSX.SdsIconZoomIn & JSXBase.HTMLAttributes<HTMLSdsIconZoomInElement>;
             "sds-icon-zoom-out": LocalJSX.SdsIconZoomOut & JSXBase.HTMLAttributes<HTMLSdsIconZoomOutElement>;
+            "sds-tag": LocalJSX.SdsTag & JSXBase.HTMLAttributes<HTMLSdsTagElement>;
+            "sds-tag-button": LocalJSX.SdsTagButton & JSXBase.HTMLAttributes<HTMLSdsTagButtonElement>;
+            /**
+             * Toggle Tag
+             */
+            "sds-toggle-tag": LocalJSX.SdsToggleTag & JSXBase.HTMLAttributes<HTMLSdsToggleTagElement>;
+            /**
+             * Toggle Tag Group
+             */
+            "sds-toggle-tag-group": LocalJSX.SdsToggleTagGroup & JSXBase.HTMLAttributes<HTMLSdsToggleTagGroupElement>;
+            /**
+             * Toggle Tag List
+             */
+            "sds-toggle-tag-list": LocalJSX.SdsToggleTagList & JSXBase.HTMLAttributes<HTMLSdsToggleTagListElement>;
         }
     }
 }
