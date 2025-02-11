@@ -25,7 +25,7 @@ export class SdsLink {
   /**
    * Target of the link
    */
-  @Prop() target?: Target;
+  @Prop() target: Target = '_self';
 
   /**
    * Rel HTML attribute

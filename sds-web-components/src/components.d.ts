@@ -1744,6 +1744,40 @@ export namespace Components {
          */
         "size"?: Size;
     }
+    interface SdsLink {
+        /**
+          * Additional CSS classes
+         */
+        "class"?: string;
+        /**
+          * Download HTML attribute
+         */
+        "download"?: string;
+        /**
+          * Href of the link
+         */
+        "href"?: string;
+        /**
+          * HrefLang HTML attribute to specify the language of the linked document
+         */
+        "hreflang"?: string;
+        /**
+          * Media HTML attribute
+         */
+        "media"?: string;
+        /**
+          * Ping HTML attribute
+         */
+        "ping"?: string;
+        /**
+          * Rel HTML attribute
+         */
+        "rel"?: string;
+        /**
+          * Target of the link
+         */
+        "target": Target;
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -3474,6 +3508,12 @@ declare global {
         prototype: HTMLSdsIconZoomOutElement;
         new (): HTMLSdsIconZoomOutElement;
     };
+    interface HTMLSdsLinkElement extends Components.SdsLink, HTMLStencilElement {
+    }
+    var HTMLSdsLinkElement: {
+        prototype: HTMLSdsLinkElement;
+        new (): HTMLSdsLinkElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
         "sds-icon-activity": HTMLSdsIconActivityElement;
@@ -3763,6 +3803,7 @@ declare global {
         "sds-icon-zap-off": HTMLSdsIconZapOffElement;
         "sds-icon-zoom-in": HTMLSdsIconZoomInElement;
         "sds-icon-zoom-out": HTMLSdsIconZoomOutElement;
+        "sds-link": HTMLSdsLinkElement;
     }
 }
 declare namespace LocalJSX {
@@ -5502,6 +5543,40 @@ declare namespace LocalJSX {
          */
         "size"?: Size;
     }
+    interface SdsLink {
+        /**
+          * Additional CSS classes
+         */
+        "class"?: string;
+        /**
+          * Download HTML attribute
+         */
+        "download"?: string;
+        /**
+          * Href of the link
+         */
+        "href"?: string;
+        /**
+          * HrefLang HTML attribute to specify the language of the linked document
+         */
+        "hreflang"?: string;
+        /**
+          * Media HTML attribute
+         */
+        "media"?: string;
+        /**
+          * Ping HTML attribute
+         */
+        "ping"?: string;
+        /**
+          * Rel HTML attribute
+         */
+        "rel"?: string;
+        /**
+          * Target of the link
+         */
+        "target"?: Target;
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
         "sds-icon-activity": SdsIconActivity;
@@ -5791,6 +5866,7 @@ declare namespace LocalJSX {
         "sds-icon-zap-off": SdsIconZapOff;
         "sds-icon-zoom-in": SdsIconZoomIn;
         "sds-icon-zoom-out": SdsIconZoomOut;
+        "sds-link": SdsLink;
     }
 }
 export { LocalJSX as JSX };
@@ -6085,6 +6161,7 @@ declare module "@stencil/core" {
             "sds-icon-zap-off": LocalJSX.SdsIconZapOff & JSXBase.HTMLAttributes<HTMLSdsIconZapOffElement>;
             "sds-icon-zoom-in": LocalJSX.SdsIconZoomIn & JSXBase.HTMLAttributes<HTMLSdsIconZoomInElement>;
             "sds-icon-zoom-out": LocalJSX.SdsIconZoomOut & JSXBase.HTMLAttributes<HTMLSdsIconZoomOutElement>;
+            "sds-link": LocalJSX.SdsLink & JSXBase.HTMLAttributes<HTMLSdsLinkElement>;
         }
     }
 }
