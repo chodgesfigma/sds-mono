@@ -20,7 +20,6 @@ const meta = {
       <sds-legend>Shipping details</sds-legend>
       <!-- <sds-text>Without this your odds of getting your order are low.</sds-text> -->
       <sds-field-group>
-        <sds-label>Label</sds-label>
         <sds-input-field
           required
           name="address"
