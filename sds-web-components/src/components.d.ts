@@ -32,15 +32,15 @@ export namespace Components {
         /**
           * The button size
          */
-        "size"?: Size;
+        "size": Size;
         /**
           * The button type
          */
-        "type"?: Type;
+        "type": Type;
         /**
           * The button default variant
          */
-        "variant"?: DefaultVariant;
+        "variant": DefaultVariant;
     }
     interface SdsButtonDanger {
         /**

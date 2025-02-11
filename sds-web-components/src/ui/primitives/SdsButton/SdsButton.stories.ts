@@ -11,15 +11,6 @@ const meta: Meta<ComponentArgs> = {
   args: {
     variant: 'primary',
   },
-  argTypes: {
-    size: {
-      control: { type: 'select' },
-    },
-    variant: {
-      control: { type: 'select' },
-      options: ['primary', 'neutral', 'subtle'],
-    },
-  },
   parameters: {
     layout: 'centered',
     actions: {
@@ -47,6 +38,11 @@ export const ButtonDanger: StoryObj<ComponentArgs> = {
     size: 'small',
     variant: 'danger-primary',
   },
+  render: args => `
+  <sds-button-danger ${spread(args)}>
+    <sds-icon-arrow-left></sds-icon-arrow-left>Hello world!<sds-icon-activity></sds-icon-activity>
+  </sds-button-danger>
+`,
 };
 
 export const ButtonGroup: StoryObj<ComponentArgs> = {

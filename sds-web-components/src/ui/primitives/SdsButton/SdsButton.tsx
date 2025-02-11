@@ -12,15 +12,15 @@ export class SdsButton {
   /**
    * The button type
    */
-  @Prop() type?: Type;
+  @Prop() type: Type = 'button';
   /**
    * The button size
    */
-  @Prop() size?: Size;
+  @Prop() size: Size = 'medium';
   /**
    * The button default variant
    */
-  @Prop() variant?: DefaultVariant = 'primary';
+  @Prop() variant: DefaultVariant = 'primary';
 
   render() {
     return (
