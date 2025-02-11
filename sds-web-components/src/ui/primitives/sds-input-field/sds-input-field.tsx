@@ -1,6 +1,6 @@
 import { Component, Prop, h } from '@stencil/core';
-import { JSXBase, State } from '@stencil/core/internal';
-import { SdsInputFunctional } from '../sds-input/sds-input-functional';
+import { State } from '@stencil/core/internal';
+import { SdsInputFunctional, SdsInputProps } from '../sds-input/sds-input-functional';
 import { SdsLabelFunctional } from '../sds-label/sds-label-functional';
 import { SdsDescriptionFunctional } from '../sds-description/sds-description-functional';
 import { SdsFieldErrorFunctional } from '../sds-field-error/sds-field-error-functional';
@@ -22,12 +22,12 @@ export class SdsInputField {
   /**
    * The value that the input field has
    */
-  @State() inputValue = '';
+  @State() inputValue: SdsInputProps['value'] = '';
 
   /**
    * Sets the default value for the input
    */
-  @Prop() defaultValue = '';
+  @Prop() defaultValue: SdsInputProps['defaultValue'] = '';
 
   /**
    * The input label
@@ -62,7 +62,7 @@ export class SdsInputField {
   /**
    * The type of input
    */
-  @Prop({ reflect: true }) type: Exclude<JSXBase.InputHTMLAttributes<HTMLInputElement>['type'], undefined> = '';
+  @Prop({ reflect: true }) type: SdsInputProps['type'] = '';
 
   componentDidLoad() {
     this.inputValue = this.defaultValue ?? '';

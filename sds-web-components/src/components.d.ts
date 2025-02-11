@@ -7,10 +7,8 @@
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Size } from "./ui/primitives/SdsIcon/SdsIcon";
 import { SdsInputProps } from "./ui/primitives/sds-input/sds-input-functional";
-import { JSXBase } from "@stencil/core/internal";
 export { Size } from "./ui/primitives/SdsIcon/SdsIcon";
 export { SdsInputProps } from "./ui/primitives/sds-input/sds-input-functional";
-export { JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MyComponent {
         /**
@@ -1827,7 +1825,7 @@ export namespace Components {
         /**
           * Sets the default value for the input
          */
-        "defaultValue": string;
+        "defaultValue": SdsInputProps['defaultValue'];
         /**
           * A secondary label below the input
          */
@@ -1855,7 +1853,7 @@ export namespace Components {
         /**
           * The type of input
          */
-        "type": Exclude<JSXBase.InputHTMLAttributes<HTMLInputElement>['type'], undefined>;
+        "type": SdsInputProps['type'];
     }
     /**
      * Fieldset Keyboard
@@ -5821,7 +5819,7 @@ declare namespace LocalJSX {
         /**
           * Sets the default value for the input
          */
-        "defaultValue"?: string;
+        "defaultValue"?: SdsInputProps['defaultValue'];
         /**
           * A secondary label below the input
          */
@@ -5849,7 +5847,7 @@ declare namespace LocalJSX {
         /**
           * The type of input
          */
-        "type"?: Exclude<JSXBase.InputHTMLAttributes<HTMLInputElement>['type'], undefined>;
+        "type"?: SdsInputProps['type'];
     }
     /**
      * Fieldset Keyboard
