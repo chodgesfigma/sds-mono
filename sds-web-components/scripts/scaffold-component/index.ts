@@ -31,7 +31,7 @@ const config: ScaffoldComponentConfig = {
 
 scaffoldComponent(config);
 
-updateScssFile(config)
+updateScssFile(config);
 
 // Move files from `src/components` to `src/ui`
 moveFiles(config);
