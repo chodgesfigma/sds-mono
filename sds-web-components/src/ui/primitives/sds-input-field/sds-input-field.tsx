@@ -1,16 +1,16 @@
 import { Component, Prop, h } from '@stencil/core';
 import { JSXBase, State } from '@stencil/core/internal';
-import { SdsLabel } from '../SdsFieldset/SdsLabel';
-import { SdsInput } from './SdsInput';
-import { SdsDescription } from '../SdsFieldset/SdsDescription';
-import { SdsFieldError } from '../SdsFieldset/SdsFieldError';
+import { SdsInputFunctional } from '../sds-input/sds-input-functional';
+import { SdsLabelFunctional } from '../sds-label/sds-label-functional';
+import { SdsDescriptionFunctional } from '../sds-description/sds-description-functional';
+import { SdsFieldErrorFunctional } from '../sds-field-error/sds-field-error-functional';
 
 /**
  * Input Field
  */
 @Component({
   tag: 'sds-input-field',
-  styleUrl: 'SdsInput.scss',
+  styleUrls: ['sds-input-field.scss'],
   shadow: true,
 })
 export class SdsInputField {
@@ -79,11 +79,11 @@ export class SdsInputField {
     return (
       <sds-field disabled={this.disabled}>
         {this.label && (
-          <SdsLabel htmlFor="input" id="label">
+          <SdsLabelFunctional htmlFor="input" id="label">
             {this.label}
-          </SdsLabel>
+          </SdsLabelFunctional>
         )}
-        <SdsInput
+        <SdsInputFunctional
           type={this.type}
           required={this.required}
           disabled={this.disabled}
@@ -100,8 +100,8 @@ export class SdsInputField {
             this.textInput = el as HTMLInputElement;
           }}
         />
-        {this.description && <SdsDescription id="description">{this.description}</SdsDescription>}
-        {this.error && <SdsFieldError id="error">{this.error}</SdsFieldError>}
+        {this.description && <SdsDescriptionFunctional id="description">{this.description}</SdsDescriptionFunctional>}
+        {this.error && <SdsFieldErrorFunctional id="error">{this.error}</SdsFieldErrorFunctional>}
       </sds-field>
     );
   }

@@ -1,9 +1,4 @@
-@import '../SdsFieldset/SdsFieldset';
-
-:host {
-  display: block;
-  width: 100%;
-}
+@import 'reset';
 
 .input {
   --input-background-color: var(--sds-color-background-default-default);

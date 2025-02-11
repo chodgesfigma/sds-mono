@@ -17,7 +17,7 @@ const meta = {
   },
   component: 'sds-input-field',
   decorators: [withActions],
-  render: args => `<sds-input-field ${spread(args)}></sds-input-field>`,
+  render: args => `<sds-input-field ${spread(args)} default-value="${args.defaultValue}"></sds-input-field>`,
 } satisfies Meta<ComponentArgs>;
 
 export default meta;

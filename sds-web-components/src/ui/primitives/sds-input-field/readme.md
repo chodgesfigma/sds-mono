@@ -27,7 +27,7 @@ Input Field
 
 ### Depends on
 
-- [sds-field](../SdsField)
+- [sds-field](../sds-field)
 
 ### Graph
 ```mermaid
