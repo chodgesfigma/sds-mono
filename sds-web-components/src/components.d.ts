@@ -6,8 +6,10 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 import { Size } from "./ui/primitives/SdsIcon/SdsIcon";
+import { SdsInputProps } from "./ui/primitives/sds-input/sds-input-functional";
 import { JSXBase } from "@stencil/core/internal";
 export { Size } from "./ui/primitives/SdsIcon/SdsIcon";
+export { SdsInputProps } from "./ui/primitives/sds-input/sds-input-functional";
 export { JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface MyComponent {
@@ -1795,6 +1797,28 @@ export namespace Components {
           * The size the icon will be displayed at
          */
         "size"?: Size;
+    }
+    /**
+     * Input
+     */
+    interface SdsInput {
+        /**
+          * Sets the default value for the input
+         */
+        "defaultValue": string;
+        /**
+          * Disables the input
+         */
+        "disabled": boolean;
+        /**
+          * Marks the input as required
+         */
+        "required": boolean;
+        /**
+          * The type of input
+         */
+        "type": SdsInputProps['type'];
+        "value"?: SdsInputProps['value'];
     }
     /**
      * Input Field
@@ -3634,6 +3658,15 @@ declare global {
         new (): HTMLSdsIconZoomOutElement;
     };
     /**
+     * Input
+     */
+    interface HTMLSdsInputElement extends Components.SdsInput, HTMLStencilElement {
+    }
+    var HTMLSdsInputElement: {
+        prototype: HTMLSdsInputElement;
+        new (): HTMLSdsInputElement;
+    };
+    /**
      * Input Field
      */
     interface HTMLSdsInputFieldElement extends Components.SdsInputField, HTMLStencilElement {
@@ -3965,6 +3998,7 @@ declare global {
         "sds-icon-zap-off": HTMLSdsIconZapOffElement;
         "sds-icon-zoom-in": HTMLSdsIconZoomInElement;
         "sds-icon-zoom-out": HTMLSdsIconZoomOutElement;
+        "sds-input": HTMLSdsInputElement;
         "sds-input-field": HTMLSdsInputFieldElement;
         "sds-keyboard": HTMLSdsKeyboardElement;
         "sds-label": HTMLSdsLabelElement;
@@ -5759,6 +5793,28 @@ declare namespace LocalJSX {
         "size"?: Size;
     }
     /**
+     * Input
+     */
+    interface SdsInput {
+        /**
+          * Sets the default value for the input
+         */
+        "defaultValue"?: string;
+        /**
+          * Disables the input
+         */
+        "disabled"?: boolean;
+        /**
+          * Marks the input as required
+         */
+        "required"?: boolean;
+        /**
+          * The type of input
+         */
+        "type"?: SdsInputProps['type'];
+        "value"?: SdsInputProps['value'];
+    }
+    /**
      * Input Field
      */
     interface SdsInputField {
@@ -6106,6 +6162,7 @@ declare namespace LocalJSX {
         "sds-icon-zap-off": SdsIconZapOff;
         "sds-icon-zoom-in": SdsIconZoomIn;
         "sds-icon-zoom-out": SdsIconZoomOut;
+        "sds-input": SdsInput;
         "sds-input-field": SdsInputField;
         "sds-keyboard": SdsKeyboard;
         "sds-label": SdsLabel;
@@ -6428,6 +6485,10 @@ declare module "@stencil/core" {
             "sds-icon-zap-off": LocalJSX.SdsIconZapOff & JSXBase.HTMLAttributes<HTMLSdsIconZapOffElement>;
             "sds-icon-zoom-in": LocalJSX.SdsIconZoomIn & JSXBase.HTMLAttributes<HTMLSdsIconZoomInElement>;
             "sds-icon-zoom-out": LocalJSX.SdsIconZoomOut & JSXBase.HTMLAttributes<HTMLSdsIconZoomOutElement>;
+            /**
+             * Input
+             */
+            "sds-input": LocalJSX.SdsInput & JSXBase.HTMLAttributes<HTMLSdsInputElement>;
             /**
              * Input Field
              */

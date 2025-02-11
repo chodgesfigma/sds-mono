@@ -10,7 +10,7 @@ import { SdsInputFunctional, SdsInputProps } from './sds-input-functional';
   shadow: true,
 })
 export class SdsInput {
-  @Prop({ reflect: true }) value?: string;
+  @Prop({ reflect: true }) value?: SdsInputProps['value'];
   /**
    * Sets the default value for the input
    */

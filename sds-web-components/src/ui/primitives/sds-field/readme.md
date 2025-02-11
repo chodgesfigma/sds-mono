@@ -20,7 +20,7 @@ Fieldset Field
 
 ### Used by
 
- - [sds-input-field](../SdsInput)
+ - [sds-input-field](../sds-input-field)
 
 ### Graph
 ```mermaid
