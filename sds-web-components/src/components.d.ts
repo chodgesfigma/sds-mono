@@ -39,6 +39,9 @@ export namespace Components {
          */
         "disabled": boolean;
     }
+    /**
+     * Fieldset Field Error
+     */
     interface SdsFieldError {
     }
     /**
@@ -1873,6 +1876,9 @@ declare global {
         prototype: HTMLSdsFieldElement;
         new (): HTMLSdsFieldElement;
     };
+    /**
+     * Fieldset Field Error
+     */
     interface HTMLSdsFieldErrorElement extends Components.SdsFieldError, HTMLStencilElement {
     }
     var HTMLSdsFieldErrorElement: {
@@ -3995,6 +4001,9 @@ declare namespace LocalJSX {
          */
         "disabled"?: boolean;
     }
+    /**
+     * Fieldset Field Error
+     */
     interface SdsFieldError {
     }
     /**
@@ -6117,6 +6126,9 @@ declare module "@stencil/core" {
              * @return styled `div` element
              */
             "sds-field": LocalJSX.SdsField & JSXBase.HTMLAttributes<HTMLSdsFieldElement>;
+            /**
+             * Fieldset Field Error
+             */
             "sds-field-error": LocalJSX.SdsFieldError & JSXBase.HTMLAttributes<HTMLSdsFieldErrorElement>;
             /**
              * Fieldset FieldGroup
