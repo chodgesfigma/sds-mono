@@ -1,5 +1,5 @@
-import { Component, Prop, h } from '@stencil/core';
 import { SdsIcon, Size } from '../primitives/SdsIcon/SdsIcon';
+import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'sds-icon-align-justify',
@@ -15,7 +15,7 @@ export class SdsIconAlignJustify {
   render() {
     return (
       <SdsIcon size={this.size}>
-        <path d="M14 6.66667H2M14 4H2M14 9.33333H2M14 12H2" stroke="var(--svg-stroke-color)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M14 6.66667H2M14 4H2M14 9.33333H2M14 12H2" stroke="var(--svg-stroke-color)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
       </SdsIcon>
     );
   }

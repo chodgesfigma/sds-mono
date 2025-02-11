@@ -1,7 +1,6 @@
-import type { Meta, StoryObj } from '@storybook/html';
-
 import { Components } from '../../components';
 import { spread } from '../../utils/storybook-helpers';
+import type { Meta, StoryObj } from '@storybook/html';
 
 type ComponentArgs = Components.MyComponent;
 

@@ -1,9 +1,6 @@
 # my-component
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -13,7 +10,6 @@
 | `last`   | `last`    | The last name   | `string` | `''`    |
 | `middle` | `middle`  | The middle name | `string` | `''`    |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_
