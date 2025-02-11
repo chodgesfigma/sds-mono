@@ -1,6 +1,9 @@
 import { Component, h } from '@stencil/core';
-import clsx from 'clsx';
+import { SdsFieldErrorFunctional } from './sds-field-error-functional';
 
+/**
+ * Fieldset Field Error
+ */
 @Component({
   tag: 'sds-field-error',
   styleUrl: 'sds-field-error.scss',
@@ -8,11 +11,10 @@ import clsx from 'clsx';
 })
 export class SdsFieldError {
   render() {
-    const className = clsx('error-message');
     return (
-      <span class={className}>
+      <SdsFieldErrorFunctional>
         <slot />
-      </span>
+      </SdsFieldErrorFunctional>
     );
   }
 }

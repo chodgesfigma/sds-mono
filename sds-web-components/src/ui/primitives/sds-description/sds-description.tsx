@@ -1,5 +1,5 @@
 import { Component, h } from '@stencil/core';
-import clsx from 'clsx';
+import { SdsDescriptionFunctional } from './sds-description-functional';
 
 /**
  * Fieldset Description
@@ -11,11 +11,10 @@ import clsx from 'clsx';
 })
 export class SdsDescription {
   render() {
-    const className = clsx('description');
     return (
-      <span class={className}>
+      <SdsDescriptionFunctional>
         <slot />
-      </span>
+      </SdsDescriptionFunctional>
     );
   }
 }
