@@ -1,0 +1,9 @@
+@import 'reset';
+
+.label {
+  color: var(--field-label-color);
+  font: var(--sds-font-body-base);
+
+  grid-area: var(--input-label-grid-area);
+  margin-bottom: var(--input-label-margin-bottom);
+}

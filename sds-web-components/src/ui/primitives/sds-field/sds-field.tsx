@@ -7,7 +7,7 @@ import clsx from 'clsx';
  */
 @Component({
   tag: 'sds-field',
-  styleUrl: 'SdsField.scss',
+  styleUrl: 'sds-field.scss',
   shadow: true,
 })
 export class SdsField {

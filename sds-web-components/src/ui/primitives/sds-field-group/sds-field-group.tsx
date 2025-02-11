@@ -6,7 +6,7 @@ import { Component, h } from '@stencil/core';
  */
 @Component({
   tag: 'sds-field-group',
-  styleUrl: 'SdsFieldset.scss',
+  styleUrl: 'sds-field-group.scss',
   shadow: true,
 })
 export class SdsFieldGroup {

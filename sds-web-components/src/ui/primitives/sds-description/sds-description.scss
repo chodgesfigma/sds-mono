@@ -1,0 +1,9 @@
+@import 'reset';
+
+.description {
+  color: var(--field-description-color);
+  font: var(--sds-font-body-base);
+
+  grid-area: var(--input-description-area);
+  margin-top: var(--input-description-margin-top);
+}
