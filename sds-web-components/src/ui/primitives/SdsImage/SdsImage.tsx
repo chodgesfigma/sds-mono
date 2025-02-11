@@ -25,17 +25,17 @@ export class SdsImage {
   /**
    * Aspect Ratio
    */
-  @Prop() aspectRatio?: AspectRatio = 'natural';
+  @Prop() aspectRatio: AspectRatio = 'natural';
 
   /**
    * Size
    */
-  @Prop() size?: Size = 'natural';
+  @Prop() size: Size = 'natural';
 
   /**
    * The variant
    */
-  @Prop() variant?: Variant = 'rounded';
+  @Prop() variant: Variant = 'rounded';
 
   /**
    * The src url
@@ -70,12 +70,12 @@ export class SdsImage {
   /**
    * Loading html attribute
    */
-  @Prop() loading?: 'eager' | 'lazy' | undefined;
+  @Prop() loading: 'eager' | 'lazy' | undefined = 'eager';
 
   /**
    * Decoding html attribute
    */
-  @Prop() decoding?: 'async' | 'auto' | 'sync' | undefined;
+  @Prop() decoding: 'async' | 'auto' | 'sync' | undefined = 'auto';
 
   /**
    * Crossorigin html attribute

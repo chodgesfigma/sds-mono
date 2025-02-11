@@ -10,7 +10,21 @@ const meta = {
   tags: ['autodocs'],
   parameters: { layout: 'centered' },
   component: 'sds-image',
+  args: {
+    alt: 'SDS Image',
+  },
   render: args => `<sds-image ${spread(args)}></sds-image>`,
+  argTypes: {
+    size: {
+      control: { type: 'radio' },
+    },
+    aspectRatio: {
+      control: { type: 'radio' },
+    },
+    variant: {
+      control: { type: 'radio' },
+    },
+  },
 } satisfies Meta<ComponentArgs>;
 
 export default meta;
@@ -22,18 +36,7 @@ export const Image: Story = {
     src: placeholder,
   },
   render: args => `  
-  <div
-    style={{
-        height: "calc(100vh - 2rem)",
-        display: "grid",
-        placeItems: "center",
-        width: "100%",
-    }}><sds-image ${spread(args)}></sds-image></div>`,
-  parameters: {
-    backgrounds: {
-      default: 'dark',
-    },
-  },
+   <div><sds-image ${spread(args)}></sds-image></div>`,
 };
 
 export const ImageSrcSet: Story = {
@@ -46,11 +49,6 @@ export const ImageSrcSet: Story = {
     <sds-image
       ${spread(args)}
     ></sds-image>`,
-  parameters: {
-    backgrounds: {
-      default: 'dark',
-    },
-  },
 };
 
 export const Picture: Story = {
@@ -64,9 +62,4 @@ export const Picture: Story = {
         <sds-image ${spread(args)} src="${placeholder}" />
       </picture>
 `,
-  parameters: {
-    backgrounds: {
-      default: 'dark',
-    },
-  },
 };

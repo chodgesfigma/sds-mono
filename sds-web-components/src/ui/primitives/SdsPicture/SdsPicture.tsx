@@ -9,10 +9,10 @@ export class SdsPicture {
   /**
    * Custom class for styling
    */
-  @Prop() className?: string;
+  @Prop() class?: string;
 
   render() {
-    const classNames = clsx(this.className, 'picture');
+    const classNames = clsx(this.class, 'picture');
 
     return (
       <picture class={classNames}>

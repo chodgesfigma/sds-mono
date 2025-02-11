@@ -30,7 +30,7 @@ export namespace Components {
         /**
           * Aspect Ratio
          */
-        "aspectRatio"?: AspectRatio;
+        "aspectRatio": AspectRatio;
         /**
           * Crossorigin html attribute
          */
@@ -38,7 +38,7 @@ export namespace Components {
         /**
           * Decoding html attribute
          */
-        "decoding"?: 'async' | 'auto' | 'sync' | undefined;
+        "decoding": 'async' | 'auto' | 'sync' | undefined;
         /**
           * Height html attribute
          */
@@ -46,11 +46,11 @@ export namespace Components {
         /**
           * Loading html attribute
          */
-        "loading"?: 'eager' | 'lazy' | undefined;
+        "loading": 'eager' | 'lazy' | undefined;
         /**
           * Size
          */
-        "size"?: Size;
+        "size": Size;
         /**
           * Sizes html attribute
          */
@@ -58,7 +58,7 @@ export namespace Components {
         /**
           * The src url
          */
-        "src"?: string | undefined;
+        "src"?: string;
         /**
           * SrcSet url html attribute
          */
@@ -70,7 +70,7 @@ export namespace Components {
         /**
           * The variant
          */
-        "variant"?: Variant;
+        "variant": Variant;
         /**
           * Width html attribute
          */
@@ -80,7 +80,7 @@ export namespace Components {
         /**
           * Custom class for styling
          */
-        "className"?: string;
+        "class"?: string;
     }
 }
 declare global {
@@ -127,7 +127,7 @@ declare namespace LocalJSX {
         /**
           * Alt description
          */
-        "alt"?: string;
+        "alt": string;
         /**
           * Aspect Ratio
          */
@@ -159,7 +159,7 @@ declare namespace LocalJSX {
         /**
           * The src url
          */
-        "src"?: string | undefined;
+        "src"?: string;
         /**
           * SrcSet url html attribute
          */
@@ -181,7 +181,7 @@ declare namespace LocalJSX {
         /**
           * Custom class for styling
          */
-        "className"?: string;
+        "class"?: string;
     }
     interface IntrinsicElements {
         "my-component": MyComponent;
