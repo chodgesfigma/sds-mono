@@ -1,9 +1,6 @@
 # sds-picture
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -11,7 +8,6 @@
 | -------- | --------- | ------------------------ | --------------------- | ----------- |
 | `class`  | `class`   | Custom class for styling | `string \| undefined` | `undefined` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

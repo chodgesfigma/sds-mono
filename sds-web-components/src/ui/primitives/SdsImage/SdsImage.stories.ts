@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/html';
-import { SdsImage } from './SdsImage';
 import { spread } from '../../../utils/storybook-helpers';
 import { placeholder } from '../../images';
+import { SdsImage } from './SdsImage';
+import type { Meta, StoryObj } from '@storybook/html';
 
 type ComponentArgs = SdsImage;
 

@@ -1,9 +1,6 @@
 # sds-image
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -23,7 +20,6 @@
 | `variant`          | `variant`      | The variant                | `"default" \| "rounded"`                                | `'rounded'` |
 | `width`            | `width`        | Width html attribute       | `number \| string \| undefined`                         | `undefined` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

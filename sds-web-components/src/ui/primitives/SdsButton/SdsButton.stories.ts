@@ -1,7 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/html';
-import { SdsButtonBaseProps } from './SdsButtonBase';
 import { spread } from '../../../utils/storybook-helpers';
+import { SdsButtonBaseProps } from './SdsButtonBase';
 import { withActions } from '@storybook/addon-actions/decorator';
+import type { Meta, StoryObj } from '@storybook/html';
 
 type ComponentArgs = SdsButtonBaseProps;
 

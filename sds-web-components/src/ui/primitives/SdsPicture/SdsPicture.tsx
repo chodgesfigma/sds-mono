@@ -5,10 +5,9 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class SdsPicture {
-
   render() {
     return (
-      <picture class='picture'>
+      <picture class="picture">
         <slot />
       </picture>
     );
