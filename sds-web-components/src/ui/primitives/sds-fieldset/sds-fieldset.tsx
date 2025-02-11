@@ -7,7 +7,7 @@ import clsx from 'clsx';
  */
 @Component({
   tag: 'sds-fieldset',
-  styleUrl: 'SdsFieldset.scss',
+  styleUrl: 'sds-fieldset.scss',
   shadow: true,
 })
 export class SdsFieldset {

@@ -1,0 +1,7 @@
+@import 'reset';
+
+.field-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-600);
+}

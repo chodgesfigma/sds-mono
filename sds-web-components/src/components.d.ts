@@ -23,6 +23,11 @@ export namespace Components {
         "middle": string;
     }
     /**
+     * Fieldset Description
+     */
+    interface SdsDescription {
+    }
+    /**
      * Fieldset Field
      * @return styled `div` element
      */
@@ -31,6 +36,8 @@ export namespace Components {
           * Controls if the field is disabled or not
          */
         "disabled": boolean;
+    }
+    interface SdsFieldError {
     }
     /**
      * Fieldset FieldGroup
@@ -55,6 +62,12 @@ export namespace Components {
           * The name associated with the group.
          */
         "name": string;
+    }
+    interface SdsForm {
+        /**
+          * If `true` the form will be displayed on a single line
+         */
+        "singleLine": boolean;
     }
     interface SdsIconActivity {
         /**
@@ -1784,6 +1797,16 @@ export namespace Components {
      */
     interface SdsKeyboard {
     }
+    /**
+     * Fieldset Label
+     */
+    interface SdsLabel {
+    }
+    /**
+     * Fieldset Legend
+     */
+    interface SdsLegend {
+    }
 }
 declare global {
     interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
@@ -1791,6 +1814,15 @@ declare global {
     var HTMLMyComponentElement: {
         prototype: HTMLMyComponentElement;
         new (): HTMLMyComponentElement;
+    };
+    /**
+     * Fieldset Description
+     */
+    interface HTMLSdsDescriptionElement extends Components.SdsDescription, HTMLStencilElement {
+    }
+    var HTMLSdsDescriptionElement: {
+        prototype: HTMLSdsDescriptionElement;
+        new (): HTMLSdsDescriptionElement;
     };
     /**
      * Fieldset Field
@@ -1801,6 +1833,12 @@ declare global {
     var HTMLSdsFieldElement: {
         prototype: HTMLSdsFieldElement;
         new (): HTMLSdsFieldElement;
+    };
+    interface HTMLSdsFieldErrorElement extends Components.SdsFieldError, HTMLStencilElement {
+    }
+    var HTMLSdsFieldErrorElement: {
+        prototype: HTMLSdsFieldErrorElement;
+        new (): HTMLSdsFieldErrorElement;
     };
     /**
      * Fieldset FieldGroup
@@ -1821,6 +1859,12 @@ declare global {
     var HTMLSdsFieldsetElement: {
         prototype: HTMLSdsFieldsetElement;
         new (): HTMLSdsFieldsetElement;
+    };
+    interface HTMLSdsFormElement extends Components.SdsForm, HTMLStencilElement {
+    }
+    var HTMLSdsFormElement: {
+        prototype: HTMLSdsFormElement;
+        new (): HTMLSdsFormElement;
     };
     interface HTMLSdsIconActivityElement extends Components.SdsIconActivity, HTMLStencilElement {
     }
@@ -3554,11 +3598,32 @@ declare global {
         prototype: HTMLSdsKeyboardElement;
         new (): HTMLSdsKeyboardElement;
     };
+    /**
+     * Fieldset Label
+     */
+    interface HTMLSdsLabelElement extends Components.SdsLabel, HTMLStencilElement {
+    }
+    var HTMLSdsLabelElement: {
+        prototype: HTMLSdsLabelElement;
+        new (): HTMLSdsLabelElement;
+    };
+    /**
+     * Fieldset Legend
+     */
+    interface HTMLSdsLegendElement extends Components.SdsLegend, HTMLStencilElement {
+    }
+    var HTMLSdsLegendElement: {
+        prototype: HTMLSdsLegendElement;
+        new (): HTMLSdsLegendElement;
+    };
     interface HTMLElementTagNameMap {
         "my-component": HTMLMyComponentElement;
+        "sds-description": HTMLSdsDescriptionElement;
         "sds-field": HTMLSdsFieldElement;
+        "sds-field-error": HTMLSdsFieldErrorElement;
         "sds-field-group": HTMLSdsFieldGroupElement;
         "sds-fieldset": HTMLSdsFieldsetElement;
+        "sds-form": HTMLSdsFormElement;
         "sds-icon-activity": HTMLSdsIconActivityElement;
         "sds-icon-airplay": HTMLSdsIconAirplayElement;
         "sds-icon-alert-circle": HTMLSdsIconAlertCircleElement;
@@ -3847,6 +3912,8 @@ declare global {
         "sds-icon-zoom-in": HTMLSdsIconZoomInElement;
         "sds-icon-zoom-out": HTMLSdsIconZoomOutElement;
         "sds-keyboard": HTMLSdsKeyboardElement;
+        "sds-label": HTMLSdsLabelElement;
+        "sds-legend": HTMLSdsLegendElement;
     }
 }
 declare namespace LocalJSX {
@@ -3865,6 +3932,11 @@ declare namespace LocalJSX {
         "middle"?: string;
     }
     /**
+     * Fieldset Description
+     */
+    interface SdsDescription {
+    }
+    /**
      * Fieldset Field
      * @return styled `div` element
      */
@@ -3873,6 +3945,8 @@ declare namespace LocalJSX {
           * Controls if the field is disabled or not
          */
         "disabled"?: boolean;
+    }
+    interface SdsFieldError {
     }
     /**
      * Fieldset FieldGroup
@@ -3897,6 +3971,12 @@ declare namespace LocalJSX {
           * The name associated with the group.
          */
         "name"?: string;
+    }
+    interface SdsForm {
+        /**
+          * If `true` the form will be displayed on a single line
+         */
+        "singleLine"?: boolean;
     }
     interface SdsIconActivity {
         /**
@@ -5626,11 +5706,24 @@ declare namespace LocalJSX {
      */
     interface SdsKeyboard {
     }
+    /**
+     * Fieldset Label
+     */
+    interface SdsLabel {
+    }
+    /**
+     * Fieldset Legend
+     */
+    interface SdsLegend {
+    }
     interface IntrinsicElements {
         "my-component": MyComponent;
+        "sds-description": SdsDescription;
         "sds-field": SdsField;
+        "sds-field-error": SdsFieldError;
         "sds-field-group": SdsFieldGroup;
         "sds-fieldset": SdsFieldset;
+        "sds-form": SdsForm;
         "sds-icon-activity": SdsIconActivity;
         "sds-icon-airplay": SdsIconAirplay;
         "sds-icon-alert-circle": SdsIconAlertCircle;
@@ -5919,6 +6012,8 @@ declare namespace LocalJSX {
         "sds-icon-zoom-in": SdsIconZoomIn;
         "sds-icon-zoom-out": SdsIconZoomOut;
         "sds-keyboard": SdsKeyboard;
+        "sds-label": SdsLabel;
+        "sds-legend": SdsLegend;
     }
 }
 export { LocalJSX as JSX };
@@ -5927,10 +6022,15 @@ declare module "@stencil/core" {
         interface IntrinsicElements {
             "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
             /**
+             * Fieldset Description
+             */
+            "sds-description": LocalJSX.SdsDescription & JSXBase.HTMLAttributes<HTMLSdsDescriptionElement>;
+            /**
              * Fieldset Field
              * @return styled `div` element
              */
             "sds-field": LocalJSX.SdsField & JSXBase.HTMLAttributes<HTMLSdsFieldElement>;
+            "sds-field-error": LocalJSX.SdsFieldError & JSXBase.HTMLAttributes<HTMLSdsFieldErrorElement>;
             /**
              * Fieldset FieldGroup
              * @return styled `div` element
@@ -5941,6 +6041,7 @@ declare module "@stencil/core" {
              * @return `fieldset` element
              */
             "sds-fieldset": LocalJSX.SdsFieldset & JSXBase.HTMLAttributes<HTMLSdsFieldsetElement>;
+            "sds-form": LocalJSX.SdsForm & JSXBase.HTMLAttributes<HTMLSdsFormElement>;
             "sds-icon-activity": LocalJSX.SdsIconActivity & JSXBase.HTMLAttributes<HTMLSdsIconActivityElement>;
             "sds-icon-airplay": LocalJSX.SdsIconAirplay & JSXBase.HTMLAttributes<HTMLSdsIconAirplayElement>;
             "sds-icon-alert-circle": LocalJSX.SdsIconAlertCircle & JSXBase.HTMLAttributes<HTMLSdsIconAlertCircleElement>;
@@ -6233,6 +6334,14 @@ declare module "@stencil/core" {
              * @return `kbd` elements
              */
             "sds-keyboard": LocalJSX.SdsKeyboard & JSXBase.HTMLAttributes<HTMLSdsKeyboardElement>;
+            /**
+             * Fieldset Label
+             */
+            "sds-label": LocalJSX.SdsLabel & JSXBase.HTMLAttributes<HTMLSdsLabelElement>;
+            /**
+             * Fieldset Legend
+             */
+            "sds-legend": LocalJSX.SdsLegend & JSXBase.HTMLAttributes<HTMLSdsLegendElement>;
         }
     }
 }
