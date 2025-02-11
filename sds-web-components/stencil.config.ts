@@ -30,7 +30,7 @@ export const config: Config = {
     },
     {
       type: 'docs-json',
-      file: './dist/docs.json'
+      file: './dist/docs.json',
     },
   ],
   testing: {
