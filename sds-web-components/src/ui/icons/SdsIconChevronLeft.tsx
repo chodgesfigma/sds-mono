@@ -1,5 +1,5 @@
-import { Component, Prop, h } from '@stencil/core';
 import { SdsIcon, Size } from '../primitives/SdsIcon/SdsIcon';
+import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'sds-icon-chevron-left',
@@ -15,7 +15,7 @@ export class SdsIconChevronLeft {
   render() {
     return (
       <SdsIcon size={this.size}>
-        <path d="M10 12L6 8L10 4" stroke="var(--svg-stroke-color)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M10 12L6 8L10 4" stroke="var(--svg-stroke-color)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" />
       </SdsIcon>
     );
   }

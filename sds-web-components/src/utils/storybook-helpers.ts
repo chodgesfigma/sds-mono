@@ -30,7 +30,7 @@ export const spread = <T>(args: T, options?: SpreadOptions<T>) => {
           }
         })
         // Filter out entries where the value cannot be stringified (e.g. functions, undefined)
-        .filter(([_key, value]) => Boolean(JSON.stringify(value)))
+        .filter(([, value]) => Boolean(JSON.stringify(value)))
         .map(([key, value]) => `${key}=${JSON.stringify(value)}`)
         .join(' ')
     );
@@ -45,11 +45,11 @@ export const spread = <T>(args: T, options?: SpreadOptions<T>) => {
  */
 type HideArgsOptions = {
   /**
-   * keys to exclude
+   * disable the controls within individual stories
    */
   disableControl?: boolean;
   /**
-   * keys to include
+   * hide the controls from both storybook docs and stories
    */
   disableDocs?: boolean;
 };

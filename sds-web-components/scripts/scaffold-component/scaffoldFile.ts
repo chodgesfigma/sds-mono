@@ -1,5 +1,5 @@
-import path from 'path';
 import fs from 'fs';
+import path from 'path';
 
 /**
  * Creates a file relative to the specified path if the file doesn't exist.
