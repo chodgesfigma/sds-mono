@@ -1,14 +1,11 @@
 import { Component, Prop, h } from '@stencil/core';
-// import { JSXBase } from '@stencil/core/internal';
 import clsx from 'clsx';
-
-// type LinkProps = JSXBase.AnchorHTMLAttributes<HTMLAnchorElement>;
 
 type Target = '_blank' | '_self' | 'parent' | '_top';
 
 @Component({
   tag: 'sds-link',
-  styleUrl: 'SdsLink.scss',
+  styleUrl: 'sds-link.scss',
   shadow: true,
 })
 export class SdsLink {
@@ -16,11 +13,6 @@ export class SdsLink {
    * Href of the link
    */
   @Prop() href?: string;
-
-  /**
-   * Additional CSS classes
-   */
-  @Prop() class?: string;
 
   /**
    * Target of the link
@@ -53,7 +45,7 @@ export class SdsLink {
   @Prop() download?: string;
 
   render() {
-    const classNames = clsx('link', this.class);
+    const classNames = clsx('link');
     return (
       <a class={classNames} download={this.download} href={this.href} rel={this.rel} target={this.target} ping={this.ping} media={this.media} hreflang={this.hreflang}>
         <slot />

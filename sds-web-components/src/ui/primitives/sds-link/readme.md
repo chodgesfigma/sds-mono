@@ -9,7 +9,6 @@
 
 | Property   | Attribute  | Description                                                            | Type                                        | Default     |
 | ---------- | ---------- | ---------------------------------------------------------------------- | ------------------------------------------- | ----------- |
-| `class`    | `class`    | Additional CSS classes                                                 | `string \| undefined`                       | `undefined` |
 | `download` | `download` | Download HTML attribute                                                | `string \| undefined`                       | `undefined` |
 | `href`     | `href`     | Href of the link                                                       | `string \| undefined`                       | `undefined` |
 | `hreflang` | `hreflang` | HrefLang HTML attribute to specify the language of the linked document | `string \| undefined`                       | `undefined` |

@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from '@storybook/html';
 
-import { SdsLink } from './SdsLink';
+import { SdsLink } from './sds-link';
 import { spread } from '../../../utils/storybook-helpers';
 
 type ComponentArgs = SdsLink;
