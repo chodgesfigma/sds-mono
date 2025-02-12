@@ -5,10 +5,10 @@
 
   display: grid;
   grid-template-areas:
-    "field-label field-extra"
-    "field-main field-main"
-    "field-description field-description"
-    "field-error field-error";
+    'field-label field-extra'
+    'field-main field-main'
+    'field-description field-description'
+    'field-error field-error';
   width: 100%;
 
   :disabled > &,
@@ -19,6 +19,7 @@
 
   // TODO: use this css var instead of the :slotted selector
   --input-grid-area: field-main;
+
   ::slotted(.select),
   ::slotted(.text-area),
   ::slotted(.slider) {

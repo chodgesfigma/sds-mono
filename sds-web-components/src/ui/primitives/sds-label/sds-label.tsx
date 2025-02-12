@@ -1,5 +1,5 @@
-import { Component, h } from '@stencil/core';
 import { SdsLabelFunctional } from './sds-label-functional';
+import { Component, h } from '@stencil/core';
 
 /**
  * Fieldset Label

@@ -1,9 +1,6 @@
 # sds-field
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Overview
 
@@ -15,7 +12,6 @@ Fieldset Field
 | ---------- | ---------- | ---------------------------------------- | --------- | ------- |
 | `disabled` | `disabled` | Controls if the field is disabled or not | `boolean` | `false` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_
