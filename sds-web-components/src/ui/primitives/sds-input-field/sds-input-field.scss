@@ -1,7 +1,7 @@
 @import 'reset';
-@import '../sds-input/sds-input.scss';
-@import '../sds-label/sds-label.scss';
-@import '../sds-description/sds-description.scss';
+@import '../sds-input/sds-input';
+@import '../sds-label/sds-label';
+@import '../sds-description/sds-description';
 
 :host {
   display: block;

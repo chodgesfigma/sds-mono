@@ -1,5 +1,5 @@
-import { Component, h, Prop } from '@stencil/core';
 import { SdsInputFunctional, SdsInputProps } from './sds-input-functional';
+import { Component, h, Prop } from '@stencil/core';
 
 /**
  * Input

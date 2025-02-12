@@ -1,9 +1,9 @@
-import { Component, Prop, h } from '@stencil/core';
-import { State } from '@stencil/core/internal';
-import { SdsInputFunctional, SdsInputProps } from '../sds-input/sds-input-functional';
-import { SdsLabelFunctional } from '../sds-label/sds-label-functional';
 import { SdsDescriptionFunctional } from '../sds-description/sds-description-functional';
 import { SdsFieldErrorFunctional } from '../sds-field-error/sds-field-error-functional';
+import { SdsInputFunctional, SdsInputProps } from '../sds-input/sds-input-functional';
+import { SdsLabelFunctional } from '../sds-label/sds-label-functional';
+import { Component, Prop, h } from '@stencil/core';
+import { State } from '@stencil/core/internal';
 
 /**
  * Input Field
