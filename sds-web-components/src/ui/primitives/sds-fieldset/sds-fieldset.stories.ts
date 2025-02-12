@@ -26,18 +26,18 @@ const meta = {
           label="Street address"
           description="Hello there"
           ${disabled ? 'disabled' : ''}
-        />
-        <!-- <SelectField
-          isRequired
+        ></sds-input-field>
+        <sds-select-field
+          required
           name="country"
-          defaultSelectedKey="us"
           label="Country"
           description="I am a select description"
+          ${disabled ? 'disabled' : ''}
         >
-          <SelectItem id="ca">Canada</SelectItem>
-          <SelectItem id="mx">Mexico</SelectItem>
-          <SelectItem id="us">United States</SelectItem>
-        </SelectField> -->
+          <sds-select-item id="ca">Canada</sds-select-item>
+          <sds-select-item id="mx">Mexico</sds-select-item>
+          <sds-select-item id="us" selected>United States</sds-select-item>
+        </sds-select-field>
         <!-- <SliderField
           name="range"
           label="Slide here"

@@ -12,19 +12,19 @@ Fieldset Field
 | ---------- | ---------- | ---------------------------------------- | --------- | ------- |
 | `disabled` | `disabled` | Controls if the field is disabled or not | `boolean` | `false` |
 
----
-
 ## Dependencies
 
 ### Used by
 
 - [sds-input-field](../sds-input-field)
+- [sds-select-field](../sds-select-field)
 
 ### Graph
 
 ```mermaid
 graph TD;
   sds-input-field --> sds-field
+  sds-select-field --> sds-field
   style sds-field fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

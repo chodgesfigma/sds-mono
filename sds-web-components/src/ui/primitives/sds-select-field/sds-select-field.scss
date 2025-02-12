@@ -1,0 +1,10 @@
+@import 'reset';
+@import '../sds-select/sds-select';
+@import '../sds-label/sds-label';
+@import '../sds-description/sds-description';
+@import '../sds-field-error/sds-field-error';
+
+:host {
+  display: block;
+  width: 100%;
+}
