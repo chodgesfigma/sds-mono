@@ -1,9 +1,6 @@
 # sds-button-group
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -11,7 +8,6 @@
 | -------- | --------- | ----------- | ------------------------------------------------------------------- | --------- |
 | `align`  | `align`   |             | `"center" \| "end" \| "justify" \| "stack" \| "start" \| undefined` | `'start'` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

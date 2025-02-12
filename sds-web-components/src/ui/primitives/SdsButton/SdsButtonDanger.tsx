@@ -1,5 +1,6 @@
-import { Component, Prop, h } from '@stencil/core';
 import { Type, Size, Variant, SdsButtonBase } from './SdsButtonBase';
+import { Component, Prop, h } from '@stencil/core';
+
 export type DangerVariant = Exclude<Variant, 'primary' | 'subtle' | 'neutral'>;
 
 @Component({

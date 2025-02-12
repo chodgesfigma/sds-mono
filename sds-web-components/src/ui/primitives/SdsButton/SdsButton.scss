@@ -2,6 +2,7 @@
 
 .button {
   --border-radius: var(--sds-size-radius-200);
+
   align-items: center;
   box-shadow: inset 0 0 0 var(--sds-size-stroke-border) var(--button-border-color);
   border-radius: var(--border-radius);
@@ -34,7 +35,6 @@
 
 .button-size-medium {
   --button-font: var(--sds-font-body-base);
-
   --button-padding-x: var(--sds-size-space-300);
   --button-padding-y: var(--sds-size-space-300);
 
@@ -45,16 +45,15 @@
 
 .button:focus-visible {
   outline: none;
+
   --offset: calc(var(--sds-size-stroke-border) * 2);
+
   &::before {
     content: '';
     border-radius: calc(var(--border-radius) + var(--offset));
-    bottom: calc(-1 * var(--offset));
+    inset: calc(-1 * var(--offset));
     box-shadow: 0 0 0 var(--global-focus-ring-size) var(--global-focus-ring-color);
-    left: calc(-1 * var(--offset));
     position: absolute;
-    right: calc(-1 * var(--offset));
-    top: calc(-1 * var(--offset));
   }
 }
 
@@ -62,23 +61,28 @@
   --button-background-color: var(--sds-color-background-brand-default);
   --button-border-color: var(--sds-color-border-brand-default);
   --button-color: var(--sds-color-text-brand-on-brand);
+
   &:hover:not(:disabled) {
     --button-background-color: var(--sds-color-background-brand-hover);
     --button-border-color: var(--sds-color-border-brand-default);
   }
 }
+
 .button-variant-neutral {
   --button-background-color: var(--sds-color-background-default-secondary);
   --button-border-color: var(--sds-color-border-default-default);
   --button-color: var(--sds-color-text-default-default);
+
   &:hover:not(:disabled) {
     --button-background-color: var(--sds-color-background-default-secondary-hover);
   }
 }
+
 .button-variant-subtle {
   --button-background-color: transparent;
   --button-border-color: transparent;
   --button-color: var(--sds-color-text-brand-default);
+
   &:hover:not(:disabled) {
     --button-background-color: var(--sds-color-background-default-default-hover);
   }
@@ -88,15 +92,18 @@
   --button-background-color: var(--sds-color-background-danger-default);
   --button-border-color: var(--sds-color-border-danger-secondary);
   --button-color: var(--sds-color-text-danger-on-danger);
+
   &:hover:not(:disabled) {
     --button-background-color: var(--sds-color-background-danger-hover);
     --button-border-color: var(--sds-color-border-danger-default);
   }
 }
+
 .button-variant-danger-subtle {
   --button-background-color: transparent;
   --button-border-color: transparent;
   --button-color: var(--sds-color-text-danger-default);
+
   &:hover:not(:disabled) {
     --button-background-color: var(--sds-color-background-danger-tertiary-hover);
   }
@@ -105,6 +112,7 @@
 .button:disabled {
   cursor: default;
   pointer-events: none;
+
   --button-background-color: var(--sds-color-background-disabled-default);
   --button-border-color: var(--sds-color-border-disabled-default);
   --button-color: var(--sds-color-text-disabled-default);
@@ -118,19 +126,24 @@
   &.button-group-align-start {
     justify-content: flex-start;
   }
+
   &.button-group-align-center {
     justify-content: center;
   }
+
   &.button-group-align-end {
     justify-content: flex-end;
   }
+
   &.button-group-align-justify {
     > .button {
       flex: 1;
     }
   }
+
   &.button-group-align-stack {
     flex-direction: column;
+
     > .button {
       width: 100%;
     }
