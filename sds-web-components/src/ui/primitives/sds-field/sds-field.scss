@@ -17,14 +17,7 @@
     --field-description-color: var(--sds-color-text-disabled-default);
   }
 
-  // TODO: use this css var instead of the :slotted selector
   --input-grid-area: field-main;
-
-  // ::slotted(.select),
-  // ::slotted(.text-area),
-  // ::slotted(.slider) {
-  //   grid-area: field-main;
-  // }
 
   // slotted label
   --input-label-grid-area: field-label;
