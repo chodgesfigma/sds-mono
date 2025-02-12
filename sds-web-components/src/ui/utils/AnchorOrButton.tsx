@@ -9,7 +9,7 @@ type AnchorOrButtonSharedProps = {
 type ButtonProps = JSXBase.ButtonHTMLAttributes<HTMLButtonElement>;
 type LinkProps = JSXBase.AnchorHTMLAttributes<HTMLAnchorElement>;
 
-type AnchorOrButtonProps = (ButtonProps | LinkProps) & AnchorOrButtonSharedProps;
+export type AnchorOrButtonProps = (ButtonProps | LinkProps) & AnchorOrButtonSharedProps;
 
 const isAnchor = (props: AnchorOrButtonProps): props is AnchorOrButtonSharedProps & LinkProps => {
   return 'href' in props;
