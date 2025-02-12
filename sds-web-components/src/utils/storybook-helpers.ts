@@ -30,7 +30,7 @@ export const spread = <T>(args: T, options?: SpreadOptions<T>) => {
           }
         })
         // Filter out entries where the value cannot be stringified (e.g. functions, undefined)
-        .filter(([_key, value]) => Boolean(JSON.stringify(value)))
+        .filter(([, value]) => Boolean(JSON.stringify(value)))
         .map(([key, value]) => `${key}=${JSON.stringify(value)}`)
         .join(' ')
     );
