@@ -38,3 +38,38 @@ export const spread = <T>(args: T, options?: SpreadOptions<T>) => {
     return '';
   }
 };
+
+/**
+ * Options for the hideArgs storybook helper
+ * @typedef {{ disableControl?: boolean, disableDocs?: boolean }} HideArgsOptions
+ */
+type HideArgsOptions = {
+  /**
+   * disable the controls within individual stories
+   */
+  disableControl?: boolean;
+  /**
+   * hide the controls from both storybook docs and stories
+   */
+  disableDocs?: boolean;
+};
+
+/**
+ * Disable the storybook controls for specific args
+ * @param args - `args` that exist on the story
+ * @param {HideArgsOptions} options - The {@link HideArgsOptions} to be used
+ * @returns a map of a story's controls to be spread into `argTypes`
+ */
+export const hideArgs = <G>(args: (keyof G)[], options?: HideArgsOptions) => {
+  const { disableControl = false, disableDocs = false } = options ?? {};
+  const hiddenArgMap: Record<string, { control: boolean; table: { disable: boolean } }> = {};
+  args.forEach(arg => {
+    hiddenArgMap[arg as string] = {
+      control: !disableControl,
+      table: {
+        disable: disableDocs,
+      },
+    };
+  });
+  return hiddenArgMap;
+};
