@@ -1,0 +1,59 @@
+name: QA Checks
+
+on:
+  pull_request:
+    branches: [main, develop]
+  push:
+    branches: [main, develop]
+  workflow_dispatch:
+
+run-name: QA Checks - "${{ github.ref_name }}"
+
+jobs:
+  check-code:
+    name: Check Code
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Use Node 22.13.1
+        uses: actions/setup-node@v3
+        with:
+          node-version: 22.13.1
+          cache: "npm"
+          cache-dependency-path: ./sds-web-components/package-lock.json
+
+      - name: Install npm dependencies
+        working-directory: ./sds-web-components
+        run: npm ci
+
+      - name: Lint JS/TS
+        working-directory: ./sds-web-components
+        run: npm run lint:js
+
+      - name: Lint styles
+        working-directory: ./sds-web-components
+        run: npm run lint:styles
+
+      - name: Check formatting
+        working-directory: ./sds-web-components
+        run: npm run lint:formatting
+
+      - name: Build project
+        working-directory: ./sds-web-components
+        run: npm run build
+
+      - name: Install Playwright for Storybook Tests
+        working-directory: ./sds-web-components
+        run: npx playwright install --with-deps
+
+      - name: Build Storybook
+        working-directory: ./sds-web-components
+        run: npm run build-storybook --quiet
+
+      - name: Serve Storybook and run tests
+        working-directory: ./sds-web-components
+        run: |
+          npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
+            "npx http-server storybook-static --port 6006 --silent" \
+            "npx wait-on tcp:127.0.0.1:6006 && npm run test-storybook"
