@@ -1,14 +1,11 @@
 # sds-field-group
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Overview
 
 Fieldset FieldGroup
 
-----------------------------------------------
+---
 
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

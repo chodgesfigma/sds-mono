@@ -1,5 +1,5 @@
-import { Component, h } from '@stencil/core';
 import { SdsDescriptionFunctional } from './sds-description-functional';
+import { Component, h } from '@stencil/core';
 
 /**
  * Fieldset Description

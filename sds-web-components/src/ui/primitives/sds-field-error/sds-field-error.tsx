@@ -1,5 +1,5 @@
-import { Component, h } from '@stencil/core';
 import { SdsFieldErrorFunctional } from './sds-field-error-functional';
+import { Component, h } from '@stencil/core';
 
 /**
  * Fieldset Field Error
