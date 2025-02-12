@@ -1,5 +1,5 @@
-import { Component, Prop, h } from '@stencil/core';
 import { SdsIcon, Size } from '../primitives/SdsIcon/SdsIcon';
+import { Component, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'sds-icon-navigation-2',
@@ -15,7 +15,13 @@ export class SdsIconNavigation2 {
   render() {
     return (
       <SdsIcon size={this.size}>
-        <path d="M8.00004 1.33337L12.6667 14L8.00004 11.3334L3.33337 14L8.00004 1.33337Z" stroke="var(--svg-stroke-color)" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        <path
+          d="M8.00004 1.33337L12.6667 14L8.00004 11.3334L3.33337 14L8.00004 1.33337Z"
+          stroke="var(--svg-stroke-color)"
+          stroke-width="1.6"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
       </SdsIcon>
     );
   }
