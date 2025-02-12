@@ -10,6 +10,7 @@
   &.fieldset-disabled {
     --field-label-color: var(--sds-color-text-disabled-default);
     --field-description-color: var(--sds-color-text-disabled-default);
+
     > * {
       color: var(--sds-color-text-disabled-default);
     }
