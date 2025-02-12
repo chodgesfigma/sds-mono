@@ -9,7 +9,7 @@ These files are handled by the global style export that Stencil does
 /* These styles are what a consumer app might define themselves as defaults */
 :root {
   --global-focus-ring-size: var(--sds-size-stroke-focus-ring);
-  --global-focus-ring-color: rgb(0, 106, 255);
+  --global-focus-ring-color: rgb(0 106 255);
   --global-line-height-paragraph: 1.4;
   --global-stack-top: 999;
   --global-stack-focus: 999;
@@ -24,13 +24,14 @@ These files are handled by the global style export that Stencil does
 .display-none-to-flex {
   display: var(--sds-responsive-display-none-to-flex) !important;
 }
+
 .display-flex-to-none {
   display: var(--sds-responsive-display-flex-to-none) !important;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --global-focus-ring-color: rgb(0, 106, 255);
+    --global-focus-ring-color: rgb(0 106 255);
   }
 }
 

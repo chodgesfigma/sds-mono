@@ -2,10 +2,9 @@
  * This script will find all .tsx files in the designated folder, and convert any React components into a Stencil component.
  * It will check to see if it's a tsx file, and if isn't already following a Stencil component pattern.
  */
-
-import path from 'path';
-import fs from 'fs';
 import { convertToKebabCase } from './utils.js';
+import fs from 'fs';
+import path from 'path';
 
 /**
  * Folder where Icon components are defined
@@ -36,16 +35,16 @@ export class SdsIcon${name} {
   }
 }
 `;
-}
+};
 
-const convertFile = async (filename) => {
+const convertFile = async filename => {
   if (!/.tsx$/.test(filename)) {
     console.log(`skipping: ${filename} is not a tsx file`);
     return;
   }
 
   const filepath = path.resolve(iconFolderPath, filename);
-  const file = fs.readFileSync(filepath, { encoding: 'utf-8'});
+  const file = fs.readFileSync(filepath, { encoding: 'utf-8' });
 
   if (/@stencil\/core/.test(file)) {
     console.log(`skipping: ${filename} is already a stencil component`);
@@ -56,7 +55,6 @@ const convertFile = async (filename) => {
   const svgContentRegex = /export const Icon(\w+) = \(props: IconProps\) => \(\W*(<Icon {\.\.\.props}>)((\S|\s)*)(<\/Icon>)/gm;
   const svgContent = svgContentRegex.exec(file);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, name, ___, svg] = svgContent;
 
   // replace React syntax for path attributes
@@ -66,14 +64,14 @@ const convertFile = async (filename) => {
     .replaceAll('clipPath', 'clip-path')
     .replaceAll('strokeLinejoin', 'stroke-linejoin');
 
-  const output = template({name, svg: normalizedSVG});
+  const output = template({ name, svg: normalizedSVG });
 
   const outputFilepath = path.resolve(iconFolderPath, `Sds${filename}`);
   console.log(`re-writing: ${name} icon to ${outputFilepath}`);
   fs.writeFileSync(outputFilepath, output, { encoding: 'utf-8' });
 
   console.log(`removing: original ${filepath} file`);
-  fs.unlink(filepath, (err) => {
+  fs.unlink(filepath, err => {
     if (err) {
       console.error(err);
     }
@@ -82,8 +80,8 @@ const convertFile = async (filename) => {
 
 const convert = () => {
   const files = fs.readdirSync(path.resolve(iconFolderPath));
-  console.log(`found: ${files.length} files`)
-  files.forEach((filename) => convertFile(filename));
-}
+  console.log(`found: ${files.length} files`);
+  files.forEach(filename => convertFile(filename));
+};
 
 convert();
