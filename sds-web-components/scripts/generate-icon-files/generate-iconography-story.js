@@ -19,7 +19,7 @@ const iconTemplate = ({ iconTag, iconName }) => {
 const fileTemplate = ({ icons }) => {
   return `import { Meta, Title, IconGallery, IconItem } from '@storybook/addon-docs';
 
-<Meta title="Iconography" />
+<Meta title="Iconography"></Meta>
  
 # Iconography
 
