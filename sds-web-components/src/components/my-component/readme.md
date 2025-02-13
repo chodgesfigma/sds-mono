@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property | Attribute | Description     | Type     | Default |
@@ -10,6 +11,7 @@
 | `last`   | `last`    | The last name   | `string` | `''`    |
 | `middle` | `middle`  | The middle name | `string` | `''`    |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

@@ -13,7 +13,7 @@ const iconFolderPath = 'src/ui/icons/';
 
 const template = ({ name, svg }) => {
   return `import { Component, Prop, h } from '@stencil/core';
-import { SdsIcon, Size } from '../primitives/SdsIcon/SdsIcon';
+import { SdsIcon, Size } from '../primitives/sds-icon/sds-icon';
 
 @Component({
   tag: 'sds-icon-${convertToKebabCase(name)}',
