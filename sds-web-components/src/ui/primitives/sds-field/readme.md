@@ -12,8 +12,6 @@ Fieldset Field
 | ---------- | ---------- | ---------------------------------------- | --------- | ------- |
 | `disabled` | `disabled` | Controls if the field is disabled or not | `boolean` | `false` |
 
----
-
 ## Dependencies
 
 ### Used by

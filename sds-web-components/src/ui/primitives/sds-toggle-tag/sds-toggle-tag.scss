@@ -1,0 +1,46 @@
+@import 'reset';
+@import '../sds-tag/sds-tag';
+
+.tag-toggle {
+  --tag-color: var(--sds-color-text-brand-tertiary);
+  --tag-icon: var(--sds-color-icon-brand-tertiary);
+  --tag-background-color: var(--sds-color-background-brand-tertiary);
+
+  cursor: pointer;
+  gap: var(--sds-size-space-200);
+  outline: none;
+  display: flex;
+  align-items: center;
+
+  &--selected {
+    --tag-color: var(--sds-color-text-brand-on-brand);
+    --tag-icon: var(--sds-color-icon-brand-on-brand);
+    --tag-background-color: var(--sds-color-background-brand-default);
+  }
+
+  &:focus-visible {
+    outline: none;
+    position: relative;
+
+    --offset: calc(var(--sds-size-stroke-border) * 2);
+
+    &::before {
+      content: '';
+      border-radius: calc(var(--border-radius) + var(--offset));
+      inset: calc(-1 * var(--offset));
+      box-shadow: 0 0 0 var(--global-focus-ring-size) var(--global-focus-ring-color);
+      position: absolute;
+    }
+  }
+}
+
+.tag-toggle-list {
+  display: flex;
+  gap: var(--sds-size-space-200);
+}
+
+.tag-toggle-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-200);
+}
