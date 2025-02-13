@@ -3,17 +3,3 @@
 :host {
   display: block;
 }
-
-.select-item {
-  gap: var(--sds-size-space-200);
-  min-width: calc(var(--sds-size-space-400) * 10);
-  padding-left: var(--sds-size-space-100);
-
-  .select-item-check {
-    opacity: 0;
-  }
-
-  &[data-selected] .select-item-check {
-    opacity: 1;
-  }
-}
