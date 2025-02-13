@@ -1,8 +1,7 @@
-import type { Meta, StoryObj } from '@storybook/html';
-import { withActions } from '@storybook/addon-actions/decorator';
-
 import { Components } from '../../../components';
 import { spread } from '../../../utils/storybook-helpers';
+import { withActions } from '@storybook/addon-actions/decorator';
+import type { Meta, StoryObj } from '@storybook/html';
 
 type ComponentArgs = Components.SdsTag & { removable: boolean };
 
@@ -25,18 +24,6 @@ const meta = {
       <sds-tag scheme=${scheme ?? 'warning'} ${spread(args)}>Warning</sds-tag>
       <sds-tag scheme=${scheme ?? 'neutral'} ${spread(args)}>Neutral</sds-tag>
     </sds-toggle-tag-list>
-
-    <script>
-      ${
-        args.removable &&
-        `document.querySelectorAll('sds-tag').forEach((node) => {
-          node.addEventListener('removed', () => {
-            console.log('removed');
-          });
-        });
-      `
-      }
-    </script>
     `,
 } satisfies Meta<ComponentArgs>;
 
