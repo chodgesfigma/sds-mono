@@ -1,6 +1,7 @@
 import { SdsSelectItemFunctional } from '../sds-select-item/sds-select-item-functional';
 import { SdsSelectFunctional } from './sds-select-functional';
-import { Component, Element, h, Prop } from '@stencil/core';
+import { Component, Element, h, Prop, State } from '@stencil/core';
+import clsx from 'clsx';
 
 /**
  * Select
@@ -13,6 +14,11 @@ import { Component, Element, h, Prop } from '@stencil/core';
 export class SdsSelect {
   selectElement!: HTMLSelectElement;
   @Element() el!: HTMLElement;
+
+  /**
+   * Keeps track of whether or not the placeholder is currently selected
+   */
+  @State() hasSelectedPlaceholder = true;
 
   /**
    * Placeholder text for the input
@@ -32,15 +38,28 @@ export class SdsSelect {
       const option = node.shadowRoot?.querySelector('option');
       if (option) {
         this.selectElement.append(option);
+
+        // if there's a selected option, and it isn't the placeholder, remove the placeholder styling
+        if (option.selected && option.dataset.placeholder !== 'true') {
+          this.hasSelectedPlaceholder = false;
+        }
       }
     });
   };
 
+  /**
+   * Remove the placeholder styling when an option is chosen
+   */
+  handleOnChange = () => {
+    this.hasSelectedPlaceholder = false;
+  };
+
   render() {
+    const className = clsx(this.hasSelectedPlaceholder && 'select-wrapper--default');
     return (
-      <SdsSelectFunctional disabled={this.disabled} ref={el => (this.selectElement = el as HTMLSelectElement)}>
+      <SdsSelectFunctional class={className} disabled={this.disabled} ref={el => (this.selectElement = el as HTMLSelectElement)} onChange={this.handleOnChange}>
         {this.placeholder && (
-          <SdsSelectItemFunctional value="" disabled selected>
+          <SdsSelectItemFunctional value="" disabled selected data-placeholder="true">
             {this.placeholder}
           </SdsSelectItemFunctional>
         )}

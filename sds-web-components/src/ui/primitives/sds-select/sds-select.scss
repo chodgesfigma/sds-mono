@@ -13,6 +13,10 @@
   position: relative;
   grid-area: var(--input-grid-area);
 
+  &--default {
+    --select-text-color: var(--sds-color-text-default-tertiary);
+  }
+
   &:has(~ .error-message):not(:disabled) {
     --select-border-color: var(--sds-color-border-danger-default);
   }
@@ -26,8 +30,7 @@
 }
 
 .select {
-  appearance: none; /* Firefox */
-  appearance: none; /* Safari and Chrome */
+  /* Firefox */ /* Safari and Chrome */
   appearance: none;
   align-items: center;
   background-color: var(--select-background-color);

@@ -3,8 +3,12 @@ import { SdsFieldErrorFunctional } from '../sds-field-error/sds-field-error-func
 import { SdsLabelFunctional } from '../sds-label/sds-label-functional';
 import { SdsSelectItemFunctional } from '../sds-select-item/sds-select-item-functional';
 import { SdsSelectFunctional } from '../sds-select/sds-select-functional';
-import { Component, h, Prop, Element } from '@stencil/core';
+import { Component, h, Prop, Element, State } from '@stencil/core';
+import clsx from 'clsx';
 
+/**
+ * Select Field
+ */
 @Component({
   tag: 'sds-select-field',
   styleUrl: 'sds-select-field.scss',
@@ -13,6 +17,11 @@ import { Component, h, Prop, Element } from '@stencil/core';
 export class SdsSelectField {
   selectElement!: HTMLSelectElement;
   @Element() el!: HTMLElement;
+
+  /**
+   * Keeps track of whether or not the placeholder is currently selected
+   */
+  @State() hasSelectedPlaceholder = true;
 
   /**
    * The input label
@@ -43,16 +52,28 @@ export class SdsSelectField {
   // this way the select can properly see and handle using the options
   componentDidLoad = () => {
     const options = this.el.querySelectorAll('sds-select-item');
-    console.log(options);
     options.forEach(node => {
       const option = node.shadowRoot?.querySelector('option');
       if (option) {
         this.selectElement.append(option);
+
+        // if there's a selected option, and it isn't the placeholder, remove the placeholder styling
+        if (option.selected && option.dataset.placeholder !== 'true') {
+          this.hasSelectedPlaceholder = false;
+        }
       }
     });
   };
 
+  /**
+   * Remove the placeholder styling when an option is chosen
+   */
+  handleOnChange = () => {
+    this.hasSelectedPlaceholder = false;
+  };
+
   render() {
+    const wrapperClassName = clsx(this.hasSelectedPlaceholder && 'select-wrapper--default');
     return (
       <sds-field disabled={this.disabled}>
         {this.label && (
@@ -66,9 +87,11 @@ export class SdsSelectField {
           disabled={this.disabled}
           aria-describedby={`description${this.error ? ' error' : ''}`}
           aria-labelledby="label"
+          class={wrapperClassName}
+          onChange={this.handleOnChange}
         >
           {this.placeholder && (
-            <SdsSelectItemFunctional value="" disabled selected>
+            <SdsSelectItemFunctional value="" disabled selected data-placeholder="true">
               {this.placeholder}
             </SdsSelectItemFunctional>
           )}
