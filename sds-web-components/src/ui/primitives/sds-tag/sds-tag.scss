@@ -1,0 +1,147 @@
+@import 'reset';
+
+.tag {
+  --border-radius: var(--sds-size-radius-200);
+
+  align-items: center;
+  background-color: var(--tag-background-color);
+  border-radius: var(--border-radius);
+  color: var(--tag-color);
+  display: inline-flex;
+  gap: var(--sds-size-space-300);
+  justify-content: center;
+  line-height: 1;
+  padding: var(--sds-size-space-200) var(--sds-size-space-200);
+
+  --icon-color: var(--tag-icon);
+
+  &:has(.tag-remove-button:focus-visible) {
+    outline: none;
+    position: relative;
+
+    --offset: calc(var(--sds-size-stroke-border) * 2);
+
+    &::before {
+      content: '';
+      border-radius: calc(var(--border-radius) + var(--offset));
+      inset: calc(-1 * var(--offset));
+      box-shadow: 0 0 0 var(--global-focus-ring-size) var(--global-focus-ring-color);
+      position: absolute;
+    }
+  }
+}
+
+.tag-remove-button {
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: flex;
+  padding: 0;
+}
+
+.tag-scheme-brand {
+  --tag-color: var(--sds-color-text-brand-on-brand);
+  --tag-icon: var(--sds-color-icon-brand-on-brand);
+  --tag-background-color: var(--sds-color-background-brand-default);
+
+  &:is(button):hover,
+  &:has(.tag-remove-button:hover) {
+    --tag-background-color: var(--sds-color-background-brand-hover);
+  }
+
+  &.tag-variant-secondary {
+    --tag-color: var(--sds-color-text-brand-on-brand-tertiary);
+    --tag-icon: var(--sds-color-icon-brand-on-brand-tertiary);
+    --tag-background-color: var(--sds-color-background-brand-tertiary);
+
+    &:is(button):hover,
+    &:has(.tag-remove-button:hover) {
+      --tag-background-color: var(--sds-color-background-default-tertiary-hover);
+    }
+  }
+}
+
+.tag-scheme-danger {
+  --tag-color: var(--sds-color-text-danger-on-danger);
+  --tag-icon: var(--sds-color-icon-danger-on-danger);
+  --tag-background-color: var(--sds-color-background-danger-default);
+
+  &:is(button):hover,
+  &:has(.tag-remove-button:hover) {
+    --tag-background-color: var(--sds-color-background-danger-hover);
+  }
+
+  &.tag-variant-secondary {
+    --tag-color: var(--sds-color-text-danger-on-danger-secondary);
+    --tag-icon: var(--sds-color-icon-danger-on-danger-secondary);
+    --tag-background-color: var(--sds-color-background-danger-secondary);
+
+    &:is(button):hover,
+    &:has(.tag-remove-button:hover) {
+      --tag-background-color: var(--sds-color-background-danger-secondary-hover);
+    }
+  }
+}
+
+.tag-scheme-positive {
+  --tag-color: var(--sds-color-text-positive-on-positive);
+  --tag-icon: var(--sds-color-icon-positive-on-positive);
+  --tag-background-color: var(--sds-color-background-positive-default);
+
+  &:is(button):hover,
+  &:has(.tag-remove-button:hover) {
+    --tag-background-color: var(--sds-color-background-positive-hover);
+  }
+
+  &.tag-variant-secondary {
+    --tag-color: var(--sds-color-text-positive-on-positive-secondary);
+    --tag-icon: var(--sds-color-icon-positive-on-positive-secondary);
+    --tag-background-color: var(--sds-color-background-positive-secondary);
+
+    &:is(button):hover,
+    &:has(.tag-remove-button:hover) {
+      --tag-background-color: var(--sds-color-background-positive-secondary-hover);
+    }
+  }
+}
+
+.tag-scheme-warning {
+  --tag-color: var(--sds-color-text-warning-on-warning);
+  --tag-icon: var(--sds-color-icon-warning-on-warning);
+  --tag-background-color: var(--sds-color-background-warning-default);
+
+  &:is(button):hover,
+  &:has(.tag-remove-button:hover) {
+    --tag-background-color: var(--sds-color-background-warning-hover);
+  }
+
+  &.tag-variant-secondary {
+    --tag-color: var(--sds-color-text-warning-on-warning-secondary);
+    --tag-icon: var(--sds-color-icon-warning-on-warning-secondary);
+    --tag-background-color: var(--sds-color-background-warning-secondary);
+
+    &:is(button):hover,
+    &:has(.tag-remove-button:hover) {
+      --tag-background-color: var(--sds-color-background-warning-secondary-hover);
+    }
+  }
+}
+
+.tag-scheme-neutral {
+  --tag-color: var(--sds-color-text-default-default);
+  --tag-icon: var(--sds-color-icon-default-default);
+  --tag-background-color: var(--sds-color-background-default-tertiary);
+
+  &:is(button):hover,
+  &:has(.tag-remove-button:hover) {
+    --tag-background-color: var(--sds-color-background-default-tertiary-hover);
+  }
+
+  &.tag-variant-secondary {
+    --tag-background-color: var(--sds-color-background-default-secondary);
+
+    &:is(button):hover,
+    &:has(.tag-remove-button:hover) {
+      --tag-background-color: var(--sds-color-background-default-secondary-hover);
+    }
+  }
+}

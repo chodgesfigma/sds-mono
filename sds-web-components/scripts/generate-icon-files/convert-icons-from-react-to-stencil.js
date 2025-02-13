@@ -55,7 +55,6 @@ const convertFile = async filename => {
   const svgContentRegex = /export const Icon(\w+) = \(props: IconProps\) => \(\W*(<Icon {\.\.\.props}>)((\S|\s)*)(<\/Icon>)/gm;
   const svgContent = svgContentRegex.exec(file);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, name, ___, svg] = svgContent;
 
   // replace React syntax for path attributes

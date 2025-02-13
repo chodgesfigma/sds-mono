@@ -1,10 +1,12 @@
-.icon {
-  --icon-color: var(--sds-color-icon-brand-default);
+:host {
   --svg-stroke-color: var(--icon-color);
   --svg-fill-color: var(--icon-color);
+}
 
+.icon {
   height: var(--icon-diameter);
   width: var(--icon-diameter);
+  display: block;
 }
 
 .icon-size-14 {
