@@ -20,6 +20,10 @@
   &:has(~ .error-message):not(:disabled) {
     --select-border-color: var(--sds-color-border-danger-default);
   }
+
+  &:has(.select:disabled) {
+    --icon-color: var(--sds-color-icon-disabled-on-disabled);
+  }
 }
 
 .icon {
@@ -30,7 +34,9 @@
 }
 
 .select {
-  /* Firefox */ /* Safari and Chrome */
+  /* Firefox */
+
+  /* Safari and Chrome */
   appearance: none;
   align-items: center;
   background-color: var(--select-background-color);
@@ -49,10 +55,6 @@
     --select-background-color: var(--sds-color-background-disabled-default);
     --select-text-color: var(--sds-color-text-disabled-default);
     --select-border-color: var(--sds-color-border-disabled-default);
-
-    > .icon {
-      --icon-color: var(--sds-color-icon-disabled-on-disabled);
-    }
   }
 
   &:focus-visible {
