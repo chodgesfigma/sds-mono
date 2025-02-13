@@ -1,37 +1,8 @@
 @import 'reset';
 
-.tag-button {
-  cursor: pointer;
-}
-
-.tag:has(.tag-remove-button:focus-visible),
-.tag-toggle:focus-visible,
-.tag-button:focus-visible {
-  outline: none;
-  position: relative;
-  --offset: calc(var(--sds-size-stroke-border) * 2);
-  &::before {
-    content: "";
-    border-radius: calc(var(--border-radius) + var(--offset));
-    bottom: calc(-1 * var(--offset));
-    box-shadow: 0 0 0 var(--global-focus-ring-size)
-      var(--global-focus-ring-color);
-    left: calc(-1 * var(--offset));
-    position: absolute;
-    right: calc(-1 * var(--offset));
-    top: calc(-1 * var(--offset));
-  }
-}
-
-.tag-remove-button {
-  border-radius: var(--border-radius);
-  cursor: pointer;
-  display: flex;
-  padding: 0;
-}
-
 .tag {
   --border-radius: var(--sds-size-radius-200);
+
   align-items: center;
   background-color: var(--tag-background-color);
   border-radius: var(--border-radius);
@@ -43,6 +14,28 @@
   padding: var(--sds-size-space-200) var(--sds-size-space-200);
 
   --icon-color: var(--tag-icon);
+
+  &:has(.tag-remove-button:focus-visible) {
+    outline: none;
+    position: relative;
+
+    --offset: calc(var(--sds-size-stroke-border) * 2);
+
+    &::before {
+      content: '';
+      border-radius: calc(var(--border-radius) + var(--offset));
+      inset: calc(-1 * var(--offset));
+      box-shadow: 0 0 0 var(--global-focus-ring-size) var(--global-focus-ring-color);
+      position: absolute;
+    }
+  }
+}
+
+.tag-remove-button {
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  display: flex;
+  padding: 0;
 }
 
 .tag-scheme-brand {
@@ -62,12 +55,11 @@
 
     &:is(button):hover,
     &:has(.tag-remove-button:hover) {
-      --tag-background-color: var(
-        --sds-color-background-default-tertiary-hover
-      );
+      --tag-background-color: var(--sds-color-background-default-tertiary-hover);
     }
   }
 }
+
 .tag-scheme-danger {
   --tag-color: var(--sds-color-text-danger-on-danger);
   --tag-icon: var(--sds-color-icon-danger-on-danger);
@@ -85,12 +77,11 @@
 
     &:is(button):hover,
     &:has(.tag-remove-button:hover) {
-      --tag-background-color: var(
-        --sds-color-background-danger-secondary-hover
-      );
+      --tag-background-color: var(--sds-color-background-danger-secondary-hover);
     }
   }
 }
+
 .tag-scheme-positive {
   --tag-color: var(--sds-color-text-positive-on-positive);
   --tag-icon: var(--sds-color-icon-positive-on-positive);
@@ -108,12 +99,11 @@
 
     &:is(button):hover,
     &:has(.tag-remove-button:hover) {
-      --tag-background-color: var(
-        --sds-color-background-positive-secondary-hover
-      );
+      --tag-background-color: var(--sds-color-background-positive-secondary-hover);
     }
   }
 }
+
 .tag-scheme-warning {
   --tag-color: var(--sds-color-text-warning-on-warning);
   --tag-icon: var(--sds-color-icon-warning-on-warning);
@@ -131,33 +121,11 @@
 
     &:is(button):hover,
     &:has(.tag-remove-button:hover) {
-      --tag-background-color: var(
-        --sds-color-background-warning-secondary-hover
-      );
+      --tag-background-color: var(--sds-color-background-warning-secondary-hover);
     }
   }
 }
-.tag-scheme-brand {
-  --tag-color: var(--sds-color-text-brand-on-brand);
-  --tag-icon: var(--sds-color-icon-brand-on-brand);
-  --tag-background-color: var(--sds-color-background-brand-default);
 
-  &:is(button):hover,
-  &:has(.tag-remove-button:hover) {
-    --tag-background-color: var(--sds-color-background-brand-hover);
-  }
-
-  &.tag-variant-secondary {
-    --tag-color: var(--sds-color-text-brand-on-brand-secondary);
-    --tag-icon: var(--sds-color-icon-brand-on-brand-secondary);
-    --tag-background-color: var(--sds-color-background-brand-secondary);
-
-    &:is(button):hover,
-    &:has(.tag-remove-button:hover) {
-      --tag-background-color: var(--sds-color-background-brand-secondary-hover);
-    }
-  }
-}
 .tag-scheme-neutral {
   --tag-color: var(--sds-color-text-default-default);
   --tag-icon: var(--sds-color-icon-default-default);
@@ -173,34 +141,7 @@
 
     &:is(button):hover,
     &:has(.tag-remove-button:hover) {
-      --tag-background-color: var(
-        --sds-color-background-default-secondary-hover
-      );
+      --tag-background-color: var(--sds-color-background-default-secondary-hover);
     }
   }
-}
-
-.tag-toggle {
-  --tag-color: var(--sds-color-text-brand-tertiary);
-  --tag-icon: var(--sds-color-icon-brand-tertiary);
-  --tag-background-color: var(--sds-color-background-brand-tertiary);
-  cursor: pointer;
-  gap: var(--sds-size-space-200);
-  outline: none;
-  &--selected {
-    --tag-color: var(--sds-color-text-brand-on-brand);
-    --tag-icon: var(--sds-color-icon-brand-on-brand);
-    --tag-background-color: var(--sds-color-background-brand-default);
-  }
-}
-
-.tag-toggle-list {
-  display: flex;
-  gap: var(--sds-size-space-200);
-}
-
-.tag-toggle-group {
-  display: flex;
-  flex-direction: column;
-  gap: var(--sds-size-space-200);
 }

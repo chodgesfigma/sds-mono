@@ -1,6 +1,5 @@
-import { Component, Element, Event, EventEmitter, h, Listen, Prop, State } from '@stencil/core';
-import clsx from 'clsx';
 import { TagToggle } from './sds-toggle-tag';
+import { Component, Element, Event, EventEmitter, h, Listen, Prop, State } from '@stencil/core';
 
 export type SelectionMode = 'single' | 'multiple' | 'none';
 
@@ -15,7 +14,7 @@ const deselectAll = (selection: Selection) => {
  */
 @Component({
   tag: 'sds-toggle-tag-list',
-  styleUrl: 'sds-tag.scss',
+  styleUrl: 'sds-toggle-tag.scss',
   shadow: true,
 })
 export class SdsToggleTagList {
@@ -57,9 +56,8 @@ export class SdsToggleTagList {
   };
 
   render() {
-    const classNames = clsx('tag-toggle-list');
     return (
-      <div class={classNames}>
+      <div class="tag-toggle-list">
         <slot />
       </div>
     );

@@ -1,8 +1,7 @@
+import { Scheme, Variant } from './types';
 import { Component, h, Event, EventEmitter } from '@stencil/core';
 import { Prop } from '@stencil/core/internal';
 import clsx from 'clsx';
-
-import { Scheme, Variant } from './types';
 
 @Component({
   tag: 'sds-tag',

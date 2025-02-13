@@ -1,28 +1,35 @@
 # sds-tag
 
-
-
 <!-- Auto Generated Below -->
-
-
-## Overview
-
-Toggle Tag List
 
 ## Properties
 
-| Property        | Attribute        | Description | Type                               | Default    |
-| --------------- | ---------------- | ----------- | ---------------------------------- | ---------- |
-| `selectionMode` | `selection-mode` |             | `"multiple" \| "none" \| "single"` | `'single'` |
-
+| Property    | Attribute   | Description                                   | Type                                                          | Default     |
+| ----------- | ----------- | --------------------------------------------- | ------------------------------------------------------------- | ----------- |
+| `removable` | `removable` | Show or hide the x button                     | `boolean`                                                     | `false`     |
+| `scheme`    | `scheme`    | Color scheme for the tag                      | `"brand" \| "danger" \| "neutral" \| "positive" \| "warning"` | `'brand'`   |
+| `variant`   | `variant`   | Sets which set of colors to use in the scheme | `"primary" \| "secondary"`                                    | `'primary'` |
 
 ## Events
 
-| Event            | Description | Type                                     |
-| ---------------- | ----------- | ---------------------------------------- |
-| `togglesUpdated` |             | `CustomEvent<{ [x: string]: boolean; }>` |
+| Event     | Description                               | Type                |
+| --------- | ----------------------------------------- | ------------------- |
+| `removed` | Fires when the `x` icon button is clicked | `CustomEvent<null>` |
 
+## Dependencies
 
-----------------------------------------------
+### Depends on
 
-*Built with [StencilJS](https://stenciljs.com/)*
+- [sds-icon-x](../../icons)
+
+### Graph
+
+```mermaid
+graph TD;
+  sds-tag --> sds-icon-x
+  style sds-tag fill:#f9f,stroke:#333,stroke-width:4px
+```
+
+---
+
+_Built with [StencilJS](https://stenciljs.com/)_

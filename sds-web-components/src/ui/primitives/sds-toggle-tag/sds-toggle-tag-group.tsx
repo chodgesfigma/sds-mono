@@ -1,5 +1,4 @@
 import { Component, h } from '@stencil/core';
-import clsx from 'clsx';
 
 /**
  * Toggle Tag Group
@@ -7,14 +6,13 @@ import clsx from 'clsx';
  */
 @Component({
   tag: 'sds-toggle-tag-group',
-  styleUrl: 'sds-tag.scss',
+  styleUrl: 'sds-toggle-tag.scss',
   shadow: true,
 })
 export class SdsToggleTagGroup {
   render() {
-    const classNames = clsx('tag-toggle-group');
     return (
-      <div class={classNames}>
+      <div class="tag-toggle-group">
         <span class="label" id="list-label">
           <slot name="label" />
         </span>

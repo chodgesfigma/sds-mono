@@ -9,7 +9,7 @@ export type TagToggle = { id: string; selected: boolean };
  */
 @Component({
   tag: 'sds-toggle-tag',
-  styleUrl: 'sds-tag.scss',
+  styleUrl: 'sds-toggle-tag.scss',
   shadow: true,
 })
 export class SdsToggleTag {
