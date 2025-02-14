@@ -1,9 +1,6 @@
 # sds-button-danger
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -13,7 +10,6 @@
 | `type`    | `type`    | The button type           | `"button" \| "reset" \| "submit" \| undefined`     | `undefined`        |
 | `variant` | `variant` | The button danger variant | `"danger-primary" \| "danger-subtle" \| undefined` | `'danger-primary'` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Properties
 
 | Property   | Attribute  | Description                                                            | Type                                        | Default     |
@@ -15,7 +14,6 @@
 | `rel`      | `rel`      | Rel HTML attribute                                                     | `string \| undefined`                       | `undefined` |
 | `target`   | `target`   | Target of the link                                                     | `"_blank" \| "_self" \| "_top" \| "parent"` | `'_self'`   |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

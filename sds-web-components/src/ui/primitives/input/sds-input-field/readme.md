@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Overview
 
 Input Field
@@ -20,7 +19,6 @@ Input Field
 | `required`     | `required`      | Marks the input as required                   | `boolean`             | `false` |
 | `type`         | `type`          | The type of input                             | `string \| undefined` | `''`    |
 
-
 ## Dependencies
 
 ### Depends on
@@ -28,12 +26,13 @@ Input Field
 - [sds-field](../../fieldset/sds-field)
 
 ### Graph
+
 ```mermaid
 graph TD;
   sds-input-field --> sds-field
   style sds-input-field fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
-----------------------------------------------
+---
 
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

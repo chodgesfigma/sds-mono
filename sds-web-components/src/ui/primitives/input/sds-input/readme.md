@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Overview
 
 Input
@@ -17,7 +16,6 @@ Input
 | `type`         | `type`          | The type of input                    | `string \| undefined`                       | `''`        |
 | `value`        | `value`         |                                      | `number \| string \| string[] \| undefined` | `undefined` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

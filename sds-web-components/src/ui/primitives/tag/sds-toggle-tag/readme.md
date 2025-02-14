@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Overview
 
 Toggle Tag List
@@ -13,14 +12,12 @@ Toggle Tag List
 | --------------- | ---------------- | ----------- | ---------------------------------- | ---------- |
 | `selectionMode` | `selection-mode` |             | `"multiple" \| "none" \| "single"` | `'single'` |
 
-
 ## Events
 
 | Event            | Description | Type                                     |
 | ---------------- | ----------- | ---------------------------------------- |
 | `togglesUpdated` |             | `CustomEvent<{ [x: string]: boolean; }>` |
 
+---
 
-----------------------------------------------
-
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_
