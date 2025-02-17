@@ -19,6 +19,10 @@ export class SdsTextList {
 
   render() {
     const classNames = `text-link-list`;
-    return <sds-text-list class={classNames} density={this.density} titleElem={this.titleElem}></sds-text-list>;
+    return (
+      <sds-text-list class={classNames} density={this.density} titleElem={this.titleElem}>
+        <slot />
+      </sds-text-list>
+    );
   }
 }

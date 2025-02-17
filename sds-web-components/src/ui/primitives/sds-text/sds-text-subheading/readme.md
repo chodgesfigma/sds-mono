@@ -13,14 +13,12 @@
 ### Used by
 
 - [sds-text-content-heading](../sds-text-content-heading)
-- [sds-text-content-title](../sds-text-content-title)
 
 ### Graph
 
 ```mermaid
 graph TD;
   sds-text-content-heading --> sds-text-subheading
-  sds-text-content-title --> sds-text-subheading
   style sds-text-subheading fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

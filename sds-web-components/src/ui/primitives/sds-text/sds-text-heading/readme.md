@@ -13,7 +13,6 @@
 ### Used by
 
 - [sds-text-content-heading](../sds-text-content-heading)
-- [sds-text-content-title](../sds-text-content-title)
 - [sds-text-price](../sds-text-price)
 
 ### Graph
@@ -21,7 +20,6 @@
 ```mermaid
 graph TD;
   sds-text-content-heading --> sds-text-heading
-  sds-text-content-title --> sds-text-heading
   sds-text-price --> sds-text-heading
   style sds-text-heading fill:#f9f,stroke:#333,stroke-width:4px
 ```

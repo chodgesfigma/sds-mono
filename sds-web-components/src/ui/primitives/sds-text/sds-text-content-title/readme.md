@@ -14,15 +14,17 @@
 
 ### Depends on
 
-- [sds-text-heading](../sds-text-heading)
-- [sds-text-subheading](../sds-text-subheading)
+- [sds-text-title-page](../sds-text-title-page)
+- [sds-text-title-hero](../sds-text-title-hero)
+- [sds-text-subtitle](../sds-text-subtitle)
 
 ### Graph
 
 ```mermaid
 graph TD;
-  sds-text-content-title --> sds-text-heading
-  sds-text-content-title --> sds-text-subheading
+  sds-text-content-title --> sds-text-title-page
+  sds-text-content-title --> sds-text-title-hero
+  sds-text-content-title --> sds-text-subtitle
   style sds-text-content-title fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

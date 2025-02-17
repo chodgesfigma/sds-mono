@@ -22,23 +22,22 @@ export class SdsTextContentTitle {
    */
   @Prop() subHeading?: string;
 
-  @State() isMobile: boolean = false;
+  @State() isMobile: boolean = true;
 
-  private mediaQueryList?: MediaQueryList;
+  private mediaQueryList: MediaQueryList = useMediaQuery('mobile');
 
   componentWillLoad() {
-    this.updateMatches(); // Initial check
+    this.updateMatches(this.mediaQueryList); // Initial check for media query
     this.mediaQueryList = window.matchMedia('(max-width: 767px)');
     this.mediaQueryList.addEventListener('change', this.updateMatches);
   }
 
   disconnectedCallback() {
-    this.mediaQueryList?.removeEventListener('change', this.updateMatches);
+    this.mediaQueryList.removeEventListener('change', this.updateMatches);
   }
 
-  private updateMatches = () => {
-    const { isMobile } = useMediaQuery();
-    this.isMobile = isMobile;
+  private updateMatches = (event: MediaQueryListEvent | MediaQueryList) => {
+    this.isMobile = event.matches;
   };
 
   render() {
