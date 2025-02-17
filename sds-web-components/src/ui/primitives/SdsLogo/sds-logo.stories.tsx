@@ -43,10 +43,4 @@ const meta = {
 export default meta;
 
 type Story = StoryObj<ComponentArgs>;
-export const Primary: Story = {
-  parameters: {
-    backgrounds: {
-      default: 'dark',
-    },
-  },
-};
+export const Primary: Story = {};
