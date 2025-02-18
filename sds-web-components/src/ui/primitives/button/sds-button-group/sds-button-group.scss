@@ -1,0 +1,33 @@
+@import 'reset';
+
+.button-group {
+  align-items: center;
+  display: flex;
+  gap: var(--sds-size-space-300);
+
+  &.button-group-align-start {
+    justify-content: flex-start;
+  }
+
+  &.button-group-align-center {
+    justify-content: center;
+  }
+
+  &.button-group-align-end {
+    justify-content: flex-end;
+  }
+
+  &.button-group-align-justify {
+    > .button {
+      flex: 1;
+    }
+  }
+
+  &.button-group-align-stack {
+    flex-direction: column;
+
+    > .button {
+      width: 100%;
+    }
+  }
+}
