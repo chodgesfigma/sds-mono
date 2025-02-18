@@ -26,7 +26,7 @@ const meta = {
           label="Street address"
           description="Hello there"
           ${disabled ? 'disabled' : ''}
-        />
+        ></sds-input-field>
         <!-- <SelectField
           isRequired
           name="country"
@@ -38,13 +38,13 @@ const meta = {
           <SelectItem id="mx">Mexico</SelectItem>
           <SelectItem id="us">United States</SelectItem>
         </SelectField> -->
-        <!-- <SliderField
+        <sds-slider
           name="range"
           label="Slide here"
           description="i love this for us"
-          defaultValue={[0, 40]}
-          showOutput
-        /> -->
+          default-value=40
+          show-output
+        ></sds-slider>
         <!-- <TextareaField
           isRequired
           defaultValue="Watch out"

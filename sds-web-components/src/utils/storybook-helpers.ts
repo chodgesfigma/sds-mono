@@ -1,3 +1,5 @@
+import { convertToKebabCase } from './utils';
+
 type SpreadOptions<T> = {
   /**
    * keys to exclude
@@ -31,7 +33,7 @@ export const spread = <T>(args: T, options?: SpreadOptions<T>) => {
         })
         // Filter out entries where the value cannot be stringified (e.g. functions, undefined)
         .filter(([, value]) => Boolean(JSON.stringify(value)))
-        .map(([key, value]) => `${key}=${JSON.stringify(value)}`)
+        .map(([key, value]) => `${convertToKebabCase(key)}=${JSON.stringify(value)}`)
         .join(' ')
     );
   } else {
