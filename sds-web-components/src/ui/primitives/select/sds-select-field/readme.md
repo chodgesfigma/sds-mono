@@ -20,8 +20,8 @@ Select Field
 
 ### Depends on
 
-- [sds-field](../sds-field)
-- [sds-icon-chevron-down](../../icons)
+- [sds-field](../../fieldset/sds-field)
+- [sds-icon-chevron-down](../../../icons)
 
 ### Graph
 

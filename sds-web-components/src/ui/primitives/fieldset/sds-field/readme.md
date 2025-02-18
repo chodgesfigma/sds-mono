@@ -17,6 +17,7 @@ Fieldset Field
 ### Used by
 
 - [sds-input-field](../../input/sds-input-field)
+- [sds-select-field](../../select/sds-select-field)
 
 ### Graph
 

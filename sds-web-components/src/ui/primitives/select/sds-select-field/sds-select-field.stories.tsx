@@ -1,5 +1,5 @@
-import { Components } from '../../../components';
-import { spread } from '../../../utils/storybook-helpers';
+import { Components } from '../../../../components';
+import { spread } from '../../../../utils/storybook-helpers';
 import { withActions } from '@storybook/addon-actions/decorator';
 import type { Meta, StoryObj } from '@storybook/html';
 

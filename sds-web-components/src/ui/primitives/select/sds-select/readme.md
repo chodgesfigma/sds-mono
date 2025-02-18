@@ -17,7 +17,7 @@ Select
 
 ### Depends on
 
-- [sds-icon-chevron-down](../../icons)
+- [sds-icon-chevron-down](../../../icons)
 
 ### Graph
 
