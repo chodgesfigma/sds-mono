@@ -1,0 +1,9 @@
+@import 'reset';
+@import '../sds-input/sds-input';
+@import '../../fieldset/sds-label/sds-label';
+@import '../../fieldset/sds-description/sds-description';
+
+:host {
+  display: block;
+  width: 100%;
+}
