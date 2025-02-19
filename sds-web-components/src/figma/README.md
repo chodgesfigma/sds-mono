@@ -19,3 +19,8 @@ This is where we keep our code-connect files. They link Figma properties to code
 1. Duplicate `.env.example` and rename it to `.env`
 1. Plug-in your generated `FIGMA_ACCESS_TOKEN`
 1. Run `npx figma connect publish` from the `sds-web-components` folder
+
+## Issues along the way
+
+- had to use `.ts` files, otherwise the publish command couldn't find the `*.figma` files
+- the base Tag connect definition wasn't being populated into Figma without any clear errors, it eventually did load in (maybe a cache type thing?)
