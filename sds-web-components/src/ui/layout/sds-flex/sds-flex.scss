@@ -43,10 +43,24 @@
 :host(.flex-type-half),
 :host(.flex-type-quarter),
 :host(.flex-type-third) {
-  --column-ratio--full: calc(var(--sds-responsive-ratio-column-full) / 1);
-  --column-ratio--half: calc(var(--sds-responsive-ratio-column-half) / 2);
-  --column-ratio--major: var(--column-major);
-  --column-ratio--minor: var(--column-minor);
+  // All of these styles are used for the sds-flex-item, but must also be available for
+  // any child of sds-flex
+
+  ::slotted(.flex-item-size-full) {
+    --column-ratio: calc(var(--sds-responsive-ratio-column-full) / 1);
+  }
+
+  ::slotted(.flex-item-size-half) {
+    --column-ratio: calc(var(--sds-responsive-ratio-column-half) / 2);
+  }
+
+  ::slotted(.flex-item-size-major) {
+    --column-ratio: var(--column-major);
+  }
+
+  ::slotted(.flex-item-size-minor) {
+    --column-ratio: var(--column-minor);
+  }
 
   ::slotted(*) {
     --column-count: calc(1 / var(--column-ratio));

@@ -5,7 +5,6 @@ type Size = 'full' | 'major' | 'minor' | 'half' | 'fill';
 
 @Component({
   tag: 'sds-flex-item',
-  styleUrl: 'sds-flex-item.scss',
   shadow: true,
 })
 export class SdsFlexItem {
