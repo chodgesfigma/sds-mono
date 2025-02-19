@@ -57,7 +57,8 @@
     "build-storybook": "storybook build",
     "prepare": "cd .. && husky sds-web-components/.husky",
     "lint-staged": "npx lint-staged",
-    "test-storybook": "test-storybook"
+    "test-storybook": "test-storybook",
+    "figma:publish": "npx figma connect publish"
   },
   "devDependencies": {
     "@eslint/js": "^9.19.0",
