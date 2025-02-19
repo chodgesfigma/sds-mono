@@ -1,4 +1,4 @@
-import { convertToKebabCase } from './utils';
+import { convertToKebabCase } from '../../scripts/generate-icon-files/utils';
 
 type SpreadOptions<T> = {
   /**

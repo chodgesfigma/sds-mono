@@ -1,0 +1,67 @@
+@import 'reset';
+
+:host {
+  display: block;
+  width: 100%;
+
+  --select-background-color: var(--sds-color-background-default-default);
+  --select-text-color: var(--sds-color-text-default-default);
+  --select-border-color: var(--sds-color-border-default-default);
+}
+
+.select-wrapper {
+  position: relative;
+  grid-area: var(--input-grid-area);
+
+  &--default {
+    --select-text-color: var(--sds-color-text-default-tertiary);
+  }
+
+  &:has(~ .error-message):not(:disabled) {
+    --select-border-color: var(--sds-color-border-danger-default);
+  }
+
+  &:has(.select:disabled) {
+    --icon-color: var(--sds-color-icon-disabled-on-disabled);
+  }
+}
+
+.icon {
+  position: absolute;
+  right: var(--sds-size-space-300);
+  top: calc(var(--sds-size-space-300) - var(--sds-size-stroke-border) * 2);
+  z-index: 2;
+}
+
+.select {
+  /* Firefox */
+
+  /* Safari and Chrome */
+  appearance: none;
+  align-items: center;
+  background-color: var(--select-background-color);
+  box-shadow: inset 0 0 0 var(--sds-size-stroke-border) var(--select-border-color);
+  border-radius: var(--sds-size-radius-200);
+  color: var(--select-text-color);
+  display: flex;
+  gap: var(--sds-size-space-200);
+  padding: calc(var(--sds-size-space-300) - var(--sds-size-stroke-border) * 2) calc(var(--sds-size-space-300) + 15px) // additional 15px here for absolutely position icon
+    calc(var(--sds-size-space-300) - var(--sds-size-stroke-border) * 2) var(--sds-size-space-400);
+  position: relative;
+  justify-content: space-between;
+  width: 100%;
+
+  &:disabled {
+    --select-background-color: var(--sds-color-background-disabled-default);
+    --select-text-color: var(--sds-color-text-disabled-default);
+    --select-border-color: var(--sds-color-border-disabled-default);
+  }
+
+  &:focus-visible {
+    --select-border-color: var(--sds-color-border-brand-secondary);
+  }
+
+  &:invalid:not(:disabled) {
+    --select-border-color: var(--sds-color-border-danger-default);
+  }
+}

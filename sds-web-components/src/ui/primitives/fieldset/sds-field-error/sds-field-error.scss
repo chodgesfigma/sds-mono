@@ -1,5 +1,6 @@
 @import 'reset';
 
+.error-message,
 :host {
   grid-area: var(--input-error-message-grid-area);
   margin-top: var(--input-error-message-margin-top);
