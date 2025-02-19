@@ -1,6 +1,6 @@
 {
   "codeConnect": {
-    "include": ["src/ui/**/*", "src/figma/**/*"],
+    "include": ["src/figma/**/*"],
     "exclude": ["src/figma/icons/*"],
     "parser": "html",
     "documentUrlSubstitutions": {
