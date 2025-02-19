@@ -22,6 +22,11 @@ export class SdsInput {
   @Prop({ reflect: true }) disabled = false;
 
   /**
+   * Placeholder text for the input
+   */
+  @Prop() placeholder = '';
+
+  /**
    * Marks the input as required
    */
   @Prop({ reflect: true }) required = false;
@@ -33,7 +38,7 @@ export class SdsInput {
 
   render() {
     return (
-      <SdsInputFunctional value={this.value} defaultValue={this.defaultValue} disabled={this.disabled} required={this.required} type={this.type}>
+      <SdsInputFunctional placeholder={this.placeholder} value={this.value} defaultValue={this.defaultValue} disabled={this.disabled} required={this.required} type={this.type}>
         <slot />
       </SdsInputFunctional>
     );
