@@ -43,9 +43,8 @@ export class SdsTextLink {
   @Prop() download?: string;
 
   render() {
-    const classNames = `text-body-link`;
     return (
-      <sds-link class={classNames} download={this.download} href={this.href} rel={this.rel} target={this.target} ping={this.ping} media={this.media} hreflang={this.hreflang}>
+      <sds-link variant="text-body-link" download={this.download} href={this.href} rel={this.rel} target={this.target} ping={this.ping} media={this.media} hreflang={this.hreflang}>
         <slot />
       </sds-link>
     );

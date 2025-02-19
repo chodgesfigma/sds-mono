@@ -20,7 +20,7 @@ export class SdsTextContentTitle {
   /**
    * Sub Heading
    */
-  @Prop() subHeading?: string;
+  @Prop() subHeading: string = '';
 
   @State() isMobile: boolean = true;
 
@@ -28,7 +28,6 @@ export class SdsTextContentTitle {
 
   componentWillLoad() {
     this.updateMatches(this.mediaQueryList); // Initial check for media query
-    this.mediaQueryList = window.matchMedia('(max-width: 767px)');
     this.mediaQueryList.addEventListener('change', this.updateMatches);
   }
 

@@ -4,11 +4,11 @@
 
 ## Properties
 
-| Property     | Attribute     | Description    | Type                  | Default     |
-| ------------ | ------------- | -------------- | --------------------- | ----------- |
-| `align`      | `align`       | Align position | `"center" \| "start"` | `'start'`   |
-| `heading`    | `heading`     | Heading        | `string`              | `''`        |
-| `subHeading` | `sub-heading` | Sub Heading    | `string \| undefined` | `undefined` |
+| Property     | Attribute     | Description    | Type                  | Default   |
+| ------------ | ------------- | -------------- | --------------------- | --------- |
+| `align`      | `align`       | Align position | `"center" \| "start"` | `'start'` |
+| `heading`    | `heading`     | Heading        | `string`              | `''`      |
+| `subHeading` | `sub-heading` | Sub Heading    | `string`              | `''`      |
 
 ## Dependencies
 

@@ -20,7 +20,7 @@ export class SdsTextContentHeading {
   /**
    * Sub Heading
    */
-  @Prop() subHeading?: string;
+  @Prop() subHeading: string = '';
 
   render() {
     const classNames = clsx('text-content-heading', `text-align-${this.align}`);
