@@ -74,26 +74,12 @@ export const StoryFlex: Story = {
             <sds-flex-item size="minor"> ${renderChild('minor')}</sds-flex-item>
             <sds-flex-item size="minor"> ${renderChild('minor')}</sds-flex-item>
         </sds-flex>
-                <sds-flex
+        <sds-flex
           ${spread(args)}
           container="true"
           flex-type="quarter"
         >
-            ${renderChild('span')}
-            ${renderChild('span')}
-            ${renderChild('span')}
-            ${renderChild('span')}
-            ${renderChild('span')}
-            ${renderChild('span')}
-            ${renderChild('span')}
-            ${renderChild('span')}
-            ${renderChild('span')}
-            ${renderChild('span')}
-            ${renderChild('span')}
-            ${renderChild('span')}
-            ${renderChild('span')}
-            ${renderChild('span')}
-            ${renderChild('span')}
+            ${Array.from({ length: 15 }, () => renderChild('span')).join('')}
         </sds-flex>
       </sds-flex>`,
 };
