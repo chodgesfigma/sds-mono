@@ -1,14 +1,14 @@
-// Taken from https://stenciljs.com/docs/vue#creating-a-vue-component-library
 {
     "extends": "../../tsconfig.json",
     "compilerOptions": {
       "outDir": "./dist",
       "lib": ["dom", "es2020"],
-      "module": "es2015",
-        "moduleResolution": "bundler",
-      "target": "es2017",
-      "skipLibCheck": true
+      "module": "ESNext",
+      "moduleResolution": "bundler",
+      "target": "ESNext",
+      "skipLibCheck": true,
+      "types": ["vue", "@stencil/core"]
     },
-    "include": ["lib"],
+    "include": ["lib", "src", "src/**/*.vue", "shims-vue.d.ts"],
     "exclude": ["node_modules"]
   }
