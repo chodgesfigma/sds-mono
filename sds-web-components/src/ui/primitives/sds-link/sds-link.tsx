@@ -10,7 +10,7 @@ export type Target = '_blank' | '_self' | 'parent' | '_top';
 })
 export class SdsLink {
   /**
-   * Variant off the link
+   * Variant of the link
    */
   @Prop() variant: 'default' | 'text-body-link' = 'default';
   /**
