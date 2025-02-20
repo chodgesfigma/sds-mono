@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property  | Attribute | Description               | Type                                               | Default            |
@@ -10,6 +11,7 @@
 | `type`    | `type`    | The button type           | `"button" \| "reset" \| "submit" \| undefined`     | `undefined`        |
 | `variant` | `variant` | The button danger variant | `"danger-primary" \| "danger-subtle" \| undefined` | `'danger-primary'` |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*

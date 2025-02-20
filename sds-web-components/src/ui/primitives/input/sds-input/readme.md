@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Overview
 
 Input
@@ -12,10 +13,12 @@ Input
 | -------------- | --------------- | ------------------------------------ | ------------------------------------------- | ----------- |
 | `defaultValue` | `default-value` | Sets the default value for the input | `string`                                    | `''`        |
 | `disabled`     | `disabled`      | Disables the input                   | `boolean`                                   | `false`     |
+| `placeholder`  | `placeholder`   | Placeholder text for the input       | `string`                                    | `''`        |
 | `required`     | `required`      | Marks the input as required          | `boolean`                                   | `false`     |
 | `type`         | `type`          | The type of input                    | `string \| undefined`                       | `''`        |
 | `value`        | `value`         |                                      | `number \| string \| string[] \| undefined` | `undefined` |
 
----
 
-_Built with [StencilJS](https://stenciljs.com/)_
+----------------------------------------------
+
+*Built with [StencilJS](https://stenciljs.com/)*
