@@ -1,0 +1,16 @@
+{
+  "name": "sds-vue-components",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "lerna run build --parallel",
+    "test": "lerna run test"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "figma-sds-replatforming Vue output target",
+  "devDependencies": {
+    "@stencil/vue-output-target": "^0.9.4"
+  }
+}
