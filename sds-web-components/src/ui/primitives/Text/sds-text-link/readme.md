@@ -1,4 +1,4 @@
-# sds-link
+# sds-text-link
 
 <!-- Auto Generated Below -->
 
@@ -6,7 +6,6 @@
 
 | Property   | Attribute  | Description                                                            | Type                                        | Default     |
 | ---------- | ---------- | ---------------------------------------------------------------------- | ------------------------------------------- | ----------- |
-| `class`    | `class`    | Href of the link                                                       | `string \| undefined`                       | `undefined` |
 | `download` | `download` | Download HTML attribute                                                | `string \| undefined`                       | `undefined` |
 | `href`     | `href`     | Href of the link                                                       | `string \| undefined`                       | `undefined` |
 | `hreflang` | `hreflang` | HrefLang HTML attribute to specify the language of the linked document | `string \| undefined`                       | `undefined` |
@@ -17,16 +16,16 @@
 
 ## Dependencies
 
-### Used by
+### Depends on
 
-- [sds-text-link](../sds-text/sds-text-link)
+- [sds-link](../../sds-link)
 
 ### Graph
 
 ```mermaid
 graph TD;
   sds-text-link --> sds-link
-  style sds-link fill:#f9f,stroke:#333,stroke-width:4px
+  style sds-text-link fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ---

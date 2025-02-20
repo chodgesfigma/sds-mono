@@ -14,6 +14,9 @@ Fieldset Field
 | `disabled` | `disabled` | Controls if the field is disabled or not | `boolean` | `false` |
 
 
+<<<<<<< HEAD:sds-web-components/src/ui/primitives/sds-field/readme.md
+_Built with [StencilJS](https://stenciljs.com/)_
+=======
 ## Dependencies
 
 ### Used by
@@ -32,3 +35,4 @@ graph TD;
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
+>>>>>>> develop:sds-web-components/src/ui/primitives/fieldset/sds-field/readme.md

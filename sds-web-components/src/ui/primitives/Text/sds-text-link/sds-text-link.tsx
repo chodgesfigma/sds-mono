@@ -1,18 +1,12 @@
+import { Target } from '../../sds-link/sds-link';
 import { Component, Prop, h } from '@stencil/core';
-import clsx from 'clsx';
-
-export type Target = '_blank' | '_self' | 'parent' | '_top';
 
 @Component({
-  tag: 'sds-link',
-  styleUrl: 'sds-link.scss',
+  tag: 'sds-text-link',
+  styleUrl: '../sds-text.scss',
   shadow: true,
 })
-export class SdsLink {
-  /**
-   * Variant of the link
-   */
-  @Prop() variant: 'default' | 'text-body-link' = 'default';
+export class SdsTextLink {
   /**
    * Href of the link
    */
@@ -49,13 +43,10 @@ export class SdsLink {
   @Prop() download?: string;
 
   render() {
-    const classNames = clsx(`link`, {
-      'text-body-link': this.variant === 'text-body-link',
-    });
     return (
-      <a class={classNames} download={this.download} href={this.href} rel={this.rel} target={this.target} ping={this.ping} media={this.media} hreflang={this.hreflang}>
+      <sds-link variant="text-body-link" download={this.download} href={this.href} rel={this.rel} target={this.target} ping={this.ping} media={this.media} hreflang={this.hreflang}>
         <slot />
-      </a>
+      </sds-link>
     );
   }
 }
