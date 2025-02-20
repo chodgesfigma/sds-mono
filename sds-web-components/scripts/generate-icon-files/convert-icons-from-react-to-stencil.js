@@ -13,7 +13,7 @@ const iconFolderPath = 'src/ui/icons/';
 
 const template = ({ name, svg }) => {
   return `import { Component, Prop, h } from '@stencil/core';
-import { SdsIcon, Size } from '../primitives/SdsIcon/SdsIcon';
+import { SdsIcon, Size } from '../primitives/sds-icon/sds-icon';
 
 @Component({
   tag: 'sds-icon-${convertToKebabCase(name)}',
@@ -55,7 +55,6 @@ const convertFile = async filename => {
   const svgContentRegex = /export const Icon(\w+) = \(props: IconProps\) => \(\W*(<Icon {\.\.\.props}>)((\S|\s)*)(<\/Icon>)/gm;
   const svgContent = svgContentRegex.exec(file);
 
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [_, name, ___, svg] = svgContent;
 
   // replace React syntax for path attributes
