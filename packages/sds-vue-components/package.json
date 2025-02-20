@@ -1,16 +1,25 @@
 {
   "name": "sds-vue-components",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
   "scripts": {
-    "build": "lerna run build --parallel",
-    "test": "lerna run test"
+    "test": "echo \"Error: run tests from root\" && exit 1",
+    "build": "npm run tsc",
+    "tsc": "tsc -p . --outDir ./dist"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "figma-sds-replatforming Vue output target",
   "devDependencies": {
-    "@stencil/vue-output-target": "^0.9.4"
+    "@stencil/vue-output-target": "^0.9.4",
+    "vue": "^3.5.13"
   }
 }

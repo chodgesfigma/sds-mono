@@ -16,8 +16,11 @@
     "strict": true,
     "noUncheckedIndexedAccess": true,
     "noImplicitOverride": true,
-    "skipLibCheck": true
+    "baseUrl": ".",
+    "skipLibCheck": true,
+    "resolveJsonModule": true,
+    "isolatedModules": true,
   },
   "include": ["src", "scripts"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules", "src/figma"]
 }

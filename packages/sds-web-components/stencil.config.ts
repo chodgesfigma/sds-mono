@@ -1,5 +1,6 @@
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
+import { vueOutputTarget } from '@stencil/vue-output-target';
 
 export const config: Config = {
   namespace: 'sds',
@@ -32,6 +33,10 @@ export const config: Config = {
       type: 'docs-json',
       file: './dist/docs.json',
     },
+    vueOutputTarget({
+      componentCorePackage: 'sds-web-components',
+      proxiesFile: '../sds-vue-components/lib/components.ts',
+    }),
   ],
   testing: {
     browserHeadless: 'shell',
