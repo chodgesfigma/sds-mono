@@ -1,11 +1,15 @@
 <script setup>
 import { SdsButton, SdsAccordion, SdsAccordionItem } from "./index";
+
+const handleClick = () => {
+  window.alert("Button Clicked!");
+};
 </script>
 
 <template>
   <div>
     <h1>Testing Vue Components</h1>
-    <SdsButton variant="primary">Test!</SdsButton>
+    <SdsButton variant="primary" @click="handleClick">Test!</SdsButton>
     <SdsAccordion>
       <SdsAccordionItem summary="Item 1"> test item 1</SdsAccordionItem>
       <SdsAccordionItem summary="Item 2"> test item 2</SdsAccordionItem>
