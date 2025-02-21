@@ -2,24 +2,11 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Overview
 
 Fieldset Label
 
-## Dependencies
+----------------------------------------------
 
-### Used by
-
-- [sds-slider](../../sds-slider)
-
-### Graph
-
-```mermaid
-graph TD;
-  sds-slider --> sds-label
-  style sds-label fill:#f9f,stroke:#333,stroke-width:4px
-```
-
----
-
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*

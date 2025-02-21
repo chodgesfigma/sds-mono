@@ -1559,6 +1559,7 @@ export const SdsLegend = /*@__PURE__*/ defineContainer<JSX.SdsLegend>('sds-legen
 
 
 export const SdsLink = /*@__PURE__*/ defineContainer<JSX.SdsLink>('sds-link', undefined, [
+  'variant',
   'href',
   'target',
   'rel',
