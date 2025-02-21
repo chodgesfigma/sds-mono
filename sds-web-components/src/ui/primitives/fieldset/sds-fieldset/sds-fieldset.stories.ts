@@ -38,13 +38,13 @@ const meta = {
           <sds-select-item id="mx">Mexico</sds-select-item>
           <sds-select-item id="us" selected>United States</sds-select-item>
         </sds-select-field>
-        <!-- <SliderField
+        <sds-slider
           name="range"
           label="Slide here"
           description="i love this for us"
-          defaultValue={[0, 40]}
-          showOutput
-        /> -->
+          default-value=40
+          show-output
+        ></sds-slider>
         <!-- <TextareaField
           isRequired
           defaultValue="Watch out"
