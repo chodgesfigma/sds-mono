@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Overview
 
 Select Field
@@ -16,6 +17,7 @@ Select Field
 | `label`       | `label`       | The input label                               | `string`  | `''`    |
 | `placeholder` | `placeholder` | Placeholder text for the input                | `string`  | `''`    |
 
+
 ## Dependencies
 
 ### Depends on
@@ -24,7 +26,6 @@ Select Field
 - [sds-icon-chevron-down](../../../icons)
 
 ### Graph
-
 ```mermaid
 graph TD;
   sds-select-field --> sds-field
@@ -32,6 +33,6 @@ graph TD;
   style sds-select-field fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*

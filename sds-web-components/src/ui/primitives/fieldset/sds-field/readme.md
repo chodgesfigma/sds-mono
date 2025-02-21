@@ -11,25 +11,3 @@ Fieldset Field
 | Property   | Attribute  | Description                              | Type      | Default |
 | ---------- | ---------- | ---------------------------------------- | --------- | ------- |
 | `disabled` | `disabled` | Controls if the field is disabled or not | `boolean` | `false` |
-
-## Dependencies
-
-### Used by
-
-- [sds-input-field](../../input/sds-input-field)
-- [sds-slider](../../sds-slider)
-- [sds-select-field](../../select/sds-select-field)
-
-### Graph
-
-```mermaid
-graph TD;
-  sds-input-field --> sds-field
-  sds-slider --> sds-field
-  sds-select-field --> sds-field
-  style sds-field fill:#f9f,stroke:#333,stroke-width:4px
-```
-
----
-
-_Built with [StencilJS](https://stenciljs.com/)_
