@@ -11,14 +11,14 @@ export class SdsSlider {
   rangeInput!: SlRange;
 
   /**
-   * The name of the slider
-   */
-  @Prop() name = '';
-
-  /**
    * The current value of the input, is set to defaultValue on load
    */
   @State() value!: SlRange['value'];
+
+  /**
+   * The name of the slider
+   */
+  @Prop() name = '';
 
   /**
    * Label for the slider input
