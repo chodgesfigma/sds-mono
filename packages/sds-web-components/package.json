@@ -58,6 +58,7 @@
     "prepare": "cd .. && husky sds-web-components/.husky",
     "lint-staged": "npx lint-staged",
     "test-storybook": "test-storybook",
+    "script:dev-resources": "cd scripts/dev-resources; node --env-file=../../.env app.mjs; cd -;",
     "figma:publish": "npx figma connect publish"
   },
   "devDependencies": {
