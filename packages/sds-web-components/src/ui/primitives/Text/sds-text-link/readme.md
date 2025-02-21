@@ -1,4 +1,4 @@
-# sds-link
+# sds-text-link
 
 <!-- Auto Generated Below -->
 
@@ -14,20 +14,19 @@
 | `ping`     | `ping`     | Ping HTML attribute                                                    | `string \| undefined`                       | `undefined` |
 | `rel`      | `rel`      | Rel HTML attribute                                                     | `string \| undefined`                       | `undefined` |
 | `target`   | `target`   | Target of the link                                                     | `"_blank" \| "_self" \| "_top" \| "parent"` | `'_self'`   |
-| `variant`  | `variant`  | Variant of the link                                                    | `"default" \| "text-body-link"`             | `'default'` |
 
 
 ## Dependencies
 
-### Used by
+### Depends on
 
- - [sds-text-link](../Text/sds-text-link)
+- [sds-link](../../sds-link)
 
 ### Graph
 ```mermaid
 graph TD;
   sds-text-link --> sds-link
-  style sds-link fill:#f9f,stroke:#333,stroke-width:4px
+  style sds-text-link fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

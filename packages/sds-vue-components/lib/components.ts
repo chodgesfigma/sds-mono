@@ -70,6 +70,22 @@ export const SdsFieldset = /*@__PURE__*/ defineContainer<JSX.SdsFieldset>('sds-f
 ]);
 
 
+export const SdsFlex = /*@__PURE__*/ defineContainer<JSX.SdsFlex>('sds-flex', undefined, [
+  'alignPrimary',
+  'alignSecondary',
+  'container',
+  'direction',
+  'gap',
+  'flexType',
+  'wrap'
+]);
+
+
+export const SdsFlexItem = /*@__PURE__*/ defineContainer<JSX.SdsFlexItem>('sds-flex-item', undefined, [
+  'size'
+]);
+
+
 export const SdsForm = /*@__PURE__*/ defineContainer<JSX.SdsForm>('sds-form', undefined, [
   'singleLine'
 ]);
@@ -1617,6 +1633,21 @@ export const SdsSelectItem = /*@__PURE__*/ defineContainer<JSX.SdsSelectItem>('s
 ]);
 
 
+export const SdsSlider = /*@__PURE__*/ defineContainer<JSX.SdsSlider>('sds-slider', undefined, [
+  'name',
+  'label',
+  'description',
+  'showOutput',
+  'disabled',
+  'defaultValue',
+  'sds-change',
+  'sds-input'
+], [
+  'sds-change',
+  'sds-input'
+]);
+
+
 export const SdsTag = /*@__PURE__*/ defineContainer<JSX.SdsTag>('sds-tag', undefined, [
   'scheme',
   'variant',
@@ -1630,6 +1661,119 @@ export const SdsTag = /*@__PURE__*/ defineContainer<JSX.SdsTag>('sds-tag', undef
 export const SdsTagButton = /*@__PURE__*/ defineContainer<JSX.SdsTagButton>('sds-tag-button', undefined, [
   'scheme',
   'variant'
+]);
+
+
+export const SdsText = /*@__PURE__*/ defineContainer<JSX.SdsText>('sds-text', undefined, [
+  'lineHeight',
+  'elementType'
+]);
+
+
+export const SdsTextCode = /*@__PURE__*/ defineContainer<JSX.SdsTextCode>('sds-text-code', undefined, [
+  'elementType'
+]);
+
+
+export const SdsTextContentHeading = /*@__PURE__*/ defineContainer<JSX.SdsTextContentHeading>('sds-text-content-heading', undefined, [
+  'align',
+  'heading',
+  'subHeading'
+]);
+
+
+export const SdsTextContentTitle = /*@__PURE__*/ defineContainer<JSX.SdsTextContentTitle>('sds-text-content-title', undefined, [
+  'align',
+  'heading',
+  'subHeading'
+]);
+
+
+export const SdsTextEmphasis = /*@__PURE__*/ defineContainer<JSX.SdsTextEmphasis>('sds-text-emphasis', undefined, [
+  'elementType'
+]);
+
+
+export const SdsTextHeading = /*@__PURE__*/ defineContainer<JSX.SdsTextHeading>('sds-text-heading', undefined, [
+  'elementType'
+]);
+
+
+export const SdsTextInput = /*@__PURE__*/ defineContainer<JSX.SdsTextInput>('sds-text-input', undefined, [
+  'elementType'
+]);
+
+
+export const SdsTextLink = /*@__PURE__*/ defineContainer<JSX.SdsTextLink>('sds-text-link', undefined, [
+  'href',
+  'target',
+  'rel',
+  'ping',
+  'media',
+  'hreflang',
+  'download'
+]);
+
+
+export const SdsTextLinkList = /*@__PURE__*/ defineContainer<JSX.SdsTextLinkList>('sds-text-link-list', undefined, [
+  'density',
+  'titleElem'
+]);
+
+
+export const SdsTextList = /*@__PURE__*/ defineContainer<JSX.SdsTextList>('sds-text-list', undefined, [
+  'density',
+  'titleElem',
+  'class'
+]);
+
+
+export const SdsTextListItem = /*@__PURE__*/ defineContainer<JSX.SdsTextListItem>('sds-text-list-item', undefined);
+
+
+export const SdsTextPrice = /*@__PURE__*/ defineContainer<JSX.SdsTextPrice>('sds-text-price', undefined, [
+  'elementType',
+  'price',
+  'currency',
+  'size',
+  'label'
+]);
+
+
+export const SdsTextSmall = /*@__PURE__*/ defineContainer<JSX.SdsTextSmall>('sds-text-small', undefined, [
+  'lineHeight',
+  'elementType'
+]);
+
+
+export const SdsTextSmallStrong = /*@__PURE__*/ defineContainer<JSX.SdsTextSmallStrong>('sds-text-small-strong', undefined, [
+  'lineHeight',
+  'elementType'
+]);
+
+
+export const SdsTextStrong = /*@__PURE__*/ defineContainer<JSX.SdsTextStrong>('sds-text-strong', undefined, [
+  'elementType'
+]);
+
+
+export const SdsTextSubheading = /*@__PURE__*/ defineContainer<JSX.SdsTextSubheading>('sds-text-subheading', undefined, [
+  'elementType'
+]);
+
+
+export const SdsTextSubtitle = /*@__PURE__*/ defineContainer<JSX.SdsTextSubtitle>('sds-text-subtitle', undefined, [
+  'elementType'
+]);
+
+
+export const SdsTextTitleHero = /*@__PURE__*/ defineContainer<JSX.SdsTextTitleHero>('sds-text-title-hero', undefined, [
+  'elementType'
+]);
+
+
+export const SdsTextTitlePage = /*@__PURE__*/ defineContainer<JSX.SdsTextTitlePage>('sds-text-title-page', undefined, [
+  'elementType'
 ]);
 
 
