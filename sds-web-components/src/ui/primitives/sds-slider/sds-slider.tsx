@@ -1,5 +1,5 @@
+import { SlRange } from '@shoelace-style/shoelace';
 import '@shoelace-style/shoelace/dist/components/range/range.js';
-import { SlRange } from '@shoelace-style/shoelace/dist/shoelace';
 import { Component, Event, EventEmitter, Prop, State, h } from '@stencil/core';
 
 @Component({
