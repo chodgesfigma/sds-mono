@@ -44,15 +44,18 @@ const meta = {
           description="i love this for us"
           default-value=40
           show-output
+          ${disabled ? 'disabled' : ''}
         ></sds-slider>
-        <!-- <TextareaField
-          isRequired
-          defaultValue="Watch out"
+        <sds-textarea-field
+          required
+          value="Watch out"
           name="notes"
           label="Delivery notes"
-          isResizable={false}
+          resizable="false"
           description="If you have a tiger, we'd like to know about it."
-        /> -->
+          ${disabled ? 'disabled' : ''}
+        >
+        </sds-textarea-field>
         <!-- <CheckboxGroup name="checkboxes">
           <CheckboxField value="one" label="One" />
           <CheckboxField value="two" label="Two" />
