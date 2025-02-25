@@ -1,2 +1,2 @@
-cd sds-web-components
+cd packages/sds-web-components
 npm run lint-staged

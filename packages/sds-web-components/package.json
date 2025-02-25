@@ -55,7 +55,7 @@
     "lint:styles-fix": "npx stylelint ./**/*.scss --fix",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "prepare": "cd .. && husky sds-web-components/.husky",
+    "prepare": "cd ../.. && husky packages/sds-web-components/.husky",
     "lint-staged": "npx lint-staged",
     "test-storybook": "test-storybook",
     "script:dev-resources": "cd scripts/dev-resources; node --env-file=../../.env app.mjs; cd -;",
