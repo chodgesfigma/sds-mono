@@ -1,2 +1,0 @@
-cd sds-web-components
-npm run lint-staged
