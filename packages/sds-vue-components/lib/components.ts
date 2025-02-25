@@ -8,13 +8,6 @@ import type { JSX } from 'sds-web-components';
 
 
 
-export const MyComponent = /*@__PURE__*/ defineContainer<JSX.MyComponent>('my-component', undefined, [
-  'first',
-  'middle',
-  'last'
-]);
-
-
 export const SdsAccordion = /*@__PURE__*/ defineContainer<JSX.SdsAccordion>('sds-accordion', undefined, [
   'multiple'
 ]);
@@ -1645,6 +1638,32 @@ export const SdsSlider = /*@__PURE__*/ defineContainer<JSX.SdsSlider>('sds-slide
 ], [
   'sds-change',
   'sds-input'
+]);
+
+
+export const SdsTab = /*@__PURE__*/ defineContainer<JSX.SdsTab>('sds-tab', undefined, [
+  'panelId',
+  'active',
+  'sds-tab-click',
+  'sds-tab-next',
+  'sds-tab-previous'
+], [
+  'sds-tab-click',
+  'sds-tab-next',
+  'sds-tab-previous'
+]);
+
+
+export const SdsTabPanel = /*@__PURE__*/ defineContainer<JSX.SdsTabPanel>('sds-tab-panel', undefined, [
+  'panelId',
+  'active'
+]);
+
+
+export const SdsTabs = /*@__PURE__*/ defineContainer<JSX.SdsTabs>('sds-tabs', undefined, [
+  'sds-tabs-selected'
+], [
+  'sds-tabs-selected'
 ]);
 
 
