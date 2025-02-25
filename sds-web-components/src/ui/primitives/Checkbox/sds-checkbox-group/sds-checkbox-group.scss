@@ -1,0 +1,14 @@
+@import 'reset';
+@import '../../fieldset/sds-label/sds-label';
+@import '../../fieldset/sds-description/sds-description';
+@import '../../fieldset/sds-field-error/sds-field-error';
+
+:host {
+  display: block;
+}
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--sds-size-space-200);
+}
