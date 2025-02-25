@@ -1,0 +1,25 @@
+<style>
+  main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+    padding: 1rem;
+    box-sizing: inherit;
+    position: relative;
+  }
+</style>
+
+<main class="main">
+  <sds-button variant="primary" (click)="onClick()">Test!</sds-button>
+  <sds-accordion>
+    <sds-accordion-item summary="Item 1"> test item 1</sds-accordion-item>
+    <sds-accordion-item summary="Item 2"> test item 2</sds-accordion-item>
+    <sds-accordion-item summary="Item 3"> test item 3</sds-accordion-item>
+  </sds-accordion>
+</main>
+
+<router-outlet />
