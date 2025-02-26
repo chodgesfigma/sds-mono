@@ -9,21 +9,6 @@
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/sds/sds.esm.js",
-  "exports": {
-    ".": {
-      "import": "./dist/sds/sds.esm.js",
-      "require": "./dist/sds/sds.cjs.js"
-    },
-    "./my-component": {
-      "import": "./dist/components/my-component.js",
-      "types": "./dist/components/my-component.d.ts"
-    },
-    "./loader": {
-      "import": "./loader/index.js",
-      "require": "./loader/index.cjs",
-      "types": "./loader/index.d.ts"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ionic-team/stencil-component-starter.git"
@@ -66,6 +51,7 @@
     "@pxtrn/storybook-addon-docs-stencil": "^8.0.0",
     "@stencil-community/eslint-plugin": "^0.9.0",
     "@stencil/core": "^4.7.0",
+    "@stencil/react-output-target": "^0.8.2",
     "@stencil/sass": "^3.0.12",
     "@storybook/addon-essentials": "^8.5.3",
     "@storybook/addon-interactions": "^8.5.3",

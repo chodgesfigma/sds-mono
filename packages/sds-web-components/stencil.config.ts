@@ -1,4 +1,5 @@
 import { Config } from '@stencil/core';
+import { reactOutputTarget } from '@stencil/react-output-target';
 import { sass } from '@stencil/sass';
 import { vueOutputTarget } from '@stencil/vue-output-target';
 
@@ -36,6 +37,10 @@ export const config: Config = {
     vueOutputTarget({
       componentCorePackage: 'sds-web-components',
       proxiesFile: '../sds-vue-components/lib/components.ts',
+    }),
+    reactOutputTarget({
+      outDir: '../sds-react-components/src',
+      stencilPackageName: 'sds-web-components',
     }),
   ],
   testing: {
