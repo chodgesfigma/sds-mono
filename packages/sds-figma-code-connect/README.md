@@ -1,6 +1,6 @@
 # SDS Figma Code Connect
 
-This package contains configurations for syncing this component library with Figma, via Code Connect.
+This package contains configurations for syncing this component library with a Figma Design Library, via `Code Connect`.
 
 ## Usage
 
@@ -21,14 +21,21 @@ Once you have your token:
 
 There are two main commands:
 
-1. `npm run compile`
-2. `npm run publish`
+```bash
+npm run compile
+```
 
-> These can also be run at the project root level via `figma:compile` and `figma:publish`
+- `compile` will combine each defined output in `outputConfig` and `documentUrlSubstitutions` into `figma.<output>.config.json` files in the `/configs`.
 
-`compile` will combine each defined output in `outputConfig` and `documentUrlSubstitutions` into `figma.<output>.config.json` files in the `/configs`.
+- It will also add in and update `package.json` scripts. Giving each output has its own `publish:<output>` command, as well as a `publish` command that combines them.
 
-It will also add in and update `package.json` scripts. Giving each output has its own `publish:<output>` command, as well as a `publish` command that combines them.
+```bash
+npm run publish
+```
+
+- `publish` will use the generated configs and push the code-connect files to the Figma design file.
+
+> These commands can also be run at the project root level via `figma:compile` and `figma:publish`
 
 ## Configuration Files
 
