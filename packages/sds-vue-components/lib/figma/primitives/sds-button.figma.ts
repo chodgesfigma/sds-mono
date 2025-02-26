@@ -27,7 +27,14 @@ figma.connect('<FIGMA_BUTTONS_BUTTON>', {
     }),
   },
   example: ({ label, size, variant, iconStart, iconEnd, isDisabled }) =>
-    html`<sds-button disabled=${isDisabled} size=${size} variant=${variant}>${iconStart}${label}${iconEnd}</sds-button>`,
+    html`<SdsButton
+      disabled=${isDisabled}
+      size=${size}
+      variant=${variant}
+      @click="() => {}"
+    >
+      ${iconStart}${label}${iconEnd}
+    </SdsButton>`,
 });
 
 figma.connect('<FIGMA_BUTTONS_BUTTON_DANGER>', {
@@ -38,7 +45,14 @@ figma.connect('<FIGMA_BUTTONS_BUTTON_DANGER>', {
     }),
   },
   example: ({ label, size, variant, iconStart, iconEnd, isDisabled }) =>
-    html`<sds-button-danger disabled=${isDisabled} size=${size} variant=${variant}>${iconStart}${label}${iconEnd}</sds-button-danger>`,
+    html`<SdsButtonDanger
+      disabled=${isDisabled}
+      size=${size}
+      variant=${variant}
+      @click="() => {}"
+    >
+      ${iconStart}${label}${iconEnd}
+    </SdsButtonDanger>`,
 });
 
 figma.connect('<FIGMA_BUTTONS_BUTTON_GROUP>', {
@@ -51,5 +65,6 @@ figma.connect('<FIGMA_BUTTONS_BUTTON_GROUP>', {
     }),
     children: figma.children(['Button']),
   },
-  example: ({ align, children }) => html`<sds-button-group align=${align}>${children}</sds-button-group>`,
+  example: ({ align, children }) =>
+    html`<SdsButtonGroup align=${align}>${children}</SdsButtonGroup>`,
 });

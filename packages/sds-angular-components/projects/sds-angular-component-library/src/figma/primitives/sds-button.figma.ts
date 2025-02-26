@@ -19,6 +19,7 @@ const sharedProps = {
 };
 
 figma.connect('<FIGMA_BUTTONS_BUTTON>', {
+  imports: ['import { SdsButton } from "sds-angular-component-library";'],
   props: {
     ...sharedProps,
     variant: figma.enum('Variant', {
@@ -27,10 +28,18 @@ figma.connect('<FIGMA_BUTTONS_BUTTON>', {
     }),
   },
   example: ({ label, size, variant, iconStart, iconEnd, isDisabled }) =>
-    html`<sds-button disabled=${isDisabled} size=${size} variant=${variant}>${iconStart}${label}${iconEnd}</sds-button>`,
+    html`<sds-button
+      disabled=${isDisabled}
+      size=${size}
+      variant=${variant}
+      (click)="handleClick()"
+    >
+      ${iconStart}${label}${iconEnd}
+    </sds-button>`,
 });
 
 figma.connect('<FIGMA_BUTTONS_BUTTON_DANGER>', {
+  imports: ['import { SdsButtonDanger } from "sds-angular-component-library";'],
   props: {
     ...sharedProps,
     variant: figma.enum('Variant', {
@@ -38,10 +47,18 @@ figma.connect('<FIGMA_BUTTONS_BUTTON_DANGER>', {
     }),
   },
   example: ({ label, size, variant, iconStart, iconEnd, isDisabled }) =>
-    html`<sds-button-danger disabled=${isDisabled} size=${size} variant=${variant}>${iconStart}${label}${iconEnd}</sds-button-danger>`,
+    html`<sds-button-danger
+      disabled=${isDisabled}
+      size=${size}
+      variant=${variant}
+      (click)="handleClick()"
+    >
+      ${iconStart}${label}${iconEnd}
+    </sds-button-danger>`,
 });
 
 figma.connect('<FIGMA_BUTTONS_BUTTON_GROUP>', {
+  imports: ['import { SdsButtonGroup } from "sds-angular-component-library";'],
   props: {
     align: figma.enum('Align', {
       Center: 'center',
@@ -51,5 +68,6 @@ figma.connect('<FIGMA_BUTTONS_BUTTON_GROUP>', {
     }),
     children: figma.children(['Button']),
   },
-  example: ({ align, children }) => html`<sds-button-group align=${align}>${children}</sds-button-group>`,
+  example: ({ align, children }) =>
+    html`<sds-button-group align=${align}>${children}</sds-button-group>`,
 });

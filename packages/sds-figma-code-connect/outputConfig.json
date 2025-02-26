@@ -1,0 +1,17 @@
+{
+  "web": {
+    "include": ["../sds-web-components/src/figma/**/*"],
+    "exclude": ["../sds-web-components/src/figma/icons/*"],
+    "parser": "html"
+  },
+  "vue": {
+    "include": ["../sds-vue-components/lib/figma/**/*"],
+    "exclude": ["../sds-vue-components/lib/figma/icons/*"],
+    "label": "Vue"
+  },
+  "angular": {
+    "include": ["../sds-angular-components/projects/sds-angular-component-library/src/figma/**/*"],
+    "exclude": ["../sds-angular-components/projects/sds-angular-component-library/src/figma/icons/*"],
+    "label": "Angular"
+  }
+}

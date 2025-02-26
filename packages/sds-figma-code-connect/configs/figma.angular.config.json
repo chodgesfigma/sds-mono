@@ -1,8 +1,12 @@
 {
   "codeConnect": {
-    "include": ["src/figma/**/*"],
-    "exclude": ["src/figma/icons/*"],
-    "parser": "html",
+    "include": [
+      "../sds-angular-components/projects/sds-angular-component-library/src/figma/**/*"
+    ],
+    "exclude": [
+      "../sds-angular-components/projects/sds-angular-component-library/src/figma/icons/*"
+    ],
+    "label": "Angular",
     "documentUrlSubstitutions": {
       "<FIGMA_ICONS_BASE>": "https://figma.com/design/mG9gWTcs6dZ0v0pNwKPnNK",
       "<FIGMA_ACCORDION_ACCORDION_ITEM>": "https://figma.com/design/mG9gWTcs6dZ0v0pNwKPnNK?node-id=7753-4634",
