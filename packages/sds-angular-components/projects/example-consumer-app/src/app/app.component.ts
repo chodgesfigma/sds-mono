@@ -8,8 +8,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'example-consumer-app';
+  disabled = false;
 
-  onClick = () => {
-    alert('click');
+  toggleDisabled = () => {
+    this.disabled = !this.disabled;
+  };
+
+  handleSubmit = () => {
+    alert('submit');
   };
 }

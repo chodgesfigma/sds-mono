@@ -66,14 +66,14 @@ export declare interface SdsAccordionItem extends Components.SdsAccordionItem {
 
 
 @ProxyCmp({
-  inputs: ['size', 'type', 'variant']
+  inputs: ['disabled', 'size', 'type', 'variant']
 })
 @Component({
   selector: 'sds-button',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['size', 'type', 'variant'],
+  inputs: ['disabled', 'size', 'type', 'variant'],
 })
 export class SdsButton {
   protected el: HTMLSdsButtonElement;
@@ -88,14 +88,14 @@ export declare interface SdsButton extends Components.SdsButton {}
 
 
 @ProxyCmp({
-  inputs: ['size', 'type', 'variant']
+  inputs: ['disabled', 'size', 'type', 'variant']
 })
 @Component({
   selector: 'sds-button-danger',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['size', 'type', 'variant'],
+  inputs: ['disabled', 'size', 'type', 'variant'],
 })
 export class SdsButtonDanger {
   protected el: HTMLSdsButtonDangerElement;

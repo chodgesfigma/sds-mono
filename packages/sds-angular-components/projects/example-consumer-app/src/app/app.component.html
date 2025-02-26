@@ -3,7 +3,6 @@
     width: 100%;
     height: 100%;
     display: flex;
-    justify-content: center;
     flex-direction: column;
     gap: 12px;
     align-items: center;
@@ -11,15 +10,62 @@
     box-sizing: inherit;
     position: relative;
   }
+
+  hr {
+    height: 4px;
+    background: #0001;
+    width: 100%;
+    border: none;
+  }
 </style>
 
 <main class="main">
-  <sds-button variant="primary" (click)="onClick()">Test!</sds-button>
-  <sds-accordion>
-    <sds-accordion-item summary="Item 1"> test item 1</sds-accordion-item>
-    <sds-accordion-item summary="Item 2"> test item 2</sds-accordion-item>
-    <sds-accordion-item summary="Item 3"> test item 3</sds-accordion-item>
-  </sds-accordion>
+  <label>
+    <input [checked]="disabled" type="checkbox" (change)="toggleDisabled()" />
+    Disable form
+  </label>
+  <hr />
+  <sds-fieldset [disabled]="disabled">
+    <sds-legend>Shipping details</sds-legend>
+    <sds-text>Without this your odds of getting your order are low.</sds-text>
+    <sds-field-group>
+      <sds-input-field
+        required
+        name="address"
+        defaultValue="123 Example Ln."
+        label="Street address"
+        description="Hello there"
+        [disabled]="disabled"
+      ></sds-input-field>
+      <sds-select-field
+        required
+        name="country"
+        label="Country"
+        description="I am a select description"
+        [disabled]="disabled"
+      >
+        <sds-select-item id="ca">Canada</sds-select-item>
+        <sds-select-item id="mx">Mexico</sds-select-item>
+        <sds-select-item id="us" selected>United States</sds-select-item>
+      </sds-select-field>
+      <sds-slider
+        name="range"
+        label="Slide here"
+        description="i love this for us"
+        defaultValue="40"
+        showOutput
+        [disabled]="disabled"
+      ></sds-slider>
+    </sds-field-group>
+    <sds-button-group align="end">
+      <sds-button-danger [disabled]="disabled" type="reset"
+        >Clear</sds-button-danger
+      >
+      <sds-button (click)="handleSubmit()" [disabled]="disabled" type="submit"
+        >Submit</sds-button
+      >
+    </sds-button-group>
+  </sds-fieldset>
 </main>
 
 <router-outlet />

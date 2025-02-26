@@ -1,9 +1,4 @@
 import { defineContainer } from '@stencil/vue-output-target/runtime';
-export const MyComponent = defineContainer('my-component', undefined, [
-    'first',
-    'middle',
-    'last'
-]);
 export const SdsAccordion = defineContainer('sds-accordion', undefined, [
     'multiple'
 ]);
@@ -18,12 +13,14 @@ export const SdsAccordionItem = defineContainer('sds-accordion-item', undefined,
 export const SdsButton = defineContainer('sds-button', undefined, [
     'type',
     'size',
-    'variant'
+    'variant',
+    'disabled'
 ]);
 export const SdsButtonDanger = defineContainer('sds-button-danger', undefined, [
     'type',
     'size',
-    'variant'
+    'variant',
+    'disabled'
 ]);
 export const SdsButtonGroup = defineContainer('sds-button-group', undefined, [
     'align'
@@ -38,6 +35,18 @@ export const SdsFieldset = defineContainer('sds-fieldset', undefined, [
     'disabled',
     'form',
     'name'
+]);
+export const SdsFlex = defineContainer('sds-flex', undefined, [
+    'alignPrimary',
+    'alignSecondary',
+    'container',
+    'direction',
+    'gap',
+    'flexType',
+    'wrap'
+]);
+export const SdsFlexItem = defineContainer('sds-flex-item', undefined, [
+    'size'
 ]);
 export const SdsForm = defineContainer('sds-form', undefined, [
     'singleLine'
@@ -940,6 +949,7 @@ export const SdsKeyboard = defineContainer('sds-keyboard', undefined);
 export const SdsLabel = defineContainer('sds-label', undefined);
 export const SdsLegend = defineContainer('sds-legend', undefined);
 export const SdsLink = defineContainer('sds-link', undefined, [
+    'variant',
     'href',
     'target',
     'rel',
@@ -981,6 +991,39 @@ export const SdsSelectItem = defineContainer('sds-select-item', undefined, [
     'selected',
     'disabled'
 ]);
+export const SdsSlider = defineContainer('sds-slider', undefined, [
+    'name',
+    'label',
+    'description',
+    'showOutput',
+    'disabled',
+    'defaultValue',
+    'sds-change',
+    'sds-input'
+], [
+    'sds-change',
+    'sds-input'
+]);
+export const SdsTab = defineContainer('sds-tab', undefined, [
+    'panelId',
+    'active',
+    'sds-tab-click',
+    'sds-tab-next',
+    'sds-tab-previous'
+], [
+    'sds-tab-click',
+    'sds-tab-next',
+    'sds-tab-previous'
+]);
+export const SdsTabPanel = defineContainer('sds-tab-panel', undefined, [
+    'panelId',
+    'active'
+]);
+export const SdsTabs = defineContainer('sds-tabs', undefined, [
+    'sds-tabs-selected'
+], [
+    'sds-tabs-selected'
+]);
 export const SdsTag = defineContainer('sds-tag', undefined, [
     'scheme',
     'variant',
@@ -992,6 +1035,81 @@ export const SdsTag = defineContainer('sds-tag', undefined, [
 export const SdsTagButton = defineContainer('sds-tag-button', undefined, [
     'scheme',
     'variant'
+]);
+export const SdsText = defineContainer('sds-text', undefined, [
+    'lineHeight',
+    'elementType'
+]);
+export const SdsTextCode = defineContainer('sds-text-code', undefined, [
+    'elementType'
+]);
+export const SdsTextContentHeading = defineContainer('sds-text-content-heading', undefined, [
+    'align',
+    'heading',
+    'subHeading'
+]);
+export const SdsTextContentTitle = defineContainer('sds-text-content-title', undefined, [
+    'align',
+    'heading',
+    'subHeading'
+]);
+export const SdsTextEmphasis = defineContainer('sds-text-emphasis', undefined, [
+    'elementType'
+]);
+export const SdsTextHeading = defineContainer('sds-text-heading', undefined, [
+    'elementType'
+]);
+export const SdsTextInput = defineContainer('sds-text-input', undefined, [
+    'elementType'
+]);
+export const SdsTextLink = defineContainer('sds-text-link', undefined, [
+    'href',
+    'target',
+    'rel',
+    'ping',
+    'media',
+    'hreflang',
+    'download'
+]);
+export const SdsTextLinkList = defineContainer('sds-text-link-list', undefined, [
+    'density',
+    'titleElem'
+]);
+export const SdsTextList = defineContainer('sds-text-list', undefined, [
+    'density',
+    'titleElem',
+    'class'
+]);
+export const SdsTextListItem = defineContainer('sds-text-list-item', undefined);
+export const SdsTextPrice = defineContainer('sds-text-price', undefined, [
+    'elementType',
+    'price',
+    'currency',
+    'size',
+    'label'
+]);
+export const SdsTextSmall = defineContainer('sds-text-small', undefined, [
+    'lineHeight',
+    'elementType'
+]);
+export const SdsTextSmallStrong = defineContainer('sds-text-small-strong', undefined, [
+    'lineHeight',
+    'elementType'
+]);
+export const SdsTextStrong = defineContainer('sds-text-strong', undefined, [
+    'elementType'
+]);
+export const SdsTextSubheading = defineContainer('sds-text-subheading', undefined, [
+    'elementType'
+]);
+export const SdsTextSubtitle = defineContainer('sds-text-subtitle', undefined, [
+    'elementType'
+]);
+export const SdsTextTitleHero = defineContainer('sds-text-title-hero', undefined, [
+    'elementType'
+]);
+export const SdsTextTitlePage = defineContainer('sds-text-title-page', undefined, [
+    'elementType'
 ]);
 export const SdsToggleTag = defineContainer('sds-toggle-tag', undefined, [
     'selected',
