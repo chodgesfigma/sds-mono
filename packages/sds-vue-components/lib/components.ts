@@ -44,6 +44,37 @@ export const SdsButtonGroup = /*@__PURE__*/ defineContainer<JSX.SdsButtonGroup>(
 ]);
 
 
+export const SdsCheckbox = /*@__PURE__*/ defineContainer<JSX.SdsCheckbox>('sds-checkbox', undefined, [
+  'selected',
+  'indeterminate',
+  'disabled',
+  'value',
+  'sds-change'
+], [
+  'sds-change'
+]);
+
+
+export const SdsCheckboxField = /*@__PURE__*/ defineContainer<JSX.SdsCheckboxField>('sds-checkbox-field', undefined, [
+  'selected',
+  'indeterminate',
+  'label',
+  'description',
+  'disabled',
+  'value',
+  'sds-change'
+], [
+  'sds-change'
+]);
+
+
+export const SdsCheckboxGroup = /*@__PURE__*/ defineContainer<JSX.SdsCheckboxGroup>('sds-checkbox-group', undefined, [
+  'label',
+  'description',
+  'error'
+]);
+
+
 export const SdsDescription = /*@__PURE__*/ defineContainer<JSX.SdsDescription>('sds-description', undefined);
 
 

@@ -1,7 +1,7 @@
 import { SdsDescriptionFunctional } from '../../fieldset/sds-description/sds-description-functional';
 import { SdsLabelFunctional } from '../../fieldset/sds-label/sds-label-functional';
 import { SdsCheckboxFunctional } from '../sds-checkbox/sds-checkbox-functional';
-import { Component, Element, Event, EventEmitter, Prop, State, h } from '@stencil/core';
+import { Component, Element, Event, EventEmitter, Prop, State, Watch, h } from '@stencil/core';
 import clsx from 'clsx';
 
 @Component({
@@ -62,10 +62,13 @@ export class SdsCheckboxField {
   })
   change!: EventEmitter<{ checked: boolean; value: string }>;
 
-  handleChange = () => {
-    const isChecked = this.checkboxInput.checked;
-    this.selected = isChecked;
-    this.change.emit({ checked: isChecked, value: this.value });
+  @Watch('selected')
+  handleChange() {
+    this.change.emit({ checked: this.selected, value: this.value });
+  }
+
+  handleInputChange = () => {
+    this.selected = this.checkboxInput.checked;
   };
 
   handleClick = () => {
@@ -77,9 +80,7 @@ export class SdsCheckboxField {
   };
 
   componentWillLoad() {
-    console.log(this.el.innerHTML);
     this.labelText = this.label || (this.el.innerHTML !== '' ? this.el.innerHTML : undefined);
-    console.log(this.labelText);
   }
 
   render() {
@@ -96,12 +97,12 @@ export class SdsCheckboxField {
           disabled={this.disabled}
           indeterminate={this.indeterminate}
           checked={this.selected}
-          onChange={this.handleChange}
+          onChange={this.handleInputChange}
           ref={el => (this.checkboxInput = el as HTMLInputElement)}
           onClick={this.handleClick}
         />
         {this.description && <SdsDescriptionFunctional id="description">{this.description}</SdsDescriptionFunctional>}
-        {/* Error field is present in base repo, but the styling isn't handled properly */}
+        {/* Error field is present in base repo, but the styling isn't handled properly, opting to not render it */}
         {/* {this.error && <SdsFieldErrorFunctional id="error">{this.error}</SdsFieldErrorFunctional>} */}
         <slot data-hidden={`${this.el.innerHTML === this.labelText}`} />
       </div>
