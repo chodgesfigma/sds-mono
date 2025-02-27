@@ -1798,6 +1798,32 @@ export const SdsTextTitlePage = /*@__PURE__*/ defineContainer<JSX.SdsTextTitlePa
 ]);
 
 
+export const SdsTextarea = /*@__PURE__*/ defineContainer<JSX.SdsTextarea>('sds-textarea', undefined, [
+  'value',
+  'disabled',
+  'placeholder',
+  'required',
+  'resizable'
+]);
+
+
+export const SdsTextareaField = /*@__PURE__*/ defineContainer<JSX.SdsTextareaField>('sds-textarea-field', undefined, [
+  'label',
+  'description',
+  'disabled',
+  'placeholder',
+  'value',
+  'required',
+  'error',
+  'resizable',
+  'sds-change',
+  'sds-input'
+], [
+  'sds-change',
+  'sds-input'
+]);
+
+
 export const SdsToggleTag = /*@__PURE__*/ defineContainer<JSX.SdsToggleTag>('sds-toggle-tag', undefined, [
   'selected',
   'allowSelfToggle',
