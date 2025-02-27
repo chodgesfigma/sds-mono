@@ -1,3 +1,4 @@
+import { angularOutputTarget } from '@stencil/angular-output-target';
 import { Config } from '@stencil/core';
 import { reactOutputTarget } from '@stencil/react-output-target';
 import { sass } from '@stencil/sass';
@@ -41,6 +42,12 @@ export const config: Config = {
     reactOutputTarget({
       outDir: '../sds-react-components/src',
       stencilPackageName: 'sds-web-components',
+    }),
+    angularOutputTarget({
+      componentCorePackage: 'sds-web-components',
+      outputType: 'component',
+      directivesProxyFile: '../sds-angular-components/projects/sds-angular-component-library/src/lib/stencil-generated/components.ts',
+      directivesArrayFile: '../sds-angular-components/projects/sds-angular-component-library/src/lib/stencil-generated/index.ts',
     }),
   ],
   testing: {

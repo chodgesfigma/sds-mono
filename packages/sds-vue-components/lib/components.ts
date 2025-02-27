@@ -26,14 +26,16 @@ export const SdsAccordionItem = /*@__PURE__*/ defineContainer<JSX.SdsAccordionIt
 export const SdsButton = /*@__PURE__*/ defineContainer<JSX.SdsButton>('sds-button', undefined, [
   'type',
   'size',
-  'variant'
+  'variant',
+  'disabled'
 ]);
 
 
 export const SdsButtonDanger = /*@__PURE__*/ defineContainer<JSX.SdsButtonDanger>('sds-button-danger', undefined, [
   'type',
   'size',
-  'variant'
+  'variant',
+  'disabled'
 ]);
 
 
