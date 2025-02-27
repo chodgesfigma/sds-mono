@@ -1,5 +1,5 @@
 import { SdsCheckboxFunctional } from './sds-checkbox-functional';
-import { Component, Event, EventEmitter, Prop, h } from '@stencil/core';
+import { Component, Event, EventEmitter, Prop, Watch, h } from '@stencil/core';
 
 @Component({
   tag: 'sds-checkbox',
@@ -40,10 +40,13 @@ export class SdsCheckbox {
   })
   change!: EventEmitter<{ checked: boolean; value: string }>;
 
-  handleChange = () => {
-    const isChecked = this.checkboxInput.checked;
-    this.selected = isChecked;
-    this.change.emit({ checked: isChecked, value: this.value });
+  @Watch('selected')
+  handleChange() {
+    this.change.emit({ checked: this.selected, value: this.value });
+  }
+
+  handleInputChange = () => {
+    this.selected = this.checkboxInput.checked;
   };
 
   handleClick = () => {
@@ -60,7 +63,7 @@ export class SdsCheckbox {
         disabled={this.disabled}
         indeterminate={this.indeterminate}
         checked={this.selected}
-        onChange={this.handleChange}
+        onChange={this.handleInputChange}
         ref={el => (this.checkboxInput = el as HTMLInputElement)}
         onClick={this.handleClick}
       ></SdsCheckboxFunctional>
