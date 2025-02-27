@@ -1,3 +1,4 @@
+import { angularOutputTarget } from '@stencil/angular-output-target';
 import { Config } from '@stencil/core';
 import { sass } from '@stencil/sass';
 import { vueOutputTarget } from '@stencil/vue-output-target';
@@ -36,6 +37,12 @@ export const config: Config = {
     vueOutputTarget({
       componentCorePackage: 'sds-web-components',
       proxiesFile: '../sds-vue-components/lib/components.ts',
+    }),
+    angularOutputTarget({
+      componentCorePackage: 'sds-web-components',
+      outputType: 'component',
+      directivesProxyFile: '../sds-angular-components/projects/sds-angular-component-library/src/lib/stencil-generated/components.ts',
+      directivesArrayFile: '../sds-angular-components/projects/sds-angular-component-library/src/lib/stencil-generated/index.ts',
     }),
   ],
   testing: {

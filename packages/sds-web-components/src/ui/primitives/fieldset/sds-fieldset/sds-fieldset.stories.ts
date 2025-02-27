@@ -44,6 +44,7 @@ const meta = {
           description="i love this for us"
           default-value=40
           show-output
+          ${disabled ? 'disabled' : ''}
         ></sds-slider>
         <!-- <TextareaField
           isRequired
@@ -68,9 +69,9 @@ const meta = {
           description="We hope you do"
         /> -->
       </sds-field-group>
-      <!-- <sds-button-group>
-        <sds-button type="submit">Submit</sds-button>
-      </sds-button-group> -->
+      <sds-button-group>
+        <sds-button ${disabled ? 'disabled' : ''} type="submit">Submit</sds-button>
+      </sds-button-group>
     </sds-fieldset>
   `,
 } satisfies Meta<ComponentArgs>;

@@ -9,21 +9,6 @@
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
   "unpkg": "dist/sds/sds.esm.js",
-  "exports": {
-    ".": {
-      "import": "./dist/sds/sds.esm.js",
-      "require": "./dist/sds/sds.cjs.js"
-    },
-    "./my-component": {
-      "import": "./dist/components/my-component.js",
-      "types": "./dist/components/my-component.d.ts"
-    },
-    "./loader": {
-      "import": "./loader/index.js",
-      "require": "./loader/index.cjs",
-      "types": "./loader/index.d.ts"
-    }
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ionic-team/stencil-component-starter.git"
@@ -99,6 +84,7 @@
   "dependencies": {
     "@figma/code-connect": "^1.3.1",
     "@shoelace-style/shoelace": "^2.20.0",
+    "@stencil/angular-output-target": "^0.10.2",
     "@stencil/vue-output-target": "^0.9.4",
     "clsx": "^2.1.1"
   },

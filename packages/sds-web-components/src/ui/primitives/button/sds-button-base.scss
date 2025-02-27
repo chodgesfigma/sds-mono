@@ -18,29 +18,21 @@
   position: relative;
   white-space: nowrap;
 
-  > .icon {
-    --icon-color: var(--button-color);
-  }
+  --icon-color: var(--button-color);
 }
 
 .button-size-small {
   --button-font: var(--sds-font-body-small);
   --button-padding-x: var(--sds-size-space-200);
   --button-padding-y: var(--sds-size-space-200);
-
-  > .icon {
-    --icon-diameter: var(--sds-typography-scale-02);
-  }
+  --icon-diameter: var(--sds-typography-scale-02);
 }
 
 .button-size-medium {
   --button-font: var(--sds-font-body-base);
   --button-padding-x: var(--sds-size-space-300);
   --button-padding-y: var(--sds-size-space-300);
-
-  > .icon {
-    --icon-diameter: var(--sds-typography-scale-03);
-  }
+  --icon-diameter: var(--sds-typography-scale-03);
 }
 
 .button:focus-visible {
