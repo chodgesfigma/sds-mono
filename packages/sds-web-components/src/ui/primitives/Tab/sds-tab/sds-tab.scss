@@ -1,0 +1,45 @@
+@import 'reset';
+
+:host {
+  display: block;
+  padding-block: 2px;
+}
+
+.tab {
+  --color: var(--sds-color-text-default-secondary);
+  --border-color: var(--sds-color-border-default-default);
+  --border-radius: var(--sds-size-radius-100);
+
+  padding: var(--sds-size-space-100) var(--sds-size-space-300);
+  border-bottom: solid var(--sds-size-stroke-border) var(--border-color);
+  border-radius: var(--border-radius) var(--border-radius) 0 0;
+  box-sizing: border-box;
+  color: var(--color);
+  cursor: pointer;
+  outline: none;
+  position: relative;
+
+  &[aria-selected='true'] {
+    --color: var(--sds-color-text-default-default);
+    --border-color: var(--sds-color-border-default-secondary);
+
+    position: relative;
+    z-index: 1;
+  }
+
+  &:hover:not([aria-selected='true']) {
+    background: var(--sds-color-background-default-default-hover);
+  }
+
+  &:focus-visible {
+    --offset: calc(var(--sds-size-stroke-border) * 0);
+
+    &::before {
+      content: '';
+      border-radius: calc(var(--border-radius) + var(--offset)) calc(var(--border-radius) + var(--offset)) 0 0;
+      inset: 1px;
+      box-shadow: 0 0 0 var(--global-focus-ring-size) var(--global-focus-ring-color);
+      position: absolute;
+    }
+  }
+}

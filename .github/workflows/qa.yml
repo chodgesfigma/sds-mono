@@ -21,38 +21,38 @@ jobs:
         with:
           node-version: 22.13.1
           cache: "npm"
-          cache-dependency-path: ./sds-web-components/package-lock.json
+          cache-dependency-path: "**/package-lock.json"
 
       - name: Install npm dependencies
-        working-directory: ./sds-web-components
+        working-directory: ./packages/sds-web-components
         run: npm ci
 
       - name: Lint JS/TS
-        working-directory: ./sds-web-components
+        working-directory: ./packages/sds-web-components
         run: npm run lint:js
 
       - name: Lint styles
-        working-directory: ./sds-web-components
+        working-directory: ./packages/sds-web-components
         run: npm run lint:styles
 
       - name: Check formatting
-        working-directory: ./sds-web-components
+        working-directory: ./packages/sds-web-components
         run: npm run lint:formatting
 
       - name: Build project
-        working-directory: ./sds-web-components
+        working-directory: ./packages/sds-web-components
         run: npm run build
 
       - name: Install Playwright for Storybook Tests
-        working-directory: ./sds-web-components
+        working-directory: ./packages/sds-web-components
         run: npx playwright install --with-deps
 
       - name: Build Storybook
-        working-directory: ./sds-web-components
-        run: npm run build-storybook --quiet
+        working-directory: ./packages/sds-web-components
+        run: npm run build-storybook --loglevel verbose --debug-webpack
 
       - name: Serve Storybook and run tests
-        working-directory: ./sds-web-components
+        working-directory: ./packages/sds-web-components
         run: |
           npx concurrently -k -s first -n "SB,TEST" -c "magenta,blue" \
             "npx http-server storybook-static --port 6006 --silent" \

@@ -1,0 +1,10 @@
+@import 'reset';
+
+:host {
+  display: block;
+}
+
+.tab-panel {
+  outline: none;
+  padding: var(--sds-size-space-300);
+}
