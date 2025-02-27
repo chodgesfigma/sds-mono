@@ -1,0 +1,14 @@
+{
+    "extends": "../../tsconfig.json",
+    "compilerOptions": {
+      "outDir": "./dist",
+      "lib": ["dom", "es2020"],
+      "module": "ESNext",
+      "moduleResolution": "bundler",
+      "target": "ESNext",
+      "skipLibCheck": true,
+      "types": ["vue", "@stencil/core"]
+    },
+    "include": ["lib", "src", "src/**/*.vue", "shims-vue.d.ts"],
+    "exclude": ["node_modules"]
+  }
