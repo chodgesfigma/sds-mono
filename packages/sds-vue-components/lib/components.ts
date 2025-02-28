@@ -26,14 +26,16 @@ export const SdsAccordionItem = /*@__PURE__*/ defineContainer<JSX.SdsAccordionIt
 export const SdsButton = /*@__PURE__*/ defineContainer<JSX.SdsButton>('sds-button', undefined, [
   'type',
   'size',
-  'variant'
+  'variant',
+  'disabled'
 ]);
 
 
 export const SdsButtonDanger = /*@__PURE__*/ defineContainer<JSX.SdsButtonDanger>('sds-button-danger', undefined, [
   'type',
   'size',
-  'variant'
+  'variant',
+  'disabled'
 ]);
 
 
@@ -1793,6 +1795,32 @@ export const SdsTextTitleHero = /*@__PURE__*/ defineContainer<JSX.SdsTextTitleHe
 
 export const SdsTextTitlePage = /*@__PURE__*/ defineContainer<JSX.SdsTextTitlePage>('sds-text-title-page', undefined, [
   'elementType'
+]);
+
+
+export const SdsTextarea = /*@__PURE__*/ defineContainer<JSX.SdsTextarea>('sds-textarea', undefined, [
+  'value',
+  'disabled',
+  'placeholder',
+  'required',
+  'resizable'
+]);
+
+
+export const SdsTextareaField = /*@__PURE__*/ defineContainer<JSX.SdsTextareaField>('sds-textarea-field', undefined, [
+  'label',
+  'description',
+  'disabled',
+  'placeholder',
+  'value',
+  'required',
+  'error',
+  'resizable',
+  'sds-change',
+  'sds-input'
+], [
+  'sds-change',
+  'sds-input'
 ]);
 
 

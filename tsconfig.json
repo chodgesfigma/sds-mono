@@ -1,8 +1,8 @@
-// This was taken from https://stenciljs.com/docs/vue#creating-a-vue-component-library
+// This was taken from https://stenciljs.com/docs/vue#creating-a-vue-sds-angular-component-library
 {
     "compilerOptions": {
       "module": "ES2020",
-      "declaration": false,
+      "declaration": true,
       "removeComments": true,
       "noLib": false,
       "emitDecoratorMetadata": true,

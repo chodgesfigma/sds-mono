@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "build": "lerna run build",
-    "clean": "rm -rf node_modules && rm package-lock.json && npm install"
+    "clean": "rimraf node_modules && npm install"
   },
   "workspaces": [
     "packages/*"
@@ -13,8 +13,8 @@
   "author": "",
   "license": "ISC",
   "description": "figma-sds monorepo replatforming proof of concept, developed by One North.",
-  "dependencies": {},
   "devDependencies": {
-    "lerna": "^8.2.0"
+    "lerna": "^8.2.0",
+    "rimraf": "^5.0.10"
   }
 }

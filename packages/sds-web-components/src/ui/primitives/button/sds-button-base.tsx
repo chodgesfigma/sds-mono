@@ -19,15 +19,20 @@ export interface SdsButtonBaseProps {
    * The button variant
    */
   variant?: Variant;
+
+  /**
+   * Disables the button
+   */
+  disabled?: boolean;
 }
 
 export const SdsButtonBase: FunctionalComponent<SdsButtonBaseProps> = props => {
-  const { type, size = 'medium', variant } = props;
+  const { type, size = 'medium', variant, disabled = false } = props;
 
   const classNames = clsx('button', `button-size-${size}`, `button-variant-${variant}`);
 
   return (
-    <button class={classNames} type={type}>
+    <button disabled={disabled} class={classNames} type={type}>
       <slot />
     </button>
   );

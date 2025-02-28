@@ -13,12 +13,14 @@ export const SdsAccordionItem = defineContainer('sds-accordion-item', undefined,
 export const SdsButton = defineContainer('sds-button', undefined, [
     'type',
     'size',
-    'variant'
+    'variant',
+    'disabled'
 ]);
 export const SdsButtonDanger = defineContainer('sds-button-danger', undefined, [
     'type',
     'size',
-    'variant'
+    'variant',
+    'disabled'
 ]);
 export const SdsButtonGroup = defineContainer('sds-button-group', undefined, [
     'align'
