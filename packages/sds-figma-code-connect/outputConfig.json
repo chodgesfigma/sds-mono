@@ -1,17 +1,17 @@
 {
   "web": {
-    "include": ["../sds-web-components/src/figma/**/*"],
-    "exclude": ["../sds-web-components/src/figma/icons/*"],
+    "include": ["dist/web/**/*"],
+    "exclude": ["dist/web/icons/*"],
     "parser": "html"
   },
   "vue": {
-    "include": ["../sds-vue-components/lib/figma/**/*"],
-    "exclude": ["../sds-vue-components/lib/figma/icons/*"],
+    "include": ["dist/vue/**/*"],
+    "exclude": ["dist/vue/icons/*"],
     "label": "Vue"
   },
   "angular": {
-    "include": ["../sds-angular-components/projects/sds-angular-component-library/src/figma/**/*"],
-    "exclude": ["../sds-angular-components/projects/sds-angular-component-library/src/figma/icons/*"],
+    "include": ["dist/angular/**/*"],
+    "exclude": ["dist/angular/icons/*"],
     "label": "Angular"
   }
 }

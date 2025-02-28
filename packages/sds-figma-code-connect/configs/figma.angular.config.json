@@ -1,10 +1,10 @@
 {
   "codeConnect": {
     "include": [
-      "../sds-angular-components/projects/sds-angular-component-library/src/figma/**/*"
+      "dist/angular/**/*"
     ],
     "exclude": [
-      "../sds-angular-components/projects/sds-angular-component-library/src/figma/icons/*"
+      "dist/angular/icons/*"
     ],
     "label": "Angular",
     "documentUrlSubstitutions": {
