@@ -7,7 +7,8 @@
     "clean": "rimraf node_modules && npm install"
   },
   "workspaces": [
-    "packages/*"
+    "packages/*",
+    "examples-apps/*"
   ],
   "keywords": [],
   "author": "",
