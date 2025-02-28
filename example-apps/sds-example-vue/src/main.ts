@@ -1,4 +1,3 @@
-import "./assets/main.css";
 // Only step to be able to use our components within a Vue repo,
 // is to register them prior to mounting the app.
 import { registerStencilComponents } from "sds-vue-components";
