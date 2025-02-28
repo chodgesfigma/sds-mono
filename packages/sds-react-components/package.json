@@ -1,0 +1,28 @@
+{
+  "name": "sds-react-components",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "module": "dist/index.js",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "npm run clean && npm run compile",
+    "clean": "rimraf dist",
+    "compile": "npm run tsc",
+    "tsc": "tsc"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "rimraf": "^6.0.1"
+  },
+  "dependencies": {
+    "@stencil/react-output-target": "^0.8.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "sds-web-components": "*"
+  }
+}

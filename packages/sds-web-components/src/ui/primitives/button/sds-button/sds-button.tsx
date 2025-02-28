@@ -1,4 +1,4 @@
-import { Size, Type, Variant, SdsButtonBase } from '../sds-button-base';
+import { type Type, type Size, type Variant, SdsButtonBase } from '../sds-button-base';
 import { Component, Prop, h } from '@stencil/core';
 
 export type DefaultVariant = Exclude<Variant, 'danger-primary' | 'danger-subtle'>;
@@ -22,9 +22,14 @@ export class SdsButton {
    */
   @Prop() variant: DefaultVariant = 'primary';
 
+  /**
+   * Disables the button
+   */
+  @Prop({ reflect: true }) disabled?: boolean;
+
   render() {
     return (
-      <SdsButtonBase variant={this.variant} size={this.size} type={this.type}>
+      <SdsButtonBase disabled={this.disabled} variant={this.variant} size={this.size} type={this.type}>
         <slot />
       </SdsButtonBase>
     );
