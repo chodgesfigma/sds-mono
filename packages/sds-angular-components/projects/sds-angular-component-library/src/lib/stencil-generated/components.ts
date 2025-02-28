@@ -7597,6 +7597,60 @@ export declare interface SdsTextTitlePage extends Components.SdsTextTitlePage {}
 
 
 @ProxyCmp({
+  inputs: ['disabled', 'placeholder', 'required', 'resizable', 'value']
+})
+@Component({
+  selector: 'sds-textarea',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['disabled', 'placeholder', 'required', 'resizable', 'value'],
+})
+export class SdsTextarea {
+  protected el: HTMLSdsTextareaElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsTextarea extends Components.SdsTextarea {}
+
+
+@ProxyCmp({
+  inputs: ['description', 'disabled', 'error', 'label', 'placeholder', 'required', 'resizable', 'value']
+})
+@Component({
+  selector: 'sds-textarea-field',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['description', 'disabled', 'error', 'label', 'placeholder', 'required', 'resizable', 'value'],
+})
+export class SdsTextareaField {
+  protected el: HTMLSdsTextareaFieldElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['sds-change', 'sds-input']);
+  }
+}
+
+
+export declare interface SdsTextareaField extends Components.SdsTextareaField {
+  /**
+   * Emitted when the textarea's value is changed
+   */
+  'sds-change': EventEmitter<CustomEvent<{ value: string }>>;
+  /**
+   * Emitted when the textarea's has input
+   */
+  'sds-input': EventEmitter<CustomEvent<{ value: string }>>;
+}
+
+
+@ProxyCmp({
   inputs: ['allowSelfToggle', 'selected']
 })
 @Component({

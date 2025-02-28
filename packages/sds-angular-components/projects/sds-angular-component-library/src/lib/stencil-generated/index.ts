@@ -344,6 +344,8 @@ export const DIRECTIVES = [
   d.SdsTextSubtitle,
   d.SdsTextTitleHero,
   d.SdsTextTitlePage,
+  d.SdsTextarea,
+  d.SdsTextareaField,
   d.SdsToggleTag,
   d.SdsToggleTagGroup,
   d.SdsToggleTagList
