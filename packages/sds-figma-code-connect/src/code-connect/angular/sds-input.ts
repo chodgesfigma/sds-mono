@@ -10,7 +10,7 @@ figma.connect('<FIGMA_INPUTS_INPUT_FIELD>', {
   example: ({ isDisabled, value, placeholder }) =>
     html`<sds-input
       disabled=${isDisabled}
-      default-value=${value}
+      defaultValue=${value}
       placeholder=${placeholder}
     ></sds-input>`,
 });
@@ -31,7 +31,7 @@ figma.connect('<FIGMA_INPUTS_INPUT_FIELD>', {
       error=${errorMessage}
       description=${description}
       disabled=${isDisabled}
-      default-value=${value}
+      defaultValue=${value}
       placeholder=${placeholder}
     ></sds-input-field>`,
 });

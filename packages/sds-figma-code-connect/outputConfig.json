@@ -13,5 +13,10 @@
     "include": ["dist/angular/**/*"],
     "exclude": ["dist/angular/icons/*"],
     "label": "Angular"
+  },
+  "react": {
+    "include": ["dist/react/**/*"],
+    "exclude": ["dist/react/icons/*"],
+    "parser": "react"
   }
 }

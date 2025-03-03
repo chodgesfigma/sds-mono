@@ -6,7 +6,6 @@ import {
 } from 'src/props/sds-button';
 
 figma.connect('<FIGMA_BUTTONS_BUTTON>', {
-  imports: ['import { SdsButton } from "sds-angular-component-library";'],
   props: BUTTON_PROPS,
   example: ({ label, size, variant, iconStart, iconEnd, isDisabled }) =>
     html`<sds-button
@@ -20,7 +19,6 @@ figma.connect('<FIGMA_BUTTONS_BUTTON>', {
 });
 
 figma.connect('<FIGMA_BUTTONS_BUTTON_DANGER>', {
-  imports: ['import { SdsButtonDanger } from "sds-angular-component-library";'],
   props: BUTTON_DANGER_PROPS,
   example: ({ label, size, variant, iconStart, iconEnd, isDisabled }) =>
     html`<sds-button-danger
@@ -34,7 +32,6 @@ figma.connect('<FIGMA_BUTTONS_BUTTON_DANGER>', {
 });
 
 figma.connect('<FIGMA_BUTTONS_BUTTON_GROUP>', {
-  imports: ['import { SdsButtonGroup } from "sds-angular-component-library";'],
   props: BUTTON_GROUP_PROPS,
   example: ({ align, children }) =>
     html`<sds-button-group align=${align}>${children}</sds-button-group>`,

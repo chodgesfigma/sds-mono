@@ -59,7 +59,7 @@ const compileFigmaConfigs = async () => {
 
   console.log('Updated package.json scripts...');
   console.log(
-    'Successfully compiled figma configs. Use `npm run publish` to sync code connect files with Figma.'
+    'Successfully compiled figma configs. Use `npm run build:code-connect` to generate code connect files.'
   );
 };
 

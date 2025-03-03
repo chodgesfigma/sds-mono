@@ -1,4 +1,9 @@
 import figma, { html } from '@figma/code-connect/html';
+import {
+  BUTTON_DANGER_PROPS,
+  BUTTON_GROUP_PROPS,
+  BUTTON_PROPS,
+} from 'src/props/sds-button';
 
 const sharedProps = {
   label: figma.string('Label'),
@@ -19,13 +24,8 @@ const sharedProps = {
 };
 
 figma.connect('<FIGMA_BUTTONS_BUTTON>', {
-  props: {
-    ...sharedProps,
-    variant: figma.enum('Variant', {
-      Neutral: 'neutral',
-      Subtle: 'subtle',
-    }),
-  },
+  imports: ['import { SdsButton } from "sds-vue-components";'],
+  props: BUTTON_PROPS,
   example: ({ label, size, variant, iconStart, iconEnd, isDisabled }) =>
     html`<SdsButton
       disabled=${isDisabled}
@@ -38,12 +38,8 @@ figma.connect('<FIGMA_BUTTONS_BUTTON>', {
 });
 
 figma.connect('<FIGMA_BUTTONS_BUTTON_DANGER>', {
-  props: {
-    ...sharedProps,
-    variant: figma.enum('Variant', {
-      Subtle: 'danger-subtle',
-    }),
-  },
+  imports: ['import { SdsButtonDanger } from "sds-vue-components";'],
+  props: BUTTON_DANGER_PROPS,
   example: ({ label, size, variant, iconStart, iconEnd, isDisabled }) =>
     html`<SdsButtonDanger
       disabled=${isDisabled}
@@ -56,15 +52,8 @@ figma.connect('<FIGMA_BUTTONS_BUTTON_DANGER>', {
 });
 
 figma.connect('<FIGMA_BUTTONS_BUTTON_GROUP>', {
-  props: {
-    align: figma.enum('Align', {
-      Center: 'center',
-      End: 'end',
-      Justify: 'justify',
-      Stack: 'stack',
-    }),
-    children: figma.children(['Button']),
-  },
+  imports: ['import { SdsButtonGroup } from "sds-vue-components";'],
+  props: BUTTON_GROUP_PROPS,
   example: ({ align, children }) =>
     html`<SdsButtonGroup align=${align}>${children}</SdsButtonGroup>`,
 });
