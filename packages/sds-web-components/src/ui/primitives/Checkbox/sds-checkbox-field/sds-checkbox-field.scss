@@ -1,0 +1,55 @@
+@import 'reset';
+@import '../sds-checkbox/sds-checkbox';
+@import '../../fieldset/sds-label/sds-label';
+@import '../../fieldset/sds-description/sds-description';
+@import '../../fieldset/sds-field-error/sds-field-error';
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.checkbox-field {
+  --checkbox-field-label-color: var(--sds-color-text-default-default);
+  --checkbox-field-description-color: var(--sds-color-text-default-secondary);
+
+  align-items: center;
+  gap: var(--sds-size-space-100) var(--sds-size-space-400);
+  display: grid;
+  grid-template-columns: var(--sds-size-space-300) 1fr;
+  width: 100%;
+
+  > .checkbox {
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+
+  > .label {
+    color: var(--checkbox-field-label-color);
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+
+  > .description {
+    color: var(--checkbox-field-description-color);
+    grid-row-start: 2;
+    grid-column-start: 2;
+  }
+
+  // hide slot content that matches the label content
+  slot[data-hidden='true'] {
+    display: none;
+  }
+}
+
+.checkbox-field--disabled {
+  --checkbox-field-label-color: var(--sds-color-text-disabled-default);
+  --checkbox-field-description-color: var(--sds-color-text-disabled-default);
+
+  .checkbox,
+  .checkbox .input:checked {
+    --checkbox-background: var(--sds-color-background-disabled-default);
+    --checkbox-border: var(--sds-color-border-disabled-default);
+    --checkbox-icon: var(--sds-color-icon-disabled-on-disabled);
+  }
+}

@@ -132,6 +132,84 @@ export declare interface SdsButtonGroup extends Components.SdsButtonGroup {}
 
 
 @ProxyCmp({
+  inputs: ['disabled', 'indeterminate', 'selected', 'value']
+})
+@Component({
+  selector: 'sds-checkbox',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['disabled', 'indeterminate', 'selected', 'value'],
+})
+export class SdsCheckbox {
+  protected el: HTMLSdsCheckboxElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['sds-change']);
+  }
+}
+
+
+export declare interface SdsCheckbox extends Components.SdsCheckbox {
+  /**
+   * Emitted when the checkbox is toggled
+   */
+  'sds-change': EventEmitter<CustomEvent<{ checked: boolean; value: string }>>;
+}
+
+
+@ProxyCmp({
+  inputs: ['description', 'disabled', 'indeterminate', 'label', 'selected', 'value']
+})
+@Component({
+  selector: 'sds-checkbox-field',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['description', 'disabled', 'indeterminate', 'label', 'selected', 'value'],
+})
+export class SdsCheckboxField {
+  protected el: HTMLSdsCheckboxFieldElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['sds-change']);
+  }
+}
+
+
+export declare interface SdsCheckboxField extends Components.SdsCheckboxField {
+  /**
+   * Emitted when the checkbox is toggled
+   */
+  'sds-change': EventEmitter<CustomEvent<{ checked: boolean; value: string }>>;
+}
+
+
+@ProxyCmp({
+  inputs: ['description', 'error', 'label']
+})
+@Component({
+  selector: 'sds-checkbox-group',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['description', 'error', 'label'],
+})
+export class SdsCheckboxGroup {
+  protected el: HTMLSdsCheckboxGroupElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsCheckboxGroup extends Components.SdsCheckboxGroup {}
+
+
+@ProxyCmp({
 })
 @Component({
   selector: 'sds-description',

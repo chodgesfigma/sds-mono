@@ -56,10 +56,10 @@ const meta = {
           ${disabled ? 'disabled' : ''}
         >
         </sds-textarea-field>
-        <!-- <CheckboxGroup name="checkboxes">
-          <CheckboxField value="one" label="One" />
-          <CheckboxField value="two" label="Two" />
-        </CheckboxGroup> -->
+        <sds-checkbox-group name="checkboxes">
+          <sds-checkbox-field value="one" label="One" />
+          <sds-checkbox-field value="two" label="Two" />
+        </sds-checkbox-group>
         <!-- <RadioGroup name="radios">
           <RadioField value="one" label="One" />
           <RadioField value="two" label="Two" />
