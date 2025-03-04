@@ -2,11 +2,6 @@
 /* To learn more about Angular compiler options: https://angular.dev/reference/configs/angular-compiler-options. */
 {
   "compileOnSave": false,
-  // "paths": {
-  //   "sds-angular-component-library": [
-  //     "./node_modules/sds-angular-component-library/dist/sds-angular-component-library"
-  //   ]
-  // },
   "compilerOptions": {
     "outDir": "./dist/out-tsc",
     "strict": true,
