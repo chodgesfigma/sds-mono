@@ -10,7 +10,7 @@
 import type { EventName, StencilReactComponent } from '@stencil/react-output-target/runtime';
 import { createComponent } from '@stencil/react-output-target/runtime';
 import React from 'react';
-import { type SdsAccordionItemCustomEvent, type SdsListBoxCustomEvent, type SdsSliderCustomEvent, type SdsToggleTagCustomEvent, type SdsToggleTagListCustomEvent, type SlHideEvent, type SlMenuItem, type SlRange, type SlShowEvent, type TagToggle } from "sds-web-components";
+import { type SdsAccordionItemCustomEvent, type SdsListBoxCustomEvent, type SdsNavigationButtonCustomEvent, type SdsNavigationPillCustomEvent, type SdsSliderCustomEvent, type SdsToggleTagCustomEvent, type SdsToggleTagListCustomEvent, type SlHideEvent, type SlMenuItem, type SlRange, type SlShowEvent, type TagToggle } from "sds-web-components";
 import { SdsAccordionItem as SdsAccordionItemElement, defineCustomElement as defineSdsAccordionItem } from "sds-web-components/dist/components/sds-accordion-item.js";
 import { SdsAccordion as SdsAccordionElement, defineCustomElement as defineSdsAccordion } from "sds-web-components/dist/components/sds-accordion.js";
 import { SdsButtonDanger as SdsButtonDangerElement, defineCustomElement as defineSdsButtonDanger } from "sds-web-components/dist/components/sds-button-danger.js";
@@ -324,6 +324,9 @@ import { SdsLink as SdsLinkElement, defineCustomElement as defineSdsLink } from 
 import { SdsListBoxItem as SdsListBoxItemElement, defineCustomElement as defineSdsListBoxItem } from "sds-web-components/dist/components/sds-list-box-item.js";
 import { SdsListBox as SdsListBoxElement, defineCustomElement as defineSdsListBox } from "sds-web-components/dist/components/sds-list-box.js";
 import { SdsLogo as SdsLogoElement, defineCustomElement as defineSdsLogo } from "sds-web-components/dist/components/sds-logo.js";
+import { SdsNavigationButton as SdsNavigationButtonElement, defineCustomElement as defineSdsNavigationButton } from "sds-web-components/dist/components/sds-navigation-button.js";
+import { SdsNavigationPill as SdsNavigationPillElement, defineCustomElement as defineSdsNavigationPill } from "sds-web-components/dist/components/sds-navigation-pill.js";
+import { SdsNavigation as SdsNavigationElement, defineCustomElement as defineSdsNavigation } from "sds-web-components/dist/components/sds-navigation.js";
 import { SdsPicture as SdsPictureElement, defineCustomElement as defineSdsPicture } from "sds-web-components/dist/components/sds-picture.js";
 import { SdsSelectField as SdsSelectFieldElement, defineCustomElement as defineSdsSelectField } from "sds-web-components/dist/components/sds-select-field.js";
 import { SdsSelectItem as SdsSelectItemElement, defineCustomElement as defineSdsSelectItem } from "sds-web-components/dist/components/sds-select-item.js";
@@ -3806,6 +3809,39 @@ export const SdsLogo: StencilReactComponent<SdsLogoElement, SdsLogoEvents> = /*@
     react: React,
     events: {} as SdsLogoEvents,
     defineCustomElement: defineSdsLogo
+});
+
+type SdsNavigationEvents = NonNullable<unknown>;
+
+export const SdsNavigation: StencilReactComponent<SdsNavigationElement, SdsNavigationEvents> = /*@__PURE__*/ createComponent<SdsNavigationElement, SdsNavigationEvents>({
+    tagName: 'sds-navigation',
+    elementClass: SdsNavigationElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsNavigationEvents,
+    defineCustomElement: defineSdsNavigation
+});
+
+type SdsNavigationButtonEvents = { onSdsNavigationSelected: EventName<SdsNavigationButtonCustomEvent<MouseEvent>> };
+
+export const SdsNavigationButton: StencilReactComponent<SdsNavigationButtonElement, SdsNavigationButtonEvents> = /*@__PURE__*/ createComponent<SdsNavigationButtonElement, SdsNavigationButtonEvents>({
+    tagName: 'sds-navigation-button',
+    elementClass: SdsNavigationButtonElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onSdsNavigationSelected: 'sds-navigation-selected' } as SdsNavigationButtonEvents,
+    defineCustomElement: defineSdsNavigationButton
+});
+
+type SdsNavigationPillEvents = { onSdsNavigationSelected: EventName<SdsNavigationPillCustomEvent<MouseEvent>> };
+
+export const SdsNavigationPill: StencilReactComponent<SdsNavigationPillElement, SdsNavigationPillEvents> = /*@__PURE__*/ createComponent<SdsNavigationPillElement, SdsNavigationPillEvents>({
+    tagName: 'sds-navigation-pill',
+    elementClass: SdsNavigationPillElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onSdsNavigationSelected: 'sds-navigation-selected' } as SdsNavigationPillEvents,
+    defineCustomElement: defineSdsNavigationPill
 });
 
 type SdsPictureEvents = NonNullable<unknown>;

@@ -6923,6 +6923,84 @@ export declare interface SdsLogo extends Components.SdsLogo {}
 
 
 @ProxyCmp({
+  inputs: ['direction']
+})
+@Component({
+  selector: 'sds-navigation',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['direction'],
+})
+export class SdsNavigation {
+  protected el: HTMLSdsNavigationElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsNavigation extends Components.SdsNavigation {}
+
+
+@ProxyCmp({
+  inputs: ['direction', 'isSelected', 'options', 'size']
+})
+@Component({
+  selector: 'sds-navigation-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['direction', 'isSelected', 'options', 'size'],
+})
+export class SdsNavigationButton {
+  protected el: HTMLSdsNavigationButtonElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['sds-navigation-selected']);
+  }
+}
+
+
+export declare interface SdsNavigationButton extends Components.SdsNavigationButton {
+  /**
+   * Event emitted when selected
+   */
+  'sds-navigation-selected': EventEmitter<CustomEvent<MouseEvent>>;
+}
+
+
+@ProxyCmp({
+  inputs: ['isSelected', 'options']
+})
+@Component({
+  selector: 'sds-navigation-pill',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['isSelected', 'options'],
+})
+export class SdsNavigationPill {
+  protected el: HTMLSdsNavigationPillElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['sds-navigation-selected']);
+  }
+}
+
+
+export declare interface SdsNavigationPill extends Components.SdsNavigationPill {
+  /**
+   * Event emitted when selected
+   */
+  'sds-navigation-selected': EventEmitter<CustomEvent<MouseEvent>>;
+}
+
+
+@ProxyCmp({
 })
 @Component({
   selector: 'sds-picture',
