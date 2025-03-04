@@ -29,8 +29,6 @@
     "icons:convert": "node ./scripts/generate-icon-files/convert-icons-from-react-to-stencil",
     "icons:docs": "node ./scripts/generate-icon-files/generate-iconography-story.js",
     "icons:rename": "tsx ./scripts/generate-icon-files/rename-icons-to-kebab-case.ts",
-    "icons:figma": "tsx ./scripts/generate-icon-files/create-icons-figma-file",
-    "scaffold:figma": "tsx ./scripts/scaffold-figma-connection",
     "dev:storybook": "npm-run-all build --parallel watch storybook",
     "lint:js": "eslint",
     "lint:js-fix": "eslint --fix",

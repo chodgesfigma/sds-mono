@@ -1,22 +1,22 @@
 {
   "web": {
     "include": ["dist/web/**/*"],
-    "exclude": ["dist/web/icons/*"],
+    "exclude": ["dist/icons/*"],
     "parser": "html"
   },
   "vue": {
     "include": ["dist/vue/**/*"],
-    "exclude": ["dist/vue/icons/*"],
+    "exclude": ["dist/icons/*"],
     "label": "Vue"
   },
   "angular": {
     "include": ["dist/angular/**/*"],
-    "exclude": ["dist/angular/icons/*"],
+    "exclude": ["dist/icons/*"],
     "label": "Angular"
   },
   "react": {
     "include": ["dist/react/**/*"],
-    "exclude": ["dist/react/icons/*"],
+    "exclude": ["dist/icons/*"],
     "parser": "react"
   }
 }

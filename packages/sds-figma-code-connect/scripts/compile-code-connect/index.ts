@@ -1,13 +1,13 @@
 import path, { resolve } from 'path';
 import fs from 'fs/promises';
 
-import outputConfig from './outputConfig.json';
+import outputConfig from '../../outputConfig.json';
 
-const outDirFolderName = 'dist';
-const outDir = path.resolve(__dirname, outDirFolderName);
+const BUILD_FOLDER = 'dist';
+const BUILD_PATH = path.resolve(BUILD_FOLDER);
 
-const propsDir = path.resolve(__dirname, 'src', 'props');
-const codeConnectDir = path.resolve(__dirname, 'src', 'code-connect');
+const PROPS_PATH = path.resolve('src', 'props');
+const CODE_CONNECT_PATH = path.resolve('src', 'code-connect');
 
 const propNameRegex = new RegExp(/export const ([\w]+)[: \w+]* = {/, 'g');
 const propNameReplacementRegex = new RegExp(/props: (\w+),/, 'g');
@@ -21,7 +21,7 @@ const compileCodeConnects = async () => {
 
   const propMap: Record<string, string> = {};
 
-  const propFiles = await fs.readdir(propsDir);
+  const propFiles = await fs.readdir(PROPS_PATH);
 
   console.log(`Found ${propFiles.length} prop files to parse...`);
 
@@ -29,7 +29,7 @@ const compileCodeConnects = async () => {
   for (let index = 0; index < propFiles.length; index += 1) {
     const filepath = propFiles[index];
     const propFileContent = await fs.readFile(
-      path.resolve(propsDir, filepath),
+      path.resolve(PROPS_PATH, filepath),
       { encoding: 'utf-8' }
     );
 
@@ -76,14 +76,14 @@ const compileCodeConnects = async () => {
 
     // use each key to find code connect templates in codeConnectDir/key
     const codeConnectTemplates = await fs.readdir(
-      path.resolve(codeConnectDir, outputName)
+      path.resolve(CODE_CONNECT_PATH, outputName)
     );
 
     console.log(
       `Found ${codeConnectTemplates.length} "${outputName}" templates to compile...`
     );
 
-    const outputDir = path.resolve(outDir, outputName);
+    const outputDir = path.resolve(BUILD_PATH, outputName);
 
     await fs.mkdir(outputDir, { recursive: true });
 
@@ -92,7 +92,7 @@ const compileCodeConnects = async () => {
 
       // pull in each template file
       const templateFileContent = await fs.readFile(
-        path.resolve(codeConnectDir, outputName, templatePath),
+        path.resolve(CODE_CONNECT_PATH, outputName, templatePath),
         {
           encoding: 'utf-8',
         }
@@ -142,18 +142,18 @@ const compileCodeConnects = async () => {
         });
 
         console.log(
-          `- Created ${outDirFolderName}/${outputName}/${outputFilename}...`
+          `- Created ${BUILD_FOLDER}/${outputName}/${outputFilename}...`
         );
       }
     }
   }
 
   console.log('Moving icons folder...');
-  const iconDestination = path.resolve(outDir, 'icons');
-  await fs.cp(path.resolve(codeConnectDir, 'icons'), iconDestination, {
+  const iconDestination = path.resolve(BUILD_PATH, 'icons');
+  await fs.cp(path.resolve(CODE_CONNECT_PATH, 'icons'), iconDestination, {
     recursive: true,
   });
-  console.log(`Moved icons folder to /${outDirFolderName}...`);
+  console.log(`Moved icons folder to /${BUILD_FOLDER}...`);
 
   console.log(
     'Successfully compiled code-connect files. Use `npm run publish` to sync code connect files with Figma.'

@@ -1,9 +1,5 @@
 import figma from '@figma/code-connect';
 
-type TABS_PROPS = {
-  children: ReturnType<typeof figma.children>;
-};
-
 export const TAB_PROPS = {
   label: figma.string('Label'),
 };
