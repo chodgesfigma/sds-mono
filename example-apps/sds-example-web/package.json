@@ -1,12 +1,17 @@
 {
-  "name": "sds-example-web",
-  "version": "1.0.0",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": ""
+    "name": "sds-example-web",
+    "version": "1.0.0",
+    "main": "index.js",
+    "scripts": {
+        "clean": "rimraf dist && mkdir dist",
+        "copy": "cp -r ../../packages/sds-web-components/dist/sds/* ./dist",
+        "start": "npm run clean && npm run copy && npx http-server -o"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "devDependencies": {
+        "http-server": "^14.1.1",
+        "rimraf": "^6.0.1"
+    }
 }
