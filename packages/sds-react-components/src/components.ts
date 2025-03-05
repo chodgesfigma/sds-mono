@@ -16,6 +16,9 @@ import { SdsAccordion as SdsAccordionElement, defineCustomElement as defineSdsAc
 import { SdsButtonDanger as SdsButtonDangerElement, defineCustomElement as defineSdsButtonDanger } from "sds-web-components/dist/components/sds-button-danger.js";
 import { SdsButtonGroup as SdsButtonGroupElement, defineCustomElement as defineSdsButtonGroup } from "sds-web-components/dist/components/sds-button-group.js";
 import { SdsButton as SdsButtonElement, defineCustomElement as defineSdsButton } from "sds-web-components/dist/components/sds-button.js";
+import { SdsCheckboxField as SdsCheckboxFieldElement, defineCustomElement as defineSdsCheckboxField } from "sds-web-components/dist/components/sds-checkbox-field.js";
+import { SdsCheckboxGroup as SdsCheckboxGroupElement, defineCustomElement as defineSdsCheckboxGroup } from "sds-web-components/dist/components/sds-checkbox-group.js";
+import { SdsCheckbox as SdsCheckboxElement, defineCustomElement as defineSdsCheckbox } from "sds-web-components/dist/components/sds-checkbox.js";
 import { SdsDescription as SdsDescriptionElement, defineCustomElement as defineSdsDescription } from "sds-web-components/dist/components/sds-description.js";
 import { SdsFieldError as SdsFieldErrorElement, defineCustomElement as defineSdsFieldError } from "sds-web-components/dist/components/sds-field-error.js";
 import { SdsFieldGroup as SdsFieldGroupElement, defineCustomElement as defineSdsFieldGroup } from "sds-web-components/dist/components/sds-field-group.js";
@@ -350,6 +353,8 @@ import { SdsTextSubtitle as SdsTextSubtitleElement, defineCustomElement as defin
 import { SdsTextTitleHero as SdsTextTitleHeroElement, defineCustomElement as defineSdsTextTitleHero } from "sds-web-components/dist/components/sds-text-title-hero.js";
 import { SdsTextTitlePage as SdsTextTitlePageElement, defineCustomElement as defineSdsTextTitlePage } from "sds-web-components/dist/components/sds-text-title-page.js";
 import { SdsText as SdsTextElement, defineCustomElement as defineSdsText } from "sds-web-components/dist/components/sds-text.js";
+import { SdsTextareaField as SdsTextareaFieldElement, defineCustomElement as defineSdsTextareaField } from "sds-web-components/dist/components/sds-textarea-field.js";
+import { SdsTextarea as SdsTextareaElement, defineCustomElement as defineSdsTextarea } from "sds-web-components/dist/components/sds-textarea.js";
 import { SdsToggleTagGroup as SdsToggleTagGroupElement, defineCustomElement as defineSdsToggleTagGroup } from "sds-web-components/dist/components/sds-toggle-tag-group.js";
 import { SdsToggleTagList as SdsToggleTagListElement, defineCustomElement as defineSdsToggleTagList } from "sds-web-components/dist/components/sds-toggle-tag-list.js";
 import { SdsToggleTag as SdsToggleTagElement, defineCustomElement as defineSdsToggleTag } from "sds-web-components/dist/components/sds-toggle-tag.js";
@@ -413,6 +418,39 @@ export const SdsButtonGroup: StencilReactComponent<SdsButtonGroupElement, SdsBut
     react: React,
     events: {} as SdsButtonGroupEvents,
     defineCustomElement: defineSdsButtonGroup
+});
+
+type SdsCheckboxEvents = { onSdsChange: EventName<CustomEvent<{ checked: boolean; value: string }>> };
+
+export const SdsCheckbox: StencilReactComponent<SdsCheckboxElement, SdsCheckboxEvents> = /*@__PURE__*/ createComponent<SdsCheckboxElement, SdsCheckboxEvents>({
+    tagName: 'sds-checkbox',
+    elementClass: SdsCheckboxElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onSdsChange: 'sds-change' } as SdsCheckboxEvents,
+    defineCustomElement: defineSdsCheckbox
+});
+
+type SdsCheckboxFieldEvents = { onSdsChange: EventName<CustomEvent<{ checked: boolean; value: string }>> };
+
+export const SdsCheckboxField: StencilReactComponent<SdsCheckboxFieldElement, SdsCheckboxFieldEvents> = /*@__PURE__*/ createComponent<SdsCheckboxFieldElement, SdsCheckboxFieldEvents>({
+    tagName: 'sds-checkbox-field',
+    elementClass: SdsCheckboxFieldElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onSdsChange: 'sds-change' } as SdsCheckboxFieldEvents,
+    defineCustomElement: defineSdsCheckboxField
+});
+
+type SdsCheckboxGroupEvents = NonNullable<unknown>;
+
+export const SdsCheckboxGroup: StencilReactComponent<SdsCheckboxGroupElement, SdsCheckboxGroupEvents> = /*@__PURE__*/ createComponent<SdsCheckboxGroupElement, SdsCheckboxGroupEvents>({
+    tagName: 'sds-checkbox-group',
+    elementClass: SdsCheckboxGroupElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsCheckboxGroupEvents,
+    defineCustomElement: defineSdsCheckboxGroup
 });
 
 type SdsDescriptionEvents = NonNullable<unknown>;
@@ -4101,6 +4139,34 @@ export const SdsTextTitlePage: StencilReactComponent<SdsTextTitlePageElement, Sd
     react: React,
     events: {} as SdsTextTitlePageEvents,
     defineCustomElement: defineSdsTextTitlePage
+});
+
+type SdsTextareaEvents = NonNullable<unknown>;
+
+export const SdsTextarea: StencilReactComponent<SdsTextareaElement, SdsTextareaEvents> = /*@__PURE__*/ createComponent<SdsTextareaElement, SdsTextareaEvents>({
+    tagName: 'sds-textarea',
+    elementClass: SdsTextareaElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsTextareaEvents,
+    defineCustomElement: defineSdsTextarea
+});
+
+type SdsTextareaFieldEvents = {
+    onSdsChange: EventName<CustomEvent<{ value: string }>>,
+    onSdsInput: EventName<CustomEvent<{ value: string }>>
+};
+
+export const SdsTextareaField: StencilReactComponent<SdsTextareaFieldElement, SdsTextareaFieldEvents> = /*@__PURE__*/ createComponent<SdsTextareaFieldElement, SdsTextareaFieldEvents>({
+    tagName: 'sds-textarea-field',
+    elementClass: SdsTextareaFieldElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {
+        onSdsChange: 'sds-change',
+        onSdsInput: 'sds-input'
+    } as SdsTextareaFieldEvents,
+    defineCustomElement: defineSdsTextareaField
 });
 
 type SdsToggleTagEvents = { onToggle: EventName<SdsToggleTagCustomEvent<TagToggle>> };

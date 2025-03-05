@@ -1,9 +1,9 @@
 {
   "name": "sds-react-components",
   "version": "1.0.0",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "module": "dist/index.js",
+  "main": "dist/components.js",
+  "types": "dist/components.d.ts",
+  "module": "dist/components.js",
   "files": [
     "dist"
   ],
