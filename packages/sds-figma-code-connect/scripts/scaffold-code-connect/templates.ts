@@ -16,8 +16,9 @@ export const templateReactCodeConnect = (
   componentName: string
 ) => `import React from 'react';
 import figma from '@figma/code-connect';
-import { PROPS } from 'src/props/${componentName}';
 import { ${convertToPascalCase(componentName)} } from 'sds-react-components';
+
+import { PROPS } from 'src/props/${componentName}';
 
 // update PROPS with appropriate definitions and a unique name in src/props/${componentName}
 // replace <URL> with appropriate value from [documentUrlSubstitutions.json]
