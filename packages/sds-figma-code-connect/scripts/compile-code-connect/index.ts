@@ -15,6 +15,7 @@ const codeConnectBodyRegex = new RegExp(/(figma\.connect[\w\W]+)$/);
 const reactImportRegex = new RegExp(
   /(import {[\w\W]+} from 'sds-react-components';)/
 );
+const enumTypeRegex = new RegExp(/figma\.enum<(\w+)>/, 'g');
 
 const compileCodeConnects = async () => {
   console.log('** Compiling Figma Code Connect files');
@@ -120,6 +121,20 @@ const compileCodeConnects = async () => {
           );
         });
 
+        // find any enum that's have a type set
+        const enumTypeMatches = codeConnectBodyContent.match(enumTypeRegex);
+        if (enumTypeMatches) {
+          const typeImports = new Array(
+            ...new Set(
+              enumTypeMatches.map((enumDef) =>
+                enumDef.replace('figma.enum<', '').replace('>', '')
+              )
+            )
+          ).join(', ');
+          // add those imports into the top of the file
+          codeConnectBodyContent = `import { ${typeImports} } from 'sds-web-components';\n\n${codeConnectBodyContent}`;
+        }
+
         // if we're dealing with a react file, grab the `sds-react-components` imports
         let reactImports: string | null = null;
         if (isReact) {
@@ -128,7 +143,7 @@ const compileCodeConnects = async () => {
         }
 
         const imports = isReact
-          ? `import figma from '@figma/code-connect';\n${reactImports}`
+          ? `import React from 'react';\nimport figma from '@figma/code-connect';\n${reactImports}`
           : "import figma, { html } from '@figma/code-connect/html';";
 
         // re-add in the figma import
