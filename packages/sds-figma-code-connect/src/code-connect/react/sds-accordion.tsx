@@ -1,7 +1,8 @@
 import React from 'react';
 import figma from '@figma/code-connect';
-import { ACCORDION_PROPS, ACCORION_ITEM_PROPS } from 'src/props/sds-accordion';
 import { SdsAccordion, SdsAccordionItem } from 'sds-react-components';
+
+import { ACCORDION_PROPS, ACCORION_ITEM_PROPS } from 'src/props/sds-accordion';
 
 figma.connect(SdsAccordion, '<FIGMA_ACCORDION_ACCORDION>', {
   props: ACCORDION_PROPS,
