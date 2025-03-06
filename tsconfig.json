@@ -4,6 +4,8 @@
       "module": "ES2020",
       "declaration": true,
       "removeComments": true,
+      "moduleResolution": "bundler",
+      "strict": true,
       "noLib": false,
       "emitDecoratorMetadata": true,
       "experimentalDecorators": true,

@@ -1635,6 +1635,31 @@ export const SdsLogo = /*@__PURE__*/ defineContainer<JSX.SdsLogo>('sds-logo', un
 ]);
 
 
+export const SdsNavigation = /*@__PURE__*/ defineContainer<JSX.SdsNavigation>('sds-navigation', undefined, [
+  'direction'
+]);
+
+
+export const SdsNavigationButton = /*@__PURE__*/ defineContainer<JSX.SdsNavigationButton>('sds-navigation-button', undefined, [
+  'isSelected',
+  'size',
+  'direction',
+  'options',
+  'sds-navigation-selected'
+], [
+  'sds-navigation-selected'
+]);
+
+
+export const SdsNavigationPill = /*@__PURE__*/ defineContainer<JSX.SdsNavigationPill>('sds-navigation-pill', undefined, [
+  'isSelected',
+  'options',
+  'sds-navigation-selected'
+], [
+  'sds-navigation-selected'
+]);
+
+
 export const SdsPicture = /*@__PURE__*/ defineContainer<JSX.SdsPicture>('sds-picture', undefined);
 
 

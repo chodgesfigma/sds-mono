@@ -4,7 +4,9 @@
   "main": "index.js",
   "scripts": {
     "build": "lerna run build",
-    "clean": "rimraf node_modules && npm ci"
+    "clean": "rimraf node_modules && npm ci",
+    "figma:build": "lerna run build --scope=sds-figma-code-connect",
+    "figma:publish": "lerna run publish --scope=sds-figma-code-connect"
   },
   "workspaces": [
     "packages/*",
