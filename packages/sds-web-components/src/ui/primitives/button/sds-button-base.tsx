@@ -2,23 +2,23 @@ import { FunctionalComponent, h } from '@stencil/core';
 import { clsx } from 'clsx';
 
 // Button Base props
-export type Type = 'submit' | 'reset' | 'button';
-export type Size = 'small' | 'medium';
-export type Variant = 'primary' | 'neutral' | 'subtle' | 'danger-primary' | 'danger-subtle';
+export type ButtonType = 'submit' | 'reset' | 'button';
+export type ButtonSize = 'small' | 'medium';
+export type ButtonVariant = 'primary' | 'neutral' | 'subtle' | 'danger-primary' | 'danger-subtle';
 
 export interface SdsButtonBaseProps {
   /**
    * The button type
    */
-  type?: Type;
+  type?: ButtonType;
   /**
    * The button size
    */
-  size?: Size;
+  size?: ButtonSize;
   /**
    * The button variant
    */
-  variant?: Variant;
+  variant?: ButtonVariant;
 
   /**
    * Disables the button

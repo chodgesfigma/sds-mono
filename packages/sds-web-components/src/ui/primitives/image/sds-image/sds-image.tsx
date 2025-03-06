@@ -1,9 +1,9 @@
 import { Component, Prop, State, h } from '@stencil/core';
 import clsx from 'clsx';
 
-export type AspectRatio = '1-1' | '16-9' | '4-3' | 'fill' | 'natural';
-export type Size = 'small' | 'medium' | 'large' | 'fill' | 'natural';
-export type Variant = 'default' | 'rounded';
+export type ImageAspectRatio = '1-1' | '16-9' | '4-3' | 'fill' | 'natural';
+export type ImageSize = 'small' | 'medium' | 'large' | 'fill' | 'natural';
+export type ImageVariant = 'default' | 'rounded';
 type crossorigin = 'anonymous' | 'use-credentials' | '' | undefined;
 
 @Component({
@@ -25,17 +25,17 @@ export class SdsImage {
   /**
    * Aspect Ratio
    */
-  @Prop() aspectRatio: AspectRatio = 'natural';
+  @Prop() aspectRatio: ImageAspectRatio = 'natural';
 
   /**
    * Size
    */
-  @Prop() size: Size = 'natural';
+  @Prop() size: ImageSize = 'natural';
 
   /**
    * The variant
    */
-  @Prop() variant: Variant = 'rounded';
+  @Prop() variant: ImageVariant = 'rounded';
 
   /**
    * The src url

@@ -1,4 +1,4 @@
-import { Scheme, Variant } from './types';
+import { TagScheme, TagVariant } from './types';
 import { Component, h, Event, EventEmitter } from '@stencil/core';
 import { Prop } from '@stencil/core/internal';
 import clsx from 'clsx';
@@ -12,12 +12,12 @@ export class SdsTag {
   /**
    * Color scheme for the tag
    */
-  @Prop() scheme: Scheme = 'brand';
+  @Prop() scheme: TagScheme = 'brand';
 
   /**
    * Sets which set of colors to use in the scheme
    */
-  @Prop() variant: Variant = 'primary';
+  @Prop() variant: TagVariant = 'primary';
 
   // this prop was added here, as Stencil doesn't have a way to dynamically
   // render something if an Event is being used within it's parent
