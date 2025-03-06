@@ -1,15 +1,12 @@
 {
-  "name": "sds-angular-components",
+  "name": "sds-example-angular",
   "version": "0.0.0",
-  "main": "dist/sds-angular-component-library/fesm2022/sds-angular-component-library.mjs",
-  "types": "dist/sds-angular-component-library/index.d.ts",
-  "module": "dist/sds-angular-component-library/fesm2022/sds-angular-component-library.mjs",
   "scripts": {
     "ng": "ng",
-    "build:app": "ng build",
+    "start": "ng serve",
+    "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "build": "npx -p @angular/cli ng build sds-angular-component-library"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -21,23 +18,22 @@
     "@angular/platform-browser": "^19.1.0",
     "@angular/platform-browser-dynamic": "^19.1.0",
     "@angular/router": "^19.1.0",
-    "@rollup/plugin-json": "^6.1.0",
     "rxjs": "~7.8.0",
+    "sds-angular-components": "file:../../packages/sds-angular-components",
     "tslib": "^2.3.0",
     "zone.js": "~0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^19.1.8",
+    "@angular-devkit/build-angular": "^19.2.0",
     "@angular/cli": "^19.1.8",
     "@angular/compiler-cli": "^19.1.0",
-    "@rollup/plugin-json": "^6.1.0",
+    "@types/jasmine": "~5.1.0",
+    "jasmine-core": "~5.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.2.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
-    "ng-packagr": "^19.1.0",
-    "sds-web-components": "*",
     "typescript": "~5.7.2"
   }
 }
