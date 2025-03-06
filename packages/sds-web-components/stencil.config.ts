@@ -38,6 +38,8 @@ export const config: Config = {
     vueOutputTarget({
       componentCorePackage: 'sds-web-components',
       proxiesFile: '../sds-vue-components/lib/components.ts',
+      includeImportCustomElements: true,
+      customElementsDir: 'dist/components',
     }),
     reactOutputTarget({
       outDir: '../sds-react-components/src',

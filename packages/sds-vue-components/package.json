@@ -10,6 +10,7 @@
   ],
   "scripts": {
     "test": "echo \"Error: run tests from root\" && exit 1",
+    "prebuild": "node utils/fix-vue-imports.js",
     "build": "npm run tsc",
     "tsc": "tsc -p . --outDir ./dist",
     "dev": "vite"
