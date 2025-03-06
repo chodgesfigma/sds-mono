@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "example-consumer-app": {
+    "example-app": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,29 +17,29 @@
           "standalone": false
         }
       },
-      "root": "projects/example-consumer-app",
-      "sourceRoot": "projects/example-consumer-app/src",
+      "root": "projects/example-app",
+      "sourceRoot": "projects/example-app/src",
       "prefix": "app",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/example-consumer-app",
-            "index": "projects/example-consumer-app/src/index.html",
-            "browser": "projects/example-consumer-app/src/main.ts",
+            "outputPath": "dist/example-app",
+            "index": "projects/example-app/src/index.html",
+            "browser": "projects/example-app/src/main.ts",
             "polyfills": [
               "zone.js"
             ],
-            "tsConfig": "projects/example-consumer-app/tsconfig.app.json",
+            "tsConfig": "projects/example-app/tsconfig.app.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/example-consumer-app/public"
+                "input": "projects/example-app/public"
               }
             ],
             "styles": [
-              "projects/example-consumer-app/src/styles.scss"
+              "projects/example-app/src/styles.scss"
             ],
             "scripts": []
           },
@@ -71,10 +71,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "example-consumer-app:build:production"
+              "buildTarget": "example-app:build:production"
             },
             "development": {
-              "buildTarget": "example-consumer-app:build:development"
+              "buildTarget": "example-app:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -89,16 +89,16 @@
               "zone.js",
               "zone.js/testing"
             ],
-            "tsConfig": "projects/example-consumer-app/tsconfig.spec.json",
+            "tsConfig": "projects/example-app/tsconfig.spec.json",
             "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
-                "input": "projects/example-consumer-app/public"
+                "input": "projects/example-app/public"
               }
             ],
             "styles": [
-              "projects/example-consumer-app/src/styles.scss"
+              "projects/example-app/src/styles.scss"
             ],
             "scripts": []
           }
