@@ -1,4 +1,4 @@
-import { Scheme, Variant } from '../sds-tag/types';
+import { TagScheme, TagVariant } from '../sds-tag/types';
 import { Component, h, Prop } from '@stencil/core';
 import clsx from 'clsx';
 
@@ -11,12 +11,12 @@ export class SdsTagButton {
   /**
    * Color scheme for the tag
    */
-  @Prop() scheme: Scheme = 'brand';
+  @Prop() scheme: TagScheme = 'brand';
 
   /**
    * Sets which set of colors to use in the scheme
    */
-  @Prop() variant: Variant = 'primary';
+  @Prop() variant: TagVariant = 'primary';
 
   render() {
     const className = clsx('tag', 'tag-button', `tag-scheme-${this.scheme}`, `tag-variant-${this.variant}`);

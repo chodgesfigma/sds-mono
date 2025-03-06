@@ -7,9 +7,9 @@ import {
 
 figma.connect('<FIGMA_BUTTONS_BUTTON>', {
   props: BUTTON_PROPS,
-  example: ({ label, size, variant, iconStart, iconEnd, isDisabled }) =>
+  example: ({ label, size, variant, iconStart, iconEnd, disabled }) =>
     html`<sds-button
-      disabled=${isDisabled}
+      disabled=${disabled}
       size=${size}
       variant=${variant}
       (click)="handleClick()"
@@ -20,9 +20,9 @@ figma.connect('<FIGMA_BUTTONS_BUTTON>', {
 
 figma.connect('<FIGMA_BUTTONS_BUTTON_DANGER>', {
   props: BUTTON_DANGER_PROPS,
-  example: ({ label, size, variant, iconStart, iconEnd, isDisabled }) =>
+  example: ({ label, size, variant, iconStart, iconEnd, disabled }) =>
     html`<sds-button-danger
-      disabled=${isDisabled}
+      disabled=${disabled}
       size=${size}
       variant=${variant}
       (click)="handleClick()"

@@ -18,7 +18,7 @@ const sharedProps = {
   size: figma.enum('Size', {
     Small: 'small',
   }),
-  isDisabled: figma.enum('State', {
+  disabled: figma.enum('State', {
     Disabled: true,
   }),
 };
@@ -26,9 +26,9 @@ const sharedProps = {
 figma.connect('<FIGMA_BUTTONS_BUTTON>', {
   imports: ['import { SdsButton } from "sds-vue-components";'],
   props: BUTTON_PROPS,
-  example: ({ label, size, variant, iconStart, iconEnd, isDisabled }) =>
+  example: ({ label, size, variant, iconStart, iconEnd, disabled }) =>
     html`<SdsButton
-      disabled=${isDisabled}
+      disabled=${disabled}
       size=${size}
       variant=${variant}
       @click="() => {}"
@@ -40,9 +40,9 @@ figma.connect('<FIGMA_BUTTONS_BUTTON>', {
 figma.connect('<FIGMA_BUTTONS_BUTTON_DANGER>', {
   imports: ['import { SdsButtonDanger } from "sds-vue-components";'],
   props: BUTTON_DANGER_PROPS,
-  example: ({ label, size, variant, iconStart, iconEnd, isDisabled }) =>
+  example: ({ label, size, variant, iconStart, iconEnd, disabled }) =>
     html`<SdsButtonDanger
-      disabled=${isDisabled}
+      disabled=${disabled}
       size=${size}
       variant=${variant}
       @click="() => {}"

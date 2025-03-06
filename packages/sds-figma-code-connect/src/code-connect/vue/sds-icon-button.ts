@@ -4,7 +4,7 @@ import { ICON_BUTTON_PROPS } from 'src/props/sds-icon-button';
 figma.connect('<FIGMA_BUTTONS_ICON_BUTTON>', {
   props: ICON_BUTTON_PROPS,
   example: ({ icon, size, variant, disabled }) =>
-    html`<sds-button size=${size} variant=${variant} disabled=${disabled}
-      >${icon}</sds-button
+    html`<SdsButton size=${size} variant=${variant} disabled=${disabled}
+      >${icon}</SdsButton
     >`,
 });

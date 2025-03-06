@@ -1,4 +1,10 @@
 import figma from '@figma/code-connect';
+import {
+  ButtonSize,
+  DefaultVariant,
+  DangerVariant,
+  ButtonGroupAlignment,
+} from 'sds-web-components';
 
 export const BUTTON_PROPS = {
   label: figma.string('Label'),
@@ -10,13 +16,13 @@ export const BUTTON_PROPS = {
     true: figma.instance('Icon End'),
     false: undefined,
   }),
-  size: figma.enum('Size', {
+  size: figma.enum<ButtonSize>('Size', {
     Small: 'small',
   }),
-  isDisabled: figma.enum('State', {
+  disabled: figma.enum('State', {
     Disabled: true,
   }),
-  variant: figma.enum('Variant', {
+  variant: figma.enum<DefaultVariant>('Variant', {
     Neutral: 'neutral',
     Subtle: 'subtle',
   }),
@@ -32,19 +38,19 @@ export const BUTTON_DANGER_PROPS = {
     true: figma.instance('Icon End'),
     false: undefined,
   }),
-  size: figma.enum('Size', {
+  size: figma.enum<ButtonSize>('Size', {
     Small: 'small',
   }),
-  isDisabled: figma.enum('State', {
+  disabled: figma.enum('State', {
     Disabled: true,
   }),
-  variant: figma.enum('Variant', {
+  variant: figma.enum<DangerVariant>('Variant', {
     Subtle: 'danger-subtle',
   }),
 };
 
 export const BUTTON_GROUP_PROPS = {
-  align: figma.enum('Align', {
+  align: figma.enum<ButtonGroupAlignment>('Align', {
     Center: 'center',
     End: 'end',
     Justify: 'justify',

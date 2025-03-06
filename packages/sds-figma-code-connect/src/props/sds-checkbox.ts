@@ -12,7 +12,7 @@ export const CHECKBOX_PROPS = {
   indeterminate: figma.enum('Value Type', {
     Indeterminate: true,
   }),
-  isDisabled: figma.enum('State', {
+  disabled: figma.enum('State', {
     Disabled: true,
   }),
 };

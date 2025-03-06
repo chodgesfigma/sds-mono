@@ -7,9 +7,9 @@ import {
 figma.connect('<FIGMA_INPUTS_INPUT_FIELD>', {
   variant: { 'Has Label': false },
   props: INPUT_FIELD_PROPS_NO_LABEL,
-  example: ({ isDisabled, value, placeholder }) =>
+  example: ({ disabled, value, placeholder }) =>
     html`<sds-input
-      disabled=${isDisabled}
+      disabled=${disabled}
       default-value=${value}
       placeholder=${placeholder}
     ></sds-input>`,
@@ -18,19 +18,12 @@ figma.connect('<FIGMA_INPUTS_INPUT_FIELD>', {
 figma.connect('<FIGMA_INPUTS_INPUT_FIELD>', {
   variant: { 'Has Label': true },
   props: INPUT_FIELD_PROPS_LABEL,
-  example: ({
-    isDisabled,
-    value,
-    placeholder,
-    description,
-    label,
-    errorMessage,
-  }) =>
+  example: ({ disabled, value, placeholder, description, label, error }) =>
     html`<sds-input-field
       label=${label}
-      error=${errorMessage}
+      error=${error}
       description=${description}
-      disabled=${isDisabled}
+      disabled=${disabled}
       default-value=${value}
       placeholder=${placeholder}
     ></sds-input-field>`,

@@ -3,18 +3,18 @@ import { CHECKBOX_PROPS, CHECKBOX_GROUP_PROPS } from 'src/props/sds-checkbox';
 
 figma.connect('<FIGMA_INPUTS_CHECKBOX_FIELD>', {
   props: CHECKBOX_PROPS,
-  example: ({ label, description, selected, indeterminate, isDisabled }) =>
-    html`<sds-checkbox-field
+  example: ({ label, description, selected, indeterminate, disabled }) =>
+    html`<SdsCheckboxField
       label=${label}
       description=${description}
-      disabled=${isDisabled}
+      disabled=${disabled}
       ${selected}
       ${indeterminate}
-    ></sds-checkbox-field>`,
+    ></SdsCheckboxField>`,
 });
 
 figma.connect('<FIGMA_INPUTS_CHECKBOX_GROUP>', {
   props: CHECKBOX_GROUP_PROPS,
   example: ({ children }) =>
-    html`<sds-checkbox-group>${children}</sds-checkbox-group>`,
+    html`<SdsCheckboxGroup>${children}</SdsCheckboxGroup>`,
 });

@@ -8,13 +8,13 @@ figma.connect('<FIGMA_INPUTS_SELECT_FIELD>', {
   variant: { 'Has Label': false },
   props: SELECT_FIELD_PROPS_NO_LABEL,
   example: ({ placeholder, selectedValue, disabled }) =>
-    html`<sds-select placeholder=${placeholder} disabled=${disabled}>
-      <sds-select-item selected>${selectedValue}</sds-select-item>
-      <sds-select-item>Option 2</sds-select-item>
-      <sds-select-item>Option 3</sds-select-item>
-      <sds-select-item>Option 4</sds-select-item>
-      <sds-select-item>Option 5</sds-select-item>
-    </sds-select>`,
+    html`<SdsSelect placeholder=${placeholder} disabled=${disabled}>
+      <SdsSelectItem selected>${selectedValue}</SdsSelectItem>
+      <SdsSelectItem>Option 2</SdsSelectItem>
+      <SdsSelectItem>Option 3</SdsSelectItem>
+      <SdsSelectItem>Option 4</SdsSelectItem>
+      <SdsSelectItem>Option 5</SdsSelectItem>
+    </SdsSelect>`,
 });
 
 figma.connect('<FIGMA_INPUTS_SELECT_FIELD>', {
@@ -28,17 +28,17 @@ figma.connect('<FIGMA_INPUTS_SELECT_FIELD>', {
     error,
     description,
   }) =>
-    html`<sds-select-field
+    html`<SdsSelectField
       placeholder=${placeholder}
       disabled=${disabled}
       label=${label}
       error=${error}
       description=${description}
     >
-      <sds-select-item selected>${selectedValue}</sds-select-item>
-      <sds-select-item>Option 2</sds-select-item>
-      <sds-select-item>Option 3</sds-select-item>
-      <sds-select-item>Option 4</sds-select-item>
-      <sds-select-item>Option 5</sds-select-item>
-    </sds-select-field>`,
+      <SdsSelectItem selected>${selectedValue}</SdsSelectItem>
+      <SdsSelectItem>Option 2</SdsSelectItem>
+      <SdsSelectItem>Option 3</SdsSelectItem>
+      <SdsSelectItem>Option 4</SdsSelectItem>
+      <SdsSelectItem>Option 5</SdsSelectItem>
+    </SdsSelectField>`,
 });
