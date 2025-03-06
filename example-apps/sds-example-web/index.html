@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Example</title>
+    <!-- Component Library Stylesheet -->
+    <link rel="stylesheet" href="./dist/sds.css" />
+    <!-- Component Library Loader -->
+    <script type="module" src="./dist/sds.esm.js"></script>
+    <script nomodule src="./dist/sds.js"></script>
+    <script>
+      window.onload = () => {
+        document
+          .querySelector("sds-button")
+          .addEventListener("click", () => window.alert("Button Clicked!"));
+      };
+    </script>
+  </head>
+  <body>
+    <h1>Web Components Example</h1>
+
+    <sds-button variant="primary">Click Me</sds-button>
+
+    <sds-accordion>
+      <sds-accordion-item summary="Item 1">Example content.</sds-accordion-item>
+      <sds-accordion-item summary="Item 2">Another example.</sds-accordion-item>
+    </sds-accordion>
+  </body>
+</html>
