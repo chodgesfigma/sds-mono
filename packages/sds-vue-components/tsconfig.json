@@ -7,7 +7,6 @@
       "moduleResolution": "bundler",
       "target": "ESNext",
       "skipLibCheck": true,
-      "strict": false,
       "types": ["vue", "@stencil/core"],
       "rootDir": "./lib",
     },
