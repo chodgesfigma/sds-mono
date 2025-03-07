@@ -40,7 +40,7 @@ This directory contains all the core packages for the **Figma SDS Replatforming*
 
 ### `sds-figma-code-connect`
 
-- **Description**: This package provides logic for code connect across multiple different output targets.
+- **Description**: This package provides logic for code connect across multiple different output targets. This is what allows devs to view proper code snipits from within Figma across multiple different frameworks.
 - **Technology**: Uses `@figma/code-connect` to connect to and leverage figma's code connect api.
 
 ---

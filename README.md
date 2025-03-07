@@ -55,4 +55,4 @@ npm run build
 
 ## Steps to test!
 
-After building the project, navigate to `example-apps`, and choose any app you'd like. Ensure that you've `npm i`'d, and then run `npm run start` or `npm run dev` depending on the project. Feel free to inspect package.json to check on the exact script to run.
+After building the project, navigate to `example-apps`, and choose any app you'd like. Ensure that you've `npm i`'d, and then run `npm run dev`. Feel free to inspect package.json to check on the exact script to run.
