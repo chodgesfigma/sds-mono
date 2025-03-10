@@ -16,6 +16,6 @@ navigate into the desired example app and run:
 
 ```sh
 cd example-apps/<example-folder>
-npm i
+npm ci
 npm run dev
 ```

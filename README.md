@@ -4,7 +4,7 @@
 
 Figma originally created a design system in react, leveraging code connect to map back to the design file in Figma. One North has turned this project into a monorepo built with Lerna x Stencil. We extracted these base components into web components using Stencil, and then generated target outputs in `React`, `Vue`, and `Angular`. These output targets are all featured within Code Connect, allowing developers and designers to bridge the gap across their design system, no matter the framework!
 
-In theory, a practical application of this will allow for a Company with a large scale design system, to bride the gap across multiple teams, working in multiple different frameworks. One source of truth, accessible for designers and developers alike!
+In theory, a practical application of this will allow for a Company with a large scale design system, to bridge the gap across multiple teams, working in multiple different frameworks. One source of truth, accessible for designers and developers alike!
 
 ## Structure:
 
@@ -32,7 +32,7 @@ From root level:
 ### To install all dependencies in all packages, run
 
 ```bash
-npm i
+npm ci
 ```
 
 ---
@@ -45,7 +45,7 @@ npm run build
 
 #### Building the project will do a number of things
 
-1. First it will generate build `sds-web-components`, which is our source of truth. Upon building, Stencil will generate the necessary files within the output targets. Once `sds-web-components` has built, all other output target projects will now be able to be built.
+1. First it will build `sds-web-components`, which is our source of truth. Upon building, Stencil will generate the necessary files within the output targets. Once `sds-web-components` has been built, all other output target projects will now be able to be built.
 2. Next, it will build `sds-vue-components`
 3. Then `sds-angular-components` will be built
 4. Then `sds-react-components` will be built
@@ -55,4 +55,4 @@ npm run build
 
 ## Steps to test!
 
-After building the project, navigate to `example-apps`, and choose any app you'd like. Ensure that you've `npm i`'d, and then run `npm run dev`. Feel free to inspect package.json to check on the exact script to run.
+After building the project, navigate to `example-apps`, and choose any app you'd like. Ensure that you've `npm ci`'d, and then run `npm run dev`. Feel free to inspect `package.json` to check on the exact script to run.
