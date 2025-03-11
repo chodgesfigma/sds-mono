@@ -1,3 +1,4 @@
+import { TextAlign } from '../types';
 import { Component, Prop, h } from '@stencil/core';
 import clsx from 'clsx';
 
@@ -10,7 +11,7 @@ export class SdsTextContentHeading {
   /**
    * Align position
    */
-  @Prop() align: 'start' | 'center' = 'start';
+  @Prop() align: TextAlign = 'start';
 
   /**
    * Heading

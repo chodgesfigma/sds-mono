@@ -1,3 +1,4 @@
+import { TextSize } from '../types';
 import { Component, Prop, h } from '@stencil/core';
 import clsx from 'clsx';
 
@@ -25,7 +26,7 @@ export class SdsTextPrice {
   /**
    * Size of text
    */
-  @Prop() size: 'small' | 'large' = 'large';
+  @Prop() size: TextSize = 'large';
 
   /**
    * Label

@@ -1,4 +1,5 @@
 import { useMediaQuery } from '../../../hooks/useMediaQuery';
+import { TextAlign } from '../types';
 import { Component, Prop, State, h } from '@stencil/core';
 
 @Component({
@@ -10,7 +11,7 @@ export class SdsTextContentTitle {
   /**
    * Align position
    */
-  @Prop() align: 'start' | 'center' = 'start';
+  @Prop() align: TextAlign = 'start';
 
   /**
    * Heading
