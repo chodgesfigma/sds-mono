@@ -84,5 +84,43 @@ These are the shared Figma prop definitions.
 
 ## Issues along the way
 
-- The HTML parser only looks at `.ts` files, otherwise the publish command couldn't find the `*.figma` files
+- The HTML parser only looks at `.ts` files, otherwise the publish command couldn't find the `*.figma` files, this didn't seem to be pointed out in the docs, and the publish cli command's only "error" was not finding files.
 - The base Tag connect definition wasn't being populated into Figma without any clear errors, however it eventually did load in. This could have been a cache issue, or something incorrect initial setup.
+
+### Prop Types
+
+Typescript can't resolve certain types when they're outside of a `figma.connect()` function. This means that with the setup of having shared prop definitions, we need to manually type these values.
+
+#### Instance props like:
+
+```ts
+figma.instance('Icon');
+```
+
+These would ideally resolve into `JSX.Element`, but result in an `instance<any>`, so we manually accept that value.
+
+#### Complex types like:
+
+```ts
+description: figma.boolean('Has Description', {
+  true: figma.string('Description'),
+  false: undefined,
+}),
+```
+
+This resolves as a `boolean<string, any>`, which typescript really does not like. This really resolves as either a `string` or as `undefined`, so we manually type it as: `description?: string;`.
+
+#### Enum props:
+
+```ts
+scheme: figma.enum('Scheme', {
+  Danger: 'danger',
+  Positive: 'positive',
+  Warning: 'warning',
+  Neutral: 'neutral',
+}),
+```
+
+In our setup, this resolves as a `string` type, which is fine for actual code-syncing, but when working with a React code-connect file typescript knows that `string` doesn't equal an enum (like `brand | danger | positive | warning | neutral`).
+
+So we can manually type these enums via `figma.enum<TagScheme>(...)`
