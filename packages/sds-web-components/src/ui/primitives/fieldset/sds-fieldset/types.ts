@@ -5,5 +5,5 @@ export type SharedFieldProps = {
   label?: string;
   description?: string;
   placeholder?: string;
-  error?: string; // | ((validation: RACValidationResult) => string); // TODO: figure out RACValidationResult
+  error?: string;
 };
