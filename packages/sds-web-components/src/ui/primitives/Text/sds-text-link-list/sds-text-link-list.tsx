@@ -1,3 +1,4 @@
+import { TextDensity } from '../types';
 import { Component, Prop, h } from '@stencil/core';
 import { VNode } from '@stencil/core/internal';
 
@@ -10,7 +11,7 @@ export class SdsTextList {
   /**
    * Density
    */
-  @Prop() density: 'default' | 'tight' = 'default';
+  @Prop() density: TextDensity = 'default';
 
   /**
    * title

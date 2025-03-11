@@ -1,13 +1,13 @@
 import figma from '@figma/code-connect';
 
 type SLIDER_PROPS = {
-  isDisabled: boolean;
+  disabled: boolean;
   label?: string;
   description?: string;
 };
 
 export const SLIDER_PROPS: SLIDER_PROPS = {
-  isDisabled: figma.enum('State', { Disabled: true }),
+  disabled: figma.enum('State', { Disabled: true }),
   label: figma.boolean('Has Label', {
     true: figma.string('Label'),
     false: undefined,

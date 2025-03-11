@@ -4,8 +4,6 @@ import type { Meta, StoryObj } from '@storybook/html';
 
 type ComponentArgs = Components.SdsFieldset;
 
-// TODO: update this story when more components are done
-
 const meta = {
   title: 'SDS Primitives/Inputs/Fieldset',
   parameters: { layout: 'centered' },

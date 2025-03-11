@@ -1,18 +1,19 @@
 import figma from '@figma/code-connect';
+import { TagScheme, TagVariant } from 'sds-web-components';
 
 type TAG_TOGGLE_PROPS = {
   label: string;
   selected: boolean;
-  iconStart: ReturnType<typeof figma.instance>;
+  iconStart: any;
 };
 
 export const TAG_PROPS = {
-  onRemove: figma.boolean('Removable'),
+  removable: figma.boolean('Removable'),
   label: figma.string('Label'),
-  variant: figma.enum('Variant', {
+  variant: figma.enum<TagVariant>('Variant', {
     Secondary: 'secondary',
   }),
-  scheme: figma.enum('Scheme', {
+  scheme: figma.enum<TagScheme>('Scheme', {
     Danger: 'danger',
     Positive: 'positive',
     Warning: 'warning',

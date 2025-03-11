@@ -45,13 +45,22 @@ const scaffoldCodeConnect = async () => {
     const { componentName } = config;
     // create props file
     const propFileContent = templateProps(componentName);
-    await fs.writeFile(
-      path.resolve(PROPS_DIR, `${componentName}.ts`),
-      propFileContent,
-      { encoding: 'utf-8' }
-    );
-
-    console.log(`Created ${componentName} prop file...`);
+    const propFilePath = path.resolve(PROPS_DIR, `${componentName}.ts`);
+    try {
+      await fs.writeFile(propFilePath, propFileContent, {
+        encoding: 'utf-8',
+        flag: 'wx',
+      });
+      console.log(`Created ${componentName} prop file...`);
+    } catch (error) {
+      if (error instanceof Error && error.message.includes('EEXIST')) {
+        console.log(
+          `Skipped creating ${componentName} prop file, as it already exists...`
+        );
+      } else {
+        console.error(error);
+      }
+    }
 
     // create code-connect file for each output configured
     outputs.forEach(async ([outputName, outputConfig]) => {
@@ -69,8 +78,21 @@ const scaffoldCodeConnect = async () => {
         ? templateReactCodeConnect(componentName)
         : templateHTMLCodeConnect(componentName);
 
-      await fs.writeFile(filePath, fileContent, { encoding: 'utf-8' });
-      console.log(`Created ${fileName}...`);
+      try {
+        await fs.writeFile(filePath, fileContent, {
+          encoding: 'utf-8',
+          flag: 'wx',
+        });
+        console.log(`Created ${outputName}/${fileName}...`);
+      } catch (error) {
+        if (error instanceof Error && error.message.includes('EEXIST')) {
+          console.log(
+            `Skipped creating ${outputName}/${fileName}, as it already exists...`
+          );
+        } else {
+          console.error(error);
+        }
+      }
     });
   } catch (error) {
     console.error(error);
