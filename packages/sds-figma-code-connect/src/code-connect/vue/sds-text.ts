@@ -78,16 +78,14 @@ figma.connect('<FIGMA_TEXT_TEXT_CODE>', {
 figma.connect('<FIGMA_TEXT_TEXT_LIST>', {
   props: TEXT_LIST_PROPS,
   example: ({ children, title, density }) =>
-    html`<SdsTextList titleElem=${title} density=${density}
-      >${children}</SdsTextList
-    >`,
+    html`<SdsTextList density=${density}>${title}${children}</SdsTextList>`,
 });
 
 figma.connect('<FIGMA_TEXT_TEXT_LINK_LIST>', {
   props: TEXT_LINK_LIST_PROPS,
   example: ({ children, title, density }) =>
-    html`<SdsTextLinkList titleElem=${title} density=${density}
-      >${children}</SdsTextLinkList
+    html`<SdsTextLinkList density=${density}
+      >${title}${children}</SdsTextLinkList
     >`,
 });
 
