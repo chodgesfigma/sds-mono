@@ -55,7 +55,7 @@ npm run build
 
 ### Code Connect:
 
-Figma link to test code connect [here](<https://www.figma.com/design/mG9gWTcs6dZ0v0pNwKPnNK/Simple-Design-System-(Stencil-Library)?node-id=7641-2142&p=f&m=dev>)!
+Figma link to test code connect [here](<https://www.figma.com/design/mG9gWTcs6dZ0v0pNwKPnNK/Simple-Design-System-(Stencil-Library)?node-id=3-5&p=f&m=dev>)!
 
 ## Steps to test!
 
