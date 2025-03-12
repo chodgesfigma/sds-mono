@@ -53,6 +53,10 @@ npm run build
 
 ---
 
+### Code Connect:
+
+Figma link to test code connect [here](<https://www.figma.com/design/mG9gWTcs6dZ0v0pNwKPnNK/Simple-Design-System-(Stencil-Library)?node-id=7641-2142&p=f&m=dev>)!
+
 ## Steps to test!
 
 After building the project, navigate to `example-apps`, and choose any app you'd like. Ensure that you've `npm ci`'d, and then run `npm run dev`. Feel free to inspect `package.json` to check on the exact script to run.
