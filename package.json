@@ -2,6 +2,10 @@
   "name": "figma-sds-replatforming",
   "version": "1.0.0",
   "main": "index.js",
+  "engines": {
+    "node": "20.18.3",
+    "npm": ">=7.0.0"
+  },
   "scripts": {
     "build": "lerna run build",
     "clean": "rimraf node_modules && npm ci",
