@@ -1,0 +1,20 @@
+import figma, { html } from '@figma/code-connect/html';
+import { CHECKBOX_GROUP_PROPS, CHECKBOX_PROPS } from 'src/props/sds-checkbox';
+
+figma.connect('<FIGMA_INPUTS_CHECKBOX_FIELD>', {
+  props: CHECKBOX_PROPS,
+  example: ({ label, description, selected, disabled, indeterminate }) =>
+    html`<sds-checkbox-field
+      label=${label}
+      description=${description}
+      disabled=${disabled}
+      ${selected}
+      ${indeterminate}
+    ></sds-checkbox-field>`,
+});
+
+figma.connect('<FIGMA_INPUTS_CHECKBOX_GROUP>', {
+  props: CHECKBOX_GROUP_PROPS,
+  example: ({ children }) =>
+    html`<sds-checkbox-group>${children}</sds-checkbox-group>`,
+});

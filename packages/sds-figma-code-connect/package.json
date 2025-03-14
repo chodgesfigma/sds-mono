@@ -1,0 +1,30 @@
+{
+  "name": "sds-figma-code-connect",
+  "version": "1.0.0",
+  "main": "src/index.ts",
+  "scripts": {
+    "scaffold": "tsx scripts/scaffold-code-connect",
+    "scaffold:icons": "tsx scripts/create-icons-figma-file",
+    "build": "npm-run-all build:config build:code-connect",
+    "build:config": "tsx scripts/compile-figma-configs",
+    "build:code-connect": "tsx scripts/compile-code-connect",
+    "publish": "npm-run-all --parallel publish:web publish:vue publish:angular publish:react",
+    "publish:vue": "npx figma connect publish -c dist/configs/figma.vue.config.json",
+    "publish:angular": "npx figma connect publish -c dist/configs/figma.angular.config.json",
+    "publish:web": "npx figma connect publish -c dist/configs/figma.web.config.json",
+    "publish:react": "npx figma connect publish -c dist/configs/figma.react.config.json"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@figma/code-connect": "^1.3.1",
+    "sds-react-components": "file:../sds-react-components",
+    "tsx": "^4.19.3",
+    "typescript": "^5.7.3"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}

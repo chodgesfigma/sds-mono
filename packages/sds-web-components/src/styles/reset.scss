@@ -1,0 +1,46 @@
+// This is a reset file that can be imported into each other .scss file via
+// @import 'reset';
+
+// This should contain minimal css as it gets injected into each component,
+// but these are styles that should only be applied to elements within our shadow-doms
+
+a,
+button,
+legend,
+fieldset,
+select,
+input,
+textarea {
+  all: unset;
+  line-height: 1;
+}
+
+div,
+button,
+select,
+input,
+textarea,
+span {
+  box-sizing: border-box;
+}
+
+// brought from: https://github.com/figma/sds/blob/2e3a0cf655396864472749e5b0843c822cfae6b9/src/index.css#L66-L83
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font: var(--sds-font-heading);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}

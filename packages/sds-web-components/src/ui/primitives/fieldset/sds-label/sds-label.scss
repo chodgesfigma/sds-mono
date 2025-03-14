@@ -1,0 +1,12 @@
+@import 'reset';
+
+:host,
+.label {
+  grid-area: var(--input-label-grid-area);
+  margin-bottom: var(--input-label-margin-bottom);
+}
+
+.label {
+  color: var(--field-label-color);
+  font: var(--sds-font-body-base);
+}

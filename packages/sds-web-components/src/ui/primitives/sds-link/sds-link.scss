@@ -1,0 +1,34 @@
+@import 'reset';
+
+.link {
+  text-decoration: none;
+}
+
+.text-body-link {
+  --border-radius: var(--sds-size-radius-100);
+
+  color: inherit;
+  cursor: pointer;
+  font: var(--sds-font-body-link);
+  position: relative;
+
+  /* Override */
+  &.link {
+    text-decoration: underline;
+  }
+
+  &:focus-visible {
+    outline: none;
+
+    --offset: calc(var(--sds-size-stroke-border) * 2);
+
+    &::before {
+      content: '';
+      border-radius: calc(var(--border-radius) + var(--offset));
+      inset: calc(-1 * var(--offset));
+      box-shadow: 0 0 0 var(--global-focus-ring-size) var(--global-focus-ring-color);
+      position: absolute;
+      z-index: var(--global-stack-focus);
+    }
+  }
+}

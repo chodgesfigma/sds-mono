@@ -1,0 +1,22 @@
+{
+  "web": {
+    "include": ["dist/web/**/*"],
+    "exclude": ["dist/icons/*"],
+    "parser": "html"
+  },
+  "vue": {
+    "include": ["dist/vue/**/*"],
+    "exclude": ["dist/icons/*"],
+    "label": "Vue"
+  },
+  "angular": {
+    "include": ["dist/angular/**/*"],
+    "exclude": ["dist/icons/*"],
+    "label": "Angular"
+  },
+  "react": {
+    "include": ["dist/react/**/*"],
+    "exclude": ["dist/icons/*"],
+    "parser": "react"
+  }
+}

@@ -1,0 +1,84 @@
+@import 'reset';
+
+.list-box-item {
+  --list-box-label-color: var(--sds-color-text-default-default);
+  --list-box-description-color: var(--sds-color-text-default-secondary);
+  --list-box-icon-color: var(--sds-color-icon-default-default);
+
+  align-items: center;
+  background-color: transparent;
+  border-radius: var(--sds-size-radius-200);
+  color: var(--list-box-label-color);
+  column-gap: var(--sds-size-space-200);
+  cursor: pointer;
+  display: grid;
+  grid-template-areas: var(--list-box-item-template-areas);
+  grid-template-columns: auto 1fr;
+  padding: var(--sds-size-space-200) var(--sds-size-space-200);
+
+  > .icon {
+    --icon-color: var(--list-box-icon-color);
+
+    opacity: 0;
+  }
+
+  [slot='label'] {
+    grid-area: label;
+    text-wrap: nowrap;
+  }
+
+  [slot='description'] {
+    grid-area: description;
+    text-wrap: nowrap;
+  }
+
+  [slot='image'] {
+    grid-area: image;
+    height: auto;
+  }
+
+  &[data-selected] > .icon {
+    opacity: 1;
+  }
+
+  &:has(:only-child) {
+    --list-box-item-template-areas: 'only-child';
+
+    > :only-child {
+      grid-area: only-child;
+    }
+  }
+
+  &:has([slot='image']:not(:only-child)) {
+    --list-box-item-template-areas: 'image .' 'image label' 'image description' 'image .';
+  }
+
+  [data-layout='grid'][data-orientation='vertical'] &:not(:has(:only-child)) {
+    --list-box-item-template-areas: 'label' 'description';
+
+    &:has([slot='image']) {
+      --list-box-item-template-areas: 'image' 'label' 'description';
+    }
+  }
+}
+
+sl-menu-item {
+  &[aria-disabled='true'] {
+    color: var(--sds-color-text-disabled-default);
+    pointer-events: none;
+  }
+
+  &[data-selected='true'] {
+    &::part(base) {
+      background-color: var(--sds-color-background-brand-default);
+      outline: none;
+      border-radius: 8px;
+    }
+
+    .list-box-item {
+      --list-box-label-color: var(--sds-color-text-brand-on-brand);
+      --list-box-description-color: var(--sds-color-text-brand-on-brand);
+      --list-box-icon-color: var(--sds-color-icon-brand-on-brand);
+    }
+  }
+}

@@ -1,0 +1,12 @@
+@import 'reset';
+
+.error-message,
+:host {
+  grid-area: var(--input-error-message-grid-area);
+  margin-top: var(--input-error-message-margin-top);
+}
+
+.error-message {
+  color: var(--sds-color-text-danger-default);
+  font: var(--sds-font-body-base);
+}
