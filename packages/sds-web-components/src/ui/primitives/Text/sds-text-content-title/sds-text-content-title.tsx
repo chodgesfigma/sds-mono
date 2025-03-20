@@ -1,4 +1,4 @@
-import { useMediaQuery } from '../../../hooks/useMediaQuery';
+import { useMediaQuery } from '../../../hooks';
 import { TextAlign } from '../types';
 import { Component, Prop, State, h } from '@stencil/core';
 
