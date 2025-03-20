@@ -11,7 +11,7 @@ Fieldset Description
 
 ### Used by
 
- - [sds-slider](../../sds-slider)
+ - [sds-slider](../../Slider)
 
 ### Graph
 ```mermaid

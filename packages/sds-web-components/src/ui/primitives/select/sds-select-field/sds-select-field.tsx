@@ -1,6 +1,6 @@
-import { SdsDescriptionFunctional } from '../../fieldset/sds-description/sds-description-functional';
-import { SdsFieldErrorFunctional } from '../../fieldset/sds-field-error/sds-field-error-functional';
-import { SdsLabelFunctional } from '../../fieldset/sds-label/sds-label-functional';
+import { SdsDescriptionFunctional } from '../../Fieldset/sds-description/sds-description-functional';
+import { SdsFieldErrorFunctional } from '../../Fieldset/sds-field-error/sds-field-error-functional';
+import { SdsLabelFunctional } from '../../Fieldset/sds-label/sds-label-functional';
 import { SdsSelectItemFunctional } from '../sds-select-item/sds-select-item-functional';
 import { SdsSelectFunctional } from '../sds-select/sds-select-functional';
 import { Component, h, Prop, Element, State } from '@stencil/core';
