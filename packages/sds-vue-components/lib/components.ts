@@ -3,7 +3,7 @@
 /* auto-generated vue proxies */
 import { defineContainer } from '@stencil/vue-output-target/runtime';
 
-import type { JSX } from 'sds-web-components/dist/components';
+import type { JSX } from 'sds-web-components/dist/types';
 
 import { defineCustomElement as defineSdsAccordion } from 'sds-web-components/dist/components/sds-accordion.js';
 import { defineCustomElement as defineSdsAccordionItem } from 'sds-web-components/dist/components/sds-accordion-item.js';
