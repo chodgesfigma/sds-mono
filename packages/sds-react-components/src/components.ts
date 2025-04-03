@@ -13,6 +13,10 @@ import React from 'react';
 import { type SdsAccordionItemCustomEvent, type SdsListBoxCustomEvent, type SdsNavigationButtonCustomEvent, type SdsNavigationPillCustomEvent, type SdsSliderCustomEvent, type SdsToggleTagCustomEvent, type SdsToggleTagListCustomEvent, type SlHideEvent, type SlMenuItem, type SlRange, type SlShowEvent, type TagToggle } from "sds-web-components";
 import { SdsAccordionItem as SdsAccordionItemElement, defineCustomElement as defineSdsAccordionItem } from "sds-web-components/dist/components/sds-accordion-item.js";
 import { SdsAccordion as SdsAccordionElement, defineCustomElement as defineSdsAccordion } from "sds-web-components/dist/components/sds-accordion.js";
+import { SdsAvatarBlock as SdsAvatarBlockElement, defineCustomElement as defineSdsAvatarBlock } from "sds-web-components/dist/components/sds-avatar-block.js";
+import { SdsAvatarButton as SdsAvatarButtonElement, defineCustomElement as defineSdsAvatarButton } from "sds-web-components/dist/components/sds-avatar-button.js";
+import { SdsAvatarGroup as SdsAvatarGroupElement, defineCustomElement as defineSdsAvatarGroup } from "sds-web-components/dist/components/sds-avatar-group.js";
+import { SdsAvatar as SdsAvatarElement, defineCustomElement as defineSdsAvatar } from "sds-web-components/dist/components/sds-avatar.js";
 import { SdsButtonDanger as SdsButtonDangerElement, defineCustomElement as defineSdsButtonDanger } from "sds-web-components/dist/components/sds-button-danger.js";
 import { SdsButtonGroup as SdsButtonGroupElement, defineCustomElement as defineSdsButtonGroup } from "sds-web-components/dist/components/sds-button-group.js";
 import { SdsButton as SdsButtonElement, defineCustomElement as defineSdsButton } from "sds-web-components/dist/components/sds-button.js";
@@ -388,6 +392,50 @@ export const SdsAccordionItem: StencilReactComponent<SdsAccordionItemElement, Sd
         onSdsAccordionItemCollapsed: 'sds-accordion-item-collapsed'
     } as SdsAccordionItemEvents,
     defineCustomElement: defineSdsAccordionItem
+});
+
+type SdsAvatarEvents = NonNullable<unknown>;
+
+export const SdsAvatar: StencilReactComponent<SdsAvatarElement, SdsAvatarEvents> = /*@__PURE__*/ createComponent<SdsAvatarElement, SdsAvatarEvents>({
+    tagName: 'sds-avatar',
+    elementClass: SdsAvatarElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsAvatarEvents,
+    defineCustomElement: defineSdsAvatar
+});
+
+type SdsAvatarBlockEvents = NonNullable<unknown>;
+
+export const SdsAvatarBlock: StencilReactComponent<SdsAvatarBlockElement, SdsAvatarBlockEvents> = /*@__PURE__*/ createComponent<SdsAvatarBlockElement, SdsAvatarBlockEvents>({
+    tagName: 'sds-avatar-block',
+    elementClass: SdsAvatarBlockElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsAvatarBlockEvents,
+    defineCustomElement: defineSdsAvatarBlock
+});
+
+type SdsAvatarButtonEvents = NonNullable<unknown>;
+
+export const SdsAvatarButton: StencilReactComponent<SdsAvatarButtonElement, SdsAvatarButtonEvents> = /*@__PURE__*/ createComponent<SdsAvatarButtonElement, SdsAvatarButtonEvents>({
+    tagName: 'sds-avatar-button',
+    elementClass: SdsAvatarButtonElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsAvatarButtonEvents,
+    defineCustomElement: defineSdsAvatarButton
+});
+
+type SdsAvatarGroupEvents = NonNullable<unknown>;
+
+export const SdsAvatarGroup: StencilReactComponent<SdsAvatarGroupElement, SdsAvatarGroupEvents> = /*@__PURE__*/ createComponent<SdsAvatarGroupElement, SdsAvatarGroupEvents>({
+    tagName: 'sds-avatar-group',
+    elementClass: SdsAvatarGroupElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsAvatarGroupEvents,
+    defineCustomElement: defineSdsAvatarGroup
 });
 
 type SdsButtonEvents = NonNullable<unknown>;

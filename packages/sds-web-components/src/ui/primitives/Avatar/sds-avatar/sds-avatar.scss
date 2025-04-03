@@ -1,0 +1,52 @@
+@import 'reset';
+
+:host {
+  display: block;
+}
+
+.avatar {
+  display: block;
+  border-radius: var(--avatar-border-radius);
+  position: relative;
+  height: var(--avatar-diameter);
+  width: var(--avatar-diameter);
+
+  img,
+  svg {
+    border-radius: var(--avatar-border-radius);
+    height: auto;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  svg {
+    background: var(--sds-color-background-brand-default);
+
+    text {
+      fill: var(--sds-color-text-brand-on-brand);
+      font-size: var(--sds-typography-scale-07);
+    }
+  }
+}
+
+.avatar-shape-circle {
+  --avatar-border-radius: var(--sds-size-radius-full);
+}
+
+.avatar-shape-square {
+  --avatar-border-radius: var(--sds-size-radius-200);
+}
+
+.avatar-size-small {
+  --avatar-diameter: var(--sds-size-icon-small);
+}
+
+.avatar-size-medium {
+  --avatar-diameter: var(--sds-size-icon-medium);
+}
+
+.avatar-size-large {
+  --avatar-diameter: var(--sds-size-icon-large);
+}
