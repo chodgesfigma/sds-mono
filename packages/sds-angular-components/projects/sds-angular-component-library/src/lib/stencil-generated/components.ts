@@ -66,14 +66,14 @@ export declare interface SdsAccordionItem extends Components.SdsAccordionItem {
 
 
 @ProxyCmp({
-  inputs: ['disabled', 'size', 'type', 'variant']
+  inputs: ['disabled', 'rounded', 'size', 'type', 'variant']
 })
 @Component({
   selector: 'sds-button',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['disabled', 'size', 'type', 'variant'],
+  inputs: ['disabled', 'rounded', 'size', 'type', 'variant'],
 })
 export class SdsButton {
   protected el: HTMLSdsButtonElement;
@@ -88,14 +88,14 @@ export declare interface SdsButton extends Components.SdsButton {}
 
 
 @ProxyCmp({
-  inputs: ['disabled', 'size', 'type', 'variant']
+  inputs: ['disabled', 'rounded', 'size', 'type', 'variant']
 })
 @Component({
   selector: 'sds-button-danger',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['disabled', 'size', 'type', 'variant'],
+  inputs: ['disabled', 'rounded', 'size', 'type', 'variant'],
 })
 export class SdsButtonDanger {
   protected el: HTMLSdsButtonDangerElement;
@@ -228,6 +228,185 @@ export class SdsDescription {
 
 
 export declare interface SdsDescription extends Components.SdsDescription {}
+
+
+@ProxyCmp({
+  inputs: ['dialogType']
+})
+@Component({
+  selector: 'sds-dialog',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['dialogType'],
+})
+export class SdsDialog {
+  protected el: HTMLSdsDialogElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsDialog extends Components.SdsDialog {}
+
+
+@ProxyCmp({
+  inputs: ['bleed']
+})
+@Component({
+  selector: 'sds-dialog-body',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['bleed'],
+})
+export class SdsDialogBody {
+  protected el: HTMLSdsDialogBodyElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsDialogBody extends Components.SdsDialogBody {}
+
+
+@ProxyCmp({
+  inputs: ['label', 'useIcon', 'variant'],
+  methods: ['openDialog', 'closeDialog']
+})
+@Component({
+  selector: 'sds-dialog-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['label', 'useIcon', 'variant'],
+})
+export class SdsDialogButton {
+  protected el: HTMLSdsDialogButtonElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsDialogButton extends Components.SdsDialogButton {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-dialog-close',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsDialogClose {
+  protected el: HTMLSdsDialogCloseElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['sds-close-dialog']);
+  }
+}
+
+
+export declare interface SdsDialogClose extends Components.SdsDialogClose {
+  /**
+   * Emitted when the close-button is clicked
+   */
+  'sds-close-dialog': EventEmitter<CustomEvent<undefined>>;
+}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-dialog-description',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsDialogDescription {
+  protected el: HTMLSdsDialogDescriptionElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsDialogDescription extends Components.SdsDialogDescription {}
+
+
+@ProxyCmp({
+  inputs: ['isDismissible', 'isOpen']
+})
+@Component({
+  selector: 'sds-dialog-modal',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['isDismissible', 'isOpen'],
+})
+export class SdsDialogModal {
+  protected el: HTMLSdsDialogModalElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsDialogModal extends Components.SdsDialogModal {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-dialog-title',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsDialogTitle {
+  protected el: HTMLSdsDialogTitleElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsDialogTitle extends Components.SdsDialogTitle {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-dialog-trigger',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsDialogTrigger {
+  protected el: HTMLSdsDialogTriggerElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsDialogTrigger extends Components.SdsDialogTrigger {}
 
 
 @ProxyCmp({

@@ -14,6 +14,14 @@ import { defineCustomElement as defineSdsCheckbox } from 'sds-web-components/dis
 import { defineCustomElement as defineSdsCheckboxField } from 'sds-web-components/dist/components/sds-checkbox-field.js';
 import { defineCustomElement as defineSdsCheckboxGroup } from 'sds-web-components/dist/components/sds-checkbox-group.js';
 import { defineCustomElement as defineSdsDescription } from 'sds-web-components/dist/components/sds-description.js';
+import { defineCustomElement as defineSdsDialog } from 'sds-web-components/dist/components/sds-dialog.js';
+import { defineCustomElement as defineSdsDialogBody } from 'sds-web-components/dist/components/sds-dialog-body.js';
+import { defineCustomElement as defineSdsDialogButton } from 'sds-web-components/dist/components/sds-dialog-button.js';
+import { defineCustomElement as defineSdsDialogClose } from 'sds-web-components/dist/components/sds-dialog-close.js';
+import { defineCustomElement as defineSdsDialogDescription } from 'sds-web-components/dist/components/sds-dialog-description.js';
+import { defineCustomElement as defineSdsDialogModal } from 'sds-web-components/dist/components/sds-dialog-modal.js';
+import { defineCustomElement as defineSdsDialogTitle } from 'sds-web-components/dist/components/sds-dialog-title.js';
+import { defineCustomElement as defineSdsDialogTrigger } from 'sds-web-components/dist/components/sds-dialog-trigger.js';
 import { defineCustomElement as defineSdsField } from 'sds-web-components/dist/components/sds-field.js';
 import { defineCustomElement as defineSdsFieldError } from 'sds-web-components/dist/components/sds-field-error.js';
 import { defineCustomElement as defineSdsFieldGroup } from 'sds-web-components/dist/components/sds-field-group.js';
@@ -376,7 +384,8 @@ export const SdsButton = /*@__PURE__*/ defineContainer<JSX.SdsButton>('sds-butto
   'type',
   'size',
   'variant',
-  'disabled'
+  'disabled',
+  'rounded'
 ]);
 
 
@@ -384,7 +393,8 @@ export const SdsButtonDanger = /*@__PURE__*/ defineContainer<JSX.SdsButtonDanger
   'type',
   'size',
   'variant',
-  'disabled'
+  'disabled',
+  'rounded'
 ]);
 
 
@@ -425,6 +435,45 @@ export const SdsCheckboxGroup = /*@__PURE__*/ defineContainer<JSX.SdsCheckboxGro
 
 
 export const SdsDescription = /*@__PURE__*/ defineContainer<JSX.SdsDescription>('sds-description', defineSdsDescription);
+
+
+export const SdsDialog = /*@__PURE__*/ defineContainer<JSX.SdsDialog>('sds-dialog', defineSdsDialog, [
+  'dialogType'
+]);
+
+
+export const SdsDialogBody = /*@__PURE__*/ defineContainer<JSX.SdsDialogBody>('sds-dialog-body', defineSdsDialogBody, [
+  'bleed'
+]);
+
+
+export const SdsDialogButton = /*@__PURE__*/ defineContainer<JSX.SdsDialogButton>('sds-dialog-button', defineSdsDialogButton, [
+  'useIcon',
+  'label',
+  'variant'
+]);
+
+
+export const SdsDialogClose = /*@__PURE__*/ defineContainer<JSX.SdsDialogClose>('sds-dialog-close', defineSdsDialogClose, [
+  'sds-close-dialog'
+], [
+  'sds-close-dialog'
+]);
+
+
+export const SdsDialogDescription = /*@__PURE__*/ defineContainer<JSX.SdsDialogDescription>('sds-dialog-description', defineSdsDialogDescription);
+
+
+export const SdsDialogModal = /*@__PURE__*/ defineContainer<JSX.SdsDialogModal>('sds-dialog-modal', defineSdsDialogModal, [
+  'isDismissible',
+  'isOpen'
+]);
+
+
+export const SdsDialogTitle = /*@__PURE__*/ defineContainer<JSX.SdsDialogTitle>('sds-dialog-title', defineSdsDialogTitle);
+
+
+export const SdsDialogTrigger = /*@__PURE__*/ defineContainer<JSX.SdsDialogTrigger>('sds-dialog-trigger', defineSdsDialogTrigger);
 
 
 export const SdsField = /*@__PURE__*/ defineContainer<JSX.SdsField>('sds-field', defineSdsField, [
