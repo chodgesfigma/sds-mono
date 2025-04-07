@@ -1,0 +1,11 @@
+@import 'reset';
+
+:host {
+  display: block;
+}
+
+.dialog-title {
+  display: block;
+  padding-left: var(--sds-size-space-800);
+  padding-right: var(--sds-size-space-800);
+}

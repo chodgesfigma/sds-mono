@@ -11,6 +11,19 @@
 | `lineHeight`  | `line-height`  | Line height of the text | `"body" \| "single"`                                                                   | `'body'` |
 
 
+## Dependencies
+
+### Used by
+
+ - [sds-dialog-description](../../dialog/sds-dialog-description)
+
+### Graph
+```mermaid
+graph TD;
+  sds-dialog-description --> sds-text
+  style sds-text fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

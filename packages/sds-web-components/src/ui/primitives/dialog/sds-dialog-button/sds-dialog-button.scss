@@ -1,0 +1,9 @@
+:host {
+  display: block;
+}
+
+.icon-button {
+  &:has(+ sds-button) {
+    display: none;
+  }
+}
