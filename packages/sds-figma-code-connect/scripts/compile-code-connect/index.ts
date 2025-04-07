@@ -164,7 +164,7 @@ const compileCodeConnects = async () => {
   }
 
   console.log('Moving icons folder...');
-  const iconDestination = path.resolve(BUILD_PATH, 'icons');
+  const iconDestination = path.resolve(BUILD_PATH);
   await fs.cp(path.resolve(CODE_CONNECT_PATH, 'icons'), iconDestination, {
     recursive: true,
   });
