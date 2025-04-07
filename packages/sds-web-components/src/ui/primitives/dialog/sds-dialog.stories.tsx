@@ -9,7 +9,7 @@ const meta = {
   title: 'SDS primitives/Dialog',
   tags: ['autodocs'],
   parameters: { layout: 'centered' },
-  component: 'sds-dialog',
+  component: 'sds-dialog-button',
   render: args => `
   <sds-dialog-button id="modal-button" ${spread(args)}>
     <sds-icon-menu slot="icon"></sds-icon-menu>
@@ -68,7 +68,7 @@ export const DialogControlled: Story = {
       <sds-dialog>
         <sds-dialog-title>Open Dialog</sds-dialog-title>
         <sds-dialog-description>
-          The refund will be reflected in the customer’s bank account 2 to 3
+          The refund will be reflected in the customer's bank account 2 to 3
           business days after processing.
         </sds-dialog-description>
         <sds-dialog-body>
