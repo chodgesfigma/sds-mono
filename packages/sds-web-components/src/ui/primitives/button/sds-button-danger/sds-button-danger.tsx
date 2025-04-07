@@ -27,9 +27,14 @@ export class SdsButtonDanger {
    */
   @Prop({ reflect: true }) disabled?: boolean;
 
+  /**
+   * Visually rounds the button
+   */
+  @Prop() rounded = false;
+
   render() {
     return (
-      <SdsButtonBase disabled={this.disabled} variant={this.variant} size={this.size} type={this.type}>
+      <SdsButtonBase disabled={this.disabled} variant={this.variant} size={this.size} type={this.type} rounded={this.rounded}>
         <slot />
       </SdsButtonBase>
     );

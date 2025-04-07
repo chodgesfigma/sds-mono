@@ -55,11 +55,7 @@ export const ButtonGroup: StoryObj<ComponentArgs> = {
 export const IconButton: StoryObj<ComponentArgs> = {
   args: {
     type: 'submit',
-  },
-  parameters: {
-    backgrounds: {
-      default: 'dark',
-    },
+    rounded: true,
   },
   render: args => `<sds-button ${spread(args)} ><sds-icon-activity></sds-icon-activity></sds-button>`,
 };
@@ -68,6 +64,7 @@ export const DestructiveIconButton: StoryObj<ComponentArgs> = {
   args: {
     type: 'submit',
     variant: 'danger-primary',
+    rounded: true,
   },
   render: args => `<sds-button-danger ${spread(args)} ><sds-icon-activity></sds-icon-activity></sds-button-danger>`,
 };
