@@ -20,7 +20,7 @@ export class SdsDialogClose {
 
   render() {
     return (
-      <sds-button onClick={this.handleClick} class="dialog-close" aria-label="Dismiss dialog" variant="subtle" size="small">
+      <sds-button rounded onClick={this.handleClick} class="dialog-close" aria-label="Dismiss dialog" variant="subtle" size="small">
         <sds-icon-x />
       </sds-button>
     );

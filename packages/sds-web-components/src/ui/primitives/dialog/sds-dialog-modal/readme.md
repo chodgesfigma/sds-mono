@@ -5,6 +5,14 @@
 <!-- Auto Generated Below -->
 
 
+## Properties
+
+| Property        | Attribute        | Description              | Type      | Default |
+| --------------- | ---------------- | ------------------------ | --------- | ------- |
+| `isDismissible` | `is-dismissible` | Unused prop currently    | `boolean` | `false` |
+| `isOpen`        | `is-open`        | Open state of the dialog | `boolean` | `false` |
+
+
 ## Dependencies
 
 ### Used by

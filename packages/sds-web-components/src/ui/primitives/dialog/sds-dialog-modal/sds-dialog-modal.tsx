@@ -1,4 +1,4 @@
-import { Component, h } from '@stencil/core';
+import { Component, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'sds-dialog-modal',
@@ -6,8 +6,21 @@ import { Component, h } from '@stencil/core';
   shadow: true,
 })
 export class SdsDialogModal {
-  // @Prop() isDismissable = false;
+  /**
+   * Unused prop currently
+   */
+  @Prop() isDismissible = false;
+
+  /**
+   * Open state of the dialog
+   */
+  @Prop({ reflect: true }) isOpen = false;
+
   render() {
+    if (!this.isOpen) {
+      return null;
+    }
+
     return (
       <div class="dialog-backdrop">
         <div class="dialog-container">

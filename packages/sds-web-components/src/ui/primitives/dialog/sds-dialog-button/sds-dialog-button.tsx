@@ -1,4 +1,4 @@
-import { Component, Listen, Prop, State, h } from '@stencil/core';
+import { Component, Listen, Method, Prop, State, h } from '@stencil/core';
 import { DefaultVariant } from 'src/components';
 
 @Component({
@@ -9,10 +9,19 @@ import { DefaultVariant } from 'src/components';
 export class SdsDialogButton {
   @State() isModalOpen = false;
 
+  /**
+   * Controls if the icon-button should be used over the label button
+   */
   @Prop() useIcon = false;
 
+  /**
+   * Label / Aria-label for the button
+   */
   @Prop() label = '';
 
+  /**
+   * Label Button variant
+   */
   @Prop() variant: DefaultVariant = 'primary';
 
   @Listen('sds-close-dialog')
@@ -20,32 +29,38 @@ export class SdsDialogButton {
     this.closeDialog();
   }
 
-  openDialog = () => {
+  /**
+   * Opens the dialog
+   */
+  @Method()
+  async openDialog() {
     this.isModalOpen = true;
-  };
+  }
 
-  closeDialog = () => {
+  /**
+   * Closes the dialog
+   */
+  @Method()
+  async closeDialog() {
     this.isModalOpen = false;
-  };
+  }
 
   render() {
     return (
       <sds-dialog-trigger>
-        <sds-button onClick={this.openDialog} aria-label={this.label} class="icon-button">
+        <sds-button rounded onClick={() => this.openDialog()} aria-label={this.label} class="icon-button">
           <slot name="icon"></slot>
         </sds-button>
         {!this.useIcon && (
-          <sds-button onClick={this.openDialog} variant={this.variant}>
+          <sds-button rounded onClick={() => this.openDialog()} variant={this.variant}>
             {this.label}
           </sds-button>
         )}
-        {this.isModalOpen && (
-          <sds-dialog-modal>
-            <sds-dialog>
-              <slot></slot>
-            </sds-dialog>
-          </sds-dialog-modal>
-        )}
+        <sds-dialog-modal isOpen={this.isModalOpen}>
+          <sds-dialog>
+            <slot></slot>
+          </sds-dialog>
+        </sds-dialog-modal>
       </sds-dialog-trigger>
     );
   }

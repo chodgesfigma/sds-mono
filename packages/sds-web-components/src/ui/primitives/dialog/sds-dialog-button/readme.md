@@ -7,11 +7,34 @@
 
 ## Properties
 
-| Property  | Attribute  | Description | Type                                 | Default     |
-| --------- | ---------- | ----------- | ------------------------------------ | ----------- |
-| `label`   | `label`    |             | `string`                             | `''`        |
-| `useIcon` | `use-icon` |             | `boolean`                            | `false`     |
-| `variant` | `variant`  |             | `"neutral" \| "primary" \| "subtle"` | `'primary'` |
+| Property  | Attribute  | Description                                                      | Type                                 | Default     |
+| --------- | ---------- | ---------------------------------------------------------------- | ------------------------------------ | ----------- |
+| `label`   | `label`    | Label / Aria-label for the button                                | `string`                             | `''`        |
+| `useIcon` | `use-icon` | Controls if the icon-button should be used over the label button | `boolean`                            | `false`     |
+| `variant` | `variant`  | Label Button variant                                             | `"neutral" \| "primary" \| "subtle"` | `'primary'` |
+
+
+## Methods
+
+### `closeDialog() => Promise<void>`
+
+Closes the dialog
+
+#### Returns
+
+Type: `Promise<void>`
+
+
+
+### `openDialog() => Promise<void>`
+
+Opens the dialog
+
+#### Returns
+
+Type: `Promise<void>`
+
+
 
 
 ## Dependencies
