@@ -318,6 +318,7 @@ export const DIRECTIVES = [
   d.SdsNavigation,
   d.SdsNavigationButton,
   d.SdsNavigationPill,
+  d.SdsNotification,
   d.SdsPicture,
   d.SdsSelect,
   d.SdsSelectField,

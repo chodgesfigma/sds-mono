@@ -13,6 +13,19 @@
 | `variant`  | `variant`  | The button default variant | `"neutral" \| "primary" \| "subtle"` | `'primary'` |
 
 
+## Dependencies
+
+### Used by
+
+ - [sds-notification](../../Notification)
+
+### Graph
+```mermaid
+graph TD;
+  sds-notification --> sds-button
+  style sds-button fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
