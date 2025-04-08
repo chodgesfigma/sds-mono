@@ -12,14 +12,21 @@ export class SdsPaginationPrevious {
   @Prop() label = 'Previous';
 
   /**
-   * Disables this nav button
+   * Link for the next page (currently WIP), disables the button if null
    */
-  @Prop() disabled = false;
+  @Prop() href: string | null = null;
 
   render() {
-    // {...(href === null ? { disabled: true } : { href })}
     return (
-      <sds-button variant="subtle" aria-label="Previous page">
+      <sds-button
+        {...(this.href === null
+          ? { disabled: true }
+          : {
+              /* TODO: resolve href */
+            })}
+        variant="subtle"
+        aria-label="Previous page"
+      >
         <sds-icon-arrow-left />
         <slot>{this.label}</slot>
       </sds-button>

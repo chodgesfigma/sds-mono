@@ -12,14 +12,22 @@ export class SdsPaginationNext {
   @Prop() label = 'Next';
 
   /**
-   * Disables this nav button
+   * Link for the next page (currently WIP), disables the button if null
    */
-  @Prop() disabled = false;
+  @Prop() href: string | null = null;
 
   render() {
-    // {...(href === null ? { disabled: true } : { href })}
     return (
-      <sds-button variant="subtle" aria-label="Next page" class="button">
+      <sds-button
+        {...(this.href === null
+          ? { disabled: true }
+          : {
+              /* TODO: resolve href */
+            })}
+        variant="subtle"
+        aria-label="Next page"
+        class="button"
+      >
         <slot>{this.label}</slot>
         <sds-icon-arrow-right />
       </sds-button>

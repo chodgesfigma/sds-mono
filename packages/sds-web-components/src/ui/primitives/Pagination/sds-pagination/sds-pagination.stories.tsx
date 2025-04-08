@@ -17,25 +17,26 @@ const meta = {
   component: 'sds-pagination',
   render: args => `
   <sds-pagination ${spread(args)}>
-      <sds-pagination-previous></sds-pagination-previous>
-      <sds-pagination-list>
-        <sds-pagination-page href="?page=1" page-number=1></sds-pagination-page>
-        <sds-pagination-page href="?page=2" page-number=2></sds-pagination-page>
-        <sds-pagination-page href="?page=3" page-number=3 current></sds-pagination-page>
-        <sds-pagination-page href="?page=4" page-number=4></sds-pagination-page>
-        <sds-pagination-gap></sds-pagination-gap>
-        <sds-pagination-page href="?page=65" page-number=65></sds-pagination-page>
-        <sds-pagination-page href="?page=66" page-number=66></sds-pagination-page>
-      </sds-pagination-list>
-      <sds-pagination-next href="?page=4"></sds-pagination-next>
-    </sds-pagination>`,
+    <sds-pagination-previous href="?page=2"></sds-pagination-previous>
+    <sds-pagination-list>
+      <sds-pagination-page href="?page=1" page-number=1></sds-pagination-page>
+      <sds-pagination-page href="?page=2" page-number=2></sds-pagination-page>
+      <sds-pagination-page href="?page=3" page-number=3 current></sds-pagination-page>
+      <sds-pagination-page href="?page=4" page-number=4></sds-pagination-page>
+      <sds-pagination-gap></sds-pagination-gap>
+      <sds-pagination-page href="?page=65" page-number=65></sds-pagination-page>
+      <sds-pagination-page href="?page=66" page-number=66></sds-pagination-page>
+    </sds-pagination-list>
+    <sds-pagination-next href="?page=4"></sds-pagination-next>
+  </sds-pagination>
+`,
   decorators: [withActions],
 } satisfies Meta<ComponentArgs>;
 
 export default meta;
 
 type Story = StoryObj<ComponentArgs>;
-export const Primary: Story = {
+export const Pagination: Story = {
   args: {
     ariaLabel: 'Page navigation',
   },

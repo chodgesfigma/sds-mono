@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property   | Attribute  | Description                                                                                  | Type      | Default  |
-| ---------- | ---------- | -------------------------------------------------------------------------------------------- | --------- | -------- |
-| `disabled` | `disabled` | Disables this nav button                                                                     | `boolean` | `false`  |
-| `label`    | `label`    | Label for the next page button, defaults to 'Next' and can be overridden via a child element | `string`  | `'Next'` |
+| Property | Attribute | Description                                                                                  | Type             | Default  |
+| -------- | --------- | -------------------------------------------------------------------------------------------- | ---------------- | -------- |
+| `href`   | `href`    | Link for the next page (currently WIP), disables the button if null                          | `null \| string` | `null`   |
+| `label`  | `label`   | Label for the next page button, defaults to 'Next' and can be overridden via a child element | `string`         | `'Next'` |
 
 
 ## Dependencies
