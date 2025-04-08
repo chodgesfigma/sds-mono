@@ -1,5 +1,9 @@
 @import 'reset';
 
+:host {
+  display: block;
+}
+
 .button {
   --border-radius: var(--sds-size-radius-200);
 
