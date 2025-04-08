@@ -7065,14 +7065,14 @@ export declare interface SdsPaginationList extends Components.SdsPaginationList 
 
 
 @ProxyCmp({
-  inputs: ['disabled', 'label']
+  inputs: ['href', 'label']
 })
 @Component({
   selector: 'sds-pagination-next',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['disabled', 'label'],
+  inputs: ['href', 'label'],
 })
 export class SdsPaginationNext {
   protected el: HTMLSdsPaginationNextElement;
@@ -7109,14 +7109,14 @@ export declare interface SdsPaginationPage extends Components.SdsPaginationPage 
 
 
 @ProxyCmp({
-  inputs: ['disabled', 'label']
+  inputs: ['href', 'label']
 })
 @Component({
   selector: 'sds-pagination-previous',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['disabled', 'label'],
+  inputs: ['href', 'label'],
 })
 export class SdsPaginationPrevious {
   protected el: HTMLSdsPaginationPreviousElement;

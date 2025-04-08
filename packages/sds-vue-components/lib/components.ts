@@ -2028,7 +2028,7 @@ export const SdsPaginationList = /*@__PURE__*/ defineContainer<JSX.SdsPagination
 
 export const SdsPaginationNext = /*@__PURE__*/ defineContainer<JSX.SdsPaginationNext>('sds-pagination-next', defineSdsPaginationNext, [
   'label',
-  'disabled'
+  'href'
 ]);
 
 
@@ -2041,7 +2041,7 @@ export const SdsPaginationPage = /*@__PURE__*/ defineContainer<JSX.SdsPagination
 
 export const SdsPaginationPrevious = /*@__PURE__*/ defineContainer<JSX.SdsPaginationPrevious>('sds-pagination-previous', defineSdsPaginationPrevious, [
   'label',
-  'disabled'
+  'href'
 ]);
 
 
