@@ -327,6 +327,12 @@ import { SdsLogo as SdsLogoElement, defineCustomElement as defineSdsLogo } from 
 import { SdsNavigationButton as SdsNavigationButtonElement, defineCustomElement as defineSdsNavigationButton } from "sds-web-components/dist/components/sds-navigation-button.js";
 import { SdsNavigationPill as SdsNavigationPillElement, defineCustomElement as defineSdsNavigationPill } from "sds-web-components/dist/components/sds-navigation-pill.js";
 import { SdsNavigation as SdsNavigationElement, defineCustomElement as defineSdsNavigation } from "sds-web-components/dist/components/sds-navigation.js";
+import { SdsPaginationGap as SdsPaginationGapElement, defineCustomElement as defineSdsPaginationGap } from "sds-web-components/dist/components/sds-pagination-gap.js";
+import { SdsPaginationList as SdsPaginationListElement, defineCustomElement as defineSdsPaginationList } from "sds-web-components/dist/components/sds-pagination-list.js";
+import { SdsPaginationNext as SdsPaginationNextElement, defineCustomElement as defineSdsPaginationNext } from "sds-web-components/dist/components/sds-pagination-next.js";
+import { SdsPaginationPage as SdsPaginationPageElement, defineCustomElement as defineSdsPaginationPage } from "sds-web-components/dist/components/sds-pagination-page.js";
+import { SdsPaginationPrevious as SdsPaginationPreviousElement, defineCustomElement as defineSdsPaginationPrevious } from "sds-web-components/dist/components/sds-pagination-previous.js";
+import { SdsPagination as SdsPaginationElement, defineCustomElement as defineSdsPagination } from "sds-web-components/dist/components/sds-pagination.js";
 import { SdsPicture as SdsPictureElement, defineCustomElement as defineSdsPicture } from "sds-web-components/dist/components/sds-picture.js";
 import { SdsSelectField as SdsSelectFieldElement, defineCustomElement as defineSdsSelectField } from "sds-web-components/dist/components/sds-select-field.js";
 import { SdsSelectItem as SdsSelectItemElement, defineCustomElement as defineSdsSelectItem } from "sds-web-components/dist/components/sds-select-item.js";
@@ -3842,6 +3848,72 @@ export const SdsNavigationPill: StencilReactComponent<SdsNavigationPillElement, 
     react: React,
     events: { onSdsNavigationSelected: 'sds-navigation-selected' } as SdsNavigationPillEvents,
     defineCustomElement: defineSdsNavigationPill
+});
+
+type SdsPaginationEvents = NonNullable<unknown>;
+
+export const SdsPagination: StencilReactComponent<SdsPaginationElement, SdsPaginationEvents> = /*@__PURE__*/ createComponent<SdsPaginationElement, SdsPaginationEvents>({
+    tagName: 'sds-pagination',
+    elementClass: SdsPaginationElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsPaginationEvents,
+    defineCustomElement: defineSdsPagination
+});
+
+type SdsPaginationGapEvents = NonNullable<unknown>;
+
+export const SdsPaginationGap: StencilReactComponent<SdsPaginationGapElement, SdsPaginationGapEvents> = /*@__PURE__*/ createComponent<SdsPaginationGapElement, SdsPaginationGapEvents>({
+    tagName: 'sds-pagination-gap',
+    elementClass: SdsPaginationGapElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsPaginationGapEvents,
+    defineCustomElement: defineSdsPaginationGap
+});
+
+type SdsPaginationListEvents = NonNullable<unknown>;
+
+export const SdsPaginationList: StencilReactComponent<SdsPaginationListElement, SdsPaginationListEvents> = /*@__PURE__*/ createComponent<SdsPaginationListElement, SdsPaginationListEvents>({
+    tagName: 'sds-pagination-list',
+    elementClass: SdsPaginationListElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsPaginationListEvents,
+    defineCustomElement: defineSdsPaginationList
+});
+
+type SdsPaginationNextEvents = NonNullable<unknown>;
+
+export const SdsPaginationNext: StencilReactComponent<SdsPaginationNextElement, SdsPaginationNextEvents> = /*@__PURE__*/ createComponent<SdsPaginationNextElement, SdsPaginationNextEvents>({
+    tagName: 'sds-pagination-next',
+    elementClass: SdsPaginationNextElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsPaginationNextEvents,
+    defineCustomElement: defineSdsPaginationNext
+});
+
+type SdsPaginationPageEvents = NonNullable<unknown>;
+
+export const SdsPaginationPage: StencilReactComponent<SdsPaginationPageElement, SdsPaginationPageEvents> = /*@__PURE__*/ createComponent<SdsPaginationPageElement, SdsPaginationPageEvents>({
+    tagName: 'sds-pagination-page',
+    elementClass: SdsPaginationPageElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsPaginationPageEvents,
+    defineCustomElement: defineSdsPaginationPage
+});
+
+type SdsPaginationPreviousEvents = NonNullable<unknown>;
+
+export const SdsPaginationPrevious: StencilReactComponent<SdsPaginationPreviousElement, SdsPaginationPreviousEvents> = /*@__PURE__*/ createComponent<SdsPaginationPreviousElement, SdsPaginationPreviousEvents>({
+    tagName: 'sds-pagination-previous',
+    elementClass: SdsPaginationPreviousElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsPaginationPreviousEvents,
+    defineCustomElement: defineSdsPaginationPrevious
 });
 
 type SdsPictureEvents = NonNullable<unknown>;
