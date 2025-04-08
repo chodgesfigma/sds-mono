@@ -332,6 +332,9 @@ import { SdsSelectField as SdsSelectFieldElement, defineCustomElement as defineS
 import { SdsSelectItem as SdsSelectItemElement, defineCustomElement as defineSdsSelectItem } from "sds-web-components/dist/components/sds-select-item.js";
 import { SdsSelect as SdsSelectElement, defineCustomElement as defineSdsSelect } from "sds-web-components/dist/components/sds-select.js";
 import { SdsSlider as SdsSliderElement, defineCustomElement as defineSdsSlider } from "sds-web-components/dist/components/sds-slider.js";
+import { SdsSwitchField as SdsSwitchFieldElement, defineCustomElement as defineSdsSwitchField } from "sds-web-components/dist/components/sds-switch-field.js";
+import { SdsSwitchGroup as SdsSwitchGroupElement, defineCustomElement as defineSdsSwitchGroup } from "sds-web-components/dist/components/sds-switch-group.js";
+import { SdsSwitch as SdsSwitchElement, defineCustomElement as defineSdsSwitch } from "sds-web-components/dist/components/sds-switch.js";
 import { SdsTabPanel as SdsTabPanelElement, defineCustomElement as defineSdsTabPanel } from "sds-web-components/dist/components/sds-tab-panel.js";
 import { SdsTab as SdsTabElement, defineCustomElement as defineSdsTab } from "sds-web-components/dist/components/sds-tab.js";
 import { SdsTabs as SdsTabsElement, defineCustomElement as defineSdsTabs } from "sds-web-components/dist/components/sds-tabs.js";
@@ -3903,6 +3906,39 @@ export const SdsSlider: StencilReactComponent<SdsSliderElement, SdsSliderEvents>
         onSdsInput: 'sds-input'
     } as SdsSliderEvents,
     defineCustomElement: defineSdsSlider
+});
+
+type SdsSwitchEvents = NonNullable<unknown>;
+
+export const SdsSwitch: StencilReactComponent<SdsSwitchElement, SdsSwitchEvents> = /*@__PURE__*/ createComponent<SdsSwitchElement, SdsSwitchEvents>({
+    tagName: 'sds-switch',
+    elementClass: SdsSwitchElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsSwitchEvents,
+    defineCustomElement: defineSdsSwitch
+});
+
+type SdsSwitchFieldEvents = { onSdsChange: EventName<CustomEvent<{ checked: boolean; value: string }>> };
+
+export const SdsSwitchField: StencilReactComponent<SdsSwitchFieldElement, SdsSwitchFieldEvents> = /*@__PURE__*/ createComponent<SdsSwitchFieldElement, SdsSwitchFieldEvents>({
+    tagName: 'sds-switch-field',
+    elementClass: SdsSwitchFieldElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onSdsChange: 'sds-change' } as SdsSwitchFieldEvents,
+    defineCustomElement: defineSdsSwitchField
+});
+
+type SdsSwitchGroupEvents = NonNullable<unknown>;
+
+export const SdsSwitchGroup: StencilReactComponent<SdsSwitchGroupElement, SdsSwitchGroupEvents> = /*@__PURE__*/ createComponent<SdsSwitchGroupElement, SdsSwitchGroupEvents>({
+    tagName: 'sds-switch-group',
+    elementClass: SdsSwitchGroupElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsSwitchGroupEvents,
+    defineCustomElement: defineSdsSwitchGroup
 });
 
 type SdsTabEvents = {
