@@ -1,0 +1,19 @@
+@import 'reset';
+
+:host {
+  display: block;
+}
+
+.keyboard {
+  align-items: center;
+  color: var(--menu-item-description-color);
+  display: flex;
+  gap: var(--sds-size-space-100);
+  text-transform: capitalize;
+
+  > kbd {
+    display: flex;
+    font: var(--sds-font-body-base);
+    text-align: center;
+  }
+}
