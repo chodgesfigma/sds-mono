@@ -231,6 +231,28 @@ export declare interface SdsDescription extends Components.SdsDescription {}
 
 
 @ProxyCmp({
+  inputs: ['ariaLabel', 'disabled', 'size', 'type', 'variant']
+})
+@Component({
+  selector: 'sds-destructive-icon-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['ariaLabel', 'disabled', 'size', 'type', 'variant'],
+})
+export class SdsDestructiveIconButton {
+  protected el: HTMLSdsDestructiveIconButtonElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsDestructiveIconButton extends Components.SdsDestructiveIconButton {}
+
+
+@ProxyCmp({
   inputs: ['disabled']
 })
 @Component({
@@ -1238,6 +1260,28 @@ export class SdsIconBriefcase {
 
 
 export declare interface SdsIconBriefcase extends Components.SdsIconBriefcase {}
+
+
+@ProxyCmp({
+  inputs: ['ariaLabel', 'disabled', 'size', 'type', 'variant']
+})
+@Component({
+  selector: 'sds-icon-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['ariaLabel', 'disabled', 'size', 'type', 'variant'],
+})
+export class SdsIconButton {
+  protected el: HTMLSdsIconButtonElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsIconButton extends Components.SdsIconButton {}
 
 
 @ProxyCmp({

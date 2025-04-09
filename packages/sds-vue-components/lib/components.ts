@@ -14,6 +14,7 @@ import { defineCustomElement as defineSdsCheckbox } from 'sds-web-components/dis
 import { defineCustomElement as defineSdsCheckboxField } from 'sds-web-components/dist/components/sds-checkbox-field.js';
 import { defineCustomElement as defineSdsCheckboxGroup } from 'sds-web-components/dist/components/sds-checkbox-group.js';
 import { defineCustomElement as defineSdsDescription } from 'sds-web-components/dist/components/sds-description.js';
+import { defineCustomElement as defineSdsDestructiveIconButton } from 'sds-web-components/dist/components/sds-destructive-icon-button.js';
 import { defineCustomElement as defineSdsField } from 'sds-web-components/dist/components/sds-field.js';
 import { defineCustomElement as defineSdsFieldError } from 'sds-web-components/dist/components/sds-field-error.js';
 import { defineCustomElement as defineSdsFieldGroup } from 'sds-web-components/dist/components/sds-field-group.js';
@@ -60,6 +61,7 @@ import { defineCustomElement as defineSdsIconBookOpen } from 'sds-web-components
 import { defineCustomElement as defineSdsIconBookmark } from 'sds-web-components/dist/components/sds-icon-bookmark.js';
 import { defineCustomElement as defineSdsIconBox } from 'sds-web-components/dist/components/sds-icon-box.js';
 import { defineCustomElement as defineSdsIconBriefcase } from 'sds-web-components/dist/components/sds-icon-briefcase.js';
+import { defineCustomElement as defineSdsIconButton } from 'sds-web-components/dist/components/sds-icon-button.js';
 import { defineCustomElement as defineSdsIconCalendar } from 'sds-web-components/dist/components/sds-icon-calendar.js';
 import { defineCustomElement as defineSdsIconCamera } from 'sds-web-components/dist/components/sds-icon-camera.js';
 import { defineCustomElement as defineSdsIconCameraOff } from 'sds-web-components/dist/components/sds-icon-camera-off.js';
@@ -427,6 +429,15 @@ export const SdsCheckboxGroup = /*@__PURE__*/ defineContainer<JSX.SdsCheckboxGro
 export const SdsDescription = /*@__PURE__*/ defineContainer<JSX.SdsDescription>('sds-description', defineSdsDescription);
 
 
+export const SdsDestructiveIconButton = /*@__PURE__*/ defineContainer<JSX.SdsDestructiveIconButton>('sds-destructive-icon-button', defineSdsDestructiveIconButton, [
+  'type',
+  'size',
+  'variant',
+  'disabled',
+  'ariaLabel'
+]);
+
+
 export const SdsField = /*@__PURE__*/ defineContainer<JSX.SdsField>('sds-field', defineSdsField, [
   'disabled'
 ]);
@@ -658,6 +669,15 @@ export const SdsIconBox = /*@__PURE__*/ defineContainer<JSX.SdsIconBox>('sds-ico
 
 export const SdsIconBriefcase = /*@__PURE__*/ defineContainer<JSX.SdsIconBriefcase>('sds-icon-briefcase', defineSdsIconBriefcase, [
   'size'
+]);
+
+
+export const SdsIconButton = /*@__PURE__*/ defineContainer<JSX.SdsIconButton>('sds-icon-button', defineSdsIconButton, [
+  'type',
+  'size',
+  'variant',
+  'disabled',
+  'ariaLabel'
 ]);
 
 
