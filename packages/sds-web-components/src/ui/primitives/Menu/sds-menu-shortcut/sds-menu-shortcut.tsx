@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, h, Element, State } from '@stencil/core';
 
 @Component({
   tag: 'sds-menu-shortcut',
@@ -6,25 +6,21 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class SdsMenuShortcut {
+  @Element() host!: HTMLElement;
+  /**
+   * The parsed innerHTML, that's been split into further <kbd> elements
+   */
+  @State() childrenData?: string[];
+
+  componentDidLoad() {
+    const slotted = this.host.innerHTML;
+    const splitContent = slotted.split('');
+    if (splitContent.length > 0) {
+      this.childrenData = splitContent;
+    }
+  }
+
   render() {
-    return (
-      <Host>
-        <slot></slot>
-      </Host>
-    );
+    return this.childrenData ? <sds-keyboard class="menu-shortcut">{this.childrenData}</sds-keyboard> : <slot />;
   }
 }
-
-// export type MenuShortcutProps = KeyboardProps;
-// export function MenuShortcut({
-//   children,
-//   className,
-//   ...props
-// }: MenuShortcutProps) {
-//   const classNames = clsx(className, "menu-shortcut");
-//   return (
-//     <Keyboard {...props} className={classNames}>
-//       {children}
-//     </Keyboard>
-//   );
-// }

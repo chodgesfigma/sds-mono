@@ -14,8 +14,3 @@ export class SdsMenu {
     );
   }
 }
-
-// export type MenuProps<T> = RACMenuProps<T>;
-// export function Menu<T extends object>({ className, ...props }: MenuProps<T>) {
-//   return <RACMenu className={clsx(className, "menu")} {...props} />;
-// }

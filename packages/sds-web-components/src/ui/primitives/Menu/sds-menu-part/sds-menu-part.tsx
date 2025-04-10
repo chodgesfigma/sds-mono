@@ -20,7 +20,7 @@ export class SdsMenuPart {
       case 'section':
       case 'header':
         return (
-          <div class={className}>
+          <div class={className} role={this.variant}>
             <slot />
           </div>
         );
@@ -45,13 +45,3 @@ export class SdsMenuPart {
     }
   }
 }
-
-/*
-
-export type MenuSeparatorProps = RACSeparatorProps;
-export function MenuSeparator({ className, ...props }: MenuSeparatorProps) {
-  const classNames = clsx(className, "menu-separator");
-  return <RACSeparator {...props} className={classNames} />;
-}
-
-*/

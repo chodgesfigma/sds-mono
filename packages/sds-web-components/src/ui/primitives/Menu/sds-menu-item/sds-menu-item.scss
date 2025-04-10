@@ -2,4 +2,54 @@
 
 :host {
   display: block;
+  width: 100%;
+
+  --menu-label-column-start: 1;
+  --menu-label-column-span-a: 2;
+  --menu-label-column-span-b: 0;
+  --menu-description-column-start: 1;
+  --menu-description-column-span: 3;
+  --menu-item-background-color: transparent;
+  --menu-item-icon-color: var(--sds-color-icon-default-default);
+  --menu-item-label-color: var(--sds-color-text-default-default);
+  --menu-item-description-color: var(--sds-color-text-default-secondary);
+  --icon-color: var(--menu-item-icon-color);
+}
+
+.menu-item {
+  box-sizing: border-box;
+  background-color: var(--menu-item-background-color);
+  border-radius: var(--sds-size-radius-200);
+  color: var(--menu-item-label-color);
+  gap: var(--sds-size-space-100) var(--sds-size-space-400);
+  display: grid;
+  font: var(--sds-font-body-base);
+  grid-template-columns: 1fr auto;
+  padding: var(--sds-size-space-300) var(--sds-size-space-400);
+  width: 100%;
+
+  &:focus-visible {
+    outline: none;
+  }
+
+  &:focus-visible,
+  &:hover:not(:disabled) {
+    --menu-item-icon-color: var(--sds-color-icon-brand-on-brand);
+    --menu-item-label-color: var(--sds-color-text-brand-on-brand);
+    --menu-item-description-color: var(--sds-color-text-brand-on-brand);
+    --menu-item-background-color: var(--sds-color-background-brand-default);
+  }
+
+  &:disabled {
+    --menu-item-icon-color: var(--sds-color-icon-disabled-default);
+    --menu-item-label-color: var(--sds-color-text-disabled-default);
+    --menu-item-description-color: var(--sds-color-text-disabled-default);
+  }
+
+  &:has(> .icon) {
+    --menu-label-column-start: 2;
+    --menu-label-column-span-a: 1;
+    --menu-description-column-start: 2;
+    --menu-description-column-span: 2;
+  }
 }

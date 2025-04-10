@@ -1,3 +1,4 @@
+import { SlPopup } from '@shoelace-style/shoelace';
 import { Component, Listen, Method, Prop, State, h } from '@stencil/core';
 import { DefaultVariant } from 'src/components';
 
@@ -19,8 +20,23 @@ export class SdsMenuButton {
    */
   @Prop() variant: DefaultVariant = 'primary';
 
+  /**
+   * Placement for where the menu appears in relation to the button
+   */
+  @Prop() placement: SlPopup['placement'] = 'bottom-start';
+
+  /**
+   * Disables the menu button
+   */
+  @Prop() isDisabled = false;
+
   @Listen('sds-close-menu')
   handleCloseMenu() {
+    this.closeMenu();
+  }
+
+  @Listen('sds-clicked')
+  handleMenuItemClicked() {
     this.closeMenu();
   }
 
@@ -29,6 +45,7 @@ export class SdsMenuButton {
    */
   @Method()
   async openMenu() {
+    if (this.isDisabled) return;
     this.isMenuOpen = true;
   }
 
@@ -37,53 +54,31 @@ export class SdsMenuButton {
    */
   @Method()
   async closeMenu() {
+    if (this.isDisabled) return;
     this.isMenuOpen = false;
+  }
+
+  /**
+   * Toggles the menu open/closed
+   */
+  @Method()
+  async toggleMenu() {
+    if (this.isDisabled) return;
+    this.isMenuOpen = !this.isMenuOpen;
   }
 
   render() {
     return (
       <sds-menu-trigger>
-        <sds-button onClick={() => this.openMenu()} aria-label={this.label} class="icon-button">
-          <slot name="icon">{this.label}</slot>
-        </sds-button>
-        <sds-menu-popover isOpen={this.isMenuOpen}>
-          <sds-dialog>
+        <sds-menu-popover isOpen={this.isMenuOpen} placement={this.placement}>
+          <sds-button disabled={this.isDisabled} slot="anchor" onClick={() => this.toggleMenu()} aria-label={this.label} class="menu-button" variant={this.variant}>
+            <slot name="icon">{this.label}</slot>
+          </sds-button>
+          <sds-menu>
             <slot></slot>
-          </sds-dialog>
+          </sds-menu>
         </sds-menu-popover>
       </sds-menu-trigger>
     );
   }
 }
-
-// export interface MenuButtonProps<T>
-//   extends RACMenuProps<T>,
-//     Omit<RACMenuTriggerProps, "children"> {
-//   label: string;
-//   variant?: ButtonProps["variant"];
-//   placement?: MenuPopoverProps["placement"];
-//   icon?: React.ReactNode;
-// }
-// export function MenuButton<T extends object>({
-//   label,
-//   children,
-//   icon,
-//   placement,
-//   variant,
-//   ...props
-// }: MenuButtonProps<T>) {
-//   return (
-//     <MenuTrigger>
-//       {icon ? (
-//         <IconButton variant={variant} aria-label={label}>
-//           {icon}
-//         </IconButton>
-//       ) : (
-//         <Button variant={variant}>{label}</Button>
-//       )}
-//       <MenuPopover placement={placement}>
-//         <Menu {...props}>{children}</Menu>
-//       </MenuPopover>
-//     </MenuTrigger>
-//   );
-// }

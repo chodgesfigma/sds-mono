@@ -1,5 +1,6 @@
 import { SlPopup } from '@shoelace-style/shoelace';
-import { Component, Prop, h } from '@stencil/core';
+import '@shoelace-style/shoelace/dist/components/popup/popup.js';
+import { Component, Host, Prop, h } from '@stencil/core';
 
 @Component({
   tag: 'sds-menu-popover',
@@ -7,20 +8,28 @@ import { Component, Prop, h } from '@stencil/core';
   shadow: true,
 })
 export class SdsMenuPopover {
+  slPopoverRef!: SlPopup;
+
+  /**
+   * Controls if the popover is open or not
+   */
   @Prop() isOpen = false;
 
+  /**
+   * Placement for the popover
+   */
   @Prop() placement: SlPopup['placement'] = 'bottom-start';
 
   render() {
     return (
-      <sl-popup active={this.isOpen} placement={this.placement}>
-        <slot></slot>
-      </sl-popup>
+      <Host>
+        <sl-popup active={this.isOpen} placement={this.placement} distance="8" ref={(el: SlPopup) => (this.slPopoverRef = el)}>
+          <span slot="anchor">
+            <slot name="anchor" />
+          </span>
+          <slot></slot>
+        </sl-popup>
+      </Host>
     );
   }
 }
-
-// export type MenuPopoverProps = RACPopoverProps;
-// export function MenuPopover({ ...props }: MenuPopoverProps) {
-//   return <RACPopover {...props} />;
-// }

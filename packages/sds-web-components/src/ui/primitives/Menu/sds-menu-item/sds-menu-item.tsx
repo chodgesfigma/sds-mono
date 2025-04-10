@@ -1,4 +1,4 @@
-import { Component, Host, h } from '@stencil/core';
+import { Component, Event, EventEmitter, h, Prop } from '@stencil/core';
 
 @Component({
   tag: 'sds-menu-item',
@@ -6,29 +6,34 @@ import { Component, Host, h } from '@stencil/core';
   shadow: true,
 })
 export class SdsMenuItem {
+  /**
+   * Disables the menu-item
+   */
+  @Prop() isDisabled = false;
+
+  /**
+   * WIP: Marks this item as a submenu and prevents closing the parent menu when clicked
+   * TODO: implement a clean way to do submenus
+   */
+  // @Prop() isSubMenu = false;
+
+  /**
+   * Emitted when the menu item is clicked
+   */
+  @Event({
+    eventName: 'sds-clicked',
+  })
+  clicked!: EventEmitter;
+
+  handleItemClicked = () => {
+    this.clicked.emit();
+  };
+
   render() {
     return (
-      <Host>
-        <slot></slot>
-      </Host>
+      <button class="menu-item" disabled={this.isDisabled} role="menuitem" onClick={this.handleItemClicked}>
+        <slot />
+      </button>
     );
   }
 }
-
-// export type MenuItemProps = RACMenuItemProps;
-// export function MenuItem({ className, ...props }: MenuItemProps) {
-//   const classNames = clsx(className, "menu-item");
-//   const textValue =
-//     props.textValue ||
-//     (typeof props.children === "string" ? props.children : undefined);
-//   return (
-//     <RACMenuItem {...props} className={classNames} textValue={textValue}>
-//       {({ hasSubmenu }) => (
-//         <>
-//           {props.children}
-//           {hasSubmenu && <IconChevronDown />}
-//         </>
-//       )}
-//     </RACMenuItem>
-//   );
-// }

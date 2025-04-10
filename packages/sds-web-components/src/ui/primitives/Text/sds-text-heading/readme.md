@@ -15,6 +15,7 @@
 ### Used by
 
  - [sds-dialog-title](../../dialog/sds-dialog-title)
+ - [sds-menu-part](../../Menu/sds-menu-part)
  - [sds-text-content-heading](../sds-text-content-heading)
  - [sds-text-price](../sds-text-price)
 
@@ -22,6 +23,7 @@
 ```mermaid
 graph TD;
   sds-dialog-title --> sds-text-heading
+  sds-menu-part --> sds-text-heading
   sds-text-content-heading --> sds-text-heading
   sds-text-price --> sds-text-heading
   style sds-text-heading fill:#f9f,stroke:#333,stroke-width:4px
