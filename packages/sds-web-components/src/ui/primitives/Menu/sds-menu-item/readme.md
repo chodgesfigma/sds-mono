@@ -7,10 +7,9 @@
 
 ## Properties
 
-| Property     | Attribute     | Description                                                                                                                    | Type      | Default |
-| ------------ | ------------- | ------------------------------------------------------------------------------------------------------------------------------ | --------- | ------- |
-| `isDisabled` | `is-disabled` | Disables the menu-item                                                                                                         | `boolean` | `false` |
-| `isSubMenu`  | `is-sub-menu` | WIP: Marks this item as a submenu and prevents closing the parent menu when clicked TODO: implement a clean way to do submenus | `boolean` | `false` |
+| Property     | Attribute     | Description            | Type      | Default |
+| ------------ | ------------- | ---------------------- | --------- | ------- |
+| `isDisabled` | `is-disabled` | Disables the menu-item | `boolean` | `false` |
 
 
 ## Events
