@@ -1,5 +1,5 @@
-import { SdsDescriptionFunctional } from '../../Fieldset/sds-description/sds-description-functional';
-import { SdsLabelFunctional } from '../../Fieldset/sds-label/sds-label-functional';
+import { SdsDescriptionFunctional } from '../../fieldset-temp/sds-description/sds-description-functional';
+import { SdsLabelFunctional } from '../../fieldset-temp/sds-label/sds-label-functional';
 import { SdsCheckboxFunctional } from '../sds-checkbox/sds-checkbox-functional';
 import { Component, Element, Event, EventEmitter, Prop, State, Watch, h } from '@stencil/core';
 import clsx from 'clsx';
