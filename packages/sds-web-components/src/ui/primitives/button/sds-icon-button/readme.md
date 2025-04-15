@@ -16,6 +16,19 @@
 | `variant`                | `variant`    | The button default variant | `"neutral" \| "primary" \| "subtle"` | `'primary'` |
 
 
+## Dependencies
+
+### Used by
+
+ - [sds-search](../../Search/sds-search)
+
+### Graph
+```mermaid
+graph TD;
+  sds-search --> sds-icon-button
+  style sds-icon-button fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

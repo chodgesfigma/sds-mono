@@ -324,6 +324,7 @@ import { defineCustomElement as defineSdsNavigation } from 'sds-web-components/d
 import { defineCustomElement as defineSdsNavigationButton } from 'sds-web-components/dist/components/sds-navigation-button.js';
 import { defineCustomElement as defineSdsNavigationPill } from 'sds-web-components/dist/components/sds-navigation-pill.js';
 import { defineCustomElement as defineSdsPicture } from 'sds-web-components/dist/components/sds-picture.js';
+import { defineCustomElement as defineSdsSearch } from 'sds-web-components/dist/components/sds-search.js';
 import { defineCustomElement as defineSdsSelect } from 'sds-web-components/dist/components/sds-select.js';
 import { defineCustomElement as defineSdsSelectField } from 'sds-web-components/dist/components/sds-select-field.js';
 import { defineCustomElement as defineSdsSelectItem } from 'sds-web-components/dist/components/sds-select-item.js';
@@ -2030,6 +2031,17 @@ export const SdsNavigationPill = /*@__PURE__*/ defineContainer<JSX.SdsNavigation
 
 
 export const SdsPicture = /*@__PURE__*/ defineContainer<JSX.SdsPicture>('sds-picture', defineSdsPicture);
+
+
+export const SdsSearch = /*@__PURE__*/ defineContainer<JSX.SdsSearch>('sds-search', defineSdsSearch, [
+  'ariaLabel',
+  'results',
+  'disabled',
+  'placeholder',
+  'sds-search'
+], [
+  'sds-search'
+]);
 
 
 export const SdsSelect = /*@__PURE__*/ defineContainer<JSX.SdsSelect>('sds-select', defineSdsSelect, [

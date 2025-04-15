@@ -7066,6 +7066,34 @@ export declare interface SdsPicture extends Components.SdsPicture {}
 
 
 @ProxyCmp({
+  inputs: ['ariaLabel', 'disabled', 'placeholder', 'results']
+})
+@Component({
+  selector: 'sds-search',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['ariaLabel', 'disabled', 'placeholder', 'results'],
+})
+export class SdsSearch {
+  protected el: HTMLSdsSearchElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['sds-search']);
+  }
+}
+
+
+export declare interface SdsSearch extends Components.SdsSearch {
+  /**
+   * Emitted when search input changes
+   */
+  'sds-search': EventEmitter<CustomEvent<{ searchTerm: string }>>;
+}
+
+
+@ProxyCmp({
   inputs: ['disabled', 'placeholder']
 })
 @Component({

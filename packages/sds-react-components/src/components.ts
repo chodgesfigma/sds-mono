@@ -330,6 +330,7 @@ import { SdsNavigationButton as SdsNavigationButtonElement, defineCustomElement 
 import { SdsNavigationPill as SdsNavigationPillElement, defineCustomElement as defineSdsNavigationPill } from "sds-web-components/dist/components/sds-navigation-pill.js";
 import { SdsNavigation as SdsNavigationElement, defineCustomElement as defineSdsNavigation } from "sds-web-components/dist/components/sds-navigation.js";
 import { SdsPicture as SdsPictureElement, defineCustomElement as defineSdsPicture } from "sds-web-components/dist/components/sds-picture.js";
+import { SdsSearch as SdsSearchElement, defineCustomElement as defineSdsSearch } from "sds-web-components/dist/components/sds-search.js";
 import { SdsSelectField as SdsSelectFieldElement, defineCustomElement as defineSdsSelectField } from "sds-web-components/dist/components/sds-select-field.js";
 import { SdsSelectItem as SdsSelectItemElement, defineCustomElement as defineSdsSelectItem } from "sds-web-components/dist/components/sds-select-item.js";
 import { SdsSelect as SdsSelectElement, defineCustomElement as defineSdsSelect } from "sds-web-components/dist/components/sds-select.js";
@@ -3877,6 +3878,17 @@ export const SdsPicture: StencilReactComponent<SdsPictureElement, SdsPictureEven
     react: React,
     events: {} as SdsPictureEvents,
     defineCustomElement: defineSdsPicture
+});
+
+type SdsSearchEvents = { onSdsSearch: EventName<CustomEvent<{ searchTerm: string }>> };
+
+export const SdsSearch: StencilReactComponent<SdsSearchElement, SdsSearchEvents> = /*@__PURE__*/ createComponent<SdsSearchElement, SdsSearchEvents>({
+    tagName: 'sds-search',
+    elementClass: SdsSearchElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onSdsSearch: 'sds-search' } as SdsSearchEvents,
+    defineCustomElement: defineSdsSearch
 });
 
 type SdsSelectEvents = NonNullable<unknown>;
