@@ -7066,14 +7066,14 @@ export declare interface SdsPicture extends Components.SdsPicture {}
 
 
 @ProxyCmp({
-  inputs: ['ariaLabel', 'disabled', 'placeholder', 'results']
+  inputs: ['ariaLabel', 'defaultValue', 'disabled', 'placeholder', 'results']
 })
 @Component({
   selector: 'sds-search',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['ariaLabel', 'disabled', 'placeholder', 'results'],
+  inputs: ['ariaLabel', 'defaultValue', 'disabled', 'placeholder', 'results'],
 })
 export class SdsSearch {
   protected el: HTMLSdsSearchElement;

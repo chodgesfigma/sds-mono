@@ -2035,9 +2035,10 @@ export const SdsPicture = /*@__PURE__*/ defineContainer<JSX.SdsPicture>('sds-pic
 
 export const SdsSearch = /*@__PURE__*/ defineContainer<JSX.SdsSearch>('sds-search', defineSdsSearch, [
   'ariaLabel',
-  'results',
+  'defaultValue',
   'disabled',
   'placeholder',
+  'results',
   'sds-search'
 ], [
   'sds-search'
