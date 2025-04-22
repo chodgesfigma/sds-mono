@@ -7,12 +7,13 @@
 
 ## Properties
 
-| Property      | Attribute     | Description                         | Type                    | Default     |
-| ------------- | ------------- | ----------------------------------- | ----------------------- | ----------- |
-| `ariaLabel`   | `aria-label`  | Label for the search input (hidden) | `string`                | `'Search'`  |
-| `disabled`    | `disabled`    | Disables the search                 | `boolean`               | `false`     |
-| `placeholder` | `placeholder` | Placeholder text for the search     | `string`                | `''`        |
-| `results`     | --            | Results to be shown below input     | `string[] \| undefined` | `undefined` |
+| Property       | Attribute       | Description                          | Type                    | Default     |
+| -------------- | --------------- | ------------------------------------ | ----------------------- | ----------- |
+| `ariaLabel`    | `aria-label`    | Label for the search input (hidden)  | `string`                | `'Search'`  |
+| `defaultValue` | `default-value` | Sets the default value for the input | `string`                | `''`        |
+| `disabled`     | `disabled`      | Disables the search                  | `boolean`               | `false`     |
+| `placeholder`  | `placeholder`   | Placeholder text for the search      | `string`                | `''`        |
+| `results`      | --              | Results to be shown below input      | `string[] \| undefined` | `undefined` |
 
 
 ## Events

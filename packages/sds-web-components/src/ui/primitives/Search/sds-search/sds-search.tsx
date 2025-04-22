@@ -1,5 +1,6 @@
 import { SdsInputFunctional } from '../../Input/sds-input/sds-input-functional';
 import { SdsLabelFunctional } from '../../fieldset/sds-label/sds-label-functional';
+import { SlMenuItem } from '@shoelace-style/shoelace';
 import '@shoelace-style/shoelace/dist/components/popup/popup.js';
 import { Component, Event, EventEmitter, Prop, State, h } from '@stencil/core';
 
@@ -61,7 +62,8 @@ export class SdsSearch {
     this.inputRef.value = clearedSearch;
   };
 
-  selectSearch = (search: string) => {
+  handleSelect = (e: CustomEvent<{ item: SlMenuItem }>) => {
+    const search = e.detail.item.value ?? '';
     this.searchTerm = search;
     this.search.emit({ searchTerm: search });
     this.inputRef.value = search;
@@ -99,9 +101,9 @@ export class SdsSearch {
           </span>
         </div>
         {this.results && this.results.length > 0 && (
-          <sds-list-box class="results">
+          <sds-list-box class="results" onSds-select={this.handleSelect}>
             {this.results?.map(searchResult => (
-              <sds-list-box-item key={searchResult} value={searchResult} onClick={() => this.selectSearch(searchResult)}>
+              <sds-list-box-item key={searchResult} value={searchResult}>
                 {searchResult}
               </sds-list-box-item>
             ))}

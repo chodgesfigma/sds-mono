@@ -1,6 +1,6 @@
 import { SdsListBoxItem } from '../sds-list-box-item/sds-list-box-item';
+import { SlMenu, SlMenuItem, SlSelectEvent } from '@shoelace-style/shoelace';
 import '@shoelace-style/shoelace/dist/components/menu/menu.js';
-import { SlMenu, SlMenuItem, SlSelectEvent } from '@shoelace-style/shoelace/dist/shoelace';
 import { Component, Host, h, Prop, Event, EventEmitter } from '@stencil/core';
 
 @Component({
