@@ -363,6 +363,7 @@ import { defineCustomElement as defineSdsTextareaField } from 'sds-web-component
 import { defineCustomElement as defineSdsToggleTag } from 'sds-web-components/dist/components/sds-toggle-tag.js';
 import { defineCustomElement as defineSdsToggleTagGroup } from 'sds-web-components/dist/components/sds-toggle-tag-group.js';
 import { defineCustomElement as defineSdsToggleTagList } from 'sds-web-components/dist/components/sds-toggle-tag-list.js';
+import { defineCustomElement as defineSdsTooltip } from 'sds-web-components/dist/components/sds-tooltip.js';
 
 
 export const SdsAccordion = /*@__PURE__*/ defineContainer<JSX.SdsAccordion>('sds-accordion', defineSdsAccordion, [
@@ -2295,5 +2296,12 @@ export const SdsToggleTagList = /*@__PURE__*/ defineContainer<JSX.SdsToggleTagLi
   'togglesUpdated'
 ], [
   'togglesUpdated'
+]);
+
+
+export const SdsTooltip = /*@__PURE__*/ defineContainer<JSX.SdsTooltip>('sds-tooltip', defineSdsTooltip, [
+  'isActive',
+  'placement',
+  'offset'
 ]);
 

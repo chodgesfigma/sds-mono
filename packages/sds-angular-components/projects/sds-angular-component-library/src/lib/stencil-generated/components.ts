@@ -7982,3 +7982,26 @@ export declare interface SdsToggleTagList extends Components.SdsToggleTagList {
 }
 
 
+@ProxyCmp({
+  inputs: ['isActive', 'offset', 'placement'],
+  methods: ['toggleTooltip']
+})
+@Component({
+  selector: 'sds-tooltip',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['isActive', 'offset', 'placement'],
+})
+export class SdsTooltip {
+  protected el: HTMLSdsTooltipElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsTooltip extends Components.SdsTooltip {}
+
+

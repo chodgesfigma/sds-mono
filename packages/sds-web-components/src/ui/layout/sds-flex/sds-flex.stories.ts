@@ -14,18 +14,7 @@ const meta = {
 
 export default meta;
 
-const renderChild = (text: string) =>
-  `<div
-      style="
-        display: grid;
-        place-items: center;
-        padding: 0.5rem 1rem;
-        background: var(--sds-color-background-brand-default);
-        color: var(--sds-color-text-brand-on-brand);
-      "
-    >
-      ${text}
-    </div>`;
+const renderChild = (text: string) => `<div class="item">${text}</div>`;
 
 type Story = StoryObj<ComponentArgs>;
 export const StoryFlex: Story = {
@@ -79,7 +68,18 @@ export const StoryFlex: Story = {
           container="true"
           flex-type="quarter"
         >
-            ${Array.from({ length: 15 }, () => renderChild('span')).join('')}
+            ${Array.from({ length: 16 }, () => renderChild('span')).join('')}
         </sds-flex>
-      </sds-flex>`,
+      </sds-flex>
+      
+      <style>
+        .item {
+          display: grid;
+          place-items: center;
+          padding: 0.5rem 1rem;
+          background: var(--sds-color-background-brand-default);
+          color: var(--sds-color-text-brand-on-brand);
+        }
+      </style>
+      `,
 };

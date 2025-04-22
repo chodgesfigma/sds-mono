@@ -369,6 +369,7 @@ import { SdsTextarea as SdsTextareaElement, defineCustomElement as defineSdsText
 import { SdsToggleTagGroup as SdsToggleTagGroupElement, defineCustomElement as defineSdsToggleTagGroup } from "sds-web-components/dist/components/sds-toggle-tag-group.js";
 import { SdsToggleTagList as SdsToggleTagListElement, defineCustomElement as defineSdsToggleTagList } from "sds-web-components/dist/components/sds-toggle-tag-list.js";
 import { SdsToggleTag as SdsToggleTagElement, defineCustomElement as defineSdsToggleTag } from "sds-web-components/dist/components/sds-toggle-tag.js";
+import { SdsTooltip as SdsTooltipElement, defineCustomElement as defineSdsTooltip } from "sds-web-components/dist/components/sds-tooltip.js";
 
 type SdsAccordionEvents = NonNullable<unknown>;
 
@@ -4332,4 +4333,15 @@ export const SdsToggleTagList: StencilReactComponent<SdsToggleTagListElement, Sd
     react: React,
     events: { onTogglesUpdated: 'togglesUpdated' } as SdsToggleTagListEvents,
     defineCustomElement: defineSdsToggleTagList
+});
+
+type SdsTooltipEvents = NonNullable<unknown>;
+
+export const SdsTooltip: StencilReactComponent<SdsTooltipElement, SdsTooltipEvents> = /*@__PURE__*/ createComponent<SdsTooltipElement, SdsTooltipEvents>({
+    tagName: 'sds-tooltip',
+    elementClass: SdsTooltipElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsTooltipEvents,
+    defineCustomElement: defineSdsTooltip
 });

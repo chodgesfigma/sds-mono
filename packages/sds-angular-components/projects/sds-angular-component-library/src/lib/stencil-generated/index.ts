@@ -359,5 +359,6 @@ export const DIRECTIVES = [
   d.SdsTextareaField,
   d.SdsToggleTag,
   d.SdsToggleTagGroup,
-  d.SdsToggleTagList
+  d.SdsToggleTagList,
+  d.SdsTooltip
 ];
