@@ -7,7 +7,7 @@ import type { Meta, StoryObj } from '@storybook/html';
 type ComponentArgs = Components.SdsSection;
 
 const meta = {
-  title: 'SDS layout/sds-section',
+  title: 'SDS Layout/Section',
   tags: ['autodocs'],
   parameters: { layout: 'centered' },
   component: 'sds-section',
