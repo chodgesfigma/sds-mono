@@ -1,0 +1,31 @@
+@import 'reset';
+
+:host {
+  display: block;
+}
+
+.avatar-block {
+  align-items: start;
+  color: var(--sds-color-text-default-secondary);
+  display: grid;
+  grid-template-areas: 'avatar title';
+  grid-template-columns: auto 1fr;
+  gap: var(--sds-size-space-050) var(--sds-size-space-200);
+
+  ::slotted(sds-avatar-button),
+  ::slotted(sds-avatar) {
+    grid-area: avatar;
+  }
+
+  &:has(sds-text) {
+    grid-template-areas: 'avatar title' 'avatar description';
+  }
+
+  sds-text-strong {
+    grid-area: title;
+  }
+
+  sds-text {
+    grid-area: description;
+  }
+}

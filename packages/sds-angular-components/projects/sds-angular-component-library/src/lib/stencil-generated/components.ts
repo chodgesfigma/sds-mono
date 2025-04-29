@@ -66,6 +66,94 @@ export declare interface SdsAccordionItem extends Components.SdsAccordionItem {
 
 
 @ProxyCmp({
+  inputs: ['alt', 'initials', 'size', 'square', 'src']
+})
+@Component({
+  selector: 'sds-avatar',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['alt', 'initials', 'size', 'square', 'src'],
+})
+export class SdsAvatar {
+  protected el: HTMLSdsAvatarElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsAvatar extends Components.SdsAvatar {}
+
+
+@ProxyCmp({
+  inputs: ['avatarTitle', 'description']
+})
+@Component({
+  selector: 'sds-avatar-block',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['avatarTitle', 'description'],
+})
+export class SdsAvatarBlock {
+  protected el: HTMLSdsAvatarBlockElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsAvatarBlock extends Components.SdsAvatarBlock {}
+
+
+@ProxyCmp({
+  inputs: ['alt', 'initials', 'options', 'size', 'square', 'src']
+})
+@Component({
+  selector: 'sds-avatar-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['alt', 'initials', 'options', 'size', 'square', 'src'],
+})
+export class SdsAvatarButton {
+  protected el: HTMLSdsAvatarButtonElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsAvatarButton extends Components.SdsAvatarButton {}
+
+
+@ProxyCmp({
+  inputs: ['max', 'spacing']
+})
+@Component({
+  selector: 'sds-avatar-group',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['max', 'spacing'],
+})
+export class SdsAvatarGroup {
+  protected el: HTMLSdsAvatarGroupElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsAvatarGroup extends Components.SdsAvatarGroup {}
+
+
+@ProxyCmp({
   inputs: ['disabled', 'size', 'type', 'variant']
 })
 @Component({
