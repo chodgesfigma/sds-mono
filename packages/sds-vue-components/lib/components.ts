@@ -330,6 +330,13 @@ import { defineCustomElement as defineSdsLink } from 'sds-web-components/dist/co
 import { defineCustomElement as defineSdsListBox } from 'sds-web-components/dist/components/sds-list-box.js';
 import { defineCustomElement as defineSdsListBoxItem } from 'sds-web-components/dist/components/sds-list-box-item.js';
 import { defineCustomElement as defineSdsLogo } from 'sds-web-components/dist/components/sds-logo.js';
+import { defineCustomElement as defineSdsMenu } from 'sds-web-components/dist/components/sds-menu.js';
+import { defineCustomElement as defineSdsMenuButton } from 'sds-web-components/dist/components/sds-menu-button.js';
+import { defineCustomElement as defineSdsMenuItem } from 'sds-web-components/dist/components/sds-menu-item.js';
+import { defineCustomElement as defineSdsMenuPart } from 'sds-web-components/dist/components/sds-menu-part.js';
+import { defineCustomElement as defineSdsMenuPopover } from 'sds-web-components/dist/components/sds-menu-popover.js';
+import { defineCustomElement as defineSdsMenuShortcut } from 'sds-web-components/dist/components/sds-menu-shortcut.js';
+import { defineCustomElement as defineSdsMenuTrigger } from 'sds-web-components/dist/components/sds-menu-trigger.js';
 import { defineCustomElement as defineSdsNavigation } from 'sds-web-components/dist/components/sds-navigation.js';
 import { defineCustomElement as defineSdsNavigationButton } from 'sds-web-components/dist/components/sds-navigation-button.js';
 import { defineCustomElement as defineSdsNavigationPill } from 'sds-web-components/dist/components/sds-navigation-pill.js';
@@ -2067,6 +2074,42 @@ export const SdsListBoxItem = /*@__PURE__*/ defineContainer<JSX.SdsListBoxItem>(
 export const SdsLogo = /*@__PURE__*/ defineContainer<JSX.SdsLogo>('sds-logo', defineSdsLogo, [
   'logoOptions'
 ]);
+
+
+export const SdsMenu = /*@__PURE__*/ defineContainer<JSX.SdsMenu>('sds-menu', defineSdsMenu);
+
+
+export const SdsMenuButton = /*@__PURE__*/ defineContainer<JSX.SdsMenuButton>('sds-menu-button', defineSdsMenuButton, [
+  'label',
+  'variant',
+  'placement',
+  'isDisabled'
+]);
+
+
+export const SdsMenuItem = /*@__PURE__*/ defineContainer<JSX.SdsMenuItem>('sds-menu-item', defineSdsMenuItem, [
+  'isDisabled',
+  'sds-clicked'
+], [
+  'sds-clicked'
+]);
+
+
+export const SdsMenuPart = /*@__PURE__*/ defineContainer<JSX.SdsMenuPart>('sds-menu-part', defineSdsMenuPart, [
+  'variant'
+]);
+
+
+export const SdsMenuPopover = /*@__PURE__*/ defineContainer<JSX.SdsMenuPopover>('sds-menu-popover', defineSdsMenuPopover, [
+  'isOpen',
+  'placement'
+]);
+
+
+export const SdsMenuShortcut = /*@__PURE__*/ defineContainer<JSX.SdsMenuShortcut>('sds-menu-shortcut', defineSdsMenuShortcut);
+
+
+export const SdsMenuTrigger = /*@__PURE__*/ defineContainer<JSX.SdsMenuTrigger>('sds-menu-trigger', defineSdsMenuTrigger);
 
 
 export const SdsNavigation = /*@__PURE__*/ defineContainer<JSX.SdsNavigation>('sds-navigation', defineSdsNavigation, [

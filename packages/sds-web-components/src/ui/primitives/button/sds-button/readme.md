@@ -19,6 +19,9 @@
 - [sds-header-auth](../../../compositions/Headers/sds-header-auth)
 - [sds-dialog-button](../../dialog/sds-dialog-button)
 - [sds-dialog-close](../../dialog/sds-dialog-close)
+- [sds-dialog-button](../../dialog/sds-dialog-button)
+- [sds-dialog-close](../../dialog/sds-dialog-close)
+- [sds-menu-button](../../Menu/sds-menu-button)
 
 ### Graph
 
@@ -27,6 +30,7 @@ graph TD;
   sds-header-auth --> sds-button
   sds-dialog-button --> sds-button
   sds-dialog-close --> sds-button
+  sds-menu-button --> sds-button
   style sds-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

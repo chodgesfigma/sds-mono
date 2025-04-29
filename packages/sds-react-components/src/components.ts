@@ -336,6 +336,13 @@ import { SdsLink as SdsLinkElement, defineCustomElement as defineSdsLink } from 
 import { SdsListBoxItem as SdsListBoxItemElement, defineCustomElement as defineSdsListBoxItem } from "sds-web-components/dist/components/sds-list-box-item.js";
 import { SdsListBox as SdsListBoxElement, defineCustomElement as defineSdsListBox } from "sds-web-components/dist/components/sds-list-box.js";
 import { SdsLogo as SdsLogoElement, defineCustomElement as defineSdsLogo } from "sds-web-components/dist/components/sds-logo.js";
+import { SdsMenuButton as SdsMenuButtonElement, defineCustomElement as defineSdsMenuButton } from "sds-web-components/dist/components/sds-menu-button.js";
+import { SdsMenuItem as SdsMenuItemElement, defineCustomElement as defineSdsMenuItem } from "sds-web-components/dist/components/sds-menu-item.js";
+import { SdsMenuPart as SdsMenuPartElement, defineCustomElement as defineSdsMenuPart } from "sds-web-components/dist/components/sds-menu-part.js";
+import { SdsMenuPopover as SdsMenuPopoverElement, defineCustomElement as defineSdsMenuPopover } from "sds-web-components/dist/components/sds-menu-popover.js";
+import { SdsMenuShortcut as SdsMenuShortcutElement, defineCustomElement as defineSdsMenuShortcut } from "sds-web-components/dist/components/sds-menu-shortcut.js";
+import { SdsMenuTrigger as SdsMenuTriggerElement, defineCustomElement as defineSdsMenuTrigger } from "sds-web-components/dist/components/sds-menu-trigger.js";
+import { SdsMenu as SdsMenuElement, defineCustomElement as defineSdsMenu } from "sds-web-components/dist/components/sds-menu.js";
 import { SdsNavigationButton as SdsNavigationButtonElement, defineCustomElement as defineSdsNavigationButton } from "sds-web-components/dist/components/sds-navigation-button.js";
 import { SdsNavigationPill as SdsNavigationPillElement, defineCustomElement as defineSdsNavigationPill } from "sds-web-components/dist/components/sds-navigation-pill.js";
 import { SdsNavigation as SdsNavigationElement, defineCustomElement as defineSdsNavigation } from "sds-web-components/dist/components/sds-navigation.js";
@@ -3954,6 +3961,83 @@ export const SdsLogo: StencilReactComponent<SdsLogoElement, SdsLogoEvents> = /*@
     react: React,
     events: {} as SdsLogoEvents,
     defineCustomElement: defineSdsLogo
+});
+
+type SdsMenuEvents = NonNullable<unknown>;
+
+export const SdsMenu: StencilReactComponent<SdsMenuElement, SdsMenuEvents> = /*@__PURE__*/ createComponent<SdsMenuElement, SdsMenuEvents>({
+    tagName: 'sds-menu',
+    elementClass: SdsMenuElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsMenuEvents,
+    defineCustomElement: defineSdsMenu
+});
+
+type SdsMenuButtonEvents = NonNullable<unknown>;
+
+export const SdsMenuButton: StencilReactComponent<SdsMenuButtonElement, SdsMenuButtonEvents> = /*@__PURE__*/ createComponent<SdsMenuButtonElement, SdsMenuButtonEvents>({
+    tagName: 'sds-menu-button',
+    elementClass: SdsMenuButtonElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsMenuButtonEvents,
+    defineCustomElement: defineSdsMenuButton
+});
+
+type SdsMenuItemEvents = { onSdsClicked: EventName<CustomEvent<any>> };
+
+export const SdsMenuItem: StencilReactComponent<SdsMenuItemElement, SdsMenuItemEvents> = /*@__PURE__*/ createComponent<SdsMenuItemElement, SdsMenuItemEvents>({
+    tagName: 'sds-menu-item',
+    elementClass: SdsMenuItemElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onSdsClicked: 'sds-clicked' } as SdsMenuItemEvents,
+    defineCustomElement: defineSdsMenuItem
+});
+
+type SdsMenuPartEvents = NonNullable<unknown>;
+
+export const SdsMenuPart: StencilReactComponent<SdsMenuPartElement, SdsMenuPartEvents> = /*@__PURE__*/ createComponent<SdsMenuPartElement, SdsMenuPartEvents>({
+    tagName: 'sds-menu-part',
+    elementClass: SdsMenuPartElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsMenuPartEvents,
+    defineCustomElement: defineSdsMenuPart
+});
+
+type SdsMenuPopoverEvents = NonNullable<unknown>;
+
+export const SdsMenuPopover: StencilReactComponent<SdsMenuPopoverElement, SdsMenuPopoverEvents> = /*@__PURE__*/ createComponent<SdsMenuPopoverElement, SdsMenuPopoverEvents>({
+    tagName: 'sds-menu-popover',
+    elementClass: SdsMenuPopoverElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsMenuPopoverEvents,
+    defineCustomElement: defineSdsMenuPopover
+});
+
+type SdsMenuShortcutEvents = NonNullable<unknown>;
+
+export const SdsMenuShortcut: StencilReactComponent<SdsMenuShortcutElement, SdsMenuShortcutEvents> = /*@__PURE__*/ createComponent<SdsMenuShortcutElement, SdsMenuShortcutEvents>({
+    tagName: 'sds-menu-shortcut',
+    elementClass: SdsMenuShortcutElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsMenuShortcutEvents,
+    defineCustomElement: defineSdsMenuShortcut
+});
+
+type SdsMenuTriggerEvents = NonNullable<unknown>;
+
+export const SdsMenuTrigger: StencilReactComponent<SdsMenuTriggerElement, SdsMenuTriggerEvents> = /*@__PURE__*/ createComponent<SdsMenuTriggerElement, SdsMenuTriggerEvents>({
+    tagName: 'sds-menu-trigger',
+    elementClass: SdsMenuTriggerElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsMenuTriggerEvents,
+    defineCustomElement: defineSdsMenuTrigger
 });
 
 type SdsNavigationEvents = NonNullable<unknown>;
