@@ -1,0 +1,50 @@
+@import 'reset';
+
+:host {
+  display: block;
+
+  ::slotted(sds-button-group) {
+    padding-left: var(--sds-size-space-800);
+    padding-right: var(--sds-size-space-800);
+    margin-top: var(--sds-size-space-600);
+  }
+}
+
+.dialog {
+  --dialog-padding-y: var(--sds-size-space-800);
+
+  background: var(--sds-color-background-default-default);
+  box-shadow: var(--sds-effects-shadows-drop-shadow-400);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: var(--dialog-padding-y);
+  padding-top: var(--dialog-padding-y);
+  position: relative;
+
+  &:focus {
+    outline: none;
+  }
+
+  .dialog-close {
+    position: absolute;
+    top: var(--sds-size-space-200);
+    right: var(--sds-size-space-200);
+  }
+}
+
+.dialog-type-card {
+  border-radius: var(--sds-size-radius-200);
+  border: var(--sds-size-stroke-border) solid var(--sds-color-border-default-default);
+  max-width: var(--global-dialog-max-width);
+  width: calc(100% - var(--sds-size-space-400) * 2);
+}
+
+.dialog-type-sheet {
+  align-self: flex-end;
+  border-top: var(--sds-size-stroke-border) solid var(--sds-color-border-default-default);
+  max-width: 100%;
+  width: 100%;
+  padding-left: calc((100% - min(var(--global-container-max-width), 100%)) / 2);
+  padding-right: calc((100% - min(var(--global-container-max-width), 100%)) / 2);
+}

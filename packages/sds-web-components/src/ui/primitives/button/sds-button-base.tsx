@@ -24,12 +24,17 @@ export interface SdsButtonBaseProps {
    * Disables the button
    */
   disabled?: boolean;
+
+  /**
+   * Visually rounds the button
+   */
+  rounded?: boolean;
 }
 
 export const SdsButtonBase: FunctionalComponent<SdsButtonBaseProps> = props => {
-  const { type, size = 'medium', variant, disabled = false } = props;
+  const { type, size = 'medium', variant, disabled = false, rounded = false } = props;
 
-  const classNames = clsx('button', `button-size-${size}`, `button-variant-${variant}`);
+  const classNames = clsx('button', `button-size-${size}`, `button-variant-${variant}`, rounded && `button-rounded`);
 
   return (
     <button disabled={disabled} class={classNames} type={type}>

@@ -24,6 +24,14 @@ import { SdsCheckboxField as SdsCheckboxFieldElement, defineCustomElement as def
 import { SdsCheckboxGroup as SdsCheckboxGroupElement, defineCustomElement as defineSdsCheckboxGroup } from "sds-web-components/dist/components/sds-checkbox-group.js";
 import { SdsCheckbox as SdsCheckboxElement, defineCustomElement as defineSdsCheckbox } from "sds-web-components/dist/components/sds-checkbox.js";
 import { SdsDescription as SdsDescriptionElement, defineCustomElement as defineSdsDescription } from "sds-web-components/dist/components/sds-description.js";
+import { SdsDialogBody as SdsDialogBodyElement, defineCustomElement as defineSdsDialogBody } from "sds-web-components/dist/components/sds-dialog-body.js";
+import { SdsDialogButton as SdsDialogButtonElement, defineCustomElement as defineSdsDialogButton } from "sds-web-components/dist/components/sds-dialog-button.js";
+import { SdsDialogClose as SdsDialogCloseElement, defineCustomElement as defineSdsDialogClose } from "sds-web-components/dist/components/sds-dialog-close.js";
+import { SdsDialogDescription as SdsDialogDescriptionElement, defineCustomElement as defineSdsDialogDescription } from "sds-web-components/dist/components/sds-dialog-description.js";
+import { SdsDialogModal as SdsDialogModalElement, defineCustomElement as defineSdsDialogModal } from "sds-web-components/dist/components/sds-dialog-modal.js";
+import { SdsDialogTitle as SdsDialogTitleElement, defineCustomElement as defineSdsDialogTitle } from "sds-web-components/dist/components/sds-dialog-title.js";
+import { SdsDialogTrigger as SdsDialogTriggerElement, defineCustomElement as defineSdsDialogTrigger } from "sds-web-components/dist/components/sds-dialog-trigger.js";
+import { SdsDialog as SdsDialogElement, defineCustomElement as defineSdsDialog } from "sds-web-components/dist/components/sds-dialog.js";
 import { SdsFieldError as SdsFieldErrorElement, defineCustomElement as defineSdsFieldError } from "sds-web-components/dist/components/sds-field-error.js";
 import { SdsFieldGroup as SdsFieldGroupElement, defineCustomElement as defineSdsFieldGroup } from "sds-web-components/dist/components/sds-field-group.js";
 import { SdsField as SdsFieldElement, defineCustomElement as defineSdsField } from "sds-web-components/dist/components/sds-field.js";
@@ -514,6 +522,94 @@ export const SdsDescription: StencilReactComponent<SdsDescriptionElement, SdsDes
     react: React,
     events: {} as SdsDescriptionEvents,
     defineCustomElement: defineSdsDescription
+});
+
+type SdsDialogEvents = NonNullable<unknown>;
+
+export const SdsDialog: StencilReactComponent<SdsDialogElement, SdsDialogEvents> = /*@__PURE__*/ createComponent<SdsDialogElement, SdsDialogEvents>({
+    tagName: 'sds-dialog',
+    elementClass: SdsDialogElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsDialogEvents,
+    defineCustomElement: defineSdsDialog
+});
+
+type SdsDialogBodyEvents = NonNullable<unknown>;
+
+export const SdsDialogBody: StencilReactComponent<SdsDialogBodyElement, SdsDialogBodyEvents> = /*@__PURE__*/ createComponent<SdsDialogBodyElement, SdsDialogBodyEvents>({
+    tagName: 'sds-dialog-body',
+    elementClass: SdsDialogBodyElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsDialogBodyEvents,
+    defineCustomElement: defineSdsDialogBody
+});
+
+type SdsDialogButtonEvents = NonNullable<unknown>;
+
+export const SdsDialogButton: StencilReactComponent<SdsDialogButtonElement, SdsDialogButtonEvents> = /*@__PURE__*/ createComponent<SdsDialogButtonElement, SdsDialogButtonEvents>({
+    tagName: 'sds-dialog-button',
+    elementClass: SdsDialogButtonElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsDialogButtonEvents,
+    defineCustomElement: defineSdsDialogButton
+});
+
+type SdsDialogCloseEvents = { onSdsCloseDialog: EventName<CustomEvent<undefined>> };
+
+export const SdsDialogClose: StencilReactComponent<SdsDialogCloseElement, SdsDialogCloseEvents> = /*@__PURE__*/ createComponent<SdsDialogCloseElement, SdsDialogCloseEvents>({
+    tagName: 'sds-dialog-close',
+    elementClass: SdsDialogCloseElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onSdsCloseDialog: 'sds-close-dialog' } as SdsDialogCloseEvents,
+    defineCustomElement: defineSdsDialogClose
+});
+
+type SdsDialogDescriptionEvents = NonNullable<unknown>;
+
+export const SdsDialogDescription: StencilReactComponent<SdsDialogDescriptionElement, SdsDialogDescriptionEvents> = /*@__PURE__*/ createComponent<SdsDialogDescriptionElement, SdsDialogDescriptionEvents>({
+    tagName: 'sds-dialog-description',
+    elementClass: SdsDialogDescriptionElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsDialogDescriptionEvents,
+    defineCustomElement: defineSdsDialogDescription
+});
+
+type SdsDialogModalEvents = NonNullable<unknown>;
+
+export const SdsDialogModal: StencilReactComponent<SdsDialogModalElement, SdsDialogModalEvents> = /*@__PURE__*/ createComponent<SdsDialogModalElement, SdsDialogModalEvents>({
+    tagName: 'sds-dialog-modal',
+    elementClass: SdsDialogModalElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsDialogModalEvents,
+    defineCustomElement: defineSdsDialogModal
+});
+
+type SdsDialogTitleEvents = NonNullable<unknown>;
+
+export const SdsDialogTitle: StencilReactComponent<SdsDialogTitleElement, SdsDialogTitleEvents> = /*@__PURE__*/ createComponent<SdsDialogTitleElement, SdsDialogTitleEvents>({
+    tagName: 'sds-dialog-title',
+    elementClass: SdsDialogTitleElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsDialogTitleEvents,
+    defineCustomElement: defineSdsDialogTitle
+});
+
+type SdsDialogTriggerEvents = NonNullable<unknown>;
+
+export const SdsDialogTrigger: StencilReactComponent<SdsDialogTriggerElement, SdsDialogTriggerEvents> = /*@__PURE__*/ createComponent<SdsDialogTriggerElement, SdsDialogTriggerEvents>({
+    tagName: 'sds-dialog-trigger',
+    elementClass: SdsDialogTriggerElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsDialogTriggerEvents,
+    defineCustomElement: defineSdsDialogTrigger
 });
 
 type SdsFieldEvents = NonNullable<unknown>;

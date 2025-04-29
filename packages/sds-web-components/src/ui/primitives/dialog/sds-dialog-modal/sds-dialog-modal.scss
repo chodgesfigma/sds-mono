@@ -1,0 +1,22 @@
+@import 'reset';
+
+:host {
+  display: block;
+}
+
+.dialog-container {
+  align-items: center;
+  inset: 0;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: var(--global-stack-dialog-container);
+}
+
+.dialog-backdrop {
+  backdrop-filter: var(--sds-effects-backdrop-filter-blur-overlay);
+  background: var(--sds-color-background-utilities-scrim);
+  inset: 0;
+  position: fixed;
+  z-index: var(--global-stack-dialog-backdrop);
+}

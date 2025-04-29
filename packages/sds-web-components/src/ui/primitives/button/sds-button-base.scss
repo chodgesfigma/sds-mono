@@ -21,6 +21,10 @@
   --icon-color: var(--button-color);
 }
 
+.button-rounded {
+  --border-radius: var(--sds-size-radius-full);
+}
+
 .button-size-small {
   --button-font: var(--sds-font-body-small);
   --button-padding-x: var(--sds-size-space-200);

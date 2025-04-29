@@ -31,9 +31,13 @@ graph TD;
   sds-header-auth --> sds-flex-item
   sds-header-auth --> sds-icon-menu
   sds-header-auth --> sds-icon-x
+  sds-header-auth --> sds-avatar
   sds-header-auth --> sds-label
   sds-header-auth --> sds-button-group
   sds-header-auth --> sds-icon-chevron-down
+  sds-header-auth --> sds-avatar-block
+  sds-avatar-block --> sds-text-strong
+  sds-avatar-block --> sds-text
   style sds-header fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
