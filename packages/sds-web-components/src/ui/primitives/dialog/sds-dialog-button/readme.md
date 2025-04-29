@@ -39,6 +39,10 @@ Type: `Promise<void>`
 
 ## Dependencies
 
+### Used by
+
+ - [sds-header-auth](../../../compositions/Headers/sds-header-auth)
+
 ### Depends on
 
 - [sds-dialog-trigger](../sds-dialog-trigger)
@@ -53,6 +57,7 @@ graph TD;
   sds-dialog-button --> sds-button
   sds-dialog-button --> sds-dialog-modal
   sds-dialog-button --> sds-dialog
+  sds-header-auth --> sds-dialog-button
   style sds-dialog-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

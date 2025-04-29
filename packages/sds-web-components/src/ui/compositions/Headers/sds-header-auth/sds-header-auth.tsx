@@ -1,7 +1,6 @@
 import { placeholder } from '../../../images';
 import { login, User } from '../AuthContext';
 import { Component, Host, State, h } from '@stencil/core';
-import clsx from 'clsx';
 import { useMediaQuery } from 'src/ui/hooks/useMediaQuery';
 
 @Component({
@@ -41,7 +40,7 @@ export class SdsHeaderAuth {
 
   render() {
     const userButtons = (
-      <div>
+      <sds-button-group align="center">
         <sds-button
           variant="subtle"
           size="small"
@@ -67,7 +66,7 @@ export class SdsHeaderAuth {
         >
           Register
         </sds-button>
-      </div>
+      </sds-button-group>
     );
 
     const navigation = (
@@ -87,65 +86,55 @@ export class SdsHeaderAuth {
           <sds-flex-item>
             {this.isTabletDown ? (
               <sds-flex alignPrimary="center">
-                <sds-icon-button variant="subtle" aria-label="Toggle navigation menu" onPress={() => (this.open = true)}>
-                  <sds-icon-menu />
-                </sds-icon-button>
-                <sds-dialog-modal isOpen={open}>
-                  <sds-dialog className={clsx('navigation-dialog')}>
-                    <sds-icon-button className={clsx('navigation-dialog-close')} variant="subtle" aria-label="Close navigation menu" onPress={() => (this.open = false)}>
-                      <sds-icon-x />
-                    </sds-icon-button>
-                    <sds-flex direction="column" alignPrimary="space-between" alignSecondary="center">
-                      {navigation}
-                      {this.currentUser ? (
-                        <sds-flex alignSecondary="center" gap="200" direction="column">
-                          <sds-flex-item>
-                            <sds-flex alignPrimary="center">
-                              <sds-avatar src={this.currentUser.avatar} initials={this.currentUser.name.charAt(0)} />
-                            </sds-flex>
-                          </sds-flex-item>
-                          <sds-flex-item>
-                            <sds-flex alignPrimary="center">
-                              <sds-label>{this.currentUser.name}</sds-label>
-                            </sds-flex>
-                          </sds-flex-item>
-                          <sds-flex-item>
-                            <sds-flex alignPrimary="center">
-                              <sds-button variant="subtle" size="small" onClick={this.handleLogout}>
-                                Log out
-                              </sds-button>
-                            </sds-flex>
-                          </sds-flex-item>
-                        </sds-flex>
-                      ) : (
-                        <sds-button-group align="center">{userButtons}</sds-button-group>
-                      )}
-                    </sds-flex>
-                  </sds-dialog>
-                </sds-dialog-modal>
+                <sds-dialog-button label="Open Navigation menu" useIcon>
+                  <sds-icon-menu slot="icon" />
+                  <sds-dialog-close></sds-dialog-close>
+                  <sds-flex direction="column" alignPrimary="space-between" alignSecondary="center" class="navigation-dialog">
+                    {navigation}
+                    {this.currentUser ? (
+                      <sds-flex alignSecondary="center" gap="200" direction="column">
+                        <sds-flex-item>
+                          <sds-flex alignPrimary="center">
+                            <sds-avatar src={this.currentUser.avatar} initials={this.currentUser.name.charAt(0)} />
+                          </sds-flex>
+                        </sds-flex-item>
+                        <sds-flex-item>
+                          <sds-flex alignPrimary="center">
+                            <sds-label>{this.currentUser.name}</sds-label>
+                          </sds-flex>
+                        </sds-flex-item>
+                        <sds-flex-item>
+                          <sds-flex alignPrimary="center">
+                            <sds-button variant="subtle" size="small" onClick={this.handleLogout}>
+                              Log out
+                            </sds-button>
+                          </sds-flex>
+                        </sds-flex-item>
+                      </sds-flex>
+                    ) : (
+                      userButtons
+                    )}
+                  </sds-flex>
+                </sds-dialog-button>
               </sds-flex>
             ) : (
               <sds-flex gap="400" alignSecondary="center">
                 {navigation}
                 {this.currentUser ? (
-                  <sds-menu-trigger>
-                    <sds-anchor-or-button className={clsx('header-auth-avatar-button')}>
+                  <sds-menu-button placement="bottom-end" variant="subtle">
+                    <div class="header-auth-avatar-button" slot="icon">
                       <sds-avatar src={this.currentUser.avatar} initials={this.currentUser.name.charAt(0)} />
                       <sds-icon-chevron-down />
-                    </sds-anchor-or-button>
-                    <sds-menu-popover placement="bottom right">
-                      <sds-menu>
-                        <sds-menu-item>
-                          <sds-avatar-block title={this.currentUser.name} description="View profile">
-                            <sds-avatar src={this.currentUser.avatar} initials={this.currentUser.name.charAt(0)} />
-                          </sds-avatar-block>
-                        </sds-menu-item>
-                        <sds-menu-item onAction={this.handleLogout}>Log out</sds-menu-item>
-                      </sds-menu>
-                    </sds-menu-popover>
-                  </sds-menu-trigger>
+                    </div>
+                    <sds-menu-item>
+                      <sds-avatar-block avatarTitle={this.currentUser.name} description="View profile">
+                        <sds-avatar src={this.currentUser.avatar} initials={this.currentUser.name.charAt(0)} />
+                      </sds-avatar-block>
+                    </sds-menu-item>
+                    <sds-menu-item onClick={this.handleLogout}>Log out</sds-menu-item>
+                  </sds-menu-button>
                 ) : (
-                  <sds-button-group>{userButtons}</sds-button-group>
+                  userButtons
                 )}
               </sds-flex>
             )}
