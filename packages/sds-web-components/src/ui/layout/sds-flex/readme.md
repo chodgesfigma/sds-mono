@@ -16,6 +16,21 @@
 | `wrap`           | `wrap`            | Wrap                | `boolean`                                                                             | `false`     |
 
 
+## Dependencies
+
+### Used by
+
+ - [sds-header](../../compositions/Headers/sds-header)
+ - [sds-header-auth](../../compositions/Headers/sds-header-auth)
+
+### Graph
+```mermaid
+graph TD;
+  sds-header --> sds-flex
+  sds-header-auth --> sds-flex
+  style sds-flex fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

@@ -11,11 +11,13 @@ Fieldset Label
 
 ### Used by
 
+ - [sds-header-auth](../../../compositions/Headers/sds-header-auth)
  - [sds-slider](../../sds-slider)
 
 ### Graph
 ```mermaid
 graph TD;
+  sds-header-auth --> sds-label
   sds-slider --> sds-label
   style sds-label fill:#f9f,stroke:#333,stroke-width:4px
 ```
