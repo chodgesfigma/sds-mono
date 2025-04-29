@@ -9,8 +9,6 @@ import { useMediaQuery } from 'src/ui/hooks/useMediaQuery';
   shadow: true,
 })
 export class SdsHeaderAuth {
-  @State() open = false;
-
   @State() isTabletDown = false;
 
   @State() currentUser: User | null = null;
