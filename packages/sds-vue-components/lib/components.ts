@@ -33,6 +33,8 @@ import { defineCustomElement as defineSdsFieldset } from 'sds-web-components/dis
 import { defineCustomElement as defineSdsFlex } from 'sds-web-components/dist/components/sds-flex.js';
 import { defineCustomElement as defineSdsFlexItem } from 'sds-web-components/dist/components/sds-flex-item.js';
 import { defineCustomElement as defineSdsForm } from 'sds-web-components/dist/components/sds-form.js';
+import { defineCustomElement as defineSdsHeader } from 'sds-web-components/dist/components/sds-header.js';
+import { defineCustomElement as defineSdsHeaderAuth } from 'sds-web-components/dist/components/sds-header-auth.js';
 import { defineCustomElement as defineSdsIconActivity } from 'sds-web-components/dist/components/sds-icon-activity.js';
 import { defineCustomElement as defineSdsIconAirplay } from 'sds-web-components/dist/components/sds-icon-airplay.js';
 import { defineCustomElement as defineSdsIconAlertCircle } from 'sds-web-components/dist/components/sds-icon-alert-circle.js';
@@ -556,6 +558,12 @@ export const SdsFlexItem = /*@__PURE__*/ defineContainer<JSX.SdsFlexItem>('sds-f
 export const SdsForm = /*@__PURE__*/ defineContainer<JSX.SdsForm>('sds-form', defineSdsForm, [
   'singleLine'
 ]);
+
+
+export const SdsHeader = /*@__PURE__*/ defineContainer<JSX.SdsHeader>('sds-header', defineSdsHeader);
+
+
+export const SdsHeaderAuth = /*@__PURE__*/ defineContainer<JSX.SdsHeaderAuth>('sds-header-auth', defineSdsHeaderAuth);
 
 
 export const SdsIconActivity = /*@__PURE__*/ defineContainer<JSX.SdsIconActivity>('sds-icon-activity', defineSdsIconActivity, [

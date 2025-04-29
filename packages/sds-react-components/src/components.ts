@@ -39,6 +39,8 @@ import { SdsFieldset as SdsFieldsetElement, defineCustomElement as defineSdsFiel
 import { SdsFlexItem as SdsFlexItemElement, defineCustomElement as defineSdsFlexItem } from "sds-web-components/dist/components/sds-flex-item.js";
 import { SdsFlex as SdsFlexElement, defineCustomElement as defineSdsFlex } from "sds-web-components/dist/components/sds-flex.js";
 import { SdsForm as SdsFormElement, defineCustomElement as defineSdsForm } from "sds-web-components/dist/components/sds-form.js";
+import { SdsHeaderAuth as SdsHeaderAuthElement, defineCustomElement as defineSdsHeaderAuth } from "sds-web-components/dist/components/sds-header-auth.js";
+import { SdsHeader as SdsHeaderElement, defineCustomElement as defineSdsHeader } from "sds-web-components/dist/components/sds-header.js";
 import { SdsIconActivity as SdsIconActivityElement, defineCustomElement as defineSdsIconActivity } from "sds-web-components/dist/components/sds-icon-activity.js";
 import { SdsIconAirplay as SdsIconAirplayElement, defineCustomElement as defineSdsIconAirplay } from "sds-web-components/dist/components/sds-icon-airplay.js";
 import { SdsIconAlertCircle as SdsIconAlertCircleElement, defineCustomElement as defineSdsIconAlertCircle } from "sds-web-components/dist/components/sds-icon-alert-circle.js";
@@ -694,6 +696,28 @@ export const SdsForm: StencilReactComponent<SdsFormElement, SdsFormEvents> = /*@
     react: React,
     events: {} as SdsFormEvents,
     defineCustomElement: defineSdsForm
+});
+
+type SdsHeaderEvents = NonNullable<unknown>;
+
+export const SdsHeader: StencilReactComponent<SdsHeaderElement, SdsHeaderEvents> = /*@__PURE__*/ createComponent<SdsHeaderElement, SdsHeaderEvents>({
+    tagName: 'sds-header',
+    elementClass: SdsHeaderElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsHeaderEvents,
+    defineCustomElement: defineSdsHeader
+});
+
+type SdsHeaderAuthEvents = NonNullable<unknown>;
+
+export const SdsHeaderAuth: StencilReactComponent<SdsHeaderAuthElement, SdsHeaderAuthEvents> = /*@__PURE__*/ createComponent<SdsHeaderAuthElement, SdsHeaderAuthEvents>({
+    tagName: 'sds-header-auth',
+    elementClass: SdsHeaderAuthElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsHeaderAuthEvents,
+    defineCustomElement: defineSdsHeaderAuth
 });
 
 type SdsIconActivityEvents = NonNullable<unknown>;
