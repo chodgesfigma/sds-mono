@@ -19,6 +19,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [sds-hero](../../compositions/Sections/sds-heroes)
+
 ### Depends on
 
 - [sds-image](../../primitives/Image/sds-image)
@@ -27,6 +31,7 @@
 ```mermaid
 graph TD;
   sds-section --> sds-image
+  sds-hero --> sds-section
   style sds-section fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

@@ -21,6 +21,7 @@ import { defineCustomElement as defineSdsFieldset } from 'sds-web-components/dis
 import { defineCustomElement as defineSdsFlex } from 'sds-web-components/dist/components/sds-flex.js';
 import { defineCustomElement as defineSdsFlexItem } from 'sds-web-components/dist/components/sds-flex-item.js';
 import { defineCustomElement as defineSdsForm } from 'sds-web-components/dist/components/sds-form.js';
+import { defineCustomElement as defineSdsHero } from 'sds-web-components/dist/components/sds-hero.js';
 import { defineCustomElement as defineSdsIconActivity } from 'sds-web-components/dist/components/sds-icon-activity.js';
 import { defineCustomElement as defineSdsIconAirplay } from 'sds-web-components/dist/components/sds-icon-airplay.js';
 import { defineCustomElement as defineSdsIconAlertCircle } from 'sds-web-components/dist/components/sds-icon-alert-circle.js';
@@ -321,6 +322,7 @@ import { defineCustomElement as defineSdsLogo } from 'sds-web-components/dist/co
 import { defineCustomElement as defineSdsNavigation } from 'sds-web-components/dist/components/sds-navigation.js';
 import { defineCustomElement as defineSdsNavigationButton } from 'sds-web-components/dist/components/sds-navigation-button.js';
 import { defineCustomElement as defineSdsNavigationPill } from 'sds-web-components/dist/components/sds-navigation-pill.js';
+import { defineCustomElement as defineSdsPanel } from 'sds-web-components/dist/components/sds-panel.js';
 import { defineCustomElement as defineSdsPicture } from 'sds-web-components/dist/components/sds-picture.js';
 import { defineCustomElement as defineSdsSection } from 'sds-web-components/dist/components/sds-section.js';
 import { defineCustomElement as defineSdsSelect } from 'sds-web-components/dist/components/sds-select.js';
@@ -464,6 +466,23 @@ export const SdsFlexItem = /*@__PURE__*/ defineContainer<JSX.SdsFlexItem>('sds-f
 
 export const SdsForm = /*@__PURE__*/ defineContainer<JSX.SdsForm>('sds-form', defineSdsForm, [
   'singleLine'
+]);
+
+
+export const SdsHero = /*@__PURE__*/ defineContainer<JSX.SdsHero>('sds-hero', defineSdsHero, [
+  'elementType',
+  'padding',
+  'paddingTop',
+  'paddingBottom',
+  'variant',
+  'src',
+  'alignPrimary',
+  'alignSecondary',
+  'container',
+  'direction',
+  'gap',
+  'flexType',
+  'wrap'
 ]);
 
 
@@ -2007,6 +2026,15 @@ export const SdsNavigationPill = /*@__PURE__*/ defineContainer<JSX.SdsNavigation
   'sds-navigation-selected'
 ], [
   'sds-navigation-selected'
+]);
+
+
+export const SdsPanel = /*@__PURE__*/ defineContainer<JSX.SdsPanel>('sds-panel', defineSdsPanel, [
+  'alignPrimary',
+  'alignSecondary',
+  'direction',
+  'gap',
+  'flexType'
 ]);
 
 

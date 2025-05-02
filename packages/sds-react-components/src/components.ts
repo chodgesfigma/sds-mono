@@ -27,6 +27,7 @@ import { SdsFieldset as SdsFieldsetElement, defineCustomElement as defineSdsFiel
 import { SdsFlexItem as SdsFlexItemElement, defineCustomElement as defineSdsFlexItem } from "sds-web-components/dist/components/sds-flex-item.js";
 import { SdsFlex as SdsFlexElement, defineCustomElement as defineSdsFlex } from "sds-web-components/dist/components/sds-flex.js";
 import { SdsForm as SdsFormElement, defineCustomElement as defineSdsForm } from "sds-web-components/dist/components/sds-form.js";
+import { SdsHero as SdsHeroElement, defineCustomElement as defineSdsHero } from "sds-web-components/dist/components/sds-hero.js";
 import { SdsIconActivity as SdsIconActivityElement, defineCustomElement as defineSdsIconActivity } from "sds-web-components/dist/components/sds-icon-activity.js";
 import { SdsIconAirplay as SdsIconAirplayElement, defineCustomElement as defineSdsIconAirplay } from "sds-web-components/dist/components/sds-icon-airplay.js";
 import { SdsIconAlertCircle as SdsIconAlertCircleElement, defineCustomElement as defineSdsIconAlertCircle } from "sds-web-components/dist/components/sds-icon-alert-circle.js";
@@ -327,6 +328,7 @@ import { SdsLogo as SdsLogoElement, defineCustomElement as defineSdsLogo } from 
 import { SdsNavigationButton as SdsNavigationButtonElement, defineCustomElement as defineSdsNavigationButton } from "sds-web-components/dist/components/sds-navigation-button.js";
 import { SdsNavigationPill as SdsNavigationPillElement, defineCustomElement as defineSdsNavigationPill } from "sds-web-components/dist/components/sds-navigation-pill.js";
 import { SdsNavigation as SdsNavigationElement, defineCustomElement as defineSdsNavigation } from "sds-web-components/dist/components/sds-navigation.js";
+import { SdsPanel as SdsPanelElement, defineCustomElement as defineSdsPanel } from "sds-web-components/dist/components/sds-panel.js";
 import { SdsPicture as SdsPictureElement, defineCustomElement as defineSdsPicture } from "sds-web-components/dist/components/sds-picture.js";
 import { SdsSection as SdsSectionElement, defineCustomElement as defineSdsSection } from "sds-web-components/dist/components/sds-section.js";
 import { SdsSelectField as SdsSelectFieldElement, defineCustomElement as defineSdsSelectField } from "sds-web-components/dist/components/sds-select-field.js";
@@ -543,6 +545,17 @@ export const SdsForm: StencilReactComponent<SdsFormElement, SdsFormEvents> = /*@
     react: React,
     events: {} as SdsFormEvents,
     defineCustomElement: defineSdsForm
+});
+
+type SdsHeroEvents = NonNullable<unknown>;
+
+export const SdsHero: StencilReactComponent<SdsHeroElement, SdsHeroEvents> = /*@__PURE__*/ createComponent<SdsHeroElement, SdsHeroEvents>({
+    tagName: 'sds-hero',
+    elementClass: SdsHeroElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsHeroEvents,
+    defineCustomElement: defineSdsHero
 });
 
 type SdsIconActivityEvents = NonNullable<unknown>;
@@ -3843,6 +3856,17 @@ export const SdsNavigationPill: StencilReactComponent<SdsNavigationPillElement, 
     react: React,
     events: { onSdsNavigationSelected: 'sds-navigation-selected' } as SdsNavigationPillEvents,
     defineCustomElement: defineSdsNavigationPill
+});
+
+type SdsPanelEvents = NonNullable<unknown>;
+
+export const SdsPanel: StencilReactComponent<SdsPanelElement, SdsPanelEvents> = /*@__PURE__*/ createComponent<SdsPanelElement, SdsPanelEvents>({
+    tagName: 'sds-panel',
+    elementClass: SdsPanelElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsPanelEvents,
+    defineCustomElement: defineSdsPanel
 });
 
 type SdsPictureEvents = NonNullable<unknown>;

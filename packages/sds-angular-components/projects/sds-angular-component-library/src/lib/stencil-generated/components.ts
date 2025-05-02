@@ -383,6 +383,28 @@ export declare interface SdsForm extends Components.SdsForm {}
 
 
 @ProxyCmp({
+  inputs: ['alignPrimary', 'alignSecondary', 'container', 'direction', 'elementType', 'flexType', 'gap', 'padding', 'paddingBottom', 'paddingTop', 'src', 'variant', 'wrap']
+})
+@Component({
+  selector: 'sds-hero',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['alignPrimary', 'alignSecondary', 'container', 'direction', 'elementType', 'flexType', 'gap', 'padding', 'paddingBottom', 'paddingTop', 'src', 'variant', 'wrap'],
+})
+export class SdsHero {
+  protected el: HTMLSdsHeroElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsHero extends Components.SdsHero {}
+
+
+@ProxyCmp({
   inputs: ['size']
 })
 @Component({
@@ -6998,6 +7020,28 @@ export declare interface SdsNavigationPill extends Components.SdsNavigationPill 
    */
   'sds-navigation-selected': EventEmitter<CustomEvent<MouseEvent>>;
 }
+
+
+@ProxyCmp({
+  inputs: ['alignPrimary', 'alignSecondary', 'direction', 'flexType', 'gap']
+})
+@Component({
+  selector: 'sds-panel',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['alignPrimary', 'alignSecondary', 'direction', 'flexType', 'gap'],
+})
+export class SdsPanel {
+  protected el: HTMLSdsPanelElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsPanel extends Components.SdsPanel {}
 
 
 @ProxyCmp({

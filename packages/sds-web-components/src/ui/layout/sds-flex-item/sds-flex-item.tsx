@@ -1,7 +1,7 @@
 import { Component, Host, Prop, h } from '@stencil/core';
 import clsx from 'clsx';
 
-type Size = 'full' | 'major' | 'minor' | 'half' | 'fill';
+export type Size = 'full' | 'major' | 'minor' | 'half' | 'fill';
 
 @Component({
   tag: 'sds-flex-item',
