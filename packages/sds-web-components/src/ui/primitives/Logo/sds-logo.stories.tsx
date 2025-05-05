@@ -4,9 +4,9 @@ import type { Meta, StoryObj } from '@storybook/html';
 
 type ComponentArgs = SdsLogo;
 
-/*  
+/**
     This is a scenario in which porting over a web component from a React component can get tricky. 
-    Because of the nature of how declaritive web components are, if we wanted to properly port
+    Because of the nature of how declarative web components are, if we wanted to properly port
     this component into a web component, we have a couple of options. 
     
     1. Explicitly declare all possible props (which would all possible props of AnchorOrButton),
@@ -18,7 +18,7 @@ type ComponentArgs = SdsLogo;
 
     3. The option that we landed on for this component, was to create a typed object prop, which would 
     allow us to seemingly port over the correct type to this class component, however now we have no 
-    intelisense when implementing said component in a html environment, and instead need to inject any attributes / props via 
+    IntelliSense when implementing said component in a html environment, and instead need to inject any attributes / props via 
     a method similar to the following one below.
 
     We wouldn't normally take this route for a solution, but to demonstrate a potential solution for other 

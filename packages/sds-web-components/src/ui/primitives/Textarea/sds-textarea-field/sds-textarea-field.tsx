@@ -1,6 +1,6 @@
-import { SdsDescriptionFunctional } from '../../fieldset/sds-description/sds-description-functional';
-import { SdsFieldErrorFunctional } from '../../fieldset/sds-field-error/sds-field-error-functional';
-import { SdsLabelFunctional } from '../../fieldset/sds-label/sds-label-functional';
+import { SdsDescriptionFunctional } from '../../Fieldset/sds-description/sds-description-functional';
+import { SdsFieldErrorFunctional } from '../../Fieldset/sds-field-error/sds-field-error-functional';
+import { SdsLabelFunctional } from '../../Fieldset/sds-label/sds-label-functional';
 import { SdsTextareaFunctional, SdsTextareaProps } from '../sds-textarea/sds-textarea-functional';
 import { Component, Prop, h, Event, EventEmitter } from '@stencil/core';
 

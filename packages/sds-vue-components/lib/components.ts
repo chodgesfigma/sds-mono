@@ -328,6 +328,7 @@ import { defineCustomElement as defineSdsPaginationNext } from 'sds-web-componen
 import { defineCustomElement as defineSdsPaginationPage } from 'sds-web-components/dist/components/sds-pagination-page.js';
 import { defineCustomElement as defineSdsPaginationPrevious } from 'sds-web-components/dist/components/sds-pagination-previous.js';
 import { defineCustomElement as defineSdsPicture } from 'sds-web-components/dist/components/sds-picture.js';
+import { defineCustomElement as defineSdsSection } from 'sds-web-components/dist/components/sds-section.js';
 import { defineCustomElement as defineSdsSelect } from 'sds-web-components/dist/components/sds-select.js';
 import { defineCustomElement as defineSdsSelectField } from 'sds-web-components/dist/components/sds-select-field.js';
 import { defineCustomElement as defineSdsSelectItem } from 'sds-web-components/dist/components/sds-select-item.js';
@@ -2046,6 +2047,16 @@ export const SdsPaginationPrevious = /*@__PURE__*/ defineContainer<JSX.SdsPagina
 
 
 export const SdsPicture = /*@__PURE__*/ defineContainer<JSX.SdsPicture>('sds-picture', defineSdsPicture);
+
+
+export const SdsSection = /*@__PURE__*/ defineContainer<JSX.SdsSection>('sds-section', defineSdsSection, [
+  'elementType',
+  'padding',
+  'paddingTop',
+  'paddingBottom',
+  'variant',
+  'src'
+]);
 
 
 export const SdsSelect = /*@__PURE__*/ defineContainer<JSX.SdsSelect>('sds-select', defineSdsSelect, [

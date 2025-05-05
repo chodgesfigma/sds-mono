@@ -325,6 +325,7 @@ export const DIRECTIVES = [
   d.SdsPaginationPage,
   d.SdsPaginationPrevious,
   d.SdsPicture,
+  d.SdsSection,
   d.SdsSelect,
   d.SdsSelectField,
   d.SdsSelectItem,
