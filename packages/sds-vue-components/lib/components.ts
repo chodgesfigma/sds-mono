@@ -325,6 +325,12 @@ import { defineCustomElement as defineSdsLogo } from 'sds-web-components/dist/co
 import { defineCustomElement as defineSdsNavigation } from 'sds-web-components/dist/components/sds-navigation.js';
 import { defineCustomElement as defineSdsNavigationButton } from 'sds-web-components/dist/components/sds-navigation-button.js';
 import { defineCustomElement as defineSdsNavigationPill } from 'sds-web-components/dist/components/sds-navigation-pill.js';
+import { defineCustomElement as defineSdsPagination } from 'sds-web-components/dist/components/sds-pagination.js';
+import { defineCustomElement as defineSdsPaginationGap } from 'sds-web-components/dist/components/sds-pagination-gap.js';
+import { defineCustomElement as defineSdsPaginationList } from 'sds-web-components/dist/components/sds-pagination-list.js';
+import { defineCustomElement as defineSdsPaginationNext } from 'sds-web-components/dist/components/sds-pagination-next.js';
+import { defineCustomElement as defineSdsPaginationPage } from 'sds-web-components/dist/components/sds-pagination-page.js';
+import { defineCustomElement as defineSdsPaginationPrevious } from 'sds-web-components/dist/components/sds-pagination-previous.js';
 import { defineCustomElement as defineSdsPicture } from 'sds-web-components/dist/components/sds-picture.js';
 import { defineCustomElement as defineSdsSection } from 'sds-web-components/dist/components/sds-section.js';
 import { defineCustomElement as defineSdsSelect } from 'sds-web-components/dist/components/sds-select.js';
@@ -2042,6 +2048,36 @@ export const SdsNavigationPill = /*@__PURE__*/ defineContainer<JSX.SdsNavigation
   'sds-navigation-selected'
 ], [
   'sds-navigation-selected'
+]);
+
+
+export const SdsPagination = /*@__PURE__*/ defineContainer<JSX.SdsPagination>('sds-pagination', defineSdsPagination, [
+  'ariaLabel'
+]);
+
+
+export const SdsPaginationGap = /*@__PURE__*/ defineContainer<JSX.SdsPaginationGap>('sds-pagination-gap', defineSdsPaginationGap);
+
+
+export const SdsPaginationList = /*@__PURE__*/ defineContainer<JSX.SdsPaginationList>('sds-pagination-list', defineSdsPaginationList);
+
+
+export const SdsPaginationNext = /*@__PURE__*/ defineContainer<JSX.SdsPaginationNext>('sds-pagination-next', defineSdsPaginationNext, [
+  'label',
+  'href'
+]);
+
+
+export const SdsPaginationPage = /*@__PURE__*/ defineContainer<JSX.SdsPaginationPage>('sds-pagination-page', defineSdsPaginationPage, [
+  'current',
+  'href',
+  'pageNumber'
+]);
+
+
+export const SdsPaginationPrevious = /*@__PURE__*/ defineContainer<JSX.SdsPaginationPrevious>('sds-pagination-previous', defineSdsPaginationPrevious, [
+  'label',
+  'href'
 ]);
 
 

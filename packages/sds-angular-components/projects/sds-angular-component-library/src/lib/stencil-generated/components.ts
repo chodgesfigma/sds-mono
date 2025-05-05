@@ -7089,6 +7089,136 @@ export declare interface SdsNavigationPill extends Components.SdsNavigationPill 
 
 
 @ProxyCmp({
+  inputs: ['ariaLabel']
+})
+@Component({
+  selector: 'sds-pagination',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['ariaLabel'],
+})
+export class SdsPagination {
+  protected el: HTMLSdsPaginationElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsPagination extends Components.SdsPagination {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-pagination-gap',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsPaginationGap {
+  protected el: HTMLSdsPaginationGapElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsPaginationGap extends Components.SdsPaginationGap {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-pagination-list',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsPaginationList {
+  protected el: HTMLSdsPaginationListElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsPaginationList extends Components.SdsPaginationList {}
+
+
+@ProxyCmp({
+  inputs: ['href', 'label']
+})
+@Component({
+  selector: 'sds-pagination-next',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['href', 'label'],
+})
+export class SdsPaginationNext {
+  protected el: HTMLSdsPaginationNextElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsPaginationNext extends Components.SdsPaginationNext {}
+
+
+@ProxyCmp({
+  inputs: ['current', 'href', 'pageNumber']
+})
+@Component({
+  selector: 'sds-pagination-page',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['current', 'href', 'pageNumber'],
+})
+export class SdsPaginationPage {
+  protected el: HTMLSdsPaginationPageElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsPaginationPage extends Components.SdsPaginationPage {}
+
+
+@ProxyCmp({
+  inputs: ['href', 'label']
+})
+@Component({
+  selector: 'sds-pagination-previous',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['href', 'label'],
+})
+export class SdsPaginationPrevious {
+  protected el: HTMLSdsPaginationPreviousElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsPaginationPrevious extends Components.SdsPaginationPrevious {}
+
+
+@ProxyCmp({
 })
 @Component({
   selector: 'sds-picture',
