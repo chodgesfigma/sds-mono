@@ -1,8 +1,8 @@
 @import 'reset';
 @import '../sds-input/sds-input';
-@import '../../fieldset/sds-label/sds-label';
-@import '../../fieldset/sds-description/sds-description';
-@import '../../fieldset/sds-field-error/sds-field-error';
+@import '../../Fieldset/sds-label/sds-label';
+@import '../../Fieldset/sds-description/sds-description';
+@import '../../Fieldset/sds-field-error/sds-field-error';
 
 :host {
   display: block;

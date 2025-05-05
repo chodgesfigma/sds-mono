@@ -1,4 +1,4 @@
-import { useMediaQuery } from '../../../hooks/useMediaQuery';
+import { useMediaQuery } from '../../../hooks';
 import { TextAlign } from '../types';
 import { Component, Prop, State, h } from '@stencil/core';
 
@@ -43,10 +43,8 @@ export class SdsTextContentTitle {
   render() {
     const classNames = 'text-content-title';
 
-    // TODO: once Flex component has been integrated, throw it in here
     return (
-      //   <Flex direction="column" gap="200" className={classNames} {...props}>
-      <div class={classNames}>
+      <sds-flex direction="column" gap="200" class={classNames}>
         {this.isMobile ? (
           <sds-text-title-page class={`text-align-${this.align}`}>{this.heading}</sds-text-title-page>
         ) : (
@@ -54,8 +52,7 @@ export class SdsTextContentTitle {
         )}
 
         {this.subHeading && <sds-text-subtitle class={`text-align-${this.align}`}>{this.subHeading}</sds-text-subtitle>}
-      </div>
-      //   </Flex>
+      </sds-flex>
     );
   }
 }

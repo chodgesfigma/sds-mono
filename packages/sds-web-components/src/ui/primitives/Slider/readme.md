@@ -27,9 +27,9 @@
 
 ### Depends on
 
-- [sds-field](../fieldset/sds-field)
-- [sds-label](../fieldset/sds-label)
-- [sds-description](../fieldset/sds-description)
+- [sds-field](../Fieldset/sds-field)
+- [sds-label](../Fieldset/sds-label)
+- [sds-description](../Fieldset/sds-description)
 
 ### Graph
 ```mermaid

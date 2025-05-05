@@ -7110,6 +7110,28 @@ export declare interface SdsPicture extends Components.SdsPicture {}
 
 
 @ProxyCmp({
+  inputs: ['elementType', 'padding', 'paddingBottom', 'paddingTop', 'src', 'variant']
+})
+@Component({
+  selector: 'sds-section',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['elementType', 'padding', 'paddingBottom', 'paddingTop', 'src', 'variant'],
+})
+export class SdsSection {
+  protected el: HTMLSdsSectionElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsSection extends Components.SdsSection {}
+
+
+@ProxyCmp({
   inputs: ['disabled', 'placeholder']
 })
 @Component({
