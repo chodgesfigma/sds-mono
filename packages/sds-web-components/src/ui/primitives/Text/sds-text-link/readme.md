@@ -20,7 +20,7 @@
 
 ### Depends on
 
-- [sds-link](../../sds-link)
+- [sds-link](../../Link)
 
 ### Graph
 ```mermaid

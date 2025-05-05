@@ -1,4 +1,4 @@
-import { SdsIcon, Size } from '../primitives/sds-icon/sds-icon';
+import { SdsIcon, Size } from '../primitives/Icon/sds-icon';
 import { Component, Prop, h } from '@stencil/core';
 
 @Component({

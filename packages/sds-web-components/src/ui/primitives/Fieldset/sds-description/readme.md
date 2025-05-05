@@ -1,23 +1,23 @@
-# sds-label
+# sds-description
 
 <!-- Auto Generated Below -->
 
 
 ## Overview
 
-Fieldset Label
+Fieldset Description
 
 ## Dependencies
 
 ### Used by
 
- - [sds-slider](../../sds-slider)
+ - [sds-slider](../../Slider)
 
 ### Graph
 ```mermaid
 graph TD;
-  sds-slider --> sds-label
-  style sds-label fill:#f9f,stroke:#333,stroke-width:4px
+  sds-slider --> sds-description
+  style sds-description fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
 ----------------------------------------------

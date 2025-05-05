@@ -16,12 +16,14 @@
 
 ### Depends on
 
+- [sds-flex](../../../layout/sds-flex)
 - [sds-text-heading](../sds-text-heading)
 - [sds-text-subheading](../sds-text-subheading)
 
 ### Graph
 ```mermaid
 graph TD;
+  sds-text-content-heading --> sds-flex
   sds-text-content-heading --> sds-text-heading
   sds-text-content-heading --> sds-text-subheading
   style sds-text-content-heading fill:#f9f,stroke:#333,stroke-width:4px
