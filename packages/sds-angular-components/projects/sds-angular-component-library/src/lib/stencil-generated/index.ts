@@ -4,6 +4,10 @@ import * as d from './components';
 export const DIRECTIVES = [
   d.SdsAccordion,
   d.SdsAccordionItem,
+  d.SdsAvatar,
+  d.SdsAvatarBlock,
+  d.SdsAvatarButton,
+  d.SdsAvatarGroup,
   d.SdsButton,
   d.SdsButtonDanger,
   d.SdsButtonGroup,

@@ -2,7 +2,6 @@
 
 <!-- Auto Generated Below -->
 
-
 ## Overview
 
 Fieldset Field
@@ -13,17 +12,17 @@ Fieldset Field
 | ---------- | ---------- | ---------------------------------------- | --------- | ------- |
 | `disabled` | `disabled` | Controls if the field is disabled or not | `boolean` | `false` |
 
-
 ## Dependencies
 
 ### Used by
 
- - [sds-input-field](../../Input/sds-input-field)
- - [sds-select-field](../../Select/sds-select-field)
- - [sds-slider](../../Slider)
- - [sds-textarea-field](../../Textarea/sds-textarea-field)
+- [sds-input-field](../../Input/sds-input-field)
+- [sds-select-field](../../Select/sds-select-field)
+- [sds-slider](../../Slider)
+- [sds-textarea-field](../../Textarea/sds-textarea-field)
 
 ### Graph
+
 ```mermaid
 graph TD;
   sds-input-field --> sds-field
@@ -33,6 +32,6 @@ graph TD;
   style sds-field fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
-----------------------------------------------
+---
 
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_

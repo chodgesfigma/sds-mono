@@ -7,6 +7,10 @@ import type { JSX } from 'sds-web-components/dist/types';
 
 import { defineCustomElement as defineSdsAccordion } from 'sds-web-components/dist/components/sds-accordion.js';
 import { defineCustomElement as defineSdsAccordionItem } from 'sds-web-components/dist/components/sds-accordion-item.js';
+import { defineCustomElement as defineSdsAvatar } from 'sds-web-components/dist/components/sds-avatar.js';
+import { defineCustomElement as defineSdsAvatarBlock } from 'sds-web-components/dist/components/sds-avatar-block.js';
+import { defineCustomElement as defineSdsAvatarButton } from 'sds-web-components/dist/components/sds-avatar-button.js';
+import { defineCustomElement as defineSdsAvatarGroup } from 'sds-web-components/dist/components/sds-avatar-group.js';
 import { defineCustomElement as defineSdsButton } from 'sds-web-components/dist/components/sds-button.js';
 import { defineCustomElement as defineSdsButtonDanger } from 'sds-web-components/dist/components/sds-button-danger.js';
 import { defineCustomElement as defineSdsButtonGroup } from 'sds-web-components/dist/components/sds-button-group.js';
@@ -370,6 +374,37 @@ export const SdsAccordionItem = /*@__PURE__*/ defineContainer<JSX.SdsAccordionIt
 ], [
   'sds-accordion-item-expanded',
   'sds-accordion-item-collapsed'
+]);
+
+
+export const SdsAvatar = /*@__PURE__*/ defineContainer<JSX.SdsAvatar>('sds-avatar', defineSdsAvatar, [
+  'size',
+  'square',
+  'src',
+  'initials',
+  'alt'
+]);
+
+
+export const SdsAvatarBlock = /*@__PURE__*/ defineContainer<JSX.SdsAvatarBlock>('sds-avatar-block', defineSdsAvatarBlock, [
+  'avatarTitle',
+  'description'
+]);
+
+
+export const SdsAvatarButton = /*@__PURE__*/ defineContainer<JSX.SdsAvatarButton>('sds-avatar-button', defineSdsAvatarButton, [
+  'size',
+  'square',
+  'src',
+  'initials',
+  'alt',
+  'options'
+]);
+
+
+export const SdsAvatarGroup = /*@__PURE__*/ defineContainer<JSX.SdsAvatarGroup>('sds-avatar-group', defineSdsAvatarGroup, [
+  'max',
+  'spacing'
 ]);
 
 
