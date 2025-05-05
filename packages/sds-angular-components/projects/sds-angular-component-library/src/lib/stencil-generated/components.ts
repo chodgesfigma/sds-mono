@@ -7362,6 +7362,76 @@ export declare interface SdsSlider extends Components.SdsSlider {
 
 
 @ProxyCmp({
+})
+@Component({
+  selector: 'sds-switch',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsSwitch {
+  protected el: HTMLSdsSwitchElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsSwitch extends Components.SdsSwitch {}
+
+
+@ProxyCmp({
+  inputs: ['checked', 'description', 'disabled', 'error', 'label', 'required', 'value']
+})
+@Component({
+  selector: 'sds-switch-field',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['checked', 'description', 'disabled', 'error', 'label', 'required', 'value'],
+})
+export class SdsSwitchField {
+  protected el: HTMLSdsSwitchFieldElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['sds-change']);
+  }
+}
+
+
+export declare interface SdsSwitchField extends Components.SdsSwitchField {
+  /**
+   * Emitted when the switch is toggled
+   */
+  'sds-change': EventEmitter<CustomEvent<{ checked: boolean; value: string }>>;
+}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-switch-group',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsSwitchGroup {
+  protected el: HTMLSdsSwitchGroupElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsSwitchGroup extends Components.SdsSwitchGroup {}
+
+
+@ProxyCmp({
   inputs: ['active', 'panelId']
 })
 @Component({

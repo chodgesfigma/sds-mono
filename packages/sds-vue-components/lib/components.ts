@@ -337,6 +337,9 @@ import { defineCustomElement as defineSdsSelect } from 'sds-web-components/dist/
 import { defineCustomElement as defineSdsSelectField } from 'sds-web-components/dist/components/sds-select-field.js';
 import { defineCustomElement as defineSdsSelectItem } from 'sds-web-components/dist/components/sds-select-item.js';
 import { defineCustomElement as defineSdsSlider } from 'sds-web-components/dist/components/sds-slider.js';
+import { defineCustomElement as defineSdsSwitch } from 'sds-web-components/dist/components/sds-switch.js';
+import { defineCustomElement as defineSdsSwitchField } from 'sds-web-components/dist/components/sds-switch-field.js';
+import { defineCustomElement as defineSdsSwitchGroup } from 'sds-web-components/dist/components/sds-switch-group.js';
 import { defineCustomElement as defineSdsTab } from 'sds-web-components/dist/components/sds-tab.js';
 import { defineCustomElement as defineSdsTabPanel } from 'sds-web-components/dist/components/sds-tab-panel.js';
 import { defineCustomElement as defineSdsTabs } from 'sds-web-components/dist/components/sds-tabs.js';
@@ -2128,6 +2131,26 @@ export const SdsSlider = /*@__PURE__*/ defineContainer<JSX.SdsSlider>('sds-slide
   'sds-change',
   'sds-input'
 ]);
+
+
+export const SdsSwitch = /*@__PURE__*/ defineContainer<JSX.SdsSwitch>('sds-switch', defineSdsSwitch);
+
+
+export const SdsSwitchField = /*@__PURE__*/ defineContainer<JSX.SdsSwitchField>('sds-switch-field', defineSdsSwitchField, [
+  'checked',
+  'disabled',
+  'description',
+  'error',
+  'label',
+  'required',
+  'value',
+  'sds-change'
+], [
+  'sds-change'
+]);
+
+
+export const SdsSwitchGroup = /*@__PURE__*/ defineContainer<JSX.SdsSwitchGroup>('sds-switch-group', defineSdsSwitchGroup);
 
 
 export const SdsTab = /*@__PURE__*/ defineContainer<JSX.SdsTab>('sds-tab', defineSdsTab, [
