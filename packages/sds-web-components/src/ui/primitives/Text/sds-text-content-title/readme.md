@@ -16,6 +16,7 @@
 
 ### Depends on
 
+- [sds-flex](../../../layout/sds-flex)
 - [sds-text-title-page](../sds-text-title-page)
 - [sds-text-title-hero](../sds-text-title-hero)
 - [sds-text-subtitle](../sds-text-subtitle)
@@ -23,6 +24,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  sds-text-content-title --> sds-flex
   sds-text-content-title --> sds-text-title-page
   sds-text-content-title --> sds-text-title-hero
   sds-text-content-title --> sds-text-subtitle

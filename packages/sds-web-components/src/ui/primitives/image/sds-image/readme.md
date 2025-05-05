@@ -22,6 +22,19 @@
 | `width`            | `width`        | Width html attribute       | `number \| string \| undefined`                         | `undefined` |
 
 
+## Dependencies
+
+### Used by
+
+ - [sds-section](../../../layout/sds-section)
+
+### Graph
+```mermaid
+graph TD;
+  sds-section --> sds-image
+  style sds-image fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
