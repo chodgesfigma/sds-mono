@@ -1,4 +1,4 @@
-import { Target } from '../../sds-link/sds-link';
+import { Target } from '../../Link/sds-link';
 import { Component, Prop, h } from '@stencil/core';
 
 @Component({

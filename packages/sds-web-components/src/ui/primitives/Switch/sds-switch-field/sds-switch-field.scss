@@ -1,0 +1,45 @@
+@import 'reset';
+@import '../sds-switch/sds-switch';
+@import '../../Fieldset/sds-label/sds-label';
+@import '../../Fieldset/sds-description/sds-description';
+@import '../../Fieldset/sds-field-error/sds-field-error';
+
+:host {
+  display: block;
+}
+
+.switch-field {
+  --switch-field-label-color: var(--sds-color-text-default-default);
+  --switch-field-description-color: var(--sds-color-text-default-secondary);
+
+  align-items: center;
+  gap: var(--sds-size-space-100) var(--sds-size-space-300);
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  .switch {
+    grid-row-start: 1;
+    grid-column-start: 2;
+  }
+
+  .label {
+    color: var(--switch-field-label-color);
+    grid-row-start: 1;
+    grid-column-start: 1;
+  }
+
+  .description {
+    color: var(--switch-field-description-color);
+    grid-row-start: 2;
+    grid-column-start: 1;
+  }
+
+  slot[data-hidden='true'] {
+    display: none;
+  }
+
+  &[data-disabled] {
+    --switch-field-label-color: var(--sds-color-text-disabled-default);
+    --switch-field-description-color: var(--sds-color-text-disabled-default);
+  }
+}
