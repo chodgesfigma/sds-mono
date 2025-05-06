@@ -16,6 +16,21 @@
 | `variant`                | `variant`    | The button default variant | `"neutral" \| "primary" \| "subtle"` | `'primary'` |
 
 
+## Dependencies
+
+### Used by
+
+ - [sds-dialog-button](../../Dialog/sds-dialog-button)
+ - [sds-dialog-close](../../Dialog/sds-dialog-close)
+
+### Graph
+```mermaid
+graph TD;
+  sds-dialog-button --> sds-icon-button
+  sds-dialog-close --> sds-icon-button
+  style sds-icon-button fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

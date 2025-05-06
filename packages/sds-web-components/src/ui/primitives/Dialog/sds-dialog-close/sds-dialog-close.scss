@@ -1,0 +1,11 @@
+@import 'reset';
+
+:host {
+  display: block;
+}
+
+.dialog-close {
+  position: absolute;
+  top: var(--sds-size-space-200);
+  right: var(--sds-size-space-200);
+}
