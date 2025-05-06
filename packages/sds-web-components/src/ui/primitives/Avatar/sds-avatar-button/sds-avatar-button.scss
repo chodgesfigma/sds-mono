@@ -1,0 +1,27 @@
+@import 'reset';
+@import '../sds-avatar/sds-avatar';
+
+:host {
+  display: block;
+}
+
+.avatar-button {
+  border-radius: var(--avatar-border-radius);
+  cursor: pointer;
+  height: var(--avatar-diameter);
+  width: var(--avatar-diameter);
+
+  &:focus-visible {
+    outline: none;
+
+    --offset: calc(var(--sds-size-stroke-border) * 2);
+
+    &::before {
+      content: '';
+      border-radius: calc(var(--avatar-border-radius) + var(--offset));
+      inset: calc(-1 * var(--offset));
+      box-shadow: 0 0 0 var(--global-focus-ring-size) var(--global-focus-ring-color);
+      position: absolute;
+    }
+  }
+}
