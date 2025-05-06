@@ -335,6 +335,7 @@ import { defineCustomElement as defineSdsLogo } from 'sds-web-components/dist/co
 import { defineCustomElement as defineSdsNavigation } from 'sds-web-components/dist/components/sds-navigation.js';
 import { defineCustomElement as defineSdsNavigationButton } from 'sds-web-components/dist/components/sds-navigation-button.js';
 import { defineCustomElement as defineSdsNavigationPill } from 'sds-web-components/dist/components/sds-navigation-pill.js';
+import { defineCustomElement as defineSdsNotification } from 'sds-web-components/dist/components/sds-notification.js';
 import { defineCustomElement as defineSdsPagination } from 'sds-web-components/dist/components/sds-pagination.js';
 import { defineCustomElement as defineSdsPaginationGap } from 'sds-web-components/dist/components/sds-pagination-gap.js';
 import { defineCustomElement as defineSdsPaginationList } from 'sds-web-components/dist/components/sds-pagination-list.js';
@@ -2121,6 +2122,15 @@ export const SdsNavigationPill = /*@__PURE__*/ defineContainer<JSX.SdsNavigation
   'sds-navigation-selected'
 ], [
   'sds-navigation-selected'
+]);
+
+
+export const SdsNotification = /*@__PURE__*/ defineContainer<JSX.SdsNotification>('sds-notification', defineSdsNotification, [
+  'isDismissible',
+  'variant',
+  'sds-dismiss'
+], [
+  'sds-dismiss'
 ]);
 
 
