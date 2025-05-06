@@ -456,14 +456,14 @@ export declare interface SdsDialogDescription extends Components.SdsDialogDescri
 
 
 @ProxyCmp({
-  inputs: ['isDismissible', 'isOpen']
+  inputs: ['isOpen']
 })
 @Component({
   selector: 'sds-dialog-modal',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['isDismissible', 'isOpen'],
+  inputs: ['isOpen'],
 })
 export class SdsDialogModal {
   protected el: HTMLSdsDialogModalElement;

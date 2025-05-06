@@ -532,7 +532,6 @@ export const SdsDialogDescription = /*@__PURE__*/ defineContainer<JSX.SdsDialogD
 
 
 export const SdsDialogModal = /*@__PURE__*/ defineContainer<JSX.SdsDialogModal>('sds-dialog-modal', defineSdsDialogModal, [
-  'isDismissible',
   'isOpen'
 ]);
 

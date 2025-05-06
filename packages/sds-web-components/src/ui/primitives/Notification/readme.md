@@ -24,16 +24,16 @@
 
 ### Depends on
 
-- [sds-button-danger](../Button/sds-button-danger)
+- [sds-destructive-icon-button](../Button/sds-destructive-icon-button)
 - [sds-icon-x](../../icons)
-- [sds-button](../Button/sds-button)
+- [sds-icon-button](../Button/sds-icon-button)
 
 ### Graph
 ```mermaid
 graph TD;
-  sds-notification --> sds-button-danger
+  sds-notification --> sds-destructive-icon-button
   sds-notification --> sds-icon-x
-  sds-notification --> sds-button
+  sds-notification --> sds-icon-button
   style sds-notification fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

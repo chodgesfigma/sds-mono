@@ -18,7 +18,7 @@ Fieldset Field
 
 ### Used by
 
- - [sds-input-field](../../Input/sds-input-field)
+ - [sds-input-field](../../input/sds-input-field)
  - [sds-select-field](../../Select/sds-select-field)
  - [sds-slider](../../Slider)
  - [sds-textarea-field](../../Textarea/sds-textarea-field)

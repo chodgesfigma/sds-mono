@@ -16,6 +16,19 @@
 | `variant`                | `variant`    | The button default variant | `"danger-primary" \| "danger-subtle"` | `'danger-primary'` |
 
 
+## Dependencies
+
+### Used by
+
+ - [sds-notification](../../Notification)
+
+### Graph
+```mermaid
+graph TD;
+  sds-notification --> sds-destructive-icon-button
+  style sds-destructive-icon-button fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*
