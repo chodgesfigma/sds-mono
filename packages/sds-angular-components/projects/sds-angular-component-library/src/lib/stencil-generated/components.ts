@@ -7133,6 +7133,34 @@ export declare interface SdsNavigationPill extends Components.SdsNavigationPill 
 
 
 @ProxyCmp({
+  inputs: ['isDismissible', 'variant']
+})
+@Component({
+  selector: 'sds-notification',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['isDismissible', 'variant'],
+})
+export class SdsNotification {
+  protected el: HTMLSdsNotificationElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['sds-dismiss']);
+  }
+}
+
+
+export declare interface SdsNotification extends Components.SdsNotification {
+  /**
+   * Emitted when the notification is dismissed
+   */
+  'sds-dismiss': EventEmitter<CustomEvent<any>>;
+}
+
+
+@ProxyCmp({
   inputs: ['ariaLabel']
 })
 @Component({

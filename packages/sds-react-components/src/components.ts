@@ -333,6 +333,7 @@ import { SdsLogo as SdsLogoElement, defineCustomElement as defineSdsLogo } from 
 import { SdsNavigationButton as SdsNavigationButtonElement, defineCustomElement as defineSdsNavigationButton } from "sds-web-components/dist/components/sds-navigation-button.js";
 import { SdsNavigationPill as SdsNavigationPillElement, defineCustomElement as defineSdsNavigationPill } from "sds-web-components/dist/components/sds-navigation-pill.js";
 import { SdsNavigation as SdsNavigationElement, defineCustomElement as defineSdsNavigation } from "sds-web-components/dist/components/sds-navigation.js";
+import { SdsNotification as SdsNotificationElement, defineCustomElement as defineSdsNotification } from "sds-web-components/dist/components/sds-notification.js";
 import { SdsPaginationGap as SdsPaginationGapElement, defineCustomElement as defineSdsPaginationGap } from "sds-web-components/dist/components/sds-pagination-gap.js";
 import { SdsPaginationList as SdsPaginationListElement, defineCustomElement as defineSdsPaginationList } from "sds-web-components/dist/components/sds-pagination-list.js";
 import { SdsPaginationNext as SdsPaginationNextElement, defineCustomElement as defineSdsPaginationNext } from "sds-web-components/dist/components/sds-pagination-next.js";
@@ -3924,6 +3925,17 @@ export const SdsNavigationPill: StencilReactComponent<SdsNavigationPillElement, 
     react: React,
     events: { onSdsNavigationSelected: 'sds-navigation-selected' } as SdsNavigationPillEvents,
     defineCustomElement: defineSdsNavigationPill
+});
+
+type SdsNotificationEvents = { onSdsDismiss: EventName<CustomEvent<any>> };
+
+export const SdsNotification: StencilReactComponent<SdsNotificationElement, SdsNotificationEvents> = /*@__PURE__*/ createComponent<SdsNotificationElement, SdsNotificationEvents>({
+    tagName: 'sds-notification',
+    elementClass: SdsNotificationElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onSdsDismiss: 'sds-dismiss' } as SdsNotificationEvents,
+    defineCustomElement: defineSdsNotification
 });
 
 type SdsPaginationEvents = NonNullable<unknown>;

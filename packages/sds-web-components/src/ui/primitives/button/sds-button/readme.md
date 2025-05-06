@@ -17,6 +17,7 @@
 
 ### Used by
 
+ - [sds-notification](../../Notification)
  - [sds-pagination-next](../../Pagination/sds-pagination-next)
  - [sds-pagination-page](../../Pagination/sds-pagination-page)
  - [sds-pagination-previous](../../Pagination/sds-pagination-previous)
@@ -24,6 +25,7 @@
 ### Graph
 ```mermaid
 graph TD;
+  sds-notification --> sds-button
   sds-pagination-next --> sds-button
   sds-pagination-page --> sds-button
   sds-pagination-previous --> sds-button
