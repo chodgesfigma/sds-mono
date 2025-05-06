@@ -1,5 +1,5 @@
 import { SdsLabelFunctional } from '../../Fieldset/sds-label/sds-label-functional';
-import { SdsInputFunctional } from '../../Temp-Input/sds-input/sds-input-functional';
+import { SdsInputFunctional } from '../../Input/sds-input/sds-input-functional';
 import { SlMenuItem } from '@shoelace-style/shoelace';
 import '@shoelace-style/shoelace/dist/components/popup/popup.js';
 import { Component, Event, EventEmitter, Prop, State, h } from '@stencil/core';
