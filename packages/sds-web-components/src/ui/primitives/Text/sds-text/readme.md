@@ -15,11 +15,13 @@
 
 ### Used by
 
- - [sds-dialog-description](../../dialog/sds-dialog-description)
+ - [sds-avatar-block](../../Avatar/sds-avatar-block)
+ - [sds-dialog-description](../../Dialog/sds-dialog-description)
 
 ### Graph
 ```mermaid
 graph TD;
+  sds-avatar-block --> sds-text
   sds-dialog-description --> sds-text
   style sds-text fill:#f9f,stroke:#333,stroke-width:4px
 ```

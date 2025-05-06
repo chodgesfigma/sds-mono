@@ -117,3 +117,7 @@
   --button-border-color: var(--sds-color-border-disabled-default);
   --button-color: var(--sds-color-text-disabled-default);
 }
+
+.icon-button {
+  --border-radius: var(--sds-size-radius-full);
+}
