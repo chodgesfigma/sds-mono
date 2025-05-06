@@ -1,4 +1,3 @@
-
 import * as d from './components';
 
 export const DIRECTIVES = [
@@ -15,14 +14,7 @@ export const DIRECTIVES = [
   d.SdsCheckboxField,
   d.SdsCheckboxGroup,
   d.SdsDescription,
-  d.SdsDialog,
-  d.SdsDialogBody,
-  d.SdsDialogButton,
-  d.SdsDialogClose,
-  d.SdsDialogDescription,
-  d.SdsDialogModal,
-  d.SdsDialogTitle,
-  d.SdsDialogTrigger,
+  d.SdsDestructiveIconButton,
   d.SdsField,
   d.SdsFieldError,
   d.SdsFieldGroup,
@@ -69,6 +61,7 @@ export const DIRECTIVES = [
   d.SdsIconBookmark,
   d.SdsIconBox,
   d.SdsIconBriefcase,
+  d.SdsIconButton,
   d.SdsIconCalendar,
   d.SdsIconCamera,
   d.SdsIconCameraOff,
@@ -373,5 +366,5 @@ export const DIRECTIVES = [
   d.SdsTextareaField,
   d.SdsToggleTag,
   d.SdsToggleTagGroup,
-  d.SdsToggleTagList
+  d.SdsToggleTagList,
 ];
