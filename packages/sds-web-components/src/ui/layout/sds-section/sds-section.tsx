@@ -1,8 +1,10 @@
 import { Component, Prop, h } from '@stencil/core';
 import clsx from 'clsx';
 
+export type SectionElementType = 'section' | 'header' | 'footer';
 export type SectionPadding = '600' | '800' | '1200' | '1600' | '4000';
 export type VerticalPadding = SectionPadding | null;
+export type SectionVariant = 'brand' | 'neutral' | 'stroke' | 'subtle' | 'image';
 
 @Component({
   tag: 'sds-section',
@@ -13,7 +15,7 @@ export class SdsSection {
   /**
    * Type for the main section element
    */
-  @Prop() elementType: 'section' | 'header' | 'footer' = 'section';
+  @Prop() elementType: SectionElementType = 'section';
 
   /**
    * Padding for both top and bottom
@@ -33,7 +35,7 @@ export class SdsSection {
   /**
    * Visual variant of the section
    */
-  @Prop() variant: 'brand' | 'neutral' | 'stroke' | 'subtle' | 'image' = 'subtle';
+  @Prop() variant: SectionVariant = 'subtle';
 
   /**
    * Source string for the optional background image, variant must be set to 'image' to display
