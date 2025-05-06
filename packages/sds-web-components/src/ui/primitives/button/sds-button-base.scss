@@ -1,5 +1,9 @@
 @import 'reset';
 
+:host {
+  display: block;
+}
+
 .button {
   --border-radius: var(--sds-size-radius-200);
 
@@ -19,6 +23,10 @@
   white-space: nowrap;
 
   --icon-color: var(--button-color);
+}
+
+.button-rounded {
+  --border-radius: var(--sds-size-radius-full);
 }
 
 .button-size-small {
@@ -108,4 +116,8 @@
   --button-background-color: var(--sds-color-background-disabled-default);
   --button-border-color: var(--sds-color-border-disabled-default);
   --button-color: var(--sds-color-text-disabled-default);
+}
+
+.icon-button {
+  --border-radius: var(--sds-size-radius-full);
 }

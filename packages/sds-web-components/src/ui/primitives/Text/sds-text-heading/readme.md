@@ -14,12 +14,14 @@
 
 ### Used by
 
+ - [sds-dialog-title](../../Dialog/sds-dialog-title)
  - [sds-text-content-heading](../sds-text-content-heading)
  - [sds-text-price](../sds-text-price)
 
 ### Graph
 ```mermaid
 graph TD;
+  sds-dialog-title --> sds-text-heading
   sds-text-content-heading --> sds-text-heading
   sds-text-price --> sds-text-heading
   style sds-text-heading fill:#f9f,stroke:#333,stroke-width:4px

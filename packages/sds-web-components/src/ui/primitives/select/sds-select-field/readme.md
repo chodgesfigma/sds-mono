@@ -22,7 +22,7 @@ Select Field
 
 ### Depends on
 
-- [sds-field](../../fieldset/sds-field)
+- [sds-field](../../Fieldset/sds-field)
 - [sds-icon-chevron-down](../../../icons)
 
 ### Graph

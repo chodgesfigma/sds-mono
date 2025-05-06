@@ -17,12 +17,10 @@ export default meta;
 
 type Story = StoryObj<ComponentArgs>;
 
-// TODO: add in flex wrapper container once that component has been finished
-
 export const Primary: Story = {
   args: {},
   render: args => `
-    <div>
+    <sds-flex container direction="column" gap="400">
       <sds-text-title-hero ${spread(args)}>Text Title Hero</sds-text-title-hero>
       <sds-text-title-page ${spread(args)}>Text Title Page</sds-text-title-page>
       <sds-text-subtitle>Text Subtitle</sds-text-subtitle>
@@ -57,6 +55,6 @@ export const Primary: Story = {
         This feature is only available to users on the${' '}
         <sds-text-strong>Business Plan</sds-text-strong>. To upgrade, visit your${' '}<sds-text-link href="#" >billing settings</sds-text-link>. your api key is${' '}<sds-text-code>fig_123456789</sds-text-code> .
       </sds-text>
-    </div>
+    </sds-flex>
     `,
 };
