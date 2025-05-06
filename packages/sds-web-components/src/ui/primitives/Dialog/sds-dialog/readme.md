@@ -17,11 +17,13 @@
 ### Used by
 
  - [sds-dialog-button](../sds-dialog-button)
+ - [sds-tooltip](../../Tooltip/sds-tooltip)
 
 ### Graph
 ```mermaid
 graph TD;
   sds-dialog-button --> sds-dialog
+  sds-tooltip --> sds-dialog
   style sds-dialog fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

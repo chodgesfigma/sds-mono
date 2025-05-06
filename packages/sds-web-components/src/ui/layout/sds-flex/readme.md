@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property         | Attribute         | Description         | Type                                                                                  | Default     |
@@ -14,17 +15,17 @@
 | `gap`            | `gap`             | Gap                 | `"100" \| "1200" \| "1600" \| "200" \| "300" \| "400" \| "600" \| "800" \| undefined` | `undefined` |
 | `wrap`           | `wrap`            | Wrap                | `boolean`                                                                             | `false`     |
 
+
 ## Dependencies
 
 ### Used by
 
-- [sds-hero](../../compositions/Sections/sds-heroes)
-- [sds-panel](../../compositions/Sections/sds-panel)
-- [sds-text-content-heading](../../primitives/Text/sds-text-content-heading)
-- [sds-text-content-title](../../primitives/Text/sds-text-content-title)
+ - [sds-hero](../../compositions/Sections/sds-heroes)
+ - [sds-panel](../../compositions/Sections/sds-panel)
+ - [sds-text-content-heading](../../primitives/Text/sds-text-content-heading)
+ - [sds-text-content-title](../../primitives/Text/sds-text-content-title)
 
 ### Graph
-
 ```mermaid
 graph TD;
   sds-hero --> sds-flex
@@ -34,6 +35,6 @@ graph TD;
   style sds-flex fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*

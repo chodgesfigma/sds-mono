@@ -1,3 +1,4 @@
+
 import * as d from './components';
 
 export const DIRECTIVES = [
@@ -339,6 +340,7 @@ export const DIRECTIVES = [
   d.SdsPaginationNext,
   d.SdsPaginationPage,
   d.SdsPaginationPrevious,
+  d.SdsPanel,
   d.SdsPicture,
   d.SdsSection,
   d.SdsSelect,
@@ -377,4 +379,5 @@ export const DIRECTIVES = [
   d.SdsToggleTag,
   d.SdsToggleTagGroup,
   d.SdsToggleTagList,
+  d.SdsTooltip
 ];
