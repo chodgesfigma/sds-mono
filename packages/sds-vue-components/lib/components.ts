@@ -494,10 +494,7 @@ export const SdsDestructiveIconButton = /*@__PURE__*/ defineContainer<JSX.SdsDes
 
 
 export const SdsDialog = /*@__PURE__*/ defineContainer<JSX.SdsDialog>('sds-dialog', defineSdsDialog, [
-  'dialogType',
-  'sds-close-dialog'
-], [
-  'sds-close-dialog'
+  'dialogType'
 ]);
 
 

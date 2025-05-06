@@ -355,17 +355,11 @@ export class SdsDialog {
   constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
     c.detach();
     this.el = r.nativeElement;
-    proxyOutputs(this, this.el, ['sds-close-dialog']);
   }
 }
 
 
-export declare interface SdsDialog extends Components.SdsDialog {
-  /**
-   * Emitted when the close-button is clicked
-   */
-  'sds-close-dialog': EventEmitter<CustomEvent<any>>;
-}
+export declare interface SdsDialog extends Components.SdsDialog {}
 
 
 @ProxyCmp({

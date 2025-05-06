@@ -43,7 +43,7 @@ Type: `Promise<void>`
 
 ### Depends on
 
-- [sds-dialog](../../dialog/sds-dialog)
+- [sds-dialog](../../Dialog/sds-dialog)
 
 ### Graph
 ```mermaid

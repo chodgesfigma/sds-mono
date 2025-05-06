@@ -548,14 +548,14 @@ export const SdsDestructiveIconButton: StencilReactComponent<SdsDestructiveIconB
     defineCustomElement: defineSdsDestructiveIconButton
 });
 
-type SdsDialogEvents = { onSdsCloseDialog: EventName<CustomEvent<any>> };
+type SdsDialogEvents = NonNullable<unknown>;
 
 export const SdsDialog: StencilReactComponent<SdsDialogElement, SdsDialogEvents> = /*@__PURE__*/ createComponent<SdsDialogElement, SdsDialogEvents>({
     tagName: 'sds-dialog',
     elementClass: SdsDialogElement,
     // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
     react: React,
-    events: { onSdsCloseDialog: 'sds-close-dialog' } as SdsDialogEvents,
+    events: {} as SdsDialogEvents,
     defineCustomElement: defineSdsDialog
 });
 
