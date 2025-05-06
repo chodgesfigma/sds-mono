@@ -42,6 +42,7 @@ Type: `Promise<void>`
 ### Depends on
 
 - [sds-dialog-trigger](../sds-dialog-trigger)
+- [sds-icon-button](../../Button/sds-icon-button)
 - [sds-button](../../Button/sds-button)
 - [sds-dialog-modal](../sds-dialog-modal)
 - [sds-dialog](../sds-dialog)
@@ -50,6 +51,7 @@ Type: `Promise<void>`
 ```mermaid
 graph TD;
   sds-dialog-button --> sds-dialog-trigger
+  sds-dialog-button --> sds-icon-button
   sds-dialog-button --> sds-button
   sds-dialog-button --> sds-dialog-modal
   sds-dialog-button --> sds-dialog

@@ -24,7 +24,7 @@ export class SdsDialogModal {
     return (
       <div class="dialog-backdrop">
         <div class="dialog-container">
-          <slot></slot>
+          <slot />
         </div>
       </div>
     );

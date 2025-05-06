@@ -48,11 +48,11 @@ export class SdsDialogButton {
   render() {
     return (
       <sds-dialog-trigger>
-        <sds-button rounded onClick={() => this.openDialog()} aria-label={this.label} class="icon-button">
+        <sds-icon-button onClick={() => this.openDialog()} ariaLabel={this.label} class="icon-button">
           <slot name="icon"></slot>
-        </sds-button>
+        </sds-icon-button>
         {!this.useIcon && (
-          <sds-button rounded onClick={() => this.openDialog()} variant={this.variant}>
+          <sds-button onClick={() => this.openDialog()} variant={this.variant}>
             {this.label}
           </sds-button>
         )}

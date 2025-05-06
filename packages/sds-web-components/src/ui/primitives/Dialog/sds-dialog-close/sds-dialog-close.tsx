@@ -12,7 +12,7 @@ export class SdsDialogClose {
   @Event({
     eventName: 'sds-close-dialog',
   })
-  closeDialog!: EventEmitter<undefined>;
+  closeDialog!: EventEmitter;
 
   handleClick = () => {
     this.closeDialog.emit();
@@ -20,9 +20,9 @@ export class SdsDialogClose {
 
   render() {
     return (
-      <sds-button rounded onClick={this.handleClick} class="dialog-close" aria-label="Dismiss dialog" variant="subtle" size="small">
+      <sds-icon-button onClick={this.handleClick} class="dialog-close" ariaLabel="Dismiss dialog" variant="subtle" size="small">
         <sds-icon-x />
-      </sds-button>
+      </sds-icon-button>
     );
   }
 }

@@ -7,22 +7,22 @@
 
 ## Events
 
-| Event              | Description                              | Type                     |
-| ------------------ | ---------------------------------------- | ------------------------ |
-| `sds-close-dialog` | Emitted when the close-button is clicked | `CustomEvent<undefined>` |
+| Event              | Description                              | Type               |
+| ------------------ | ---------------------------------------- | ------------------ |
+| `sds-close-dialog` | Emitted when the close-button is clicked | `CustomEvent<any>` |
 
 
 ## Dependencies
 
 ### Depends on
 
-- [sds-button](../../Button/sds-button)
+- [sds-icon-button](../../Button/sds-icon-button)
 - [sds-icon-x](../../../icons)
 
 ### Graph
 ```mermaid
 graph TD;
-  sds-dialog-close --> sds-button
+  sds-dialog-close --> sds-icon-button
   sds-dialog-close --> sds-icon-x
   style sds-dialog-close fill:#f9f,stroke:#333,stroke-width:4px
 ```

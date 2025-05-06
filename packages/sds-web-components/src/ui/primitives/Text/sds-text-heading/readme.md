@@ -14,7 +14,7 @@
 
 ### Used by
 
- - [sds-dialog-title](../../dialog/sds-dialog-title)
+ - [sds-dialog-title](../../Dialog/sds-dialog-title)
  - [sds-text-content-heading](../sds-text-content-heading)
  - [sds-text-price](../sds-text-price)
 
