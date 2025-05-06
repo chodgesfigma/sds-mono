@@ -1,4 +1,4 @@
-import { Component, Prop, State, h } from '@stencil/core';
+import { Component, Host, Prop, State, h } from '@stencil/core';
 import clsx from 'clsx';
 
 export type ImageAspectRatio = '1-1' | '16-9' | '4-3' | 'fill' | 'natural';
@@ -90,7 +90,7 @@ export class SdsImage {
     const classNames = clsx('image', `image-aspect-ratio-${this.aspectRatio}`, `image-size-${this.size}`, `image-variant-${this.variant}`, { 'image-loading': !this.loaded });
 
     return (
-      <>
+      <Host>
         {!this.loaded && <span class={clsx('image-placeholder', classNames)} />}
         <img
           class={classNames}
@@ -106,7 +106,7 @@ export class SdsImage {
           crossorigin={this.crossorigin}
           onLoad={this.handleLoad}
         />
-      </>
+      </Host>
     );
   }
 }

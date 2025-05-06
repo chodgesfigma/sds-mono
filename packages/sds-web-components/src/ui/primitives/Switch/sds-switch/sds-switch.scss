@@ -1,0 +1,68 @@
+@import 'reset';
+
+:host {
+  display: block;
+}
+
+.input {
+  position: absolute;
+  inset: 0;
+  z-index: 200;
+}
+
+.switch {
+  --switch-background: var(--sds-color-background-default-secondary);
+  --switch-border: var(--sds-color-border-default-default);
+  --switch-icon: var(--sds-color-icon-default-secondary);
+  --switch-padding: var(--sds-size-space-100);
+  --switch-width: calc(var(--sds-size-space-400) + var(--sds-size-space-600));
+  --switch-icon-diameter: var(--sds-size-space-400);
+  --switch-icon-x: calc(var(--switch-padding));
+  --switch-border-radius: var(--sds-size-space-600);
+
+  background: var(--switch-background);
+  box-shadow: inset 0 0 0 var(--sds-size-stroke-border) var(--switch-border);
+  border-radius: var(--switch-border-radius);
+  height: var(--sds-size-space-600);
+  padding: var(--switch-padding);
+  position: relative;
+  width: var(--switch-width);
+
+  &:has(input:disabled) {
+    --switch-background: var(--sds-color-background-disabled-default);
+    --switch-border: var(--sds-color-border-disabled-default);
+    --switch-icon: var(--sds-color-icon-disabled-default);
+  }
+
+  &:has(input:checked) {
+    --switch-background: var(--sds-color-background-brand-default);
+    --switch-border: var(--switch-background);
+    --switch-icon: var(--sds-color-icon-brand-on-brand);
+    --switch-icon-x: calc(var(--switch-width) - var(--switch-padding) - var(--switch-icon-diameter));
+  }
+
+  &:has(input:focus-visible) {
+    &::before {
+      --offset: calc(var(--sds-size-stroke-border) * 2);
+
+      content: '';
+      border-radius: calc(var(--switch-border-radius) + var(--offset));
+      inset: calc(-1 * var(--offset));
+      box-shadow: 0 0 0 var(--global-focus-ring-size) var(--global-focus-ring-color);
+      position: absolute;
+    }
+  }
+}
+
+.switch-icon {
+  background: var(--switch-icon);
+  border-radius: var(--switch-icon-diameter);
+  display: block;
+  left: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%) translateX(var(--switch-icon-x));
+  height: var(--switch-icon-diameter);
+  width: var(--switch-icon-diameter);
+  transition: all 0.2s ease-out;
+}

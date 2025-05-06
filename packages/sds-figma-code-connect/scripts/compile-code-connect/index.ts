@@ -15,7 +15,7 @@ const codeConnectBodyRegex = new RegExp(/(figma\.connect[\w\W]+)$/);
 const reactImportRegex = new RegExp(
   /(import {[\w\W]+} from 'sds-react-components';)/
 );
-const enumTypeRegex = new RegExp(/figma\.enum<(\w+)>/, 'g');
+const enumTypeRegex = new RegExp(/figma\.enum<(\w+)(\['\w+'\])?>/, 'g');
 
 const compileCodeConnects = async () => {
   console.log('** Compiling Figma Code Connect files');
@@ -127,7 +127,10 @@ const compileCodeConnects = async () => {
           const typeImports = new Array(
             ...new Set(
               enumTypeMatches.map((enumDef) =>
-                enumDef.replace('figma.enum<', '').replace('>', '')
+                enumDef
+                  .replace('figma.enum<', '')
+                  .replace('>', '')
+                  .replace(/\['\w+'\]/, '')
               )
             )
           ).join(', ');
@@ -164,7 +167,7 @@ const compileCodeConnects = async () => {
   }
 
   console.log('Moving icons folder...');
-  const iconDestination = path.resolve(BUILD_PATH, 'icons');
+  const iconDestination = path.resolve(BUILD_PATH);
   await fs.cp(path.resolve(CODE_CONNECT_PATH, 'icons'), iconDestination, {
     recursive: true,
   });
