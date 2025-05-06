@@ -1,11 +1,10 @@
 import { Component, Host, Prop, h } from '@stencil/core';
 import clsx from 'clsx';
 
-type AlignPrimary = 'start' | 'end' | 'center' | 'stretch' | 'space-between';
-type AlignSecondary = 'start' | 'end' | 'center' | 'stretch' | 'space-between';
-type Direction = 'row' | 'row-reverse' | 'column' | 'column-reverse';
-type Gap = '100' | '200' | '300' | '400' | '600' | '800' | '1200' | '1600';
-type FlexType = 'quarter' | 'third' | 'half' | 'auto';
+export type FlexAlignment = 'start' | 'end' | 'center' | 'stretch' | 'space-between';
+export type Direction = 'row' | 'row-reverse' | 'column' | 'column-reverse';
+export type Gap = '100' | '200' | '300' | '400' | '600' | '800' | '1200' | '1600';
+export type FlexType = 'quarter' | 'third' | 'half' | 'auto';
 
 @Component({
   tag: 'sds-flex',
@@ -16,11 +15,11 @@ export class SdsFlex {
   /**
    * Primary alignment
    */
-  @Prop() alignPrimary: AlignPrimary = 'start';
+  @Prop() alignPrimary: FlexAlignment = 'start';
   /**
    * Secondary alignment
    */
-  @Prop() alignSecondary: AlignSecondary = 'start';
+  @Prop() alignSecondary: FlexAlignment = 'start';
   /**
    * Container
    */

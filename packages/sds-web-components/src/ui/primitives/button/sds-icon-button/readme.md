@@ -1,9 +1,6 @@
 # sds-icon-button
 
-
-
 <!-- Auto Generated Below -->
-
 
 ## Properties
 
@@ -15,20 +12,26 @@
 | `type`                   | `type`       | The button type            | `"button" \| "reset" \| "submit"`    | `'button'`  |
 | `variant`                | `variant`    | The button default variant | `"neutral" \| "primary" \| "subtle"` | `'primary'` |
 
-
 ## Dependencies
 
 ### Used by
 
- - [sds-search](../../Search/sds-search)
+- [sds-search](../../Search/sds-search)
+- [sds-dialog-button](../../Dialog/sds-dialog-button)
+- [sds-dialog-close](../../Dialog/sds-dialog-close)
+- [sds-menu-button](../../Menu/sds-menu-button)
 
 ### Graph
+
 ```mermaid
 graph TD;
   sds-search --> sds-icon-button
+  sds-dialog-button --> sds-icon-button
+  sds-dialog-close --> sds-icon-button
+  sds-menu-button --> sds-icon-button
   style sds-icon-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
-----------------------------------------------
+---
 
-*Built with [StencilJS](https://stenciljs.com/)*
+_Built with [StencilJS](https://stenciljs.com/)_
