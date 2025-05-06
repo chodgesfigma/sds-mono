@@ -7,11 +7,6 @@ import { Component, h, Prop } from '@stencil/core';
 })
 export class SdsDialogModal {
   /**
-   * Unused prop currently
-   */
-  @Prop() isDismissible = false;
-
-  /**
    * Open state of the dialog
    */
   @Prop({ reflect: true }) isOpen = false;

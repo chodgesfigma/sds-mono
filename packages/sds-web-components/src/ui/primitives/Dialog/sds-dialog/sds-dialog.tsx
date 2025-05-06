@@ -9,6 +9,9 @@ export type DialogType = 'sheet' | 'card';
   shadow: true,
 })
 export class SdsDialog {
+  /**
+   * Visual type of the dialog
+   */
   @Prop() dialogType: DialogType = 'card';
 
   render() {
