@@ -1,3 +1,4 @@
+
 import * as d from './components';
 
 export const DIRECTIVES = [
@@ -30,6 +31,8 @@ export const DIRECTIVES = [
   d.SdsFlex,
   d.SdsFlexItem,
   d.SdsForm,
+  d.SdsHeader,
+  d.SdsHeaderAuth,
   d.SdsHero,
   d.SdsIconActivity,
   d.SdsIconAirplay,
@@ -385,5 +388,5 @@ export const DIRECTIVES = [
   d.SdsToggleTag,
   d.SdsToggleTagGroup,
   d.SdsToggleTagList,
-  d.SdsTooltip,
+  d.SdsTooltip
 ];

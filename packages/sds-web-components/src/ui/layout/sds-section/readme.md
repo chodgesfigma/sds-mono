@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Properties
 
 | Property        | Attribute        | Description                                                                                | Type                                                      | Default     |
@@ -13,19 +14,19 @@
 | `src`           | `src`            | Source string for the optional background image, variant must be set to 'image' to display | `string`                                                  | `''`        |
 | `variant`       | `variant`        | Visual variant of the section                                                              | `"brand" \| "image" \| "neutral" \| "stroke" \| "subtle"` | `'subtle'`  |
 
+
 ## Dependencies
 
 ### Used by
 
-- [sds-header](../../compositions/Headers/sds-header)
-- [sds-hero](../../compositions/Sections/sds-heroes)
+ - [sds-header](../../compositions/Headers/sds-header)
+ - [sds-hero](../../compositions/Sections/sds-heroes)
 
 ### Depends on
 
 - [sds-image](../../primitives/Image/sds-image)
 
 ### Graph
-
 ```mermaid
 graph TD;
   sds-section --> sds-image
@@ -34,6 +35,6 @@ graph TD;
   style sds-section fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*

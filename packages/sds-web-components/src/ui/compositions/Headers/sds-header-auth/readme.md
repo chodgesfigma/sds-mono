@@ -19,11 +19,11 @@
 - [sds-navigation-pill](../../../primitives/Navigation/sds-navigation-pill)
 - [sds-flex](../../../layout/sds-flex)
 - [sds-flex-item](../../../layout/sds-flex-item)
-- [sds-dialog-button](../../../primitives/dialog/sds-dialog-button)
+- [sds-dialog-button](../../../primitives/Dialog/sds-dialog-button)
 - [sds-icon-menu](../../../icons)
-- [sds-dialog-close](../../../primitives/dialog/sds-dialog-close)
+- [sds-dialog-close](../../../primitives/Dialog/sds-dialog-close)
 - [sds-avatar](../../../primitives/Avatar/sds-avatar)
-- [sds-label](../../../primitives/fieldset/sds-label)
+- [sds-label](../../../primitives/Fieldset/sds-label)
 - [sds-menu-button](../../../primitives/Menu/sds-menu-button)
 - [sds-icon-chevron-down](../../../icons)
 - [sds-menu-item](../../../primitives/Menu/sds-menu-item)
@@ -48,14 +48,15 @@ graph TD;
   sds-header-auth --> sds-menu-item
   sds-header-auth --> sds-avatar-block
   sds-dialog-button --> sds-dialog-trigger
+  sds-dialog-button --> sds-icon-button
   sds-dialog-button --> sds-button
   sds-dialog-button --> sds-dialog-modal
   sds-dialog-button --> sds-dialog
-  sds-dialog-close --> sds-button
+  sds-dialog-close --> sds-icon-button
   sds-dialog-close --> sds-icon-x
   sds-menu-button --> sds-menu-trigger
   sds-menu-button --> sds-menu-popover
-  sds-menu-button --> sds-button
+  sds-menu-button --> sds-icon-button
   sds-menu-button --> sds-menu
   sds-avatar-block --> sds-text-strong
   sds-avatar-block --> sds-text
