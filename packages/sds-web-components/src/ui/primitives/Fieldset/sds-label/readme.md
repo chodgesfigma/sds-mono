@@ -11,11 +11,13 @@ Fieldset Label
 
 ### Used by
 
+ - [sds-menu-part](../../Menu/sds-menu-part)
  - [sds-slider](../../Slider)
 
 ### Graph
 ```mermaid
 graph TD;
+  sds-menu-part --> sds-label
   sds-slider --> sds-label
   style sds-label fill:#f9f,stroke:#333,stroke-width:4px
 ```

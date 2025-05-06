@@ -1,0 +1,15 @@
+@import 'reset';
+
+:host {
+  align-items: center;
+  color: var(--menu-item-description-color);
+  display: flex;
+  gap: var(--sds-size-space-100);
+  text-transform: capitalize;
+}
+
+.menu-shortcut {
+  font: var(--sds-font-body-base);
+  display: flex;
+  text-align: center;
+}

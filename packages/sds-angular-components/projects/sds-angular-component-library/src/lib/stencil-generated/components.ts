@@ -7256,6 +7256,164 @@ export declare interface SdsLogo extends Components.SdsLogo {}
 
 
 @ProxyCmp({
+})
+@Component({
+  selector: 'sds-menu',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsMenu {
+  protected el: HTMLSdsMenuElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsMenu extends Components.SdsMenu {}
+
+
+@ProxyCmp({
+  inputs: ['isDisabled', 'label', 'placement', 'variant'],
+  methods: ['openMenu', 'closeMenu', 'toggleMenu']
+})
+@Component({
+  selector: 'sds-menu-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['isDisabled', 'label', 'placement', 'variant'],
+})
+export class SdsMenuButton {
+  protected el: HTMLSdsMenuButtonElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsMenuButton extends Components.SdsMenuButton {}
+
+
+@ProxyCmp({
+  inputs: ['isDisabled']
+})
+@Component({
+  selector: 'sds-menu-item',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['isDisabled'],
+})
+export class SdsMenuItem {
+  protected el: HTMLSdsMenuItemElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['sds-clicked']);
+  }
+}
+
+
+export declare interface SdsMenuItem extends Components.SdsMenuItem {
+  /**
+   * Emitted when the menu item is clicked
+   */
+  'sds-clicked': EventEmitter<CustomEvent<any>>;
+}
+
+
+@ProxyCmp({
+  inputs: ['variant']
+})
+@Component({
+  selector: 'sds-menu-part',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['variant'],
+})
+export class SdsMenuPart {
+  protected el: HTMLSdsMenuPartElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsMenuPart extends Components.SdsMenuPart {}
+
+
+@ProxyCmp({
+  inputs: ['isOpen', 'placement']
+})
+@Component({
+  selector: 'sds-menu-popover',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['isOpen', 'placement'],
+})
+export class SdsMenuPopover {
+  protected el: HTMLSdsMenuPopoverElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsMenuPopover extends Components.SdsMenuPopover {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-menu-shortcut',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsMenuShortcut {
+  protected el: HTMLSdsMenuShortcutElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsMenuShortcut extends Components.SdsMenuShortcut {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-menu-trigger',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsMenuTrigger {
+  protected el: HTMLSdsMenuTriggerElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsMenuTrigger extends Components.SdsMenuTrigger {}
+
+
+@ProxyCmp({
   inputs: ['direction']
 })
 @Component({
