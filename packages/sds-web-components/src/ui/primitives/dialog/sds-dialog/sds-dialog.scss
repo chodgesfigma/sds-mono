@@ -1,5 +1,7 @@
 @import 'reset';
 
+// SCSS Variables used within the dialog that have different default fallbacks based on dialog type,
+//  but that can be overridden by parent styes:
 // --dialog-width
 // --dialog-padding-x
 // --dialog-max-width
