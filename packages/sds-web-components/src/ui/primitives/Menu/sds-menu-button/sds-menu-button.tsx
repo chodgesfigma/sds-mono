@@ -71,9 +71,9 @@ export class SdsMenuButton {
     return (
       <sds-menu-trigger>
         <sds-menu-popover isOpen={this.isMenuOpen} placement={this.placement}>
-          <sds-button disabled={this.isDisabled} slot="anchor" onClick={() => this.toggleMenu()} aria-label={this.label} class="menu-button" variant={this.variant}>
+          <sds-icon-button disabled={this.isDisabled} slot="anchor" onClick={() => this.toggleMenu()} ariaLabel={this.label} class="menu-button" variant={this.variant}>
             <slot name="icon">{this.label}</slot>
-          </sds-button>
+          </sds-icon-button>
           <sds-menu>
             <slot></slot>
           </sds-menu>

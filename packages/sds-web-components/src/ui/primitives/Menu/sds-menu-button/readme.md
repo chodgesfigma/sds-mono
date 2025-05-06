@@ -58,7 +58,7 @@ Type: `Promise<void>`
 
 - [sds-menu-trigger](../sds-menu-trigger)
 - [sds-menu-popover](../sds-menu-popover)
-- [sds-button](../../Button/sds-button)
+- [sds-icon-button](../../Button/sds-icon-button)
 - [sds-menu](../sds-menu)
 
 ### Graph
@@ -66,7 +66,7 @@ Type: `Promise<void>`
 graph TD;
   sds-menu-button --> sds-menu-trigger
   sds-menu-button --> sds-menu-popover
-  sds-menu-button --> sds-button
+  sds-menu-button --> sds-icon-button
   sds-menu-button --> sds-menu
   sds-header-auth --> sds-menu-button
   style sds-menu-button fill:#f9f,stroke:#333,stroke-width:4px

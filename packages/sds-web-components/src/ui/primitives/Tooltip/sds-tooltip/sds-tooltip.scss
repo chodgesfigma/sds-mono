@@ -1,0 +1,35 @@
+@use 'reset';
+
+:host {
+  display: block;
+}
+
+.tooltip {
+  --arrow-color: var(--sds-color-background-default-default);
+  --arrow-size: 10px;
+
+  &[data-placement='top'],
+  &[data-placement='bottom'] {
+    text-align: center;
+  }
+
+  &::part(arrow) {
+    box-shadow: var(--sds-effects-shadows-drop-shadow-200);
+    border: var(--sds-size-stroke-border) solid var(--sds-color-border-default-default);
+  }
+
+  &::part(popup) {
+    border-radius: var(--sds-size-radius-200);
+    box-shadow: var(--sds-effects-shadows-drop-shadow-200);
+    border: var(--sds-size-stroke-border) solid var(--sds-color-border-default-default);
+  }
+}
+
+.dialog {
+  --dialog-padding-y: var(--sds-size-space-200);
+  --dialog-padding-x: var(--sds-size-space-300);
+  --dialog-width: 100%;
+  --dialog-max-width: var(--global-tooltip-max-width);
+  --dialog-box-shadow: none;
+  --dialog-border: none;
+}

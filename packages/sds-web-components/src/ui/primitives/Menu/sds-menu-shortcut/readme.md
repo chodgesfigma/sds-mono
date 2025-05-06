@@ -9,7 +9,7 @@
 
 ### Depends on
 
-- [sds-keyboard](../../fieldset/sds-keyboard)
+- [sds-keyboard](../../Fieldset/sds-keyboard)
 
 ### Graph
 ```mermaid

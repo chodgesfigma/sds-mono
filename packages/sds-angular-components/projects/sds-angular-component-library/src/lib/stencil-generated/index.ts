@@ -1,4 +1,3 @@
-
 import * as d from './components';
 
 export const DIRECTIVES = [
@@ -15,6 +14,7 @@ export const DIRECTIVES = [
   d.SdsCheckboxField,
   d.SdsCheckboxGroup,
   d.SdsDescription,
+  d.SdsDestructiveIconButton,
   d.SdsDialog,
   d.SdsDialogBody,
   d.SdsDialogButton,
@@ -30,8 +30,7 @@ export const DIRECTIVES = [
   d.SdsFlex,
   d.SdsFlexItem,
   d.SdsForm,
-  d.SdsHeader,
-  d.SdsHeaderAuth,
+  d.SdsHero,
   d.SdsIconActivity,
   d.SdsIconAirplay,
   d.SdsIconAlertCircle,
@@ -71,6 +70,7 @@ export const DIRECTIVES = [
   d.SdsIconBookmark,
   d.SdsIconBox,
   d.SdsIconBriefcase,
+  d.SdsIconButton,
   d.SdsIconCalendar,
   d.SdsIconCamera,
   d.SdsIconCameraOff,
@@ -339,12 +339,23 @@ export const DIRECTIVES = [
   d.SdsNavigation,
   d.SdsNavigationButton,
   d.SdsNavigationPill,
+  d.SdsNotification,
+  d.SdsPagination,
+  d.SdsPaginationGap,
+  d.SdsPaginationList,
+  d.SdsPaginationNext,
+  d.SdsPaginationPage,
+  d.SdsPaginationPrevious,
+  d.SdsPanel,
   d.SdsPicture,
   d.SdsSection,
   d.SdsSelect,
   d.SdsSelectField,
   d.SdsSelectItem,
   d.SdsSlider,
+  d.SdsSwitch,
+  d.SdsSwitchField,
+  d.SdsSwitchGroup,
   d.SdsTab,
   d.SdsTabPanel,
   d.SdsTabs,
@@ -373,5 +384,6 @@ export const DIRECTIVES = [
   d.SdsTextareaField,
   d.SdsToggleTag,
   d.SdsToggleTagGroup,
-  d.SdsToggleTagList
+  d.SdsToggleTagList,
+  d.SdsTooltip,
 ];
