@@ -24,6 +24,7 @@ import { SdsCheckboxField as SdsCheckboxFieldElement, defineCustomElement as def
 import { SdsCheckboxGroup as SdsCheckboxGroupElement, defineCustomElement as defineSdsCheckboxGroup } from "sds-web-components/dist/components/sds-checkbox-group.js";
 import { SdsCheckbox as SdsCheckboxElement, defineCustomElement as defineSdsCheckbox } from "sds-web-components/dist/components/sds-checkbox.js";
 import { SdsDescription as SdsDescriptionElement, defineCustomElement as defineSdsDescription } from "sds-web-components/dist/components/sds-description.js";
+import { SdsDestructiveIconButton as SdsDestructiveIconButtonElement, defineCustomElement as defineSdsDestructiveIconButton } from "sds-web-components/dist/components/sds-destructive-icon-button.js";
 import { SdsFieldError as SdsFieldErrorElement, defineCustomElement as defineSdsFieldError } from "sds-web-components/dist/components/sds-field-error.js";
 import { SdsFieldGroup as SdsFieldGroupElement, defineCustomElement as defineSdsFieldGroup } from "sds-web-components/dist/components/sds-field-group.js";
 import { SdsField as SdsFieldElement, defineCustomElement as defineSdsField } from "sds-web-components/dist/components/sds-field.js";
@@ -70,6 +71,7 @@ import { SdsIconBook as SdsIconBookElement, defineCustomElement as defineSdsIcon
 import { SdsIconBookmark as SdsIconBookmarkElement, defineCustomElement as defineSdsIconBookmark } from "sds-web-components/dist/components/sds-icon-bookmark.js";
 import { SdsIconBox as SdsIconBoxElement, defineCustomElement as defineSdsIconBox } from "sds-web-components/dist/components/sds-icon-box.js";
 import { SdsIconBriefcase as SdsIconBriefcaseElement, defineCustomElement as defineSdsIconBriefcase } from "sds-web-components/dist/components/sds-icon-briefcase.js";
+import { SdsIconButton as SdsIconButtonElement, defineCustomElement as defineSdsIconButton } from "sds-web-components/dist/components/sds-icon-button.js";
 import { SdsIconCalendar as SdsIconCalendarElement, defineCustomElement as defineSdsIconCalendar } from "sds-web-components/dist/components/sds-icon-calendar.js";
 import { SdsIconCameraOff as SdsIconCameraOffElement, defineCustomElement as defineSdsIconCameraOff } from "sds-web-components/dist/components/sds-icon-camera-off.js";
 import { SdsIconCamera as SdsIconCameraElement, defineCustomElement as defineSdsIconCamera } from "sds-web-components/dist/components/sds-icon-camera.js";
@@ -523,6 +525,17 @@ export const SdsDescription: StencilReactComponent<SdsDescriptionElement, SdsDes
     react: React,
     events: {} as SdsDescriptionEvents,
     defineCustomElement: defineSdsDescription
+});
+
+type SdsDestructiveIconButtonEvents = NonNullable<unknown>;
+
+export const SdsDestructiveIconButton: StencilReactComponent<SdsDestructiveIconButtonElement, SdsDestructiveIconButtonEvents> = /*@__PURE__*/ createComponent<SdsDestructiveIconButtonElement, SdsDestructiveIconButtonEvents>({
+    tagName: 'sds-destructive-icon-button',
+    elementClass: SdsDestructiveIconButtonElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsDestructiveIconButtonEvents,
+    defineCustomElement: defineSdsDestructiveIconButton
 });
 
 type SdsFieldEvents = NonNullable<unknown>;
@@ -1029,6 +1042,17 @@ export const SdsIconBriefcase: StencilReactComponent<SdsIconBriefcaseElement, Sd
     react: React,
     events: {} as SdsIconBriefcaseEvents,
     defineCustomElement: defineSdsIconBriefcase
+});
+
+type SdsIconButtonEvents = NonNullable<unknown>;
+
+export const SdsIconButton: StencilReactComponent<SdsIconButtonElement, SdsIconButtonEvents> = /*@__PURE__*/ createComponent<SdsIconButtonElement, SdsIconButtonEvents>({
+    tagName: 'sds-icon-button',
+    elementClass: SdsIconButtonElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsIconButtonEvents,
+    defineCustomElement: defineSdsIconButton
 });
 
 type SdsIconCalendarEvents = NonNullable<unknown>;
