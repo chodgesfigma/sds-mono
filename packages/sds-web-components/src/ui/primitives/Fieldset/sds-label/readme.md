@@ -2,6 +2,7 @@
 
 <!-- Auto Generated Below -->
 
+
 ## Overview
 
 Fieldset Label
@@ -10,11 +11,10 @@ Fieldset Label
 
 ### Used by
 
-- [sds-menu-part](../../Menu/sds-menu-part)
-- [sds-slider](../../Slider)
+ - [sds-menu-part](../../Menu/sds-menu-part)
+ - [sds-slider](../../Slider)
 
 ### Graph
-
 ```mermaid
 graph TD;
   sds-menu-part --> sds-label
@@ -22,6 +22,6 @@ graph TD;
   style sds-label fill:#f9f,stroke:#333,stroke-width:4px
 ```
 
----
+----------------------------------------------
 
-_Built with [StencilJS](https://stenciljs.com/)_
+*Built with [StencilJS](https://stenciljs.com/)*
