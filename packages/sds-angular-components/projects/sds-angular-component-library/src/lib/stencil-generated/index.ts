@@ -1,3 +1,4 @@
+
 import * as d from './components';
 
 export const DIRECTIVES = [
@@ -323,6 +324,7 @@ export const DIRECTIVES = [
   d.SdsNavigation,
   d.SdsNavigationButton,
   d.SdsNavigationPill,
+  d.SdsNotification,
   d.SdsPagination,
   d.SdsPaginationGap,
   d.SdsPaginationList,
@@ -366,5 +368,5 @@ export const DIRECTIVES = [
   d.SdsTextareaField,
   d.SdsToggleTag,
   d.SdsToggleTagGroup,
-  d.SdsToggleTagList,
+  d.SdsToggleTagList
 ];
