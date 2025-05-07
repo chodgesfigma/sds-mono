@@ -66,6 +66,94 @@ export declare interface SdsAccordionItem extends Components.SdsAccordionItem {
 
 
 @ProxyCmp({
+  inputs: ['alt', 'initials', 'size', 'square', 'src']
+})
+@Component({
+  selector: 'sds-avatar',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['alt', 'initials', 'size', 'square', 'src'],
+})
+export class SdsAvatar {
+  protected el: HTMLSdsAvatarElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsAvatar extends Components.SdsAvatar {}
+
+
+@ProxyCmp({
+  inputs: ['avatarTitle', 'description']
+})
+@Component({
+  selector: 'sds-avatar-block',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['avatarTitle', 'description'],
+})
+export class SdsAvatarBlock {
+  protected el: HTMLSdsAvatarBlockElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsAvatarBlock extends Components.SdsAvatarBlock {}
+
+
+@ProxyCmp({
+  inputs: ['alt', 'initials', 'options', 'size', 'square', 'src']
+})
+@Component({
+  selector: 'sds-avatar-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['alt', 'initials', 'options', 'size', 'square', 'src'],
+})
+export class SdsAvatarButton {
+  protected el: HTMLSdsAvatarButtonElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsAvatarButton extends Components.SdsAvatarButton {}
+
+
+@ProxyCmp({
+  inputs: ['max', 'spacing']
+})
+@Component({
+  selector: 'sds-avatar-group',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['max', 'spacing'],
+})
+export class SdsAvatarGroup {
+  protected el: HTMLSdsAvatarGroupElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsAvatarGroup extends Components.SdsAvatarGroup {}
+
+
+@ProxyCmp({
   inputs: ['disabled', 'size', 'type', 'variant']
 })
 @Component({
@@ -231,6 +319,207 @@ export declare interface SdsDescription extends Components.SdsDescription {}
 
 
 @ProxyCmp({
+  inputs: ['ariaLabel', 'disabled', 'size', 'type', 'variant']
+})
+@Component({
+  selector: 'sds-destructive-icon-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['ariaLabel', 'disabled', 'size', 'type', 'variant'],
+})
+export class SdsDestructiveIconButton {
+  protected el: HTMLSdsDestructiveIconButtonElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsDestructiveIconButton extends Components.SdsDestructiveIconButton {}
+
+
+@ProxyCmp({
+  inputs: ['dialogType']
+})
+@Component({
+  selector: 'sds-dialog',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['dialogType'],
+})
+export class SdsDialog {
+  protected el: HTMLSdsDialogElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsDialog extends Components.SdsDialog {}
+
+
+@ProxyCmp({
+  inputs: ['bleed']
+})
+@Component({
+  selector: 'sds-dialog-body',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['bleed'],
+})
+export class SdsDialogBody {
+  protected el: HTMLSdsDialogBodyElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsDialogBody extends Components.SdsDialogBody {}
+
+
+@ProxyCmp({
+  inputs: ['label', 'useIcon', 'variant'],
+  methods: ['openDialog', 'closeDialog']
+})
+@Component({
+  selector: 'sds-dialog-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['label', 'useIcon', 'variant'],
+})
+export class SdsDialogButton {
+  protected el: HTMLSdsDialogButtonElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsDialogButton extends Components.SdsDialogButton {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-dialog-close',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsDialogClose {
+  protected el: HTMLSdsDialogCloseElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['sds-close-dialog']);
+  }
+}
+
+
+export declare interface SdsDialogClose extends Components.SdsDialogClose {
+  /**
+   * Emitted when the close-button is clicked
+   */
+  'sds-close-dialog': EventEmitter<CustomEvent<any>>;
+}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-dialog-description',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsDialogDescription {
+  protected el: HTMLSdsDialogDescriptionElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsDialogDescription extends Components.SdsDialogDescription {}
+
+
+@ProxyCmp({
+  inputs: ['isOpen']
+})
+@Component({
+  selector: 'sds-dialog-modal',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['isOpen'],
+})
+export class SdsDialogModal {
+  protected el: HTMLSdsDialogModalElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsDialogModal extends Components.SdsDialogModal {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-dialog-title',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsDialogTitle {
+  protected el: HTMLSdsDialogTitleElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsDialogTitle extends Components.SdsDialogTitle {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-dialog-trigger',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsDialogTrigger {
+  protected el: HTMLSdsDialogTriggerElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsDialogTrigger extends Components.SdsDialogTrigger {}
+
+
+@ProxyCmp({
   inputs: ['disabled']
 })
 @Component({
@@ -380,6 +669,70 @@ export class SdsForm {
 
 
 export declare interface SdsForm extends Components.SdsForm {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-header',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsHeader {
+  protected el: HTMLSdsHeaderElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsHeader extends Components.SdsHeader {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-header-auth',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsHeaderAuth {
+  protected el: HTMLSdsHeaderAuthElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsHeaderAuth extends Components.SdsHeaderAuth {}
+
+
+@ProxyCmp({
+  inputs: ['alignPrimary', 'alignSecondary', 'container', 'direction', 'elementType', 'flexType', 'gap', 'padding', 'paddingBottom', 'paddingTop', 'src', 'variant', 'wrap']
+})
+@Component({
+  selector: 'sds-hero',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['alignPrimary', 'alignSecondary', 'container', 'direction', 'elementType', 'flexType', 'gap', 'padding', 'paddingBottom', 'paddingTop', 'src', 'variant', 'wrap'],
+})
+export class SdsHero {
+  protected el: HTMLSdsHeroElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsHero extends Components.SdsHero {}
 
 
 @ProxyCmp({
@@ -1238,6 +1591,28 @@ export class SdsIconBriefcase {
 
 
 export declare interface SdsIconBriefcase extends Components.SdsIconBriefcase {}
+
+
+@ProxyCmp({
+  inputs: ['ariaLabel', 'disabled', 'size', 'type', 'variant']
+})
+@Component({
+  selector: 'sds-icon-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['ariaLabel', 'disabled', 'size', 'type', 'variant'],
+})
+export class SdsIconButton {
+  protected el: HTMLSdsIconButtonElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsIconButton extends Components.SdsIconButton {}
 
 
 @ProxyCmp({
@@ -6923,6 +7298,164 @@ export declare interface SdsLogo extends Components.SdsLogo {}
 
 
 @ProxyCmp({
+})
+@Component({
+  selector: 'sds-menu',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsMenu {
+  protected el: HTMLSdsMenuElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsMenu extends Components.SdsMenu {}
+
+
+@ProxyCmp({
+  inputs: ['isDisabled', 'label', 'placement', 'variant'],
+  methods: ['openMenu', 'closeMenu', 'toggleMenu']
+})
+@Component({
+  selector: 'sds-menu-button',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['isDisabled', 'label', 'placement', 'variant'],
+})
+export class SdsMenuButton {
+  protected el: HTMLSdsMenuButtonElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsMenuButton extends Components.SdsMenuButton {}
+
+
+@ProxyCmp({
+  inputs: ['isDisabled']
+})
+@Component({
+  selector: 'sds-menu-item',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['isDisabled'],
+})
+export class SdsMenuItem {
+  protected el: HTMLSdsMenuItemElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['sds-clicked']);
+  }
+}
+
+
+export declare interface SdsMenuItem extends Components.SdsMenuItem {
+  /**
+   * Emitted when the menu item is clicked
+   */
+  'sds-clicked': EventEmitter<CustomEvent<any>>;
+}
+
+
+@ProxyCmp({
+  inputs: ['variant']
+})
+@Component({
+  selector: 'sds-menu-part',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['variant'],
+})
+export class SdsMenuPart {
+  protected el: HTMLSdsMenuPartElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsMenuPart extends Components.SdsMenuPart {}
+
+
+@ProxyCmp({
+  inputs: ['isOpen', 'placement']
+})
+@Component({
+  selector: 'sds-menu-popover',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['isOpen', 'placement'],
+})
+export class SdsMenuPopover {
+  protected el: HTMLSdsMenuPopoverElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsMenuPopover extends Components.SdsMenuPopover {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-menu-shortcut',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsMenuShortcut {
+  protected el: HTMLSdsMenuShortcutElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsMenuShortcut extends Components.SdsMenuShortcut {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-menu-trigger',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsMenuTrigger {
+  protected el: HTMLSdsMenuTriggerElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsMenuTrigger extends Components.SdsMenuTrigger {}
+
+
+@ProxyCmp({
   inputs: ['direction']
 })
 @Component({
@@ -7001,6 +7534,186 @@ export declare interface SdsNavigationPill extends Components.SdsNavigationPill 
 
 
 @ProxyCmp({
+  inputs: ['isDismissible', 'variant']
+})
+@Component({
+  selector: 'sds-notification',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['isDismissible', 'variant'],
+})
+export class SdsNotification {
+  protected el: HTMLSdsNotificationElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['sds-dismiss']);
+  }
+}
+
+
+export declare interface SdsNotification extends Components.SdsNotification {
+  /**
+   * Emitted when the notification is dismissed
+   */
+  'sds-dismiss': EventEmitter<CustomEvent<any>>;
+}
+
+
+@ProxyCmp({
+  inputs: ['ariaLabel']
+})
+@Component({
+  selector: 'sds-pagination',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['ariaLabel'],
+})
+export class SdsPagination {
+  protected el: HTMLSdsPaginationElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsPagination extends Components.SdsPagination {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-pagination-gap',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsPaginationGap {
+  protected el: HTMLSdsPaginationGapElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsPaginationGap extends Components.SdsPaginationGap {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-pagination-list',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsPaginationList {
+  protected el: HTMLSdsPaginationListElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsPaginationList extends Components.SdsPaginationList {}
+
+
+@ProxyCmp({
+  inputs: ['href', 'label']
+})
+@Component({
+  selector: 'sds-pagination-next',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['href', 'label'],
+})
+export class SdsPaginationNext {
+  protected el: HTMLSdsPaginationNextElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsPaginationNext extends Components.SdsPaginationNext {}
+
+
+@ProxyCmp({
+  inputs: ['current', 'href', 'pageNumber']
+})
+@Component({
+  selector: 'sds-pagination-page',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['current', 'href', 'pageNumber'],
+})
+export class SdsPaginationPage {
+  protected el: HTMLSdsPaginationPageElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsPaginationPage extends Components.SdsPaginationPage {}
+
+
+@ProxyCmp({
+  inputs: ['href', 'label']
+})
+@Component({
+  selector: 'sds-pagination-previous',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['href', 'label'],
+})
+export class SdsPaginationPrevious {
+  protected el: HTMLSdsPaginationPreviousElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsPaginationPrevious extends Components.SdsPaginationPrevious {}
+
+
+@ProxyCmp({
+  inputs: ['alignPrimary', 'alignSecondary', 'direction', 'flexType', 'gap']
+})
+@Component({
+  selector: 'sds-panel',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['alignPrimary', 'alignSecondary', 'direction', 'flexType', 'gap'],
+})
+export class SdsPanel {
+  protected el: HTMLSdsPanelElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsPanel extends Components.SdsPanel {}
+
+
+@ProxyCmp({
 })
 @Component({
   selector: 'sds-picture',
@@ -7019,6 +7732,56 @@ export class SdsPicture {
 
 
 export declare interface SdsPicture extends Components.SdsPicture {}
+
+
+@ProxyCmp({
+  inputs: ['ariaLabel', 'defaultValue', 'disabled', 'placeholder', 'results']
+})
+@Component({
+  selector: 'sds-search',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['ariaLabel', 'defaultValue', 'disabled', 'placeholder', 'results'],
+})
+export class SdsSearch {
+  protected el: HTMLSdsSearchElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['sds-search']);
+  }
+}
+
+
+export declare interface SdsSearch extends Components.SdsSearch {
+  /**
+   * Emitted when search input changes
+   */
+  'sds-search': EventEmitter<CustomEvent<{ searchTerm: string }>>;
+}
+
+
+@ProxyCmp({
+  inputs: ['elementType', 'padding', 'paddingBottom', 'paddingTop', 'src', 'variant']
+})
+@Component({
+  selector: 'sds-section',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['elementType', 'padding', 'paddingBottom', 'paddingTop', 'src', 'variant'],
+})
+export class SdsSection {
+  protected el: HTMLSdsSectionElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsSection extends Components.SdsSection {}
 
 
 @ProxyCmp({
@@ -7122,6 +7885,76 @@ export declare interface SdsSlider extends Components.SdsSlider {
 
 
 @ProxyCmp({
+})
+@Component({
+  selector: 'sds-switch',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsSwitch {
+  protected el: HTMLSdsSwitchElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsSwitch extends Components.SdsSwitch {}
+
+
+@ProxyCmp({
+  inputs: ['checked', 'description', 'disabled', 'error', 'label', 'required', 'value']
+})
+@Component({
+  selector: 'sds-switch-field',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['checked', 'description', 'disabled', 'error', 'label', 'required', 'value'],
+})
+export class SdsSwitchField {
+  protected el: HTMLSdsSwitchFieldElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+    proxyOutputs(this, this.el, ['sds-change']);
+  }
+}
+
+
+export declare interface SdsSwitchField extends Components.SdsSwitchField {
+  /**
+   * Emitted when the switch is toggled
+   */
+  'sds-change': EventEmitter<CustomEvent<{ checked: boolean; value: string }>>;
+}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-switch-group',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsSwitchGroup {
+  protected el: HTMLSdsSwitchGroupElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsSwitchGroup extends Components.SdsSwitchGroup {}
+
+
+@ProxyCmp({
   inputs: ['active', 'panelId']
 })
 @Component({
@@ -7177,6 +8010,28 @@ export class SdsTabPanel {
 
 
 export declare interface SdsTabPanel extends Components.SdsTabPanel {}
+
+
+@ProxyCmp({
+  inputs: ['alignment', 'bleed', 'dense', 'grid', 'interactive', 'striped']
+})
+@Component({
+  selector: 'sds-table',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['alignment', 'bleed', 'dense', 'grid', 'interactive', 'striped'],
+})
+export class SdsTable {
+  protected el: HTMLSdsTableElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsTable extends Components.SdsTable {}
 
 
 @ProxyCmp({
@@ -7801,5 +8656,28 @@ export declare interface SdsToggleTagList extends Components.SdsToggleTagList {
 
   togglesUpdated: EventEmitter<CustomEvent<Selection>>;
 }
+
+
+@ProxyCmp({
+  inputs: ['isActive', 'offset', 'placement'],
+  methods: ['toggleTooltip']
+})
+@Component({
+  selector: 'sds-tooltip',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['isActive', 'offset', 'placement'],
+})
+export class SdsTooltip {
+  protected el: HTMLSdsTooltipElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsTooltip extends Components.SdsTooltip {}
 
 

@@ -15,6 +15,6 @@ export class AppComponent {
   };
 
   handleSubmit = () => {
-    alert('submit');
+    alert('Submitted in Angular env!');
   };
 }

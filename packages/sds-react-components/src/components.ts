@@ -13,6 +13,10 @@ import React from 'react';
 import { type SdsAccordionItemCustomEvent, type SdsListBoxCustomEvent, type SdsNavigationButtonCustomEvent, type SdsNavigationPillCustomEvent, type SdsSliderCustomEvent, type SdsToggleTagCustomEvent, type SdsToggleTagListCustomEvent, type SlHideEvent, type SlMenuItem, type SlRange, type SlShowEvent, type TagToggle } from "sds-web-components";
 import { SdsAccordionItem as SdsAccordionItemElement, defineCustomElement as defineSdsAccordionItem } from "sds-web-components/dist/components/sds-accordion-item.js";
 import { SdsAccordion as SdsAccordionElement, defineCustomElement as defineSdsAccordion } from "sds-web-components/dist/components/sds-accordion.js";
+import { SdsAvatarBlock as SdsAvatarBlockElement, defineCustomElement as defineSdsAvatarBlock } from "sds-web-components/dist/components/sds-avatar-block.js";
+import { SdsAvatarButton as SdsAvatarButtonElement, defineCustomElement as defineSdsAvatarButton } from "sds-web-components/dist/components/sds-avatar-button.js";
+import { SdsAvatarGroup as SdsAvatarGroupElement, defineCustomElement as defineSdsAvatarGroup } from "sds-web-components/dist/components/sds-avatar-group.js";
+import { SdsAvatar as SdsAvatarElement, defineCustomElement as defineSdsAvatar } from "sds-web-components/dist/components/sds-avatar.js";
 import { SdsButtonDanger as SdsButtonDangerElement, defineCustomElement as defineSdsButtonDanger } from "sds-web-components/dist/components/sds-button-danger.js";
 import { SdsButtonGroup as SdsButtonGroupElement, defineCustomElement as defineSdsButtonGroup } from "sds-web-components/dist/components/sds-button-group.js";
 import { SdsButton as SdsButtonElement, defineCustomElement as defineSdsButton } from "sds-web-components/dist/components/sds-button.js";
@@ -20,6 +24,15 @@ import { SdsCheckboxField as SdsCheckboxFieldElement, defineCustomElement as def
 import { SdsCheckboxGroup as SdsCheckboxGroupElement, defineCustomElement as defineSdsCheckboxGroup } from "sds-web-components/dist/components/sds-checkbox-group.js";
 import { SdsCheckbox as SdsCheckboxElement, defineCustomElement as defineSdsCheckbox } from "sds-web-components/dist/components/sds-checkbox.js";
 import { SdsDescription as SdsDescriptionElement, defineCustomElement as defineSdsDescription } from "sds-web-components/dist/components/sds-description.js";
+import { SdsDestructiveIconButton as SdsDestructiveIconButtonElement, defineCustomElement as defineSdsDestructiveIconButton } from "sds-web-components/dist/components/sds-destructive-icon-button.js";
+import { SdsDialogBody as SdsDialogBodyElement, defineCustomElement as defineSdsDialogBody } from "sds-web-components/dist/components/sds-dialog-body.js";
+import { SdsDialogButton as SdsDialogButtonElement, defineCustomElement as defineSdsDialogButton } from "sds-web-components/dist/components/sds-dialog-button.js";
+import { SdsDialogClose as SdsDialogCloseElement, defineCustomElement as defineSdsDialogClose } from "sds-web-components/dist/components/sds-dialog-close.js";
+import { SdsDialogDescription as SdsDialogDescriptionElement, defineCustomElement as defineSdsDialogDescription } from "sds-web-components/dist/components/sds-dialog-description.js";
+import { SdsDialogModal as SdsDialogModalElement, defineCustomElement as defineSdsDialogModal } from "sds-web-components/dist/components/sds-dialog-modal.js";
+import { SdsDialogTitle as SdsDialogTitleElement, defineCustomElement as defineSdsDialogTitle } from "sds-web-components/dist/components/sds-dialog-title.js";
+import { SdsDialogTrigger as SdsDialogTriggerElement, defineCustomElement as defineSdsDialogTrigger } from "sds-web-components/dist/components/sds-dialog-trigger.js";
+import { SdsDialog as SdsDialogElement, defineCustomElement as defineSdsDialog } from "sds-web-components/dist/components/sds-dialog.js";
 import { SdsFieldError as SdsFieldErrorElement, defineCustomElement as defineSdsFieldError } from "sds-web-components/dist/components/sds-field-error.js";
 import { SdsFieldGroup as SdsFieldGroupElement, defineCustomElement as defineSdsFieldGroup } from "sds-web-components/dist/components/sds-field-group.js";
 import { SdsField as SdsFieldElement, defineCustomElement as defineSdsField } from "sds-web-components/dist/components/sds-field.js";
@@ -27,6 +40,9 @@ import { SdsFieldset as SdsFieldsetElement, defineCustomElement as defineSdsFiel
 import { SdsFlexItem as SdsFlexItemElement, defineCustomElement as defineSdsFlexItem } from "sds-web-components/dist/components/sds-flex-item.js";
 import { SdsFlex as SdsFlexElement, defineCustomElement as defineSdsFlex } from "sds-web-components/dist/components/sds-flex.js";
 import { SdsForm as SdsFormElement, defineCustomElement as defineSdsForm } from "sds-web-components/dist/components/sds-form.js";
+import { SdsHeaderAuth as SdsHeaderAuthElement, defineCustomElement as defineSdsHeaderAuth } from "sds-web-components/dist/components/sds-header-auth.js";
+import { SdsHeader as SdsHeaderElement, defineCustomElement as defineSdsHeader } from "sds-web-components/dist/components/sds-header.js";
+import { SdsHero as SdsHeroElement, defineCustomElement as defineSdsHero } from "sds-web-components/dist/components/sds-hero.js";
 import { SdsIconActivity as SdsIconActivityElement, defineCustomElement as defineSdsIconActivity } from "sds-web-components/dist/components/sds-icon-activity.js";
 import { SdsIconAirplay as SdsIconAirplayElement, defineCustomElement as defineSdsIconAirplay } from "sds-web-components/dist/components/sds-icon-airplay.js";
 import { SdsIconAlertCircle as SdsIconAlertCircleElement, defineCustomElement as defineSdsIconAlertCircle } from "sds-web-components/dist/components/sds-icon-alert-circle.js";
@@ -66,6 +82,7 @@ import { SdsIconBook as SdsIconBookElement, defineCustomElement as defineSdsIcon
 import { SdsIconBookmark as SdsIconBookmarkElement, defineCustomElement as defineSdsIconBookmark } from "sds-web-components/dist/components/sds-icon-bookmark.js";
 import { SdsIconBox as SdsIconBoxElement, defineCustomElement as defineSdsIconBox } from "sds-web-components/dist/components/sds-icon-box.js";
 import { SdsIconBriefcase as SdsIconBriefcaseElement, defineCustomElement as defineSdsIconBriefcase } from "sds-web-components/dist/components/sds-icon-briefcase.js";
+import { SdsIconButton as SdsIconButtonElement, defineCustomElement as defineSdsIconButton } from "sds-web-components/dist/components/sds-icon-button.js";
 import { SdsIconCalendar as SdsIconCalendarElement, defineCustomElement as defineSdsIconCalendar } from "sds-web-components/dist/components/sds-icon-calendar.js";
 import { SdsIconCameraOff as SdsIconCameraOffElement, defineCustomElement as defineSdsIconCameraOff } from "sds-web-components/dist/components/sds-icon-camera-off.js";
 import { SdsIconCamera as SdsIconCameraElement, defineCustomElement as defineSdsIconCamera } from "sds-web-components/dist/components/sds-icon-camera.js";
@@ -324,16 +341,37 @@ import { SdsLink as SdsLinkElement, defineCustomElement as defineSdsLink } from 
 import { SdsListBoxItem as SdsListBoxItemElement, defineCustomElement as defineSdsListBoxItem } from "sds-web-components/dist/components/sds-list-box-item.js";
 import { SdsListBox as SdsListBoxElement, defineCustomElement as defineSdsListBox } from "sds-web-components/dist/components/sds-list-box.js";
 import { SdsLogo as SdsLogoElement, defineCustomElement as defineSdsLogo } from "sds-web-components/dist/components/sds-logo.js";
+import { SdsMenuButton as SdsMenuButtonElement, defineCustomElement as defineSdsMenuButton } from "sds-web-components/dist/components/sds-menu-button.js";
+import { SdsMenuItem as SdsMenuItemElement, defineCustomElement as defineSdsMenuItem } from "sds-web-components/dist/components/sds-menu-item.js";
+import { SdsMenuPart as SdsMenuPartElement, defineCustomElement as defineSdsMenuPart } from "sds-web-components/dist/components/sds-menu-part.js";
+import { SdsMenuPopover as SdsMenuPopoverElement, defineCustomElement as defineSdsMenuPopover } from "sds-web-components/dist/components/sds-menu-popover.js";
+import { SdsMenuShortcut as SdsMenuShortcutElement, defineCustomElement as defineSdsMenuShortcut } from "sds-web-components/dist/components/sds-menu-shortcut.js";
+import { SdsMenuTrigger as SdsMenuTriggerElement, defineCustomElement as defineSdsMenuTrigger } from "sds-web-components/dist/components/sds-menu-trigger.js";
+import { SdsMenu as SdsMenuElement, defineCustomElement as defineSdsMenu } from "sds-web-components/dist/components/sds-menu.js";
 import { SdsNavigationButton as SdsNavigationButtonElement, defineCustomElement as defineSdsNavigationButton } from "sds-web-components/dist/components/sds-navigation-button.js";
 import { SdsNavigationPill as SdsNavigationPillElement, defineCustomElement as defineSdsNavigationPill } from "sds-web-components/dist/components/sds-navigation-pill.js";
 import { SdsNavigation as SdsNavigationElement, defineCustomElement as defineSdsNavigation } from "sds-web-components/dist/components/sds-navigation.js";
+import { SdsNotification as SdsNotificationElement, defineCustomElement as defineSdsNotification } from "sds-web-components/dist/components/sds-notification.js";
+import { SdsPaginationGap as SdsPaginationGapElement, defineCustomElement as defineSdsPaginationGap } from "sds-web-components/dist/components/sds-pagination-gap.js";
+import { SdsPaginationList as SdsPaginationListElement, defineCustomElement as defineSdsPaginationList } from "sds-web-components/dist/components/sds-pagination-list.js";
+import { SdsPaginationNext as SdsPaginationNextElement, defineCustomElement as defineSdsPaginationNext } from "sds-web-components/dist/components/sds-pagination-next.js";
+import { SdsPaginationPage as SdsPaginationPageElement, defineCustomElement as defineSdsPaginationPage } from "sds-web-components/dist/components/sds-pagination-page.js";
+import { SdsPaginationPrevious as SdsPaginationPreviousElement, defineCustomElement as defineSdsPaginationPrevious } from "sds-web-components/dist/components/sds-pagination-previous.js";
+import { SdsPagination as SdsPaginationElement, defineCustomElement as defineSdsPagination } from "sds-web-components/dist/components/sds-pagination.js";
+import { SdsPanel as SdsPanelElement, defineCustomElement as defineSdsPanel } from "sds-web-components/dist/components/sds-panel.js";
 import { SdsPicture as SdsPictureElement, defineCustomElement as defineSdsPicture } from "sds-web-components/dist/components/sds-picture.js";
+import { SdsSearch as SdsSearchElement, defineCustomElement as defineSdsSearch } from "sds-web-components/dist/components/sds-search.js";
+import { SdsSection as SdsSectionElement, defineCustomElement as defineSdsSection } from "sds-web-components/dist/components/sds-section.js";
 import { SdsSelectField as SdsSelectFieldElement, defineCustomElement as defineSdsSelectField } from "sds-web-components/dist/components/sds-select-field.js";
 import { SdsSelectItem as SdsSelectItemElement, defineCustomElement as defineSdsSelectItem } from "sds-web-components/dist/components/sds-select-item.js";
 import { SdsSelect as SdsSelectElement, defineCustomElement as defineSdsSelect } from "sds-web-components/dist/components/sds-select.js";
 import { SdsSlider as SdsSliderElement, defineCustomElement as defineSdsSlider } from "sds-web-components/dist/components/sds-slider.js";
+import { SdsSwitchField as SdsSwitchFieldElement, defineCustomElement as defineSdsSwitchField } from "sds-web-components/dist/components/sds-switch-field.js";
+import { SdsSwitchGroup as SdsSwitchGroupElement, defineCustomElement as defineSdsSwitchGroup } from "sds-web-components/dist/components/sds-switch-group.js";
+import { SdsSwitch as SdsSwitchElement, defineCustomElement as defineSdsSwitch } from "sds-web-components/dist/components/sds-switch.js";
 import { SdsTabPanel as SdsTabPanelElement, defineCustomElement as defineSdsTabPanel } from "sds-web-components/dist/components/sds-tab-panel.js";
 import { SdsTab as SdsTabElement, defineCustomElement as defineSdsTab } from "sds-web-components/dist/components/sds-tab.js";
+import { SdsTable as SdsTableElement, defineCustomElement as defineSdsTable } from "sds-web-components/dist/components/sds-table.js";
 import { SdsTabs as SdsTabsElement, defineCustomElement as defineSdsTabs } from "sds-web-components/dist/components/sds-tabs.js";
 import { SdsTagButton as SdsTagButtonElement, defineCustomElement as defineSdsTagButton } from "sds-web-components/dist/components/sds-tag-button.js";
 import { SdsTag as SdsTagElement, defineCustomElement as defineSdsTag } from "sds-web-components/dist/components/sds-tag.js";
@@ -361,6 +399,7 @@ import { SdsTextarea as SdsTextareaElement, defineCustomElement as defineSdsText
 import { SdsToggleTagGroup as SdsToggleTagGroupElement, defineCustomElement as defineSdsToggleTagGroup } from "sds-web-components/dist/components/sds-toggle-tag-group.js";
 import { SdsToggleTagList as SdsToggleTagListElement, defineCustomElement as defineSdsToggleTagList } from "sds-web-components/dist/components/sds-toggle-tag-list.js";
 import { SdsToggleTag as SdsToggleTagElement, defineCustomElement as defineSdsToggleTag } from "sds-web-components/dist/components/sds-toggle-tag.js";
+import { SdsTooltip as SdsTooltipElement, defineCustomElement as defineSdsTooltip } from "sds-web-components/dist/components/sds-tooltip.js";
 
 type SdsAccordionEvents = NonNullable<unknown>;
 
@@ -388,6 +427,50 @@ export const SdsAccordionItem: StencilReactComponent<SdsAccordionItemElement, Sd
         onSdsAccordionItemCollapsed: 'sds-accordion-item-collapsed'
     } as SdsAccordionItemEvents,
     defineCustomElement: defineSdsAccordionItem
+});
+
+type SdsAvatarEvents = NonNullable<unknown>;
+
+export const SdsAvatar: StencilReactComponent<SdsAvatarElement, SdsAvatarEvents> = /*@__PURE__*/ createComponent<SdsAvatarElement, SdsAvatarEvents>({
+    tagName: 'sds-avatar',
+    elementClass: SdsAvatarElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsAvatarEvents,
+    defineCustomElement: defineSdsAvatar
+});
+
+type SdsAvatarBlockEvents = NonNullable<unknown>;
+
+export const SdsAvatarBlock: StencilReactComponent<SdsAvatarBlockElement, SdsAvatarBlockEvents> = /*@__PURE__*/ createComponent<SdsAvatarBlockElement, SdsAvatarBlockEvents>({
+    tagName: 'sds-avatar-block',
+    elementClass: SdsAvatarBlockElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsAvatarBlockEvents,
+    defineCustomElement: defineSdsAvatarBlock
+});
+
+type SdsAvatarButtonEvents = NonNullable<unknown>;
+
+export const SdsAvatarButton: StencilReactComponent<SdsAvatarButtonElement, SdsAvatarButtonEvents> = /*@__PURE__*/ createComponent<SdsAvatarButtonElement, SdsAvatarButtonEvents>({
+    tagName: 'sds-avatar-button',
+    elementClass: SdsAvatarButtonElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsAvatarButtonEvents,
+    defineCustomElement: defineSdsAvatarButton
+});
+
+type SdsAvatarGroupEvents = NonNullable<unknown>;
+
+export const SdsAvatarGroup: StencilReactComponent<SdsAvatarGroupElement, SdsAvatarGroupEvents> = /*@__PURE__*/ createComponent<SdsAvatarGroupElement, SdsAvatarGroupEvents>({
+    tagName: 'sds-avatar-group',
+    elementClass: SdsAvatarGroupElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsAvatarGroupEvents,
+    defineCustomElement: defineSdsAvatarGroup
 });
 
 type SdsButtonEvents = NonNullable<unknown>;
@@ -467,6 +550,105 @@ export const SdsDescription: StencilReactComponent<SdsDescriptionElement, SdsDes
     defineCustomElement: defineSdsDescription
 });
 
+type SdsDestructiveIconButtonEvents = NonNullable<unknown>;
+
+export const SdsDestructiveIconButton: StencilReactComponent<SdsDestructiveIconButtonElement, SdsDestructiveIconButtonEvents> = /*@__PURE__*/ createComponent<SdsDestructiveIconButtonElement, SdsDestructiveIconButtonEvents>({
+    tagName: 'sds-destructive-icon-button',
+    elementClass: SdsDestructiveIconButtonElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsDestructiveIconButtonEvents,
+    defineCustomElement: defineSdsDestructiveIconButton
+});
+
+type SdsDialogEvents = NonNullable<unknown>;
+
+export const SdsDialog: StencilReactComponent<SdsDialogElement, SdsDialogEvents> = /*@__PURE__*/ createComponent<SdsDialogElement, SdsDialogEvents>({
+    tagName: 'sds-dialog',
+    elementClass: SdsDialogElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsDialogEvents,
+    defineCustomElement: defineSdsDialog
+});
+
+type SdsDialogBodyEvents = NonNullable<unknown>;
+
+export const SdsDialogBody: StencilReactComponent<SdsDialogBodyElement, SdsDialogBodyEvents> = /*@__PURE__*/ createComponent<SdsDialogBodyElement, SdsDialogBodyEvents>({
+    tagName: 'sds-dialog-body',
+    elementClass: SdsDialogBodyElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsDialogBodyEvents,
+    defineCustomElement: defineSdsDialogBody
+});
+
+type SdsDialogButtonEvents = NonNullable<unknown>;
+
+export const SdsDialogButton: StencilReactComponent<SdsDialogButtonElement, SdsDialogButtonEvents> = /*@__PURE__*/ createComponent<SdsDialogButtonElement, SdsDialogButtonEvents>({
+    tagName: 'sds-dialog-button',
+    elementClass: SdsDialogButtonElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsDialogButtonEvents,
+    defineCustomElement: defineSdsDialogButton
+});
+
+type SdsDialogCloseEvents = { onSdsCloseDialog: EventName<CustomEvent<any>> };
+
+export const SdsDialogClose: StencilReactComponent<SdsDialogCloseElement, SdsDialogCloseEvents> = /*@__PURE__*/ createComponent<SdsDialogCloseElement, SdsDialogCloseEvents>({
+    tagName: 'sds-dialog-close',
+    elementClass: SdsDialogCloseElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onSdsCloseDialog: 'sds-close-dialog' } as SdsDialogCloseEvents,
+    defineCustomElement: defineSdsDialogClose
+});
+
+type SdsDialogDescriptionEvents = NonNullable<unknown>;
+
+export const SdsDialogDescription: StencilReactComponent<SdsDialogDescriptionElement, SdsDialogDescriptionEvents> = /*@__PURE__*/ createComponent<SdsDialogDescriptionElement, SdsDialogDescriptionEvents>({
+    tagName: 'sds-dialog-description',
+    elementClass: SdsDialogDescriptionElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsDialogDescriptionEvents,
+    defineCustomElement: defineSdsDialogDescription
+});
+
+type SdsDialogModalEvents = NonNullable<unknown>;
+
+export const SdsDialogModal: StencilReactComponent<SdsDialogModalElement, SdsDialogModalEvents> = /*@__PURE__*/ createComponent<SdsDialogModalElement, SdsDialogModalEvents>({
+    tagName: 'sds-dialog-modal',
+    elementClass: SdsDialogModalElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsDialogModalEvents,
+    defineCustomElement: defineSdsDialogModal
+});
+
+type SdsDialogTitleEvents = NonNullable<unknown>;
+
+export const SdsDialogTitle: StencilReactComponent<SdsDialogTitleElement, SdsDialogTitleEvents> = /*@__PURE__*/ createComponent<SdsDialogTitleElement, SdsDialogTitleEvents>({
+    tagName: 'sds-dialog-title',
+    elementClass: SdsDialogTitleElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsDialogTitleEvents,
+    defineCustomElement: defineSdsDialogTitle
+});
+
+type SdsDialogTriggerEvents = NonNullable<unknown>;
+
+export const SdsDialogTrigger: StencilReactComponent<SdsDialogTriggerElement, SdsDialogTriggerEvents> = /*@__PURE__*/ createComponent<SdsDialogTriggerElement, SdsDialogTriggerEvents>({
+    tagName: 'sds-dialog-trigger',
+    elementClass: SdsDialogTriggerElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsDialogTriggerEvents,
+    defineCustomElement: defineSdsDialogTrigger
+});
+
 type SdsFieldEvents = NonNullable<unknown>;
 
 export const SdsField: StencilReactComponent<SdsFieldElement, SdsFieldEvents> = /*@__PURE__*/ createComponent<SdsFieldElement, SdsFieldEvents>({
@@ -542,6 +724,39 @@ export const SdsForm: StencilReactComponent<SdsFormElement, SdsFormEvents> = /*@
     react: React,
     events: {} as SdsFormEvents,
     defineCustomElement: defineSdsForm
+});
+
+type SdsHeaderEvents = NonNullable<unknown>;
+
+export const SdsHeader: StencilReactComponent<SdsHeaderElement, SdsHeaderEvents> = /*@__PURE__*/ createComponent<SdsHeaderElement, SdsHeaderEvents>({
+    tagName: 'sds-header',
+    elementClass: SdsHeaderElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsHeaderEvents,
+    defineCustomElement: defineSdsHeader
+});
+
+type SdsHeaderAuthEvents = NonNullable<unknown>;
+
+export const SdsHeaderAuth: StencilReactComponent<SdsHeaderAuthElement, SdsHeaderAuthEvents> = /*@__PURE__*/ createComponent<SdsHeaderAuthElement, SdsHeaderAuthEvents>({
+    tagName: 'sds-header-auth',
+    elementClass: SdsHeaderAuthElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsHeaderAuthEvents,
+    defineCustomElement: defineSdsHeaderAuth
+});
+
+type SdsHeroEvents = NonNullable<unknown>;
+
+export const SdsHero: StencilReactComponent<SdsHeroElement, SdsHeroEvents> = /*@__PURE__*/ createComponent<SdsHeroElement, SdsHeroEvents>({
+    tagName: 'sds-hero',
+    elementClass: SdsHeroElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsHeroEvents,
+    defineCustomElement: defineSdsHero
 });
 
 type SdsIconActivityEvents = NonNullable<unknown>;
@@ -971,6 +1186,17 @@ export const SdsIconBriefcase: StencilReactComponent<SdsIconBriefcaseElement, Sd
     react: React,
     events: {} as SdsIconBriefcaseEvents,
     defineCustomElement: defineSdsIconBriefcase
+});
+
+type SdsIconButtonEvents = NonNullable<unknown>;
+
+export const SdsIconButton: StencilReactComponent<SdsIconButtonElement, SdsIconButtonEvents> = /*@__PURE__*/ createComponent<SdsIconButtonElement, SdsIconButtonEvents>({
+    tagName: 'sds-icon-button',
+    elementClass: SdsIconButtonElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsIconButtonEvents,
+    defineCustomElement: defineSdsIconButton
 });
 
 type SdsIconCalendarEvents = NonNullable<unknown>;
@@ -3811,6 +4037,83 @@ export const SdsLogo: StencilReactComponent<SdsLogoElement, SdsLogoEvents> = /*@
     defineCustomElement: defineSdsLogo
 });
 
+type SdsMenuEvents = NonNullable<unknown>;
+
+export const SdsMenu: StencilReactComponent<SdsMenuElement, SdsMenuEvents> = /*@__PURE__*/ createComponent<SdsMenuElement, SdsMenuEvents>({
+    tagName: 'sds-menu',
+    elementClass: SdsMenuElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsMenuEvents,
+    defineCustomElement: defineSdsMenu
+});
+
+type SdsMenuButtonEvents = NonNullable<unknown>;
+
+export const SdsMenuButton: StencilReactComponent<SdsMenuButtonElement, SdsMenuButtonEvents> = /*@__PURE__*/ createComponent<SdsMenuButtonElement, SdsMenuButtonEvents>({
+    tagName: 'sds-menu-button',
+    elementClass: SdsMenuButtonElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsMenuButtonEvents,
+    defineCustomElement: defineSdsMenuButton
+});
+
+type SdsMenuItemEvents = { onSdsClicked: EventName<CustomEvent<any>> };
+
+export const SdsMenuItem: StencilReactComponent<SdsMenuItemElement, SdsMenuItemEvents> = /*@__PURE__*/ createComponent<SdsMenuItemElement, SdsMenuItemEvents>({
+    tagName: 'sds-menu-item',
+    elementClass: SdsMenuItemElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onSdsClicked: 'sds-clicked' } as SdsMenuItemEvents,
+    defineCustomElement: defineSdsMenuItem
+});
+
+type SdsMenuPartEvents = NonNullable<unknown>;
+
+export const SdsMenuPart: StencilReactComponent<SdsMenuPartElement, SdsMenuPartEvents> = /*@__PURE__*/ createComponent<SdsMenuPartElement, SdsMenuPartEvents>({
+    tagName: 'sds-menu-part',
+    elementClass: SdsMenuPartElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsMenuPartEvents,
+    defineCustomElement: defineSdsMenuPart
+});
+
+type SdsMenuPopoverEvents = NonNullable<unknown>;
+
+export const SdsMenuPopover: StencilReactComponent<SdsMenuPopoverElement, SdsMenuPopoverEvents> = /*@__PURE__*/ createComponent<SdsMenuPopoverElement, SdsMenuPopoverEvents>({
+    tagName: 'sds-menu-popover',
+    elementClass: SdsMenuPopoverElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsMenuPopoverEvents,
+    defineCustomElement: defineSdsMenuPopover
+});
+
+type SdsMenuShortcutEvents = NonNullable<unknown>;
+
+export const SdsMenuShortcut: StencilReactComponent<SdsMenuShortcutElement, SdsMenuShortcutEvents> = /*@__PURE__*/ createComponent<SdsMenuShortcutElement, SdsMenuShortcutEvents>({
+    tagName: 'sds-menu-shortcut',
+    elementClass: SdsMenuShortcutElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsMenuShortcutEvents,
+    defineCustomElement: defineSdsMenuShortcut
+});
+
+type SdsMenuTriggerEvents = NonNullable<unknown>;
+
+export const SdsMenuTrigger: StencilReactComponent<SdsMenuTriggerElement, SdsMenuTriggerEvents> = /*@__PURE__*/ createComponent<SdsMenuTriggerElement, SdsMenuTriggerEvents>({
+    tagName: 'sds-menu-trigger',
+    elementClass: SdsMenuTriggerElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsMenuTriggerEvents,
+    defineCustomElement: defineSdsMenuTrigger
+});
+
 type SdsNavigationEvents = NonNullable<unknown>;
 
 export const SdsNavigation: StencilReactComponent<SdsNavigationElement, SdsNavigationEvents> = /*@__PURE__*/ createComponent<SdsNavigationElement, SdsNavigationEvents>({
@@ -3844,6 +4147,94 @@ export const SdsNavigationPill: StencilReactComponent<SdsNavigationPillElement, 
     defineCustomElement: defineSdsNavigationPill
 });
 
+type SdsNotificationEvents = { onSdsDismiss: EventName<CustomEvent<any>> };
+
+export const SdsNotification: StencilReactComponent<SdsNotificationElement, SdsNotificationEvents> = /*@__PURE__*/ createComponent<SdsNotificationElement, SdsNotificationEvents>({
+    tagName: 'sds-notification',
+    elementClass: SdsNotificationElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onSdsDismiss: 'sds-dismiss' } as SdsNotificationEvents,
+    defineCustomElement: defineSdsNotification
+});
+
+type SdsPaginationEvents = NonNullable<unknown>;
+
+export const SdsPagination: StencilReactComponent<SdsPaginationElement, SdsPaginationEvents> = /*@__PURE__*/ createComponent<SdsPaginationElement, SdsPaginationEvents>({
+    tagName: 'sds-pagination',
+    elementClass: SdsPaginationElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsPaginationEvents,
+    defineCustomElement: defineSdsPagination
+});
+
+type SdsPaginationGapEvents = NonNullable<unknown>;
+
+export const SdsPaginationGap: StencilReactComponent<SdsPaginationGapElement, SdsPaginationGapEvents> = /*@__PURE__*/ createComponent<SdsPaginationGapElement, SdsPaginationGapEvents>({
+    tagName: 'sds-pagination-gap',
+    elementClass: SdsPaginationGapElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsPaginationGapEvents,
+    defineCustomElement: defineSdsPaginationGap
+});
+
+type SdsPaginationListEvents = NonNullable<unknown>;
+
+export const SdsPaginationList: StencilReactComponent<SdsPaginationListElement, SdsPaginationListEvents> = /*@__PURE__*/ createComponent<SdsPaginationListElement, SdsPaginationListEvents>({
+    tagName: 'sds-pagination-list',
+    elementClass: SdsPaginationListElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsPaginationListEvents,
+    defineCustomElement: defineSdsPaginationList
+});
+
+type SdsPaginationNextEvents = NonNullable<unknown>;
+
+export const SdsPaginationNext: StencilReactComponent<SdsPaginationNextElement, SdsPaginationNextEvents> = /*@__PURE__*/ createComponent<SdsPaginationNextElement, SdsPaginationNextEvents>({
+    tagName: 'sds-pagination-next',
+    elementClass: SdsPaginationNextElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsPaginationNextEvents,
+    defineCustomElement: defineSdsPaginationNext
+});
+
+type SdsPaginationPageEvents = NonNullable<unknown>;
+
+export const SdsPaginationPage: StencilReactComponent<SdsPaginationPageElement, SdsPaginationPageEvents> = /*@__PURE__*/ createComponent<SdsPaginationPageElement, SdsPaginationPageEvents>({
+    tagName: 'sds-pagination-page',
+    elementClass: SdsPaginationPageElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsPaginationPageEvents,
+    defineCustomElement: defineSdsPaginationPage
+});
+
+type SdsPaginationPreviousEvents = NonNullable<unknown>;
+
+export const SdsPaginationPrevious: StencilReactComponent<SdsPaginationPreviousElement, SdsPaginationPreviousEvents> = /*@__PURE__*/ createComponent<SdsPaginationPreviousElement, SdsPaginationPreviousEvents>({
+    tagName: 'sds-pagination-previous',
+    elementClass: SdsPaginationPreviousElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsPaginationPreviousEvents,
+    defineCustomElement: defineSdsPaginationPrevious
+});
+
+type SdsPanelEvents = NonNullable<unknown>;
+
+export const SdsPanel: StencilReactComponent<SdsPanelElement, SdsPanelEvents> = /*@__PURE__*/ createComponent<SdsPanelElement, SdsPanelEvents>({
+    tagName: 'sds-panel',
+    elementClass: SdsPanelElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsPanelEvents,
+    defineCustomElement: defineSdsPanel
+});
+
 type SdsPictureEvents = NonNullable<unknown>;
 
 export const SdsPicture: StencilReactComponent<SdsPictureElement, SdsPictureEvents> = /*@__PURE__*/ createComponent<SdsPictureElement, SdsPictureEvents>({
@@ -3853,6 +4244,28 @@ export const SdsPicture: StencilReactComponent<SdsPictureElement, SdsPictureEven
     react: React,
     events: {} as SdsPictureEvents,
     defineCustomElement: defineSdsPicture
+});
+
+type SdsSearchEvents = { onSdsSearch: EventName<CustomEvent<{ searchTerm: string }>> };
+
+export const SdsSearch: StencilReactComponent<SdsSearchElement, SdsSearchEvents> = /*@__PURE__*/ createComponent<SdsSearchElement, SdsSearchEvents>({
+    tagName: 'sds-search',
+    elementClass: SdsSearchElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onSdsSearch: 'sds-search' } as SdsSearchEvents,
+    defineCustomElement: defineSdsSearch
+});
+
+type SdsSectionEvents = NonNullable<unknown>;
+
+export const SdsSection: StencilReactComponent<SdsSectionElement, SdsSectionEvents> = /*@__PURE__*/ createComponent<SdsSectionElement, SdsSectionEvents>({
+    tagName: 'sds-section',
+    elementClass: SdsSectionElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsSectionEvents,
+    defineCustomElement: defineSdsSection
 });
 
 type SdsSelectEvents = NonNullable<unknown>;
@@ -3905,6 +4318,39 @@ export const SdsSlider: StencilReactComponent<SdsSliderElement, SdsSliderEvents>
     defineCustomElement: defineSdsSlider
 });
 
+type SdsSwitchEvents = NonNullable<unknown>;
+
+export const SdsSwitch: StencilReactComponent<SdsSwitchElement, SdsSwitchEvents> = /*@__PURE__*/ createComponent<SdsSwitchElement, SdsSwitchEvents>({
+    tagName: 'sds-switch',
+    elementClass: SdsSwitchElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsSwitchEvents,
+    defineCustomElement: defineSdsSwitch
+});
+
+type SdsSwitchFieldEvents = { onSdsChange: EventName<CustomEvent<{ checked: boolean; value: string }>> };
+
+export const SdsSwitchField: StencilReactComponent<SdsSwitchFieldElement, SdsSwitchFieldEvents> = /*@__PURE__*/ createComponent<SdsSwitchFieldElement, SdsSwitchFieldEvents>({
+    tagName: 'sds-switch-field',
+    elementClass: SdsSwitchFieldElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: { onSdsChange: 'sds-change' } as SdsSwitchFieldEvents,
+    defineCustomElement: defineSdsSwitchField
+});
+
+type SdsSwitchGroupEvents = NonNullable<unknown>;
+
+export const SdsSwitchGroup: StencilReactComponent<SdsSwitchGroupElement, SdsSwitchGroupEvents> = /*@__PURE__*/ createComponent<SdsSwitchGroupElement, SdsSwitchGroupEvents>({
+    tagName: 'sds-switch-group',
+    elementClass: SdsSwitchGroupElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsSwitchGroupEvents,
+    defineCustomElement: defineSdsSwitchGroup
+});
+
 type SdsTabEvents = {
     onSdsTabClick: EventName<CustomEvent<{ panelId: string }>>,
     onSdsTabNext: EventName<CustomEvent<{ panelId: string }>>,
@@ -3933,6 +4379,17 @@ export const SdsTabPanel: StencilReactComponent<SdsTabPanelElement, SdsTabPanelE
     react: React,
     events: {} as SdsTabPanelEvents,
     defineCustomElement: defineSdsTabPanel
+});
+
+type SdsTableEvents = NonNullable<unknown>;
+
+export const SdsTable: StencilReactComponent<SdsTableElement, SdsTableEvents> = /*@__PURE__*/ createComponent<SdsTableElement, SdsTableEvents>({
+    tagName: 'sds-table',
+    elementClass: SdsTableElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsTableEvents,
+    defineCustomElement: defineSdsTable
 });
 
 type SdsTabsEvents = { onSdsTabsSelected: EventName<CustomEvent<{ panelId: string }>> };
@@ -4236,4 +4693,15 @@ export const SdsToggleTagList: StencilReactComponent<SdsToggleTagListElement, Sd
     react: React,
     events: { onTogglesUpdated: 'togglesUpdated' } as SdsToggleTagListEvents,
     defineCustomElement: defineSdsToggleTagList
+});
+
+type SdsTooltipEvents = NonNullable<unknown>;
+
+export const SdsTooltip: StencilReactComponent<SdsTooltipElement, SdsTooltipEvents> = /*@__PURE__*/ createComponent<SdsTooltipElement, SdsTooltipEvents>({
+    tagName: 'sds-tooltip',
+    elementClass: SdsTooltipElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsTooltipEvents,
+    defineCustomElement: defineSdsTooltip
 });

@@ -1,0 +1,11 @@
+@import 'reset';
+
+:host {
+  display: block;
+}
+
+.pagination-list {
+  align-items: center;
+  display: flex;
+  gap: var(--sds-size-space-200);
+}

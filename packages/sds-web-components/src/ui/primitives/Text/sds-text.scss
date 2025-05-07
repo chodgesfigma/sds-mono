@@ -1,5 +1,9 @@
 @import 'reset';
 
+:host {
+  display: block;
+}
+
 .text-body-base {
   font: var(--sds-font-body-base);
 }

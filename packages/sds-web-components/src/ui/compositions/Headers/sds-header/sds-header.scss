@@ -1,0 +1,17 @@
+@import 'reset';
+
+:host {
+  display: block;
+  left: 0;
+  position: sticky;
+  top: 0;
+  width: 100%;
+}
+
+.header {
+  background: var(--sds-color-background-default-default);
+  left: 0;
+  position: sticky;
+  top: 0;
+  z-index: var(--global-stack-top);
+}

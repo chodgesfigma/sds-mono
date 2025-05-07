@@ -15,6 +15,13 @@ Once you have your token:
 - Duplicate `.env.example` and rename it to `.env`
 - Set your generated `FIGMA_ACCESS_TOKEN`
 
+To populate your own Figma file:
+
+1. Make a copy of the official [Simple Design System community file](https://www.figma.com/community/file/1380235722331273046)
+2. Update the file id (`uUwqqXZ8Gcw8AfUot9toz8`) in [documentUrlSubstitutions](./documentUrlSubstitutions.json) with the copied Figma file's id
+
+[Read more about code-connect setup.](https://www.figma.com/code-connect-docs/quickstart-guide/#before-you-begin)
+
 ### Writing code-connect files
 
 To create a code connect file, there are 2 main types of files to be written: `props` and `code-connect`. This package helps with prop defintion re-use, by generating `*.figma.ts(x)` files.
@@ -35,15 +42,15 @@ To create a new code-connect file:
 There are two main commands:
 
 ```bash
-npm run build
+npm run compile
 ```
 
-- will run `build:config` and then `build:code-connect`
-- `build:config` will combine each defined output in `outputConfig` and `documentUrlSubstitutions` into `figma.<output>.config.json` files in the `/configs`.
+- will run `compile:config` and then `compile:code-connect`
+- `compile:config` will combine each defined output in `outputConfig` and `documentUrlSubstitutions` into `figma.<output>.config.json` files in the `/dist/configs` folder.
 
   - It will also add in and update `package.json` scripts. Giving each output has its own `publish:<output>` command, as well as a `publish` command that combines them.
 
-- `build:code-connect` will generate `*.figma.ts(x)` files in a `dist` output folder
+- `compile:code-connect` will generate `*.figma.ts(x)` files in a `/dist/<output-name>` folder
   - These are combinations of shared `/props` and output specific `/code-connect` files
 
 ```bash
@@ -60,7 +67,7 @@ npm run publish
 
 This file contains key:value pairings that our `*.figma.ts` files can use to easily replace Figma Node URLS. Right now these are universal between all of our output types.
 
-To change the target Figma design file, replace `mG9gWTcs6dZ0v0pNwKPnNK`.
+To change the target Figma design file, replace `uUwqqXZ8Gcw8AfUot9toz8` with your own Figma file.
 
 [Read more about documentUrlSubstitutions in the Figma Docs.](https://www.figma.com/code-connect-docs/api/config-file/#documenturlsubstitutions)
 

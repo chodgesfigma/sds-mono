@@ -7,6 +7,10 @@ import type { JSX } from 'sds-web-components/dist/types';
 
 import { defineCustomElement as defineSdsAccordion } from 'sds-web-components/dist/components/sds-accordion.js';
 import { defineCustomElement as defineSdsAccordionItem } from 'sds-web-components/dist/components/sds-accordion-item.js';
+import { defineCustomElement as defineSdsAvatar } from 'sds-web-components/dist/components/sds-avatar.js';
+import { defineCustomElement as defineSdsAvatarBlock } from 'sds-web-components/dist/components/sds-avatar-block.js';
+import { defineCustomElement as defineSdsAvatarButton } from 'sds-web-components/dist/components/sds-avatar-button.js';
+import { defineCustomElement as defineSdsAvatarGroup } from 'sds-web-components/dist/components/sds-avatar-group.js';
 import { defineCustomElement as defineSdsButton } from 'sds-web-components/dist/components/sds-button.js';
 import { defineCustomElement as defineSdsButtonDanger } from 'sds-web-components/dist/components/sds-button-danger.js';
 import { defineCustomElement as defineSdsButtonGroup } from 'sds-web-components/dist/components/sds-button-group.js';
@@ -14,6 +18,15 @@ import { defineCustomElement as defineSdsCheckbox } from 'sds-web-components/dis
 import { defineCustomElement as defineSdsCheckboxField } from 'sds-web-components/dist/components/sds-checkbox-field.js';
 import { defineCustomElement as defineSdsCheckboxGroup } from 'sds-web-components/dist/components/sds-checkbox-group.js';
 import { defineCustomElement as defineSdsDescription } from 'sds-web-components/dist/components/sds-description.js';
+import { defineCustomElement as defineSdsDestructiveIconButton } from 'sds-web-components/dist/components/sds-destructive-icon-button.js';
+import { defineCustomElement as defineSdsDialog } from 'sds-web-components/dist/components/sds-dialog.js';
+import { defineCustomElement as defineSdsDialogBody } from 'sds-web-components/dist/components/sds-dialog-body.js';
+import { defineCustomElement as defineSdsDialogButton } from 'sds-web-components/dist/components/sds-dialog-button.js';
+import { defineCustomElement as defineSdsDialogClose } from 'sds-web-components/dist/components/sds-dialog-close.js';
+import { defineCustomElement as defineSdsDialogDescription } from 'sds-web-components/dist/components/sds-dialog-description.js';
+import { defineCustomElement as defineSdsDialogModal } from 'sds-web-components/dist/components/sds-dialog-modal.js';
+import { defineCustomElement as defineSdsDialogTitle } from 'sds-web-components/dist/components/sds-dialog-title.js';
+import { defineCustomElement as defineSdsDialogTrigger } from 'sds-web-components/dist/components/sds-dialog-trigger.js';
 import { defineCustomElement as defineSdsField } from 'sds-web-components/dist/components/sds-field.js';
 import { defineCustomElement as defineSdsFieldError } from 'sds-web-components/dist/components/sds-field-error.js';
 import { defineCustomElement as defineSdsFieldGroup } from 'sds-web-components/dist/components/sds-field-group.js';
@@ -21,6 +34,9 @@ import { defineCustomElement as defineSdsFieldset } from 'sds-web-components/dis
 import { defineCustomElement as defineSdsFlex } from 'sds-web-components/dist/components/sds-flex.js';
 import { defineCustomElement as defineSdsFlexItem } from 'sds-web-components/dist/components/sds-flex-item.js';
 import { defineCustomElement as defineSdsForm } from 'sds-web-components/dist/components/sds-form.js';
+import { defineCustomElement as defineSdsHeader } from 'sds-web-components/dist/components/sds-header.js';
+import { defineCustomElement as defineSdsHeaderAuth } from 'sds-web-components/dist/components/sds-header-auth.js';
+import { defineCustomElement as defineSdsHero } from 'sds-web-components/dist/components/sds-hero.js';
 import { defineCustomElement as defineSdsIconActivity } from 'sds-web-components/dist/components/sds-icon-activity.js';
 import { defineCustomElement as defineSdsIconAirplay } from 'sds-web-components/dist/components/sds-icon-airplay.js';
 import { defineCustomElement as defineSdsIconAlertCircle } from 'sds-web-components/dist/components/sds-icon-alert-circle.js';
@@ -60,6 +76,7 @@ import { defineCustomElement as defineSdsIconBookOpen } from 'sds-web-components
 import { defineCustomElement as defineSdsIconBookmark } from 'sds-web-components/dist/components/sds-icon-bookmark.js';
 import { defineCustomElement as defineSdsIconBox } from 'sds-web-components/dist/components/sds-icon-box.js';
 import { defineCustomElement as defineSdsIconBriefcase } from 'sds-web-components/dist/components/sds-icon-briefcase.js';
+import { defineCustomElement as defineSdsIconButton } from 'sds-web-components/dist/components/sds-icon-button.js';
 import { defineCustomElement as defineSdsIconCalendar } from 'sds-web-components/dist/components/sds-icon-calendar.js';
 import { defineCustomElement as defineSdsIconCamera } from 'sds-web-components/dist/components/sds-icon-camera.js';
 import { defineCustomElement as defineSdsIconCameraOff } from 'sds-web-components/dist/components/sds-icon-camera-off.js';
@@ -318,16 +335,37 @@ import { defineCustomElement as defineSdsLink } from 'sds-web-components/dist/co
 import { defineCustomElement as defineSdsListBox } from 'sds-web-components/dist/components/sds-list-box.js';
 import { defineCustomElement as defineSdsListBoxItem } from 'sds-web-components/dist/components/sds-list-box-item.js';
 import { defineCustomElement as defineSdsLogo } from 'sds-web-components/dist/components/sds-logo.js';
+import { defineCustomElement as defineSdsMenu } from 'sds-web-components/dist/components/sds-menu.js';
+import { defineCustomElement as defineSdsMenuButton } from 'sds-web-components/dist/components/sds-menu-button.js';
+import { defineCustomElement as defineSdsMenuItem } from 'sds-web-components/dist/components/sds-menu-item.js';
+import { defineCustomElement as defineSdsMenuPart } from 'sds-web-components/dist/components/sds-menu-part.js';
+import { defineCustomElement as defineSdsMenuPopover } from 'sds-web-components/dist/components/sds-menu-popover.js';
+import { defineCustomElement as defineSdsMenuShortcut } from 'sds-web-components/dist/components/sds-menu-shortcut.js';
+import { defineCustomElement as defineSdsMenuTrigger } from 'sds-web-components/dist/components/sds-menu-trigger.js';
 import { defineCustomElement as defineSdsNavigation } from 'sds-web-components/dist/components/sds-navigation.js';
 import { defineCustomElement as defineSdsNavigationButton } from 'sds-web-components/dist/components/sds-navigation-button.js';
 import { defineCustomElement as defineSdsNavigationPill } from 'sds-web-components/dist/components/sds-navigation-pill.js';
+import { defineCustomElement as defineSdsNotification } from 'sds-web-components/dist/components/sds-notification.js';
+import { defineCustomElement as defineSdsPagination } from 'sds-web-components/dist/components/sds-pagination.js';
+import { defineCustomElement as defineSdsPaginationGap } from 'sds-web-components/dist/components/sds-pagination-gap.js';
+import { defineCustomElement as defineSdsPaginationList } from 'sds-web-components/dist/components/sds-pagination-list.js';
+import { defineCustomElement as defineSdsPaginationNext } from 'sds-web-components/dist/components/sds-pagination-next.js';
+import { defineCustomElement as defineSdsPaginationPage } from 'sds-web-components/dist/components/sds-pagination-page.js';
+import { defineCustomElement as defineSdsPaginationPrevious } from 'sds-web-components/dist/components/sds-pagination-previous.js';
+import { defineCustomElement as defineSdsPanel } from 'sds-web-components/dist/components/sds-panel.js';
 import { defineCustomElement as defineSdsPicture } from 'sds-web-components/dist/components/sds-picture.js';
+import { defineCustomElement as defineSdsSearch } from 'sds-web-components/dist/components/sds-search.js';
+import { defineCustomElement as defineSdsSection } from 'sds-web-components/dist/components/sds-section.js';
 import { defineCustomElement as defineSdsSelect } from 'sds-web-components/dist/components/sds-select.js';
 import { defineCustomElement as defineSdsSelectField } from 'sds-web-components/dist/components/sds-select-field.js';
 import { defineCustomElement as defineSdsSelectItem } from 'sds-web-components/dist/components/sds-select-item.js';
 import { defineCustomElement as defineSdsSlider } from 'sds-web-components/dist/components/sds-slider.js';
+import { defineCustomElement as defineSdsSwitch } from 'sds-web-components/dist/components/sds-switch.js';
+import { defineCustomElement as defineSdsSwitchField } from 'sds-web-components/dist/components/sds-switch-field.js';
+import { defineCustomElement as defineSdsSwitchGroup } from 'sds-web-components/dist/components/sds-switch-group.js';
 import { defineCustomElement as defineSdsTab } from 'sds-web-components/dist/components/sds-tab.js';
 import { defineCustomElement as defineSdsTabPanel } from 'sds-web-components/dist/components/sds-tab-panel.js';
+import { defineCustomElement as defineSdsTable } from 'sds-web-components/dist/components/sds-table.js';
 import { defineCustomElement as defineSdsTabs } from 'sds-web-components/dist/components/sds-tabs.js';
 import { defineCustomElement as defineSdsTag } from 'sds-web-components/dist/components/sds-tag.js';
 import { defineCustomElement as defineSdsTagButton } from 'sds-web-components/dist/components/sds-tag-button.js';
@@ -355,6 +393,7 @@ import { defineCustomElement as defineSdsTextareaField } from 'sds-web-component
 import { defineCustomElement as defineSdsToggleTag } from 'sds-web-components/dist/components/sds-toggle-tag.js';
 import { defineCustomElement as defineSdsToggleTagGroup } from 'sds-web-components/dist/components/sds-toggle-tag-group.js';
 import { defineCustomElement as defineSdsToggleTagList } from 'sds-web-components/dist/components/sds-toggle-tag-list.js';
+import { defineCustomElement as defineSdsTooltip } from 'sds-web-components/dist/components/sds-tooltip.js';
 
 
 export const SdsAccordion = /*@__PURE__*/ defineContainer<JSX.SdsAccordion>('sds-accordion', defineSdsAccordion, [
@@ -369,6 +408,37 @@ export const SdsAccordionItem = /*@__PURE__*/ defineContainer<JSX.SdsAccordionIt
 ], [
   'sds-accordion-item-expanded',
   'sds-accordion-item-collapsed'
+]);
+
+
+export const SdsAvatar = /*@__PURE__*/ defineContainer<JSX.SdsAvatar>('sds-avatar', defineSdsAvatar, [
+  'size',
+  'square',
+  'src',
+  'initials',
+  'alt'
+]);
+
+
+export const SdsAvatarBlock = /*@__PURE__*/ defineContainer<JSX.SdsAvatarBlock>('sds-avatar-block', defineSdsAvatarBlock, [
+  'avatarTitle',
+  'description'
+]);
+
+
+export const SdsAvatarButton = /*@__PURE__*/ defineContainer<JSX.SdsAvatarButton>('sds-avatar-button', defineSdsAvatarButton, [
+  'size',
+  'square',
+  'src',
+  'initials',
+  'alt',
+  'options'
+]);
+
+
+export const SdsAvatarGroup = /*@__PURE__*/ defineContainer<JSX.SdsAvatarGroup>('sds-avatar-group', defineSdsAvatarGroup, [
+  'max',
+  'spacing'
 ]);
 
 
@@ -427,6 +497,53 @@ export const SdsCheckboxGroup = /*@__PURE__*/ defineContainer<JSX.SdsCheckboxGro
 export const SdsDescription = /*@__PURE__*/ defineContainer<JSX.SdsDescription>('sds-description', defineSdsDescription);
 
 
+export const SdsDestructiveIconButton = /*@__PURE__*/ defineContainer<JSX.SdsDestructiveIconButton>('sds-destructive-icon-button', defineSdsDestructiveIconButton, [
+  'type',
+  'size',
+  'variant',
+  'disabled',
+  'ariaLabel'
+]);
+
+
+export const SdsDialog = /*@__PURE__*/ defineContainer<JSX.SdsDialog>('sds-dialog', defineSdsDialog, [
+  'dialogType'
+]);
+
+
+export const SdsDialogBody = /*@__PURE__*/ defineContainer<JSX.SdsDialogBody>('sds-dialog-body', defineSdsDialogBody, [
+  'bleed'
+]);
+
+
+export const SdsDialogButton = /*@__PURE__*/ defineContainer<JSX.SdsDialogButton>('sds-dialog-button', defineSdsDialogButton, [
+  'useIcon',
+  'label',
+  'variant'
+]);
+
+
+export const SdsDialogClose = /*@__PURE__*/ defineContainer<JSX.SdsDialogClose>('sds-dialog-close', defineSdsDialogClose, [
+  'sds-close-dialog'
+], [
+  'sds-close-dialog'
+]);
+
+
+export const SdsDialogDescription = /*@__PURE__*/ defineContainer<JSX.SdsDialogDescription>('sds-dialog-description', defineSdsDialogDescription);
+
+
+export const SdsDialogModal = /*@__PURE__*/ defineContainer<JSX.SdsDialogModal>('sds-dialog-modal', defineSdsDialogModal, [
+  'isOpen'
+]);
+
+
+export const SdsDialogTitle = /*@__PURE__*/ defineContainer<JSX.SdsDialogTitle>('sds-dialog-title', defineSdsDialogTitle);
+
+
+export const SdsDialogTrigger = /*@__PURE__*/ defineContainer<JSX.SdsDialogTrigger>('sds-dialog-trigger', defineSdsDialogTrigger);
+
+
 export const SdsField = /*@__PURE__*/ defineContainer<JSX.SdsField>('sds-field', defineSdsField, [
   'disabled'
 ]);
@@ -463,6 +580,29 @@ export const SdsFlexItem = /*@__PURE__*/ defineContainer<JSX.SdsFlexItem>('sds-f
 
 export const SdsForm = /*@__PURE__*/ defineContainer<JSX.SdsForm>('sds-form', defineSdsForm, [
   'singleLine'
+]);
+
+
+export const SdsHeader = /*@__PURE__*/ defineContainer<JSX.SdsHeader>('sds-header', defineSdsHeader);
+
+
+export const SdsHeaderAuth = /*@__PURE__*/ defineContainer<JSX.SdsHeaderAuth>('sds-header-auth', defineSdsHeaderAuth);
+
+
+export const SdsHero = /*@__PURE__*/ defineContainer<JSX.SdsHero>('sds-hero', defineSdsHero, [
+  'elementType',
+  'padding',
+  'paddingTop',
+  'paddingBottom',
+  'variant',
+  'src',
+  'alignPrimary',
+  'alignSecondary',
+  'container',
+  'direction',
+  'gap',
+  'flexType',
+  'wrap'
 ]);
 
 
@@ -658,6 +798,15 @@ export const SdsIconBox = /*@__PURE__*/ defineContainer<JSX.SdsIconBox>('sds-ico
 
 export const SdsIconBriefcase = /*@__PURE__*/ defineContainer<JSX.SdsIconBriefcase>('sds-icon-briefcase', defineSdsIconBriefcase, [
   'size'
+]);
+
+
+export const SdsIconButton = /*@__PURE__*/ defineContainer<JSX.SdsIconButton>('sds-icon-button', defineSdsIconButton, [
+  'type',
+  'size',
+  'variant',
+  'disabled',
+  'ariaLabel'
 ]);
 
 
@@ -1984,6 +2133,42 @@ export const SdsLogo = /*@__PURE__*/ defineContainer<JSX.SdsLogo>('sds-logo', de
 ]);
 
 
+export const SdsMenu = /*@__PURE__*/ defineContainer<JSX.SdsMenu>('sds-menu', defineSdsMenu);
+
+
+export const SdsMenuButton = /*@__PURE__*/ defineContainer<JSX.SdsMenuButton>('sds-menu-button', defineSdsMenuButton, [
+  'label',
+  'variant',
+  'placement',
+  'isDisabled'
+]);
+
+
+export const SdsMenuItem = /*@__PURE__*/ defineContainer<JSX.SdsMenuItem>('sds-menu-item', defineSdsMenuItem, [
+  'isDisabled',
+  'sds-clicked'
+], [
+  'sds-clicked'
+]);
+
+
+export const SdsMenuPart = /*@__PURE__*/ defineContainer<JSX.SdsMenuPart>('sds-menu-part', defineSdsMenuPart, [
+  'variant'
+]);
+
+
+export const SdsMenuPopover = /*@__PURE__*/ defineContainer<JSX.SdsMenuPopover>('sds-menu-popover', defineSdsMenuPopover, [
+  'isOpen',
+  'placement'
+]);
+
+
+export const SdsMenuShortcut = /*@__PURE__*/ defineContainer<JSX.SdsMenuShortcut>('sds-menu-shortcut', defineSdsMenuShortcut);
+
+
+export const SdsMenuTrigger = /*@__PURE__*/ defineContainer<JSX.SdsMenuTrigger>('sds-menu-trigger', defineSdsMenuTrigger);
+
+
 export const SdsNavigation = /*@__PURE__*/ defineContainer<JSX.SdsNavigation>('sds-navigation', defineSdsNavigation, [
   'direction'
 ]);
@@ -2009,7 +2194,77 @@ export const SdsNavigationPill = /*@__PURE__*/ defineContainer<JSX.SdsNavigation
 ]);
 
 
+export const SdsNotification = /*@__PURE__*/ defineContainer<JSX.SdsNotification>('sds-notification', defineSdsNotification, [
+  'isDismissible',
+  'variant',
+  'sds-dismiss'
+], [
+  'sds-dismiss'
+]);
+
+
+export const SdsPagination = /*@__PURE__*/ defineContainer<JSX.SdsPagination>('sds-pagination', defineSdsPagination, [
+  'ariaLabel'
+]);
+
+
+export const SdsPaginationGap = /*@__PURE__*/ defineContainer<JSX.SdsPaginationGap>('sds-pagination-gap', defineSdsPaginationGap);
+
+
+export const SdsPaginationList = /*@__PURE__*/ defineContainer<JSX.SdsPaginationList>('sds-pagination-list', defineSdsPaginationList);
+
+
+export const SdsPaginationNext = /*@__PURE__*/ defineContainer<JSX.SdsPaginationNext>('sds-pagination-next', defineSdsPaginationNext, [
+  'label',
+  'href'
+]);
+
+
+export const SdsPaginationPage = /*@__PURE__*/ defineContainer<JSX.SdsPaginationPage>('sds-pagination-page', defineSdsPaginationPage, [
+  'current',
+  'href',
+  'pageNumber'
+]);
+
+
+export const SdsPaginationPrevious = /*@__PURE__*/ defineContainer<JSX.SdsPaginationPrevious>('sds-pagination-previous', defineSdsPaginationPrevious, [
+  'label',
+  'href'
+]);
+
+
+export const SdsPanel = /*@__PURE__*/ defineContainer<JSX.SdsPanel>('sds-panel', defineSdsPanel, [
+  'alignPrimary',
+  'alignSecondary',
+  'direction',
+  'gap',
+  'flexType'
+]);
+
+
 export const SdsPicture = /*@__PURE__*/ defineContainer<JSX.SdsPicture>('sds-picture', defineSdsPicture);
+
+
+export const SdsSearch = /*@__PURE__*/ defineContainer<JSX.SdsSearch>('sds-search', defineSdsSearch, [
+  'ariaLabel',
+  'defaultValue',
+  'disabled',
+  'placeholder',
+  'results',
+  'sds-search'
+], [
+  'sds-search'
+]);
+
+
+export const SdsSection = /*@__PURE__*/ defineContainer<JSX.SdsSection>('sds-section', defineSdsSection, [
+  'elementType',
+  'padding',
+  'paddingTop',
+  'paddingBottom',
+  'variant',
+  'src'
+]);
 
 
 export const SdsSelect = /*@__PURE__*/ defineContainer<JSX.SdsSelect>('sds-select', defineSdsSelect, [
@@ -2048,6 +2303,26 @@ export const SdsSlider = /*@__PURE__*/ defineContainer<JSX.SdsSlider>('sds-slide
 ]);
 
 
+export const SdsSwitch = /*@__PURE__*/ defineContainer<JSX.SdsSwitch>('sds-switch', defineSdsSwitch);
+
+
+export const SdsSwitchField = /*@__PURE__*/ defineContainer<JSX.SdsSwitchField>('sds-switch-field', defineSdsSwitchField, [
+  'checked',
+  'disabled',
+  'description',
+  'error',
+  'label',
+  'required',
+  'value',
+  'sds-change'
+], [
+  'sds-change'
+]);
+
+
+export const SdsSwitchGroup = /*@__PURE__*/ defineContainer<JSX.SdsSwitchGroup>('sds-switch-group', defineSdsSwitchGroup);
+
+
 export const SdsTab = /*@__PURE__*/ defineContainer<JSX.SdsTab>('sds-tab', defineSdsTab, [
   'panelId',
   'active',
@@ -2064,6 +2339,16 @@ export const SdsTab = /*@__PURE__*/ defineContainer<JSX.SdsTab>('sds-tab', defin
 export const SdsTabPanel = /*@__PURE__*/ defineContainer<JSX.SdsTabPanel>('sds-tab-panel', defineSdsTabPanel, [
   'panelId',
   'active'
+]);
+
+
+export const SdsTable = /*@__PURE__*/ defineContainer<JSX.SdsTable>('sds-table', defineSdsTable, [
+  'bleed',
+  'dense',
+  'grid',
+  'striped',
+  'interactive',
+  'alignment'
 ]);
 
 
@@ -2246,5 +2531,12 @@ export const SdsToggleTagList = /*@__PURE__*/ defineContainer<JSX.SdsToggleTagLi
   'togglesUpdated'
 ], [
   'togglesUpdated'
+]);
+
+
+export const SdsTooltip = /*@__PURE__*/ defineContainer<JSX.SdsTooltip>('sds-tooltip', defineSdsTooltip, [
+  'isActive',
+  'placement',
+  'offset'
 ]);
 

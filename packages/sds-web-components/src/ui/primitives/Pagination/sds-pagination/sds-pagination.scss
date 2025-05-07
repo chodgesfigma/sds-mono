@@ -1,0 +1,13 @@
+@import 'reset';
+
+:host {
+  display: block;
+  width: 100%;
+}
+
+.pagination {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
