@@ -13,7 +13,6 @@ import {
   MENU_SHORTCUT_PROPS,
   MENU_HEADER_PROPS,
   MENU_ITEM_PROPS,
-  MENU_DESCRIPTION_PROPS,
 } from 'src/props/sds-menu';
 
 figma.connect(SdsMenu, '<FIGMA_MENU_MENU>', {
@@ -33,13 +32,6 @@ figma.connect(SdsMenuShortcut, '<FIGMA_MENU_MENU_SHORTCUT>', {
   example: ({ shortcut }) => <SdsMenuShortcut>{shortcut}</SdsMenuShortcut>,
 });
 
-figma.connect(SdsMenuPart, '<FIGMA_MENU_DESCRIPTION>', {
-  props: MENU_DESCRIPTION_PROPS,
-  example: ({ description }) => (
-    <SdsMenuPart variant='description'>{description}</SdsMenuPart>
-  ),
-});
-
 figma.connect(SdsMenuItem, '<FIGMA_MENU_MENU_ITEM>', {
   props: MENU_ITEM_PROPS,
   example: ({ icon, label, description, shortcut, isDisabled }) => (
@@ -47,7 +39,7 @@ figma.connect(SdsMenuItem, '<FIGMA_MENU_MENU_ITEM>', {
       {icon}
       <SdsMenuPart variant='label'>{label}</SdsMenuPart>
       {shortcut}
-      {description}
+      <SdsMenuPart variant='description'>{description}</SdsMenuPart>
     </SdsMenuItem>
   ),
 });
