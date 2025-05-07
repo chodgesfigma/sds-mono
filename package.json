@@ -9,7 +9,7 @@
   "scripts": {
     "build": "lerna run build",
     "clean": "rimraf node_modules && npm ci",
-    "figma:build": "lerna run build --scope=sds-figma-code-connect",
+    "figma:compile": "lerna run compile --scope=sds-figma-code-connect",
     "figma:publish": "lerna run publish --scope=sds-figma-code-connect",
     "dev:vue": "npm run dev --workspace=example-apps/sds-example-vue",
     "dev:react": "npm run dev --workspace=example-apps/sds-example-react",

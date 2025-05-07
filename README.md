@@ -55,9 +55,7 @@ npm run build
 
 ### To test out the Example Output Applications for yourself:
 
-
-
-First, ensure that you have built the project first, following the instructions above. 
+First, ensure that you have built the project first, following the instructions above.
 
 To test how the SDS components work across different frameworks, we have provided mock example applications for each output target.
 
@@ -78,8 +76,9 @@ npm run dev:web
 
 ### Code Connect:
 
-Figma link to test code connect [here](<https://www.figma.com/design/mG9gWTcs6dZ0v0pNwKPnNK/Simple-Design-System-(Stencil-Library)?node-id=3-5&p=f&m=dev>)!
+Figma link to test code connect [here](<https://www.figma.com/design/uUwqqXZ8Gcw8AfUot9toz8/Simple-Design-System-(Stencil-Library)?node-id=3-5&p=f&m=dev>)!
 
 ## Steps to test!
 
 After building the project, navigate to `example-apps`, and choose any app you'd like. Ensure that you've `npm ci`'d, and then run `npm run dev`. Feel free to inspect `package.json` to check on the exact script to run.
+```
