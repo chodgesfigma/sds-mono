@@ -1,5 +1,5 @@
+import { SlMenuItem } from '@shoelace-style/shoelace';
 import '@shoelace-style/shoelace/dist/components/menu-item/menu-item.js';
-import { SlMenuItem } from '@shoelace-style/shoelace/dist/shoelace';
 import { Component, Host, h, Prop, State, Method } from '@stencil/core';
 
 @Component({

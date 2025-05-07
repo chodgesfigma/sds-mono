@@ -27,6 +27,19 @@ Type: `Promise<void>`
 
 
 
+## Dependencies
+
+### Used by
+
+ - [sds-search](../../Search/sds-search)
+
+### Graph
+```mermaid
+graph TD;
+  sds-search --> sds-list-box-item
+  style sds-list-box-item fill:#f9f,stroke:#333,stroke-width:4px
+```
+
 ----------------------------------------------
 
 *Built with [StencilJS](https://stenciljs.com/)*

@@ -349,6 +349,7 @@ export const DIRECTIVES = [
   d.SdsPaginationPrevious,
   d.SdsPanel,
   d.SdsPicture,
+  d.SdsSearch,
   d.SdsSection,
   d.SdsSelect,
   d.SdsSelectField,

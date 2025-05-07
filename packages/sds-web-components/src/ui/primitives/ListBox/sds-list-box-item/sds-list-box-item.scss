@@ -68,6 +68,7 @@ sl-menu-item {
     pointer-events: none;
   }
 
+  &:focus-within,
   &[data-selected='true'] {
     &::part(base) {
       background-color: var(--sds-color-background-brand-default);
