@@ -369,6 +369,7 @@ import { SdsSwitchGroup as SdsSwitchGroupElement, defineCustomElement as defineS
 import { SdsSwitch as SdsSwitchElement, defineCustomElement as defineSdsSwitch } from "sds-web-components/dist/components/sds-switch.js";
 import { SdsTabPanel as SdsTabPanelElement, defineCustomElement as defineSdsTabPanel } from "sds-web-components/dist/components/sds-tab-panel.js";
 import { SdsTab as SdsTabElement, defineCustomElement as defineSdsTab } from "sds-web-components/dist/components/sds-tab.js";
+import { SdsTable as SdsTableElement, defineCustomElement as defineSdsTable } from "sds-web-components/dist/components/sds-table.js";
 import { SdsTabs as SdsTabsElement, defineCustomElement as defineSdsTabs } from "sds-web-components/dist/components/sds-tabs.js";
 import { SdsTagButton as SdsTagButtonElement, defineCustomElement as defineSdsTagButton } from "sds-web-components/dist/components/sds-tag-button.js";
 import { SdsTag as SdsTagElement, defineCustomElement as defineSdsTag } from "sds-web-components/dist/components/sds-tag.js";
@@ -4354,6 +4355,17 @@ export const SdsTabPanel: StencilReactComponent<SdsTabPanelElement, SdsTabPanelE
     react: React,
     events: {} as SdsTabPanelEvents,
     defineCustomElement: defineSdsTabPanel
+});
+
+type SdsTableEvents = NonNullable<unknown>;
+
+export const SdsTable: StencilReactComponent<SdsTableElement, SdsTableEvents> = /*@__PURE__*/ createComponent<SdsTableElement, SdsTableEvents>({
+    tagName: 'sds-table',
+    elementClass: SdsTableElement,
+    // @ts-ignore - React type of Stencil Output Target may differ from the React version used in the Nuxt.js project, this can be ignored.
+    react: React,
+    events: {} as SdsTableEvents,
+    defineCustomElement: defineSdsTable
 });
 
 type SdsTabsEvents = { onSdsTabsSelected: EventName<CustomEvent<{ panelId: string }>> };
