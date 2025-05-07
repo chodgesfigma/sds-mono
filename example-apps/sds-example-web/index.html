@@ -4,27 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Web Example</title>
+    <link rel="stylesheet" href="./styles.css" />
     <!-- Component Library Stylesheet -->
     <link rel="stylesheet" href="./dist/sds.css" />
     <!-- Component Library Loader -->
     <script type="module" src="./dist/sds.esm.js"></script>
     <script nomodule src="./dist/sds.js"></script>
     <script>
-      window.onload = () => {
-        document
-          .querySelector("sds-button")
-          .addEventListener("click", () => window.alert("Button Clicked!"));
-      };
+      window.addEventListener("DOMContentLoaded", () => {
+        const disabledCheckbox = document.getElementById("disable-toggle");
+        const fieldset = document.querySelector("sds-fieldset");
+
+        disabledCheckbox.addEventListener("change", () => {
+          const isDisabled = disabledCheckbox.checked;
+
+          if (isDisabled) fieldset.setAttribute("disabled", "");
+          else fieldset.removeAttribute("disabled");
+
+          fieldset
+            .querySelectorAll(
+              "sds-input-field, sds-select-field, sds-slider, sds-button-danger, sds-button"
+            )
+            .forEach((el) => {
+              if (isDisabled) el.setAttribute("disabled", "");
+              else el.removeAttribute("disabled");
+            });
+        });
+
+        window.handleSubmit = () => {
+          window.alert("Submitted in Web env!");
+        };
+      });
     </script>
   </head>
-  <body>
-    <h1>Web Components Example</h1>
+  <main>
+    <label>
+      <input id="disable-toggle" type="checkbox" />
+      Disable form
+    </label>
+    <hr />
 
-    <sds-button variant="primary">Click Me</sds-button>
+    <sds-form>
+      <sds-fieldset>
+        <sds-legend>Shipping details</sds-legend>
+        <sds-text>
+          Without this your odds of getting your order are low.
+        </sds-text>
 
-    <sds-accordion>
-      <sds-accordion-item summary="Item 1">Example content.</sds-accordion-item>
-      <sds-accordion-item summary="Item 2">Another example.</sds-accordion-item>
-    </sds-accordion>
-  </body>
+        <sds-field-group>
+          <sds-input-field
+            required
+            name="address"
+            placeholder="123 Example Ln."
+            label="Street address"
+            description="Hello there"
+          ></sds-input-field>
+
+          <sds-select-field
+            required
+            name="country"
+            label="Country"
+            description="Select your country"
+          >
+            <sds-select-item id="ca">Canada</sds-select-item>
+            <sds-select-item id="mx">Mexico</sds-select-item>
+            <sds-select-item id="us" selected>United States</sds-select-item>
+          </sds-select-field>
+
+          <sds-slider
+            name="range"
+            label="Slide here"
+            description="Choose a value"
+            defaultValue="40"
+            showOutput
+          ></sds-slider>
+        </sds-field-group>
+
+        <sds-button-group align="end">
+          <sds-button-danger type="reset">Clear</sds-button-danger>
+          <sds-button type="submit" onclick="handleSubmit()">
+            Submit
+          </sds-button>
+        </sds-button-group>
+      </sds-fieldset>
+    </sds-form>
+  </main>
 </html>
