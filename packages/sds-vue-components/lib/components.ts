@@ -365,6 +365,7 @@ import { defineCustomElement as defineSdsSwitchField } from 'sds-web-components/
 import { defineCustomElement as defineSdsSwitchGroup } from 'sds-web-components/dist/components/sds-switch-group.js';
 import { defineCustomElement as defineSdsTab } from 'sds-web-components/dist/components/sds-tab.js';
 import { defineCustomElement as defineSdsTabPanel } from 'sds-web-components/dist/components/sds-tab-panel.js';
+import { defineCustomElement as defineSdsTable } from 'sds-web-components/dist/components/sds-table.js';
 import { defineCustomElement as defineSdsTabs } from 'sds-web-components/dist/components/sds-tabs.js';
 import { defineCustomElement as defineSdsTag } from 'sds-web-components/dist/components/sds-tag.js';
 import { defineCustomElement as defineSdsTagButton } from 'sds-web-components/dist/components/sds-tag-button.js';
@@ -2338,6 +2339,16 @@ export const SdsTab = /*@__PURE__*/ defineContainer<JSX.SdsTab>('sds-tab', defin
 export const SdsTabPanel = /*@__PURE__*/ defineContainer<JSX.SdsTabPanel>('sds-tab-panel', defineSdsTabPanel, [
   'panelId',
   'active'
+]);
+
+
+export const SdsTable = /*@__PURE__*/ defineContainer<JSX.SdsTable>('sds-table', defineSdsTable, [
+  'bleed',
+  'dense',
+  'grid',
+  'striped',
+  'interactive',
+  'alignment'
 ]);
 
 

@@ -362,6 +362,7 @@ export const DIRECTIVES = [
   d.SdsSwitchGroup,
   d.SdsTab,
   d.SdsTabPanel,
+  d.SdsTable,
   d.SdsTabs,
   d.SdsTag,
   d.SdsTagButton,

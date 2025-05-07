@@ -8013,6 +8013,28 @@ export declare interface SdsTabPanel extends Components.SdsTabPanel {}
 
 
 @ProxyCmp({
+  inputs: ['alignment', 'bleed', 'dense', 'grid', 'interactive', 'striped']
+})
+@Component({
+  selector: 'sds-table',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: ['alignment', 'bleed', 'dense', 'grid', 'interactive', 'striped'],
+})
+export class SdsTable {
+  protected el: HTMLSdsTableElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsTable extends Components.SdsTable {}
+
+
+@ProxyCmp({
   methods: ['show']
 })
 @Component({
