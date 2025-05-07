@@ -456,14 +456,14 @@ export declare interface SdsDialogDescription extends Components.SdsDialogDescri
 
 
 @ProxyCmp({
-  inputs: ['isDismissible', 'isOpen']
+  inputs: ['isOpen']
 })
 @Component({
   selector: 'sds-dialog-modal',
   changeDetection: ChangeDetectionStrategy.OnPush,
   template: '<ng-content></ng-content>',
   // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
-  inputs: ['isDismissible', 'isOpen'],
+  inputs: ['isOpen'],
 })
 export class SdsDialogModal {
   protected el: HTMLSdsDialogModalElement;
@@ -669,6 +669,48 @@ export class SdsForm {
 
 
 export declare interface SdsForm extends Components.SdsForm {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-header',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsHeader {
+  protected el: HTMLSdsHeaderElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsHeader extends Components.SdsHeader {}
+
+
+@ProxyCmp({
+})
+@Component({
+  selector: 'sds-header-auth',
+  changeDetection: ChangeDetectionStrategy.OnPush,
+  template: '<ng-content></ng-content>',
+  // eslint-disable-next-line @angular-eslint/no-inputs-metadata-property
+  inputs: [],
+})
+export class SdsHeaderAuth {
+  protected el: HTMLSdsHeaderAuthElement;
+  constructor(c: ChangeDetectorRef, r: ElementRef, protected z: NgZone) {
+    c.detach();
+    this.el = r.nativeElement;
+  }
+}
+
+
+export declare interface SdsHeaderAuth extends Components.SdsHeaderAuth {}
 
 
 @ProxyCmp({

@@ -50,6 +50,10 @@ Type: `Promise<void>`
 
 ## Dependencies
 
+### Used by
+
+ - [sds-header-auth](../../../compositions/Headers/sds-header-auth)
+
 ### Depends on
 
 - [sds-menu-trigger](../sds-menu-trigger)
@@ -64,6 +68,7 @@ graph TD;
   sds-menu-button --> sds-menu-popover
   sds-menu-button --> sds-icon-button
   sds-menu-button --> sds-menu
+  sds-header-auth --> sds-menu-button
   style sds-menu-button fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

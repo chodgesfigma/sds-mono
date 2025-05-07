@@ -22,10 +22,6 @@ export const MENU_HEADER_PROPS = {
   subhead: figma.children('Text Small'),
 };
 
-export const MENU_DESCRIPTION_PROPS = {
-  description: figma.string('Description'),
-};
-
 export const MENU_ITEM_PROPS = {
   icon: figma.boolean('Has Icon', {
     true: figma.instance('Icon'),
@@ -40,7 +36,7 @@ export const MENU_ITEM_PROPS = {
     Disabled: true,
   }),
   description: figma.boolean('Has Description', {
-    true: figma.children('Menu Description'),
+    true: figma.textContent('Description'),
     false: undefined,
   }),
 };

@@ -31,6 +31,8 @@ export const DIRECTIVES = [
   d.SdsFlex,
   d.SdsFlexItem,
   d.SdsForm,
+  d.SdsHeader,
+  d.SdsHeaderAuth,
   d.SdsHero,
   d.SdsIconActivity,
   d.SdsIconAirplay,

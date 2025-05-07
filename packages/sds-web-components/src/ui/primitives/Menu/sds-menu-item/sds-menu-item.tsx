@@ -12,12 +12,6 @@ export class SdsMenuItem {
   @Prop() isDisabled = false;
 
   /**
-   * WIP: Marks this item as a submenu and prevents closing the parent menu when clicked
-   * TODO: implement a clean way to do submenus
-   */
-  // @Prop() isSubMenu = false;
-
-  /**
    * Emitted when the menu item is clicked
    */
   @Event({

@@ -7,9 +7,9 @@
 
 ## Properties
 
-| Property     | Attribute     | Description | Type                | Default  |
-| ------------ | ------------- | ----------- | ------------------- | -------- |
-| `dialogType` | `dialog-type` |             | `"card" \| "sheet"` | `'card'` |
+| Property     | Attribute     | Description               | Type                | Default  |
+| ------------ | ------------- | ------------------------- | ------------------- | -------- |
+| `dialogType` | `dialog-type` | Visual type of the dialog | `"card" \| "sheet"` | `'card'` |
 
 
 ## Dependencies

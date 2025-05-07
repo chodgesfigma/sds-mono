@@ -20,6 +20,8 @@
 
 ### Used by
 
+ - [sds-header](../../compositions/Headers/sds-header)
+ - [sds-header-auth](../../compositions/Headers/sds-header-auth)
  - [sds-hero](../../compositions/Sections/sds-heroes)
  - [sds-panel](../../compositions/Sections/sds-panel)
  - [sds-text-content-heading](../../primitives/Text/sds-text-content-heading)
@@ -28,6 +30,8 @@
 ### Graph
 ```mermaid
 graph TD;
+  sds-header --> sds-flex
+  sds-header-auth --> sds-flex
   sds-hero --> sds-flex
   sds-panel --> sds-flex
   sds-text-content-heading --> sds-flex

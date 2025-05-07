@@ -15,6 +15,10 @@
 
 ## Dependencies
 
+### Used by
+
+ - [sds-header-auth](../../../compositions/Headers/sds-header-auth)
+
 ### Depends on
 
 - [sds-text-strong](../../Text/sds-text-strong)
@@ -25,6 +29,7 @@
 graph TD;
   sds-avatar-block --> sds-text-strong
   sds-avatar-block --> sds-text
+  sds-header-auth --> sds-avatar-block
   style sds-avatar-block fill:#f9f,stroke:#333,stroke-width:4px
 ```
 

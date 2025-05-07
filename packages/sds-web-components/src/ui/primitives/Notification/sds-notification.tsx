@@ -41,19 +41,13 @@ export class SdsNotification {
         </div>
         {this.isDismissible &&
           (this.variant === 'alert' ? (
-            <sds-button-danger
-              size="small"
-              variant="danger-subtle"
-              aria-label="Dismiss notification"
-              onClick={this.handleDismiss}
-              // TODO: add rounded
-            >
+            <sds-destructive-icon-button size="small" variant="danger-subtle" ariaLabel="Dismiss notification" onClick={this.handleDismiss}>
               <sds-icon-x />
-            </sds-button-danger>
+            </sds-destructive-icon-button>
           ) : (
-            <sds-button size="small" variant="subtle" aria-label="Dismiss notification" onClick={this.handleDismiss}>
+            <sds-icon-button size="small" variant="subtle" ariaLabel="Dismiss notification" onClick={this.handleDismiss}>
               <sds-icon-x />
-            </sds-button>
+            </sds-icon-button>
           ))}
       </div>
     );

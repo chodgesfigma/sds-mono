@@ -1,7 +1,5 @@
 # sds-section
 
-
-
 <!-- Auto Generated Below -->
 
 
@@ -21,6 +19,7 @@
 
 ### Used by
 
+ - [sds-header](../../compositions/Headers/sds-header)
  - [sds-hero](../../compositions/Sections/sds-heroes)
 
 ### Depends on
@@ -31,6 +30,7 @@
 ```mermaid
 graph TD;
   sds-section --> sds-image
+  sds-header --> sds-section
   sds-hero --> sds-section
   style sds-section fill:#f9f,stroke:#333,stroke-width:4px
 ```

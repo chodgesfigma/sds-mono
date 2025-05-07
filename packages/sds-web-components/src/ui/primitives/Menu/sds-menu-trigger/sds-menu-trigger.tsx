@@ -14,8 +14,3 @@ export class SdsMenuTrigger {
     );
   }
 }
-
-// export type MenuTriggerProps = RACMenuTriggerProps;
-// export function MenuTrigger({ ...props }: MenuTriggerProps) {
-//   return <RACMenuTrigger {...props} />;
-// }
