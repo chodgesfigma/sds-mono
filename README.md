@@ -73,12 +73,9 @@ npm run dev:angular
 
 # Run the plain Web Components example application ~ source of truth
 npm run dev:web
+```
 
 ### Code Connect:
 
-Figma link to test code connect [here](<https://www.figma.com/design/uUwqqXZ8Gcw8AfUot9toz8/Simple-Design-System-(Stencil-Library)?node-id=3-5&p=f&m=dev>)!
+Figma link to test code connect [here](https://www.figma.com/design/uUwqqXZ8Gcw8AfUot9toz8/Simple-Design-System-(Stencil-Library)?node-id=3-5&p=f&m=dev)!
 
-## Steps to test!
-
-After building the project, navigate to `example-apps`, and choose any app you'd like. Ensure that you've `npm ci`'d, and then run `npm run dev`. Feel free to inspect `package.json` to check on the exact script to run.
-```
