@@ -24,7 +24,7 @@
 
 ### Depends on
 
-- [sds-image](../../primitives/Image/sds-image)
+- [sds-image](../../primitives/image/sds-image)
 
 ### Graph
 ```mermaid

@@ -20,7 +20,7 @@
 
 ### Depends on
 
-- [sds-icon-button](../../Button/sds-icon-button)
+- [sds-icon-button](../../button/sds-icon-button)
 - [sds-icon-x](../../../icons)
 
 ### Graph

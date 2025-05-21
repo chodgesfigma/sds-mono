@@ -18,5 +18,10 @@
     "include": ["dist/react/**/*"],
     "exclude": ["dist/react/sds-icons.figma.tsx"],
     "parser": "react"
+  },
+  "react@1.1": {
+    "include": ["dist/react/**/*"],
+    "exclude": ["dist/react/sds-icons.figma.tsx"],
+    "parser": "react@1.1"
   }
 }

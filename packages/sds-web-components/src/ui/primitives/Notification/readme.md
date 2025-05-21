@@ -24,9 +24,9 @@
 
 ### Depends on
 
-- [sds-destructive-icon-button](../Button/sds-destructive-icon-button)
+- [sds-destructive-icon-button](../button/sds-destructive-icon-button)
 - [sds-icon-x](../../icons)
-- [sds-icon-button](../Button/sds-icon-button)
+- [sds-icon-button](../button/sds-icon-button)
 
 ### Graph
 ```mermaid

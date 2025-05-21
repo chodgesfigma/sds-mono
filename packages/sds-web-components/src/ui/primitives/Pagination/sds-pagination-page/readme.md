@@ -18,7 +18,7 @@
 
 ### Depends on
 
-- [sds-button](../../Button/sds-button)
+- [sds-button](../../button/sds-button)
 
 ### Graph
 ```mermaid

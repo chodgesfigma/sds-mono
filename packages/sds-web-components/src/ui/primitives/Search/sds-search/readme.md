@@ -27,7 +27,7 @@
 
 ### Depends on
 
-- [sds-icon-button](../../Button/sds-icon-button)
+- [sds-icon-button](../../button/sds-icon-button)
 - [sds-icon-x](../../../icons)
 - [sds-icon-search](../../../icons)
 - [sds-list-box](../../ListBox/sds-list-box)

@@ -13,8 +13,8 @@
 
 ### Depends on
 
-- [sds-button-group](../../../primitives/Button/sds-button-group)
-- [sds-button](../../../primitives/Button/sds-button)
+- [sds-button-group](../../../primitives/button/sds-button-group)
+- [sds-button](../../../primitives/button/sds-button)
 - [sds-navigation](../../../primitives/Navigation/sds-navigation)
 - [sds-navigation-pill](../../../primitives/Navigation/sds-navigation-pill)
 - [sds-flex](../../../layout/sds-flex)

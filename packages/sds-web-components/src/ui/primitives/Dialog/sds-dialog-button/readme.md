@@ -7,11 +7,11 @@
 
 ## Properties
 
-| Property  | Attribute  | Description                                                      | Type                                 | Default     |
-| --------- | ---------- | ---------------------------------------------------------------- | ------------------------------------ | ----------- |
-| `label`   | `label`    | Label / Aria-label for the button                                | `string`                             | `''`        |
-| `useIcon` | `use-icon` | Controls if the icon-button should be used over the label button | `boolean`                            | `false`     |
-| `variant` | `variant`  | Label Button variant                                             | `"neutral" \| "primary" \| "subtle"` | `'primary'` |
+| Property  | Attribute  | Description                                                      | Type             | Default     |
+| --------- | ---------- | ---------------------------------------------------------------- | ---------------- | ----------- |
+| `label`   | `label`    | Label / Aria-label for the button                                | `string`         | `''`        |
+| `useIcon` | `use-icon` | Controls if the icon-button should be used over the label button | `boolean`        | `false`     |
+| `variant` | `variant`  | Label Button variant                                             | `DefaultVariant` | `'primary'` |
 
 
 ## Methods
@@ -46,8 +46,8 @@ Type: `Promise<void>`
 ### Depends on
 
 - [sds-dialog-trigger](../sds-dialog-trigger)
-- [sds-icon-button](../../Button/sds-icon-button)
-- [sds-button](../../Button/sds-button)
+- [sds-icon-button](../../button/sds-icon-button)
+- [sds-button](../../button/sds-button)
 - [sds-dialog-modal](../sds-dialog-modal)
 - [sds-dialog](../sds-dialog)
 
