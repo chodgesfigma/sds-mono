@@ -21,6 +21,8 @@ const compileFigmaConfigs = async () => {
       label?: string;
       parser?: string;
       documentUrlSubstitutions?: Record<string, string>;
+      importPaths?: Record<string, string>;
+      paths?: Record<string, string>;
     };
   };
 

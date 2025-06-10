@@ -484,6 +484,9 @@ export const SdsButton: StencilReactComponent<SdsButtonElement, SdsButtonEvents>
     defineCustomElement: defineSdsButton
 });
 
+// Example usage:
+// <SdsButton variant="primary" size="medium">Button Text</SdsButton>
+
 type SdsButtonDangerEvents = NonNullable<unknown>;
 
 export const SdsButtonDanger: StencilReactComponent<SdsButtonDangerElement, SdsButtonDangerEvents> = /*@__PURE__*/ createComponent<SdsButtonDangerElement, SdsButtonDangerEvents>({

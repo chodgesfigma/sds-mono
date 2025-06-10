@@ -6,22 +6,18 @@
   },
   "vue": {
     "include": ["dist/vue/**/*"],
-    "exclude": ["dist/vue/sds-icons.figma.ts"],
+    "exclude": [""],
     "label": "Vue"
   },
   "angular": {
     "include": ["dist/angular/**/*"],
-    "exclude": ["dist/angular/sds-icons.figma.ts"],
+    "exclude": [""],
     "label": "Angular"
   },
   "react": {
     "include": ["dist/react/**/*"],
-    "exclude": ["dist/react/sds-icons.figma.tsx"],
-    "parser": "react"
-  },
-  "react@1.1": {
-    "include": ["dist/react/**/*"],
-    "exclude": ["dist/react/sds-icons.figma.tsx"],
-    "parser": "react@1.1"
+    "exclude": [""],
+    "parser": "react",
+    "label": "React@1.0"
   }
 }

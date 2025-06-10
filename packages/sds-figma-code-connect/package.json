@@ -12,7 +12,10 @@
     "publish:vue": "npx figma connect publish -c dist/configs/figma.vue.config.json",
     "publish:angular": "npx figma connect publish -c dist/configs/figma.angular.config.json",
     "publish:web": "npx figma connect publish -c dist/configs/figma.web.config.json",
-    "publish:react": "npx figma connect publish -c dist/configs/figma.react.config.json"
+    "publish:react": "npx figma connect publish -c dist/configs/figma.react.config.json",
+    "publish:react@1_0": "npx figma connect publish -c dist/configs/figma.react@1_0.config.json",
+    "publish:react@1_1": "npx figma connect publish -c dist/configs/figma.react@1_1.config.json",
+    "publish:react@1_2": "npx figma connect publish -c dist/configs/figma.react@1_2.config.json"
   },
   "keywords": [],
   "author": "",
